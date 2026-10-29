@@ -46,6 +46,11 @@ export default {
 
     // 6. Phục vụ file tĩnh (HTML, CSS, JS, âm thanh, icon) qua Assets
     if (env.ASSETS) {
+      // Hỗ trợ cả đường dẫn không đuôi mà không cần redirect (tránh lỗi iframe)
+      if (['/hsk1', '/hsk2', '/hsk3', '/admin'].includes(url.pathname)) {
+        const rewrittenUrl = new URL(url.pathname + '.html' + url.search, url.origin);
+        return env.ASSETS.fetch(new Request(rewrittenUrl, request));
+      }
       return env.ASSETS.fetch(request);
     }
 

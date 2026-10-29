@@ -270,21 +270,15 @@
   renderAuthHeader();
   showRoute();
 
-  // Quản lý Service Worker: Trên localhost/127.0.0.1 tự động gỡ bỏ để tránh cache lỗi iframe
+  // Tự động gỡ bỏ Service Worker và xóa cache cũ trên mọi domain để tránh lỗi iframe crash
   if ('serviceWorker' in navigator) {
-    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-      navigator.serviceWorker.getRegistrations().then(regs => {
-        for (const reg of regs) reg.unregister();
-      });
-      if ('caches' in window) {
-        caches.keys().then(names => {
-          for (const name of names) caches.delete(name);
-        });
-      }
-    } else if (location.protocol.startsWith('http')) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').catch(() => {});
-      });
-    }
+    navigator.serviceWorker.getRegistrations().then(regs => {
+      for (const reg of regs) reg.unregister();
+    });
+  }
+  if ('caches' in window) {
+    caches.keys().then(names => {
+      for (const name of names) caches.delete(name);
+    });
   }
 })();

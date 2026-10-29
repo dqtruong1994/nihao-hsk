@@ -16,10 +16,15 @@
   <link rel="stylesheet" href="site.css">
   <link rel="stylesheet" href="enhancements.css">
   <script>
-    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.getRegistrations().then(r => r.forEach(reg => reg.unregister()));
-      }
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(regs => {
+        for (const reg of regs) reg.unregister();
+      });
+    }
+    if ('caches' in window) {
+      caches.keys().then(names => {
+        for (const name of names) caches.delete(name);
+      });
     }
   </script>
   <script src="auth.js"></script>
