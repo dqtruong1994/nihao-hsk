@@ -1,0 +1,255 @@
+/* Mock Exam Styles - Phòng Thi Thử HSK */
+.mock-exam-btn {
+  background: linear-gradient(135deg, #fef3c7, #fde68a) !important;
+  color: #92400e !important;
+  border: 1px solid #f59e0b !important;
+  font-weight: 800 !important;
+  margin-top: 14px !important;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.mock-exam-btn:hover {
+  background: linear-gradient(135deg, #fde68a, #fcd34d) !important;
+}
+
+.mock-exam-badge {
+  background: #d97706;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* Container phòng thi */
+.exam-container {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 28px;
+  margin-top: 16px;
+}
+
+.exam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1.5px solid #f1f5f9;
+}
+
+.exam-title-box h2 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  color: #1e1b4b;
+}
+
+.exam-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  color: #6657d9;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.exam-timer-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 12px;
+}
+
+.exam-timer-box.warning {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #b91c1c;
+  animation: pulse 1s infinite;
+}
+
+.timer-digits {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: monospace;
+}
+
+/* Thanh tiến độ */
+.exam-progress {
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 18px 0;
+}
+
+.exam-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6657d9, #8b5cf6);
+  width: 0%;
+  transition: width 0.3s;
+}
+
+/* Phần thi */
+.exam-section-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 24px 0 14px;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-left: 4px solid #6657d9;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exam-q-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.exam-q-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.exam-q-num {
+  font-size: 13px;
+  font-weight: 800;
+  color: #6657d9;
+  margin-bottom: 8px;
+}
+
+.exam-prompt {
+  font-size: 16px;
+  color: #1e293b;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.exam-prompt .zh {
+  font-size: 22px;
+  font-family: STKaiti, KaiTi, serif;
+  color: #0f172a;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.exam-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.exam-option-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.15s;
+  font-size: 15px;
+}
+
+.exam-option-label:hover {
+  border-color: #6657d9;
+  background: #fcfbfe;
+}
+
+.exam-option-label input[type="radio"]:checked + .opt-text {
+  color: #6657d9;
+  font-weight: 700;
+}
+
+.exam-option-label:has(input[type="radio"]:checked) {
+  border-color: #6657d9;
+  background: #f5f3ff;
+}
+
+/* Nộp bài */
+.exam-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.btn-submit-exam {
+  background: #6657d9;
+  color: #fff;
+  border: 0;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(102, 87, 217, 0.25);
+}
+
+.btn-submit-exam:hover {
+  background: #5545cc;
+}
+
+/* Kết quả thi */
+.exam-result-banner {
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.exam-result-banner.pass {
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+  border: 2px solid #86efac;
+  color: #14532d;
+}
+
+.exam-result-banner.fail {
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+  border: 2px solid #fca5a5;
+  color: #7f1d1d;
+}
+
+.exam-result-score {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 10px 0;
+}
+
+.exam-expl-box {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.expl-correct {
+  color: #15803d;
+  font-weight: 700;
+}
+
+.expl-wrong {
+  color: #b91c1c;
+  font-weight: 700;
+}

@@ -11,3 +11,34 @@
 .course-three .level-tag,.course-three .course-progress-label>b{color:var(--teal)}.course-three .course-number{color:#dcecf0}.course-three h3 span{color:#98b7bf}.course-three .course-progress{background:#e9f3f5}.course-three .course-progress span{background:var(--teal)}.course-three .course-link{background:#edf7f8;border-color:#d8eaed;color:var(--teal)}.course-three .course-link:hover{background:#dceff2}
 @media(min-width:681px) and (max-width:900px){.course-grid{grid-template-columns:1fr}.course-card>p{max-width:560px;min-height:0}.course-card{padding:24px 27px}}
 @media(max-width:680px){.top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px}.logo{grid-column:1;grid-row:1;min-width:0}.site-nav{grid-column:1/-1;grid-row:2;width:100%;margin:0}.site-nav a{flex:1;text-align:center;padding:9px 7px}.manage-link{grid-column:2;grid-row:1;margin:0}.course-meta{margin-top:0}}
+
+.course-exam-cta {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  background: #f4f2ff;
+  border: 1px dashed #cfc8ff;
+  color: #6657d9;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all .2s ease;
+}
+.course-exam-cta:hover {
+  background: #6657d9;
+  color: #fff;
+  border-color: #6657d9;
+}
+.course-three .course-exam-cta {
+  background: #edf7f8;
+  border-color: #bee3e8;
+  color: var(--teal);
+}
+.course-three .course-exam-cta:hover {
+  background: var(--teal);
+  color: #fff;
+  border-color: var(--teal);
+}

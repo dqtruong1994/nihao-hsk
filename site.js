@@ -205,6 +205,16 @@
           const currentSrc = frame.getAttribute('src');
           if (!currentSrc || currentSrc === 'about:blank') {
             frame.src = course + '.html';
+          } else {
+            try {
+              const examLevel = localStorage.getItem('hskOpenExam');
+              if (examLevel === course) {
+                localStorage.removeItem('hskOpenExam');
+                setTimeout(() => {
+                  frame.contentWindow?.document?.querySelector('.mock-exam-btn[data-level="' + course + '"]')?.click();
+                }, 100);
+              }
+            } catch {}
           }
         }
         if (course !== route && frame.hasAttribute('src')) {

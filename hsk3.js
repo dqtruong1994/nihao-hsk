@@ -88,6 +88,9 @@
     }).join('');
     $('teacherMode').textContent = teacherOpen ? 'Học theo thứ tự' : 'Mở tất cả bài';
     $('teacherMode').setAttribute('aria-pressed', String(teacherOpen));
+    if (window.HSKMockExam) {
+      window.HSKMockExam.attachExamButton('hsk3', 'nav');
+    }
   }
   function renderVocabulary() {
     const saved = reviews(), now = Date.now(), vocabulary = lessons[current].vocabulary;
@@ -210,6 +213,11 @@
       return;
     }
     window.HSKAudio?.stop();
+    const host = document.getElementById('mainExamHost');
+    if (host) host.hidden = true;
+    document.querySelectorAll('.hero, #lessonContent, .stats, .gamify').forEach(el => el.hidden = false);
+    const ach = document.getElementById('achievementBar');
+    if (ach) ach.hidden = false;
     current = index; write('hsk3Lesson', current); write('hskLastCourse', 'hsk3');
     const lesson = lessons[current];
     quizItems = uniqueQuiz(lesson.quiz).map(item => ({ ...item, choices: shuffle(item.choices) })); reviewOnly = false;
@@ -239,6 +247,10 @@
       if (!Array.isArray(data.lessons) || data.lessons.length !== 12 || data.lessons.some(lesson => !Array.isArray(lesson.quiz) || !lesson.quiz.length || lesson.quiz.some(item => !Array.isArray(item.choices) || !item.choices.includes(item.correct)))) throw new Error('Giáo án đang được cập nhật.');
       course = data; lessons = data.lessons;
       openLesson(current);
+      if (window.HSKMockExam && localStorage.getItem('hskOpenExam') === 'hsk3') {
+        localStorage.removeItem('hskOpenExam');
+        setTimeout(() => document.querySelector('.mock-exam-btn[data-level="hsk3"]')?.click(), 100);
+      }
     } catch {
       $('lessonHeading').textContent = 'Chưa tải được giáo án HSK 3';
       $('courseNotice').hidden = false;
