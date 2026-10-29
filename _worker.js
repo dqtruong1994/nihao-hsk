@@ -46,11 +46,24 @@ export default {
 
     // 6. Phục vụ file tĩnh (HTML, CSS, JS, âm thanh, icon) qua Assets
     if (env.ASSETS) {
-      // Hỗ trợ cả đường dẫn không đuôi mà không cần redirect (tránh lỗi iframe)
+      // 6.1. Trang chủ '/' -> '/index.html'
+      if (url.pathname === '/' || url.pathname === '') {
+        const indexUrl = new URL('/index.html' + url.search, url.origin);
+        return env.ASSETS.fetch(new Request(indexUrl, request));
+      }
+
+      // 6.2. Hỗ trợ đường dẫn không đuôi mà không cần redirect (tránh lỗi iframe)
       if (['/hsk1', '/hsk2', '/hsk3', '/admin'].includes(url.pathname)) {
         const rewrittenUrl = new URL(url.pathname + '.html' + url.search, url.origin);
         return env.ASSETS.fetch(new Request(rewrittenUrl, request));
       }
+
+      // 6.3. Thư mục con '/admin/' -> '/admin/index.html'
+      if (url.pathname === '/admin/') {
+        const adminUrl = new URL('/admin/index.html' + url.search, url.origin);
+        return env.ASSETS.fetch(new Request(adminUrl, request));
+      }
+
       return env.ASSETS.fetch(request);
     }
 
