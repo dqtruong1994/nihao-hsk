@@ -13,24 +13,17 @@
   <title>你好 HSK · Học tiếng Trung mỗi ngày</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="你好 HSK">
   <link rel="stylesheet" href="site.css">
   <link rel="stylesheet" href="enhancements.css">
   <link rel="stylesheet" href="gamification.css">
   <link rel="stylesheet" href="speech-trainer.css">
   <link rel="stylesheet" href="typing-game.css">
   <link rel="stylesheet" href="skill-drills.css">
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(regs => {
-        for (const reg of regs) reg.unregister();
-      });
-    }
-    if ('caches' in window) {
-      caches.keys().then(names => {
-        for (const name of names) caches.delete(name);
-      });
-    }
-  </script>
+  <link rel="stylesheet" href="pwa-install.css">
   <script src="auth.js"></script>
   <script src="data-store.js"></script>
   <script src="dictionary.js"></script>
@@ -41,6 +34,7 @@
   <script src="typing-game.js" defer></script>
   <script src="skill-drills.js" defer></script>
   <script src="srs-engine.js" defer></script>
+  <script src="pwa-install.js" defer></script>
   <script src="learner-sync.js" defer></script>
   <script src="site.js" defer></script>
 </head>
@@ -92,6 +86,22 @@
             <div class="journey-stat"><strong id="totalXP">0</strong><small>XP tích lũy</small></div>
             <div class="journey-stat" style="cursor:pointer;" onclick="window.SRSEngine?.openReviewModal()" title="Bấm để mở flashcard ôn tập"><strong id="totalReview">0</strong><small>từ đến hạn ôn ↗</small></div>
           </section>
+          <div class="pwa-home-banner" id="pwaHomeBanner">
+            <div class="pwa-banner-left">
+              <div class="pwa-app-icon">
+                <img src="favicon.svg" alt="你好 HSK" width="34" height="34">
+              </div>
+              <div>
+                <strong>Cài đặt App 你好 HSK về điện thoại</strong>
+                <p>Mở học toàn màn hình không vướng trình duyệt, truy cập siêu nhanh chỉ với 1 chạm từ Màn hình chính.</p>
+              </div>
+            </div>
+            <div class="pwa-banner-right">
+              <button type="button" class="pwa-install-action-btn" onclick="window.HSKPWA?.install()">
+                📲 Cài đặt App ngay
+              </button>
+            </div>
+          </div>
           <div class="home-rank-card" onclick="window.Gamification?.openRankModal()" title="Xem chi tiết Cấp bậc Rank và Nhiệm vụ hàng ngày">
             <div style="display:flex; align-items:center; gap:16px;">
               <span id="homeRankIcon" style="font-size:42px;">🛡️</span>

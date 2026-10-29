@@ -65,6 +65,13 @@
     const user = window.HSKAuth?.getCurrentUser();
     const rankInfo = window.Gamification?.getRankProgress?.() || { current: { icon: '🛡️', name: 'Sắt', bgClass: 'rank-iron', color: '#71717a' } };
     const xp = window.Gamification?.getTotalXP?.() || 0;
+    const isStandalone = window.matchMedia?.('(display-mode: standalone)')?.matches || window.navigator?.standalone;
+    const pwaHtml = isStandalone ? '' : `
+      <button type="button" id="pwaHeaderInstallBtn" class="pwa-header-btn" onclick="window.HSKPWA?.install()" title="Cài đặt App về điện thoại hoặc máy tính">
+        <span>📲</span>
+        <span>Cài App</span>
+      </button>
+    `;
 
     const rankHtml = `
       <button type="button" id="headerRankBadge" class="header-rank-badge ${rankInfo.current.bgClass}" onclick="window.Gamification?.openRankModal()" title="Bấm để xem Cấp bậc Rank và Nhiệm vụ hàng ngày">
@@ -78,6 +85,7 @@
     if (user) {
       const isAdmin = user.role === 'admin';
       slot.innerHTML = `
+        ${pwaHtml}
         ${rankHtml}
         <span style="font-size:13px; font-weight:600; color:#475467; display:inline-flex; align-items:center; gap:6px;">
           <span style="display:inline-block; width:26px; height:26px; line-height:26px; text-align:center; border-radius:50%; background:#e0e7ff; color:#4338ca; font-size:12px; font-weight:800;">${(user.name || user.username || 'U')[0].toUpperCase()}</span>
@@ -89,6 +97,7 @@
       `;
     } else {
       slot.innerHTML = `
+        ${pwaHtml}
         ${rankHtml}
         <button type="button" id="headerLoginBtn" style="background:#6657d9; color:#fff; border:0; padding:7px 15px; border-radius:9px; font-weight:700; font-size:13px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.12);" onclick="window.HSKAuth?.openAuthModal()">Đăng nhập</button>
       `;

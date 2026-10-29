@@ -1,19 +1,20 @@
 /**
- * Service Worker Cleaner
- * Tự động dọn dẹp cache cũ và hủy đăng ký Service Worker để tránh lỗi iframe crash
+ * Service Worker for 你好 HSK PWA
+ * Hỗ trợ cài đặt ứng dụng PWA mà không can thiệp lỗi iframe con
  */
+const CACHE_NAME = 'nihao-hsk-pwa-v2';
+
 self.addEventListener('install', event => {
   self.skipWaiting();
 });
 
 self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keys => {
-      return Promise.all(keys.map(key => caches.delete(key)));
-    }).then(() => {
-      return self.registration.unregister();
-    }).then(() => {
-      return self.clients.claim();
-    })
-  );
+  event.waitUntil(self.clients.claim());
+});
+
+self.addEventListener('fetch', event => {
+  // Chỉ xử lý các yêu cầu không phải điều hướng iframe
+  if (event.request.mode === 'navigate') {
+    return;
+  }
 });
