@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Skill Drills (Luyện Thi Theo Chuyên Đề & Dạng Bài) Styles
+   ========================================================================== */
+
+.drill-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: drillFadeIn 0.2s ease;
+}
+
+@keyframes drillFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.drill-modal-card {
+  background: #ffffff;
+  border-radius: 24px;
+  width: min(720px, 100%);
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.drill-modal-header {
+  padding: 20px 28px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drill-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Category Grid */
+.drill-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 24px 28px;
+}
+
+@media (max-width: 560px) {
+  .drill-category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.drill-cat-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.drill-cat-card:hover {
+  transform: translateY(-2px);
+  border-color: #6657d9;
+  box-shadow: 0 8px 24px rgba(102, 87, 217, 0.1);
+}
+
+.drill-cat-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.drill-cat-card strong {
+  display: block;
+  font-size: 16px;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.drill-cat-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Question Area */
+.drill-question-container {
+  padding: 20px 28px 28px;
+}
+
+.drill-progress-bar-wrap {
+  height: 6px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.drill-progress-bar-fill {
+  height: 100%;
+  background: #6657d9;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.drill-q-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.drill-q-prompt {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.drill-q-prompt b {
+  color: #6657d9;
+  font-family: STKaiti, KaiTi, serif;
+  font-size: 22px;
+}
+
+.drill-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drill-opt-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drill-opt-btn:hover:not(:disabled) {
+  border-color: #6657d9;
+  background: #faf5ff;
+}
+
+.drill-opt-btn.correct {
+  background: #dcfce7 !important;
+  border-color: #22c55e !important;
+  color: #15803d !important;
+  font-weight: 800;
+}
+
+.drill-opt-btn.wrong {
+  background: #fee2e2 !important;
+  border-color: #ef4444 !important;
+  color: #b91c1c !important;
+  text-decoration: line-through;
+}
+
+.drill-explanation-box {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-top: 16px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #1e3a8a;
+}
+
+.drill-explanation-box b {
+  color: #1d4ed8;
+}

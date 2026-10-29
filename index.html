@@ -15,6 +15,10 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="site.css">
   <link rel="stylesheet" href="enhancements.css">
+  <link rel="stylesheet" href="gamification.css">
+  <link rel="stylesheet" href="speech-trainer.css">
+  <link rel="stylesheet" href="typing-game.css">
+  <link rel="stylesheet" href="skill-drills.css">
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then(regs => {
@@ -33,6 +37,9 @@
   <script src="chinese-audio.js"></script>
   <script src="hanzi-canvas.js"></script>
   <script src="gamification.js" defer></script>
+  <script src="speech-trainer.js" defer></script>
+  <script src="typing-game.js" defer></script>
+  <script src="skill-drills.js" defer></script>
   <script src="srs-engine.js" defer></script>
   <script src="learner-sync.js" defer></script>
   <script src="site.js" defer></script>
@@ -49,8 +56,12 @@
         <a href="#hsk3" data-route="hsk3">HSK 3</a>
         <a href="#dict" data-route="dict">📖 Tra từ điển</a>
         <a href="#notebook" data-route="notebook">⭐ Sổ tay</a>
+        <a href="javascript:void(0)" onclick="window.HSKSpeechTrainer?.open()" title="Luyện phát âm câu mẫu bằng giọng nói AI">🎙️ Luyện nói</a>
+        <a href="javascript:void(0)" onclick="window.HSKTypingGame?.open()" title="Thử thách gõ Pinyin ra chữ Hán trong 60 giây">⌨️ Gõ Pinyin</a>
+        <a href="javascript:void(0)" onclick="window.HSKSkillDrills?.open()" title="Luyện theo chuyên đề ngữ pháp, bẫy thi và nghe hiểu">🎯 Chuyên đề</a>
       </nav>
       <div id="authHeaderSlot" style="display:flex; align-items:center; gap:8px;">
+        <button type="button" id="headerRankBadge" class="header-rank-badge rank-iron" onclick="window.Gamification?.openRankModal()" title="Cấp bậc Rank & Nhiệm vụ hàng ngày">🛡️ Sắt · 0 XP</button>
         <button type="button" id="headerLoginBtn" style="background:#6657d9; color:#fff; border:0; padding:7px 14px; border-radius:9px; font-weight:700; font-size:13px; cursor:pointer;" onclick="window.HSKAuth?.openAuthModal()">Đăng nhập</button>
       </div>
     </header>
@@ -81,6 +92,19 @@
             <div class="journey-stat"><strong id="totalXP">0</strong><small>XP tích lũy</small></div>
             <div class="journey-stat" style="cursor:pointer;" onclick="window.SRSEngine?.openReviewModal()" title="Bấm để mở flashcard ôn tập"><strong id="totalReview">0</strong><small>từ đến hạn ôn ↗</small></div>
           </section>
+          <div class="home-rank-card" onclick="window.Gamification?.openRankModal()" title="Xem chi tiết Cấp bậc Rank và Nhiệm vụ hàng ngày">
+            <div style="display:flex; align-items:center; gap:16px;">
+              <span id="homeRankIcon" style="font-size:42px;">🛡️</span>
+              <div>
+                <div style="font-size:12px; font-weight:800; color:#7c3aed; text-transform:uppercase; letter-spacing:0.5px;">HỆ THỐNG CẤP BẬC HÁN NGỮ</div>
+                <strong id="homeRankName" style="font-size:20px; color:#1e1b4b; display:block;">Rank: Sắt</strong>
+                <small id="homeRankSub" style="color:#64748b;">0 XP · Bấm để xem nhiệm vụ nhận thưởng và thăng hạng ↗</small>
+              </div>
+            </div>
+            <button type="button" class="btn" style="background:#7c3aed; color:#fff; border:0; padding:10px 18px; border-radius:12px; font-weight:700; font-size:13px; white-space:nowrap;">
+              🏆 Nhiệm vụ & Xếp hạng
+            </button>
+          </div>
           <div class="home-review-cta" id="homeReviewCTA">
             <div class="home-review-left">
               <span class="home-review-icon" aria-hidden="true">🔁</span>
@@ -91,6 +115,34 @@
             </div>
             <button type="button" class="home-review-btn" onclick="window.SRSEngine?.openReviewModal()">🎯 Bắt đầu ôn tập</button>
           </div>
+          <section class="skills-hub" style="margin:24px 0 36px;">
+            <div class="section-heading" style="margin-bottom:16px;">
+              <div>
+                <span class="section-kicker">RÈN LUYỆN ĐẶC BIỆT</span>
+                <h2 style="font-size:22px; margin:4px 0 0;">Luyện kỹ năng thực chiến</h2>
+              </div>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:14px;">
+              <div class="drill-cat-card" onclick="window.HSKSpeechTrainer?.open()" style="border-top:4px solid #dc2626;">
+                <div style="font-size:28px; margin-bottom:8px;">🎙️</div>
+                <strong style="font-size:16px;">Luyện nói AI & Shadowing</strong>
+                <p style="font-size:13px; color:#64748b; margin-top:4px;">Thu âm giọng nói, chấm điểm phát âm chuẩn xác từng chữ Hán và thanh điệu.</p>
+                <span style="display:inline-block; margin-top:12px; font-size:12px; font-weight:800; color:#dc2626;">Bắt đầu nói →</span>
+              </div>
+              <div class="drill-cat-card" onclick="window.HSKTypingGame?.open()" style="border-top:4px solid #d97706;">
+                <div style="font-size:28px; margin-bottom:8px;">⌨️</div>
+                <strong style="font-size:16px;">Thử thách gõ Pinyin (60s)</strong>
+                <p style="font-size:13px; color:#64748b; margin-top:4px;">Rèn phản xạ gõ bàn phím Hán ngữ tốc độ cao, tính WPM và chuỗi đúng.</p>
+                <span style="display:inline-block; margin-top:12px; font-size:12px; font-weight:800; color:#d97706;">Chơi ngay →</span>
+              </div>
+              <div class="drill-cat-card" onclick="window.HSKSkillDrills?.open()" style="border-top:4px solid #2563eb;">
+                <div style="font-size:28px; margin-bottom:8px;">🎯</div>
+                <strong style="font-size:16px;">Luyện theo Chuyên đề HSK</strong>
+                <p style="font-size:13px; color:#64748b; margin-top:4px;">Chuyên đề câu chữ 把, chữ 被, so sánh 比, phân biệt từ dễ nhầm và luyện nghe.</p>
+                <span style="display:inline-block; margin-top:12px; font-size:12px; font-weight:800; color:#2563eb;">Luyện chuyên đề →</span>
+              </div>
+            </div>
+          </section>
           <section class="courses" aria-labelledby="coursesTitle">
             <div class="section-heading"><div><span class="section-kicker">LỘ TRÌNH HỌC TẬP</span><h2 id="coursesTitle">Hôm nay, bạn muốn học gì?</h2></div><span class="course-count">3 cấp độ · 36 bài học</span></div>
             <div class="course-grid">

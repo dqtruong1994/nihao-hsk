@@ -1,0 +1,194 @@
+/* ==========================================================================
+   Pinyin Typing Challenge Game Styles
+   ========================================================================== */
+
+.typing-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: typingFadeIn 0.2s ease;
+}
+
+@keyframes typingFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.typing-modal-card {
+  background: #ffffff;
+  border-radius: 24px;
+  width: min(680px, 100%);
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.typing-modal-header {
+  padding: 20px 28px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.typing-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.typing-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 16px 28px 0;
+}
+
+.typing-stat-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.typing-stat-item small {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.typing-stat-item strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-top: 2px;
+}
+
+.typing-modal-body {
+  padding: 24px 28px;
+}
+
+/* Question Prompt */
+.typing-prompt-box {
+  background: #f1f5f9;
+  border-radius: 20px;
+  padding: 28px 20px;
+  text-align: center;
+  margin-bottom: 24px;
+  position: relative;
+  border: 2px dashed #cbd5e1;
+}
+
+.typing-target-meaning {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.typing-target-hint {
+  font-size: 14px;
+  color: #6657d9;
+  font-weight: 700;
+}
+
+.typing-target-hanzi-reveal {
+  font-family: STKaiti, KaiTi, serif;
+  font-size: 40px;
+  color: #6657d9;
+  margin-top: 8px;
+}
+
+/* Input Area */
+.typing-input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.typing-input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 20px;
+  border: 2px solid #cbd5e1;
+  border-radius: 14px;
+  outline: none;
+  text-align: center;
+  font-weight: 700;
+  color: #1e293b;
+  transition: all 0.2s;
+  background: #ffffff;
+}
+
+.typing-input:focus {
+  border-color: #6657d9;
+  box-shadow: 0 0 0 4px rgba(102, 87, 217, 0.15);
+}
+
+/* Candidate Suggestions (IME Mode) */
+.typing-candidates {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  min-height: 38px;
+}
+
+.typing-candidate-btn {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: STKaiti, KaiTi, serif;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.typing-candidate-btn:hover, .typing-candidate-btn.highlight {
+  background: #6657d9;
+  color: #ffffff;
+  border-color: #6657d9;
+  transform: translateY(-1px);
+}
+
+/* Game Over Card */
+.typing-result-card {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.typing-result-score {
+  font-size: 48px;
+  font-weight: 900;
+  color: #6657d9;
+  margin: 10px 0;
+}
+
+.typing-result-badge {
+  display: inline-block;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}

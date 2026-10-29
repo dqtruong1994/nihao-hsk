@@ -193,16 +193,261 @@
     render();
   }
 
-  // --- 3. Global Gamification Stats ---
-  function addXP(amount) {
+  // --- 3. Hệ Thống 8 Cấp Bậc Rank & Nhiệm Vụ Hàng Ngày ---
+  // Sắt -> Đồng -> Vàng -> Bạch kim -> Kim cương -> Cao thủ -> Đại cao thủ -> Thách đấu
+  const RANKS = [
+    { key: 'iron', name: 'Sắt', minXP: 0, icon: '🛡️', color: '#71717a', bgClass: 'rank-iron', desc: 'Khởi đầu học Hán tự và phát âm' },
+    { key: 'bronze', name: 'Đồng', minXP: 200, icon: '🥉', color: '#b45309', bgClass: 'rank-bronze', desc: 'Nắm vững thanh điệu & Pinyin cơ bản' },
+    { key: 'gold', name: 'Vàng', minXP: 500, icon: '🥇', color: '#d97706', bgClass: 'rank-gold', desc: 'Giao tiếp sơ cấp HSK 1 vững vàng' },
+    { key: 'platinum', name: 'Bạch kim', minXP: 1000, icon: '💠', color: '#0d9488', bgClass: 'rank-platinum', desc: 'Vốn từ mở rộng, phản xạ HSK 2' },
+    { key: 'diamond', name: 'Kim cương', minXP: 2000, icon: '💎', color: '#2563eb', bgClass: 'rank-diamond', desc: 'Làm chủ ngữ pháp HSK 2, tiến vào HSK 3' },
+    { key: 'master', name: 'Cao thủ', minXP: 3500, icon: '⚔️', color: '#7c3aed', bgClass: 'rank-master', desc: 'Tự tin giao tiếp và đọc hiểu HSK 3' },
+    { key: 'grandmaster', name: 'Đại cao thủ', minXP: 5500, icon: '👑', color: '#e11d48', bgClass: 'rank-grandmaster', desc: 'Bản lĩnh vững vàng, làm chủ các kỳ thi' },
+    { key: 'challenger', name: 'Thách đấu', minXP: 8000, icon: '🔥', color: '#ea580c', bgClass: 'rank-challenger', desc: 'Bậc thầy Hán ngữ, đỉnh cao phản xạ' }
+  ];
+
+  function getTotalXP() {
     try {
-      const current = Number(localStorage.getItem('hskXP') || 0);
-      const updated = current + amount;
-      localStorage.setItem('hskXP', String(updated));
-      const xpNode = document.getElementById('totalXP') || document.getElementById('xpStat');
-      if (xpNode) xpNode.textContent = String(updated);
+      const hsk1 = Number(localStorage.getItem('hskXP') || 0);
+      const hsk2 = Number(localStorage.getItem('hsk2XP') || 0);
+      const hsk3 = Number(localStorage.getItem('hsk3XP') || 0);
+      const bonus = Number(localStorage.getItem('hskBonusXP') || 0);
+      return Math.max(0, hsk1 + hsk2 + hsk3 + bonus);
+    } catch {
+      return 0;
+    }
+  }
+
+  function getRank(xp = getTotalXP()) {
+    let current = RANKS[0];
+    for (let i = RANKS.length - 1; i >= 0; i--) {
+      if (xp >= RANKS[i].minXP) {
+        current = RANKS[i];
+        break;
+      }
+    }
+    return current;
+  }
+
+  function getRankProgress(xp = getTotalXP()) {
+    const current = getRank(xp);
+    const currentIndex = RANKS.findIndex(r => r.key === current.key);
+    const nextRank = currentIndex < RANKS.length - 1 ? RANKS[currentIndex + 1] : null;
+
+    if (!nextRank) {
+      return { current, next: null, percent: 100, neededXP: 0, currentLevelXP: xp - current.minXP, spanXP: 1 };
+    }
+
+    const spanXP = nextRank.minXP - current.minXP;
+    const currentLevelXP = xp - current.minXP;
+    const percent = Math.min(100, Math.max(0, Math.round((currentLevelXP / spanXP) * 100)));
+    const neededXP = nextRank.minXP - xp;
+
+    return { current, next: nextRank, percent, neededXP, currentLevelXP, spanXP };
+  }
+
+  // Quản lý Nhiệm vụ hàng ngày (Daily Quests)
+  function getTodayKey() {
+    const d = new Date();
+    return `hsk_quests_${d.getFullYear()}_${d.getMonth() + 1}_${d.getDate()}`;
+  }
+
+  function getDailyQuests() {
+    const key = getTodayKey();
+    let data = null;
+    try {
+      data = JSON.parse(localStorage.getItem(key) || 'null');
+    } catch {}
+
+    if (!data) {
+      data = {
+        login: { title: 'Điểm danh học hàng ngày', icon: '📅', xp: 10, done: true, desc: 'Mở trang học tiếng Trung mỗi ngày' },
+        speech: { title: 'Luyện nói 3 câu chuẩn xác', icon: '🎙️', xp: 25, done: false, count: 0, target: 3, desc: 'Luyện phát âm trong Phòng Luyện Nói AI' },
+        typing: { title: 'Thử thách gõ Pinyin 1 ván', icon: '⌨️', xp: 30, done: false, desc: 'Chơi 1 ván thử thách gõ chữ Hán' },
+        drill: { title: 'Luyện 1 bài chuyên đề HSK', icon: '🎯', xp: 35, done: false, desc: 'Làm 1 bài luyện ngữ pháp/nghe/từ vựng' }
+      };
+      try { localStorage.setItem(key, JSON.stringify(data)); } catch {}
+    }
+    return data;
+  }
+
+  function updateQuestProgress(questKey, increment = 1) {
+    try {
+      const key = getTodayKey();
+      const quests = getDailyQuests();
+      const q = quests[questKey];
+      if (!q || q.done) return;
+
+      if (q.target) {
+        q.count = (q.count || 0) + increment;
+        if (q.count >= q.target) {
+          q.done = true;
+          addXP(q.xp, `Hoàn thành nhiệm vụ: ${q.title}`);
+        }
+      } else {
+        q.done = true;
+        addXP(q.xp, `Hoàn thành nhiệm vụ: ${q.title}`);
+      }
+
+      localStorage.setItem(key, JSON.stringify(quests));
+      updateRankUI();
     } catch {}
   }
+
+  // Thêm XP toàn cục & kiểm tra thăng hạng
+  function addXP(amount, reason = '') {
+    try {
+      const prevTotal = getTotalXP();
+      const prevRank = getRank(prevTotal);
+
+      const currentBonus = Number(localStorage.getItem('hskBonusXP') || 0);
+      localStorage.setItem('hskBonusXP', String(currentBonus + amount));
+
+      const newTotal = getTotalXP();
+      const newRank = getRank(newTotal);
+
+      updateRankUI();
+
+      // Thông báo thăng hạng nếu vượt cấp
+      if (newRank.minXP > prevRank.minXP) {
+        confetti();
+        playSuccessSound();
+        showRankUpModal(newRank);
+      }
+    } catch {}
+  }
+
+  function showRankUpModal(newRank) {
+    const existing = document.getElementById('hskRankUpModal');
+    if (existing) existing.remove();
+
+    const overlay = document.createElement('div');
+    overlay.id = 'hskRankUpModal';
+    overlay.className = 'rank-modal-overlay';
+    overlay.innerHTML = `
+      <div class="rank-modal-card" style="max-width:440px; text-align:center; padding:32px 24px;">
+        <div style="font-size:64px; animation: rankBounce 1.5s infinite ease-in-out;">${newRank.icon}</div>
+        <span style="font-size:12px; font-weight:800; color:#7c3aed; letter-spacing:1px; text-transform:uppercase;">CHÚC MỪNG THĂNG HẠNG!</span>
+        <h2 style="font-size:26px; font-weight:900; color:#1e1b4b; margin:6px 0 10px;">Cấp bậc: ${newRank.name}</h2>
+        <p style="color:#64748b; font-size:14px; margin-bottom:20px;">${newRank.desc}</p>
+        <button type="button" class="btn" style="background:#6657d9; color:#fff; border:0; padding:12px 24px; border-radius:12px; font-weight:800; cursor:pointer;" onclick="this.closest('.rank-modal-overlay').remove()">
+          Tuyệt vời · Nhận thưởng
+        </button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  }
+
+  // Cập nhật giao diện Rank trên Header & Trang chủ
+  function updateRankUI() {
+    const xp = getTotalXP();
+    const info = getRankProgress(xp);
+
+    // Cập nhật thẻ trên header
+    const badge = document.getElementById('headerRankBadge');
+    if (badge) {
+      badge.className = `header-rank-badge ${info.current.bgClass}`;
+      badge.innerHTML = `
+        <span style="font-size:15px;">${info.current.icon}</span>
+        <span>${info.current.name}</span>
+        <span style="opacity:0.65; font-size:10px;">•</span>
+        <span style="color:${info.current.color}; font-weight:800;">${xp} XP</span>
+      `;
+    }
+
+    // Cập nhật totalXP text nếu có
+    const totalXPNode = document.getElementById('totalXP');
+    if (totalXPNode) totalXPNode.textContent = String(xp);
+  }
+
+  // Mở Popup Chi Tiết Rank & Nhiệm Vụ Hàng Ngày
+  function openRankModal() {
+    const existing = document.getElementById('hskRankDetailModal');
+    if (existing) existing.remove();
+
+    const xp = getTotalXP();
+    const info = getRankProgress(xp);
+    const quests = getDailyQuests();
+
+    const overlay = document.createElement('div');
+    overlay.id = 'hskRankDetailModal';
+    overlay.className = 'rank-modal-overlay';
+    overlay.onclick = e => { if (e.target === overlay) overlay.remove(); };
+
+    overlay.innerHTML = `
+      <div class="rank-modal-card">
+        <header class="rank-modal-header">
+          <h2>🏆 Hệ Thống Cấp Bậc & Nhiệm Vụ</h2>
+          <button type="button" class="rank-modal-close" onclick="this.closest('.rank-modal-overlay').remove()">✕</button>
+        </header>
+
+        <div class="rank-modal-body">
+          <!-- Spotlight Rank Hiện Tại -->
+          <div class="rank-current-spotlight">
+            <div class="rank-spotlight-icon">${info.current.icon}</div>
+            <div class="rank-spotlight-name">Rank: ${info.current.name}</div>
+            <div class="rank-spotlight-xp">${xp} XP Tích Lũy</div>
+
+            <div class="rank-progress-container">
+              <div class="rank-progress-bar" style="width: ${info.percent}%"></div>
+            </div>
+            <div class="rank-progress-label">
+              <span>${info.percent}% tiến độ cấp hiện tại</span>
+              <span>${info.next ? `Cần +${info.neededXP} XP để lên ${info.next.icon} ${info.next.name}` : 'Đã đạt cấp tối đa! 🔥'}</span>
+            </div>
+          </div>
+
+          <!-- Nhiệm Vụ Hàng Ngày -->
+          <h3 class="rank-tiers-title">🎯 Nhiệm vụ hôm nay (+XP nhanh)</h3>
+          <div class="quests-container">
+            ${Object.entries(quests).map(([k, q]) => `
+              <div class="quest-item ${q.done ? 'completed' : ''}">
+                <div class="quest-left">
+                  <span class="quest-icon">${q.icon}</span>
+                  <div>
+                    <div class="quest-title">${q.title}</div>
+                    <div class="quest-desc">${q.desc} ${q.target ? `(${q.count || 0}/${q.target})` : ''}</div>
+                  </div>
+                </div>
+                <div>
+                  ${q.done 
+                    ? '<span class="quest-done-tag">✓ Đã xong</span>' 
+                    : `<span class="quest-reward">+${q.xp} XP</span>`}
+                </div>
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- 8 Bậc Rank -->
+          <h3 class="rank-tiers-title">⭐ 8 Cấp bậc Năng lực Hán ngữ</h3>
+          <div class="rank-tier-list">
+            ${RANKS.map(r => {
+              const isUnlocked = xp >= r.minXP;
+              const isActive = r.key === info.current.key;
+              return `
+                <div class="rank-tier-card ${isUnlocked ? 'unlocked' : 'locked'} ${isActive ? 'active' : ''}">
+                  <span class="rank-tier-icon">${r.icon}</span>
+                  <div class="rank-tier-info">
+                    <strong>${r.name} ${isActive ? '<span style="color:#7c3aed; font-size:11px;">(Hiện tại)</span>' : ''}</strong>
+                    <small>Từ ${r.minXP} XP • ${r.desc}</small>
+                  </div>
+                  ${isUnlocked ? '<span style="color:#16a34a; font-weight:800; font-size:12px;">✓</span>' : '<span style="color:#94a3b8; font-size:12px;">🔒</span>'}
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(overlay);
+  }
+
+  // Tự động khởi tạo và điểm danh
+  window.addEventListener('DOMContentLoaded', () => {
+    getDailyQuests();
+    updateRankUI();
+  });
 
   window.Gamification = {
     playTone,
@@ -210,6 +455,14 @@
     playErrorSound,
     playToneContour,
     confetti,
-    addXP
+    addXP,
+    getTotalXP,
+    getRank,
+    getRankProgress,
+    getDailyQuests,
+    updateQuestProgress,
+    openRankModal,
+    updateRankUI,
+    RANKS
   };
 })();

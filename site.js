@@ -63,9 +63,22 @@
     const slot = document.getElementById('authHeaderSlot');
     if (!slot) return;
     const user = window.HSKAuth?.getCurrentUser();
+    const rankInfo = window.Gamification?.getRankProgress?.() || { current: { icon: '🛡️', name: 'Sắt', bgClass: 'rank-iron', color: '#71717a' } };
+    const xp = window.Gamification?.getTotalXP?.() || 0;
+
+    const rankHtml = `
+      <button type="button" id="headerRankBadge" class="header-rank-badge ${rankInfo.current.bgClass}" onclick="window.Gamification?.openRankModal()" title="Bấm để xem Cấp bậc Rank và Nhiệm vụ hàng ngày">
+        <span style="font-size:15px;">${rankInfo.current.icon}</span>
+        <span>${rankInfo.current.name}</span>
+        <span style="opacity:0.65; font-size:10px;">•</span>
+        <span style="color:${rankInfo.current.color}; font-weight:800;">${xp} XP</span>
+      </button>
+    `;
+
     if (user) {
       const isAdmin = user.role === 'admin';
       slot.innerHTML = `
+        ${rankHtml}
         <span style="font-size:13px; font-weight:600; color:#475467; display:inline-flex; align-items:center; gap:6px;">
           <span style="display:inline-block; width:26px; height:26px; line-height:26px; text-align:center; border-radius:50%; background:#e0e7ff; color:#4338ca; font-size:12px; font-weight:800;">${(user.name || user.username || 'U')[0].toUpperCase()}</span>
           <span>${user.name || user.username}</span>
@@ -76,6 +89,7 @@
       `;
     } else {
       slot.innerHTML = `
+        ${rankHtml}
         <button type="button" id="headerLoginBtn" style="background:#6657d9; color:#fff; border:0; padding:7px 15px; border-radius:9px; font-weight:700; font-size:13px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.12);" onclick="window.HSKAuth?.openAuthModal()">Đăng nhập</button>
       `;
     }
@@ -84,19 +98,25 @@
   function renderMenus() {
     const nav = document.getElementById('dynamicNav');
     if (!nav) return;
-    const menus = window.HSKData ? window.HSKData.getMenus().filter(m => m.visible !== false) : [
+    const baseNavMenus = [
       { label: 'Trang chủ', route: 'home', url: '#home' },
       { label: 'HSK 1', route: 'hsk1', url: '#hsk1' },
       { label: 'HSK 2', route: 'hsk2', url: '#hsk2' },
       { label: 'HSK 3', route: 'hsk3', url: '#hsk3' },
-      { label: '📖 Tra từ điển', route: 'dict', url: '#dict' },
-      { label: '⭐ Sổ tay', route: 'notebook', url: '#notebook' }
+      { label: '📖 Từ điển', route: 'dict', url: '#dict' },
+      { label: '⭐ Sổ tay', route: 'notebook', url: '#notebook' },
+      { label: '🎙️ Luyện nói', route: 'speech', url: 'javascript:void(0)', onclick: 'window.HSKSpeechTrainer?.open()' },
+      { label: '⌨️ Gõ Pinyin', route: 'typing', url: 'javascript:void(0)', onclick: 'window.HSKTypingGame?.open()' },
+      { label: '🎯 Chuyên đề', route: 'drills', url: 'javascript:void(0)', onclick: 'window.HSKSkillDrills?.open()' },
+      { label: '🏆 Rank', route: 'rank', url: 'javascript:void(0)', onclick: 'window.Gamification?.openRankModal()' }
     ];
+    const menus = window.HSKData ? window.HSKData.getMenus().filter(m => m.visible !== false) : baseNavMenus;
     const currentRoute = location.hash.slice(1) || 'home';
     nav.innerHTML = menus.map(m => {
       const active = (m.route === currentRoute || (m.route === 'home' && (!currentRoute || currentRoute === 'home'))) ? 'active' : '';
       const ariaCurrent = active ? 'aria-current="page"' : '';
-      return `<a href="${m.url}" data-route="${m.route}" class="${active}" ${ariaCurrent}>${m.label}</a>`;
+      const clickAttr = m.onclick ? `onclick="${m.onclick}"` : '';
+      return `<a href="${m.url}" data-route="${m.route}" class="${active}" ${ariaCurrent} ${clickAttr}>${m.label}</a>`;
     }).join('');
   }
 
@@ -137,7 +157,25 @@
     }
 
     const totalXP = document.getElementById('totalXP');
-    if (totalXP) totalXP.textContent = String(courses.reduce((sum, course) => sum + course.xp, 0));
+    const xpVal = window.Gamification?.getTotalXP ? window.Gamification.getTotalXP() : courses.reduce((sum, course) => sum + course.xp, 0);
+    if (totalXP) totalXP.textContent = String(xpVal);
+
+    const rankInfo = window.Gamification?.getRankProgress?.();
+    if (rankInfo) {
+      const homeRankIcon = document.getElementById('homeRankIcon');
+      const homeRankName = document.getElementById('homeRankName');
+      const homeRankSub = document.getElementById('homeRankSub');
+      if (homeRankIcon) homeRankIcon.textContent = rankInfo.current.icon;
+      if (homeRankName) homeRankName.textContent = 'Rank: ' + rankInfo.current.name;
+      if (homeRankSub) {
+        if (rankInfo.next) {
+          homeRankSub.textContent = rankInfo.currentXP + ' XP · Cần thêm ' + (rankInfo.next.minXP - rankInfo.currentXP) + ' XP để lên ' + rankInfo.next.name + ' ↗';
+        } else {
+          homeRankSub.textContent = rankInfo.currentXP + ' XP · Bạn đã đạt cấp bậc vinh dự tối cao: ' + rankInfo.current.name + '! 🎉';
+        }
+      }
+    }
+    renderAuthHeader();
 
     const dueCount = courses.reduce((sum, course) => sum + course.due, 0);
     const totalReview = document.getElementById('totalReview');
