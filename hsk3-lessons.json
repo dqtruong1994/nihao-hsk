@@ -1,0 +1,3744 @@
+{
+  "title": "HSK 3 · Giao tiếp và vận dụng",
+  "description": "Giáo án tự biên soạn gồm 12 bài theo chủ đề chọn lọc, nối tiếp HSK 1–2 và luyện giao tiếp trong đời sống, học tập, công việc. Đây là khóa luyện tập của website, không phải giáo trình chính thức hay cam kết bao phủ toàn bộ đề cương HSK.",
+  "sources": [
+    {
+      "label": "Chinese Tests Service Website — Đề cương và tài liệu HSK",
+      "url": "https://www.chinesetest.cn/syllabus"
+    },
+    {
+      "label": "HSK 3.0 — Mô tả năng lực chính thức: HSK 3 giao tiếp hiệu quả trong đời sống, học tập và công việc",
+      "url": "https://hsk.cn-bj.ufileos.com/3.0/HSK3.0%E8%80%83%E8%AF%95%E8%83%BD%E5%8A%9B%E6%8F%8F%E8%BF%B0.pdf"
+    }
+  ],
+  "lessons": [
+    {
+      "title": "Kế hoạch học tập và cuối tuần",
+      "topic": [
+        "周末我打算复习汉语。",
+        "Zhōumò wǒ dǎsuàn fùxí Hànyǔ.",
+        "Cuối tuần tôi định ôn tiếng Trung."
+      ],
+      "description": "Nói dự định, sắp xếp thứ tự công việc và giải thích mục đích của một kế hoạch.",
+      "objectives": [
+        "Nêu được ba việc dự định làm và thời gian thực hiện.",
+        "Dùng 先…再… để trình bày một kế hoạch có thứ tự.",
+        "Dùng 为了… để giải thích mục đích học tập bằng một câu hoàn chỉnh."
+      ],
+      "preparation": [
+        "Chuẩn bị lịch tuần trống và ba việc người học muốn hoàn thành.",
+        "Đọc lại từ chỉ ngày, giờ và các động từ học tập đã gặp ở HSK 1–2."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động: tuần này của bạn",
+          "minutes": 5,
+          "teacher": "Hỏi ngày rảnh và một việc học viên muốn làm; ghi động từ lên bảng.",
+          "learner": "Trả lời bằng hai câu ngắn về lịch của mình."
+        },
+        {
+          "title": "Từ vựng trong lịch tuần",
+          "minutes": 10,
+          "teacher": "Giới thiệu 12 từ, làm mẫu với 打算、准备、安排; kiểm tra âm và thanh.",
+          "learner": "Đọc từ rồi gắn ít nhất sáu từ vào lịch cá nhân."
+        },
+        {
+          "title": "Ba mẫu câu lập kế hoạch",
+          "minutes": 15,
+          "teacher": "Dạy 打算/准备 + hành động, 先…再… và 为了…; yêu cầu thay dữ kiện.",
+          "learner": "Viết một câu cho mỗi cấu trúc và đổi câu với bạn học."
+        },
+        {
+          "title": "Hội thoại và đọc hiểu",
+          "minutes": 15,
+          "teacher": "Đọc mẫu hội thoại; cho học viên tìm thời gian, hoạt động và mục đích trong bài đọc.",
+          "learner": "Đóng vai, ẩn bản dịch rồi trả lời câu hỏi về kế hoạch của nhân vật."
+        },
+        {
+          "title": "Lập kế hoạch có thứ tự",
+          "minutes": 15,
+          "teacher": "Giao nhiệm vụ lập lịch cuối tuần có việc học, nghỉ ngơi và một mục tiêu cụ thể.",
+          "learner": "Trình bày bốn đến năm câu; hoàn thành sắp xếp câu và mini test."
+        },
+        {
+          "title": "Chốt bài",
+          "minutes": 5,
+          "teacher": "Chọn hai lỗi về vị trí của 先、再 để sửa; giao bài về nhà.",
+          "learner": "Nói một dự định và giải thích mục đích bằng 为了."
+        }
+      ],
+      "vocabulary": [
+        [
+          "打算",
+          "dǎsuàn",
+          "đả toán",
+          "dự định",
+          "🗓️"
+        ],
+        [
+          "计划",
+          "jìhuà",
+          "kế hoạch",
+          "kế hoạch; lên kế hoạch",
+          "📋"
+        ],
+        [
+          "准备",
+          "zhǔnbèi",
+          "chuẩn bị",
+          "chuẩn bị; định làm",
+          "🎒"
+        ],
+        [
+          "决定",
+          "juédìng",
+          "quyết định",
+          "quyết định",
+          "✅"
+        ],
+        [
+          "复习",
+          "fùxí",
+          "phục tập",
+          "ôn tập",
+          "📚"
+        ],
+        [
+          "安排",
+          "ānpái",
+          "an bài",
+          "sắp xếp; bố trí",
+          "🧩"
+        ],
+        [
+          "完成",
+          "wánchéng",
+          "hoàn thành",
+          "hoàn thành",
+          "🏁"
+        ],
+        [
+          "提高",
+          "tígāo",
+          "đề cao",
+          "nâng cao; cải thiện",
+          "📈"
+        ],
+        [
+          "认真",
+          "rènzhēn",
+          "nhận chân",
+          "nghiêm túc; chăm chú",
+          "🔎"
+        ],
+        [
+          "考试",
+          "kǎoshì",
+          "khảo thí",
+          "kỳ thi; thi",
+          "📝"
+        ],
+        [
+          "目标",
+          "mùbiāo",
+          "mục tiêu",
+          "mục tiêu",
+          "🎯"
+        ],
+        [
+          "先",
+          "xiān",
+          "tiên",
+          "trước; trước tiên",
+          "1️⃣"
+        ]
+      ],
+      "grammar": [
+        [
+          "Nói dự định",
+          "Chủ ngữ + 打算 / 准备 + hành động",
+          "打算 nhấn mạnh dự định. 准备 có thể nói sự chuẩn bị hoặc dự định tùy ngữ cảnh; sau chúng là hành động muốn thực hiện.",
+          "我打算周末复习汉语。",
+          "Wǒ dǎsuàn zhōumò fùxí Hànyǔ.",
+          "Tôi định ôn tiếng Trung vào cuối tuần."
+        ],
+        [
+          "Sắp xếp thứ tự",
+          "先 + hành động 1，再 + hành động 2",
+          "先 và 再 đứng trước các hành động tương ứng. Mẫu này cho biết làm việc nào trước, việc nào tiếp theo.",
+          "我先复习生词，再练习听力。",
+          "Wǒ xiān fùxí shēngcí, zài liànxí tīnglì.",
+          "Tôi ôn từ mới trước, rồi luyện nghe."
+        ],
+        [
+          "Giải thích mục đích",
+          "为了 + mục đích，chủ ngữ + hành động",
+          "为了 nêu mục đích muốn đạt được. Phần sau nói hành động được thực hiện để đạt mục đích đó.",
+          "为了准备考试，我每天复习。",
+          "Wèile zhǔnbèi kǎoshì, wǒ měitiān fùxí.",
+          "Để chuẩn bị cho kỳ thi, tôi ôn bài mỗi ngày."
+        ]
+      ],
+      "dialogue": [
+        [
+          "An",
+          "你周末有什么安排？",
+          "Nǐ zhōumò yǒu shénme ānpái?",
+          "Cuối tuần bạn có kế hoạch gì?"
+        ],
+        [
+          "Minh",
+          "我打算去图书馆复习汉语。",
+          "Wǒ dǎsuàn qù túshūguǎn fùxí Hànyǔ.",
+          "Tôi định đến thư viện ôn tiếng Trung."
+        ],
+        [
+          "An",
+          "你准备先做什么？",
+          "Nǐ zhǔnbèi xiān zuò shénme?",
+          "Bạn định làm gì trước?"
+        ],
+        [
+          "Minh",
+          "我先复习生词，再练习听力。",
+          "Wǒ xiān fùxí shēngcí, zài liànxí tīnglì.",
+          "Tôi ôn từ mới trước, rồi luyện nghe."
+        ],
+        [
+          "An",
+          "我也要准备考试，我们一起学吧。",
+          "Wǒ yě yào zhǔnbèi kǎoshì, wǒmen yìqǐ xué ba.",
+          "Tôi cũng cần chuẩn bị thi, mình học cùng nhau nhé."
+        ],
+        [
+          "Minh",
+          "好，为了学得更好，我们每天练习半个小时。",
+          "Hǎo, wèile xué de gèng hǎo, wǒmen měitiān liànxí bàn ge xiǎoshí.",
+          "Được, để học tốt hơn, chúng ta luyện tập nửa giờ mỗi ngày."
+        ]
+      ],
+      "reading": {
+        "hanzi": "周六我打算和同学去图书馆。我们先复习生词，再一起练习对话。为了准备下周的考试，我已经写好了学习计划。晚上我还要给妈妈打电话，告诉她这周的学习情况。",
+        "pinyin": "Zhōuliù wǒ dǎsuàn hé tóngxué qù túshūguǎn. Wǒmen xiān fùxí shēngcí, zài yìqǐ liànxí duìhuà. Wèile zhǔnbèi xià zhōu de kǎoshì, wǒ yǐjīng xiě hǎo le xuéxí jìhuà. Wǎnshang wǒ hái yào gěi māma dǎ diànhuà, gàosu tā zhè zhōu de xuéxí qíngkuàng.",
+        "meaning": "Thứ Bảy tôi định đến thư viện cùng bạn học. Chúng tôi ôn từ mới trước, rồi cùng luyện hội thoại. Để chuẩn bị cho kỳ thi tuần sau, tôi đã viết xong kế hoạch học tập. Buổi tối tôi còn gọi cho mẹ để kể tình hình học trong tuần."
+      },
+      "practice": [
+        "Điền ba hoạt động vào lịch cuối tuần và nói bằng 打算 hoặc 准备.",
+        "Sắp xếp bốn việc học theo thứ tự; nói ít nhất hai câu có 先…再….",
+        "Đóng vai rủ bạn ôn thi, nêu thời gian, nơi học và mục đích."
+      ],
+      "homework": "Viết năm câu về kế hoạch tuần tới, có ít nhất một câu 为了… và một câu 先…再…. Đọc thành tiếng và tự kiểm tra thứ tự từ.",
+      "sentenceTokens": [
+        "我",
+        "先",
+        "复习生词",
+        "再",
+        "练习听力"
+      ],
+      "sentenceMeaning": "Tôi ôn từ mới trước, rồi luyện nghe.",
+      "mistake": {
+        "wrong": "我复习先生词，再练习听力。",
+        "correct": "我先复习生词，再练习听力。",
+        "explanation": "先 phải đứng trước động từ 复习, không chen giữa động từ và tân ngữ 生词."
+      },
+      "quiz": [
+        {
+          "question": "“安排” có nghĩa phù hợp nhất là gì?",
+          "choices": [
+            "Sắp xếp, bố trí",
+            "Quên mất",
+            "Nghỉ ngơi",
+            "Mượn sách"
+          ],
+          "correct": "Sắp xếp, bố trí",
+          "explanation": "安排 dùng khi bố trí lịch, công việc hoặc hoạt động."
+        },
+        {
+          "question": "Chọn từ chỉ dự định: 明天我___去图书馆。",
+          "choices": [
+            "打算",
+            "正在",
+            "已经"
+          ],
+          "correct": "打算",
+          "explanation": "打算 nói việc định làm; 明天 chỉ thời gian tương lai."
+        },
+        {
+          "question": "Điền từ nối thứ tự: 我先复习生词，___做练习。",
+          "choices": [
+            "再",
+            "和",
+            "的"
+          ],
+          "correct": "再",
+          "explanation": "先…再… diễn tả làm một việc trước rồi làm việc tiếp theo."
+        },
+        {
+          "question": "Trong “为了准备考试，我每天复习”, 为了 giới thiệu điều gì?",
+          "choices": [
+            "Mục đích",
+            "Địa điểm",
+            "Người sở hữu"
+          ],
+          "correct": "Mục đích",
+          "explanation": "Mục đích của việc ôn tập hằng ngày là chuẩn bị cho kỳ thi."
+        },
+        {
+          "question": "Theo hội thoại, Minh ôn phần nào trước?",
+          "choices": [
+            "生词",
+            "听力",
+            "写字"
+          ],
+          "correct": "生词",
+          "explanation": "Minh nói 我先复习生词，再练习听力."
+        },
+        {
+          "question": "Theo bài đọc, người kể gọi điện cho mẹ vào lúc nào?",
+          "choices": [
+            "晚上",
+            "早上",
+            "中午"
+          ],
+          "correct": "晚上",
+          "explanation": "Bài đọc có câu 晚上我还要给妈妈打电话."
+        },
+        {
+          "question": "Chọn câu có trật tự từ đúng.",
+          "choices": [
+            "我先复习生词，再练习听力。",
+            "我复习先生词，再练习听力。",
+            "我先复习生词，练习再听力。"
+          ],
+          "correct": "我先复习生词，再练习听力。",
+          "explanation": "先 và 再 đều đặt trước động từ của hành động tương ứng."
+        }
+      ]
+    },
+    {
+      "title": "Phương pháp học và trao đổi trong lớp",
+      "topic": [
+        "这个句子我看得懂。",
+        "Zhège jùzi wǒ kàn de dǒng.",
+        "Câu này tôi đọc hiểu được."
+      ],
+      "description": "Phân biệt làm xong, hiểu được và làm hai việc đồng thời; biết nhờ bạn giải thích chỗ chưa hiểu.",
+      "objectives": [
+        "Dùng bổ ngữ kết quả để nói đã làm xong hoặc đã hiểu một nội dung.",
+        "Hỏi và trả lời về khả năng đọc hiểu với 看得懂 / 看不懂.",
+        "Trình bày một cách học có hai hành động đồng thời bằng 一边…一边…."
+      ],
+      "preparation": [
+        "Chuẩn bị một đoạn văn ngắn và đánh dấu hai câu cần giải thích.",
+        "Mang giấy ghi chú hoặc mở ứng dụng ghi chú để thực hành."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động: cách bạn học từ mới",
+          "minutes": 5,
+          "teacher": "Hỏi học viên thường nghe, đọc hay ghi chép trước; ghi các cách học.",
+          "learner": "Nói một cách học đang sử dụng và một khó khăn."
+        },
+        {
+          "title": "Từ vựng học tập",
+          "minutes": 10,
+          "teacher": "Làm rõ 句子、问题、回答、方法; luyện âm 懂 và 清楚.",
+          "learner": "Ghép từ với tình huống trong lớp rồi đọc theo cặp."
+        },
+        {
+          "title": "Kết quả và khả năng",
+          "minutes": 15,
+          "teacher": "Đối chiếu 看懂了 với 看得懂; trình bày 一边…一边… bằng hai hành động mẫu.",
+          "learner": "Tạo ba câu: làm xong, đọc hiểu được, vừa nghe vừa ghi."
+        },
+        {
+          "title": "Hội thoại và bài đọc",
+          "minutes": 15,
+          "teacher": "Cho đọc theo vai và tìm cách nhân vật xử lý câu chưa hiểu.",
+          "learner": "Đóng vai nhờ giải thích; gạch dưới ba cách học trong bài đọc."
+        },
+        {
+          "title": "Thực hành có phản hồi",
+          "minutes": 15,
+          "teacher": "Giao một câu mới để học viên hỏi nhau và giải thích bằng từ quen thuộc.",
+          "learner": "Làm sắp xếp câu, trả lời mini test và sửa câu sai."
+        },
+        {
+          "title": "Chốt phương pháp cá nhân",
+          "minutes": 5,
+          "teacher": "Mời mỗi người chọn một cách học có thể áp dụng ngày mai.",
+          "learner": "Nói một câu bắt đầu bằng 我一边… hoặc 这个句子…."
+        }
+      ],
+      "vocabulary": [
+        [
+          "练习",
+          "liànxí",
+          "luyện tập",
+          "luyện tập; bài tập",
+          "✍️"
+        ],
+        [
+          "生词",
+          "shēngcí",
+          "sinh từ",
+          "từ mới",
+          "🔤"
+        ],
+        [
+          "句子",
+          "jùzi",
+          "cú tử",
+          "câu",
+          "💬"
+        ],
+        [
+          "懂",
+          "dǒng",
+          "đổng",
+          "hiểu",
+          "💡"
+        ],
+        [
+          "清楚",
+          "qīngchu",
+          "thanh sở",
+          "rõ ràng; rõ",
+          "🔎"
+        ],
+        [
+          "记得",
+          "jìde",
+          "kí đắc",
+          "nhớ; còn nhớ",
+          "🧠"
+        ],
+        [
+          "忘记",
+          "wàngjì",
+          "vong kí",
+          "quên",
+          "❔"
+        ],
+        [
+          "方法",
+          "fāngfǎ",
+          "phương pháp",
+          "phương pháp; cách làm",
+          "🛠️"
+        ],
+        [
+          "笔记",
+          "bǐjì",
+          "bút kí",
+          "ghi chép; vở ghi",
+          "📓"
+        ],
+        [
+          "问题",
+          "wèntí",
+          "vấn đề",
+          "câu hỏi; vấn đề",
+          "❓"
+        ],
+        [
+          "回答",
+          "huídá",
+          "hồi đáp",
+          "trả lời; câu trả lời",
+          "🗣️"
+        ],
+        [
+          "进步",
+          "jìnbù",
+          "tiến bộ",
+          "tiến bộ",
+          "🌱"
+        ]
+      ],
+      "grammar": [
+        [
+          "Nói kết quả của hành động",
+          "Động từ + 完 / 懂 / 好",
+          "完 cho biết hoàn thành; 懂 cho biết hiểu sau khi nghe hoặc đọc; 好 nhấn mạnh làm xong và đạt yêu cầu trong ngữ cảnh.",
+          "我已经做完练习了。",
+          "Wǒ yǐjīng zuò wán liànxí le.",
+          "Tôi đã làm xong bài tập rồi."
+        ],
+        [
+          "Hai hành động đồng thời",
+          "一边 + hành động 1，一边 + hành động 2",
+          "Dùng khi một người thực hiện hai hành động đồng thời hoặc trong cùng một quá trình. Không dùng cho hai việc buộc phải làm trước sau.",
+          "我一边听录音，一边写笔记。",
+          "Wǒ yìbiān tīng lùyīn, yìbiān xiě bǐjì.",
+          "Tôi vừa nghe bản ghi âm vừa ghi chép."
+        ],
+        [
+          "Có thể đạt được kết quả",
+          "Động từ + 得 / 不 + bổ ngữ kết quả",
+          "看得懂 là đọc và có thể hiểu; 看不懂 là đọc nhưng không hiểu được. 得 ở đây đọc nhẹ, không phải 得 děi nghĩa là phải.",
+          "这个句子我看得懂。",
+          "Zhège jùzi wǒ kàn de dǒng.",
+          "Câu này tôi đọc hiểu được."
+        ]
+      ],
+      "dialogue": [
+        [
+          "An",
+          "你做完今天的练习了吗？",
+          "Nǐ zuò wán jīntiān de liànxí le ma?",
+          "Bạn làm xong bài tập hôm nay chưa?"
+        ],
+        [
+          "Minh",
+          "做完了，但是最后一个句子我看不懂。",
+          "Zuò wán le, dànshì zuìhòu yí ge jùzi wǒ kàn bu dǒng.",
+          "Xong rồi, nhưng câu cuối tôi đọc không hiểu."
+        ],
+        [
+          "An",
+          "我们一起看看。你觉得哪个词比较难？",
+          "Wǒmen yìqǐ kànkan. Nǐ juéde nǎ ge cí bǐjiào nán?",
+          "Mình cùng xem nhé. Bạn thấy từ nào khá khó?"
+        ],
+        [
+          "Minh",
+          "这个词我忘记了，你能再说一遍吗？",
+          "Zhège cí wǒ wàngjì le, nǐ néng zài shuō yí biàn ma?",
+          "Tôi quên từ này rồi, bạn nói lại một lần được không?"
+        ],
+        [
+          "An",
+          "可以。你一边听，一边写笔记吧。",
+          "Kěyǐ. Nǐ yìbiān tīng, yìbiān xiě bǐjì ba.",
+          "Được. Bạn vừa nghe vừa ghi chép nhé."
+        ],
+        [
+          "Minh",
+          "现在我听懂了，谢谢你的帮助！",
+          "Xiànzài wǒ tīng dǒng le, xièxie nǐ de bāngzhù!",
+          "Bây giờ tôi nghe hiểu rồi, cảm ơn bạn đã giúp!"
+        ]
+      ],
+      "reading": {
+        "hanzi": "小安以前只读生词，很少写句子。现在她换了学习方法，每天一边听录音，一边做笔记。遇到看不懂的句子，她先问同学，再请老师解释。一个月以后，她发现自己进步了，也更愿意开口说汉语。",
+        "pinyin": "Xiǎo Ān yǐqián zhǐ dú shēngcí, hěn shǎo xiě jùzi. Xiànzài tā huàn le xuéxí fāngfǎ, měitiān yìbiān tīng lùyīn, yìbiān zuò bǐjì. Yùdào kàn bu dǒng de jùzi, tā xiān wèn tóngxué, zài qǐng lǎoshī jiěshì. Yí ge yuè yǐhòu, tā fāxiàn zìjǐ jìnbù le, yě gèng yuànyì kāikǒu shuō Hànyǔ.",
+        "meaning": "Trước đây An chỉ đọc từ mới, ít viết câu. Giờ cô đổi phương pháp, mỗi ngày vừa nghe ghi âm vừa ghi chép. Gặp câu đọc không hiểu, cô hỏi bạn trước rồi nhờ giáo viên giải thích. Sau một tháng, cô thấy mình tiến bộ và sẵn sàng nói tiếng Trung hơn."
+      },
+      "practice": [
+        "Viết ba câu nói đã làm xong, nghe hiểu hoặc đọc hiểu một nội dung.",
+        "Đóng vai người chưa hiểu một câu và người giải thích; dùng 看不懂 và 再说一遍.",
+        "Nêu hai hoạt động có thể thực hiện đồng thời và ghép bằng 一边…一边…."
+      ],
+      "homework": "Đọc một đoạn tiếng Trung ngắn, ghi ba từ mới và hai câu chưa hiểu. Viết bốn câu mô tả cách bạn sẽ xử lý những chỗ khó.",
+      "sentenceTokens": [
+        "我",
+        "一边",
+        "听录音",
+        "一边",
+        "写笔记"
+      ],
+      "sentenceMeaning": "Tôi vừa nghe ghi âm vừa ghi chép.",
+      "sentenceAlternatives": [
+        "我一边写笔记一边听录音"
+      ],
+      "mistake": {
+        "wrong": "这个句子我看不明白得。",
+        "correct": "这个句子我看不明白。",
+        "explanation": "Bổ ngữ khả năng phủ định có dạng động từ + 不 + bổ ngữ, như 看不明白 hoặc 看不懂; không thêm 得 ở cuối."
+      },
+      "quiz": [
+        {
+          "question": "“笔记” trong ngữ cảnh học tập nghĩa là gì?",
+          "choices": [
+            "Ghi chép",
+            "Kỳ nghỉ",
+            "Bữa sáng"
+          ],
+          "correct": "Ghi chép",
+          "explanation": "做笔记 hoặc 写笔记 đều nói việc ghi chép."
+        },
+        {
+          "question": "我已经做___练习了。 Chọn bổ ngữ chỉ hoàn thành.",
+          "choices": [
+            "完",
+            "比",
+            "从"
+          ],
+          "correct": "完",
+          "explanation": "做完 là làm xong; 完 đứng ngay sau động từ 做."
+        },
+        {
+          "question": "Muốn nói “Tôi đọc câu này không hiểu”, chọn câu nào?",
+          "choices": [
+            "这个句子我看不懂。",
+            "这个句子我不懂看。",
+            "这个句子我看懂不。"
+          ],
+          "correct": "这个句子我看不懂。",
+          "explanation": "Trật tự của bổ ngữ khả năng phủ định là 看 + 不 + 懂."
+        },
+        {
+          "question": "一边…一边… phù hợp với tình huống nào?",
+          "choices": [
+            "Vừa nghe ghi âm vừa ghi chú",
+            "Làm bài xong rồi mới đi ngủ",
+            "Hôm qua đi học, tuần sau đi chơi"
+          ],
+          "correct": "Vừa nghe ghi âm vừa ghi chú",
+          "explanation": "Hai hành động diễn ra đồng thời nên dùng 一边…一边…."
+        },
+        {
+          "question": "Theo hội thoại, Minh gặp khó khăn ở phần nào?",
+          "choices": [
+            "Câu cuối của bài tập",
+            "Toàn bộ bài nghe",
+            "Ngày thi"
+          ],
+          "correct": "Câu cuối của bài tập",
+          "explanation": "Minh nói 最后一个句子我看不懂."
+        },
+        {
+          "question": "Theo bài đọc, trước đây An ít làm việc gì?",
+          "choices": [
+            "写句子",
+            "读生词",
+            "看手机"
+          ],
+          "correct": "写句子",
+          "explanation": "Bài đọc nêu 她很少写句子, nghĩa là cô ấy ít viết câu."
+        },
+        {
+          "question": "Gặp câu không hiểu, An hỏi ai trước?",
+          "choices": [
+            "同学",
+            "老师",
+            "妈妈"
+          ],
+          "correct": "同学",
+          "explanation": "Trình tự là 先问同学，再请老师解释."
+        },
+        {
+          "question": "“我听懂了” nhấn mạnh điều gì?",
+          "choices": [
+            "Đã nghe và hiểu được",
+            "Đang chuẩn bị nghe",
+            "Không thể nghe được"
+          ],
+          "correct": "Đã nghe và hiểu được",
+          "explanation": "听懂 nêu kết quả hiểu sau khi nghe; 了 cho biết kết quả đã đạt được trong ngữ cảnh."
+        }
+      ]
+    },
+    {
+      "title": "Đi lại và tìm đường trong thành phố",
+      "topic": [
+        "我终于找到地铁站了。",
+        "Wǒ zhōngyú zhǎo dào dìtiězhàn le.",
+        "Cuối cùng tôi đã tìm thấy ga tàu điện ngầm."
+      ],
+      "description": "Hỏi thời gian di chuyển, xác nhận đã tìm thấy địa điểm và phân biệt hướng về gần hay đi xa người nói.",
+      "objectives": [
+        "Hỏi và trả lời được thời gian đi từ nơi này đến nơi khác.",
+        "Dùng 找到 để nói kết quả tìm kiếm địa điểm.",
+        "Dùng 过来 / 过去 đúng theo vị trí của người nói trong tình huống đơn giản."
+      ],
+      "preparation": [
+        "Chuẩn bị bản đồ đơn giản có trường học, ga, cửa hàng và hai lối vào.",
+        "Ôn 左、右、前、后 và mẫu hỏi 怎么走."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động trên bản đồ",
+          "minutes": 5,
+          "teacher": "Đặt câu hỏi về đường từ trường đến ga, cho người học chỉ hướng.",
+          "learner": "Dùng 左、右、前 để mô tả hai bước đi."
+        },
+        {
+          "title": "Từ vựng di chuyển",
+          "minutes": 10,
+          "teacher": "Giới thiệu từ qua bản đồ; phân biệt 入口 với 出口 và 找 với 找到.",
+          "learner": "Dán nhãn các vị trí, đọc từ và đặt câu hỏi ngắn."
+        },
+        {
+          "title": "Thời gian, kết quả và hướng",
+          "minutes": 15,
+          "teacher": "Dạy 从…到…要…; minh họa 找到 và 过来/过去 bằng vị trí trong lớp.",
+          "learner": "Hỏi đáp về ba tuyến đường và thực hiện chỉ dẫn di chuyển."
+        },
+        {
+          "title": "Nghe vai và đọc tình huống",
+          "minutes": 15,
+          "teacher": "Đọc hội thoại rồi yêu cầu xác định đường đi; hướng dẫn đọc câu chuyện đi nhầm hướng.",
+          "learner": "Đóng vai người hỏi đường và người chỉ đường; tóm tắt cách nhân vật đến ga."
+        },
+        {
+          "title": "Giải quyết đường đi",
+          "minutes": 15,
+          "teacher": "Cho hai bản đồ hơi khác nhau để học viên hỏi thông tin thiếu.",
+          "learner": "Tạo hội thoại bốn lượt, sắp xếp câu và làm mini test."
+        },
+        {
+          "title": "Chốt vị trí của người nói",
+          "minutes": 5,
+          "teacher": "Đổi vị trí đứng để kiểm tra lại 来 và 去.",
+          "learner": "Nói một câu 过来 và một câu 过去 với động tác phù hợp."
+        }
+      ],
+      "vocabulary": [
+        [
+          "地图",
+          "dìtú",
+          "địa đồ",
+          "bản đồ",
+          "🗺️"
+        ],
+        [
+          "车站",
+          "chēzhàn",
+          "xa trạm",
+          "bến xe; nhà ga",
+          "🚏"
+        ],
+        [
+          "地铁",
+          "dìtiě",
+          "địa thiết",
+          "tàu điện ngầm",
+          "🚇"
+        ],
+        [
+          "换车",
+          "huàn chē",
+          "hoán xa",
+          "đổi xe; chuyển tuyến",
+          "🔄"
+        ],
+        [
+          "经过",
+          "jīngguò",
+          "kinh quá",
+          "đi qua; trải qua",
+          "🚶"
+        ],
+        [
+          "附近",
+          "fùjìn",
+          "phụ cận",
+          "gần đó; khu vực lân cận",
+          "📍"
+        ],
+        [
+          "入口",
+          "rùkǒu",
+          "nhập khẩu",
+          "lối vào",
+          "🚪"
+        ],
+        [
+          "出口",
+          "chūkǒu",
+          "xuất khẩu",
+          "lối ra",
+          "↗️"
+        ],
+        [
+          "方向",
+          "fāngxiàng",
+          "phương hướng",
+          "phương hướng",
+          "🧭"
+        ],
+        [
+          "到达",
+          "dàodá",
+          "đáo đạt",
+          "đến nơi",
+          "🏁"
+        ],
+        [
+          "迟到",
+          "chídào",
+          "trì đáo",
+          "đến muộn",
+          "⏰"
+        ],
+        [
+          "终于",
+          "zhōngyú",
+          "chung vu",
+          "cuối cùng thì",
+          "🙌"
+        ]
+      ],
+      "grammar": [
+        [
+          "Hỏi thời gian di chuyển",
+          "从 + A + 到 + B + 要 + bao lâu / thời lượng",
+          "从 giới thiệu điểm bắt đầu, 到 giới thiệu điểm đến. 要 trong mẫu này nói thời gian cần dùng.",
+          "从学校到车站要十分钟。",
+          "Cóng xuéxiào dào chēzhàn yào shí fēnzhōng.",
+          "Từ trường đến bến xe mất mười phút."
+        ],
+        [
+          "Đạt được kết quả với 到",
+          "Động từ + 到",
+          "Trong 找到、听到、看到, 到 làm bổ ngữ kết quả. 找 nói hành động tìm; 找到 cho biết đã tìm thấy.",
+          "我终于找到地铁站了。",
+          "Wǒ zhōngyú zhǎo dào dìtiězhàn le.",
+          "Cuối cùng tôi đã tìm thấy ga tàu điện ngầm."
+        ],
+        [
+          "Hướng về phía người nói hoặc ra xa",
+          "Động từ + 过来 / 过去",
+          "过来 chỉ di chuyển về phía người nói hoặc điểm nhìn được chọn. 过去 chỉ di chuyển sang phía xa người nói trong tình huống cụ thể.",
+          "我在入口，你走过来吧。",
+          "Wǒ zài rùkǒu, nǐ zǒu guòlai ba.",
+          "Tôi ở lối vào, bạn đi lại đây nhé."
+        ]
+      ],
+      "dialogue": [
+        [
+          "Minh",
+          "请问，附近有地铁站吗？",
+          "Qǐngwèn, fùjìn yǒu dìtiězhàn ma?",
+          "Xin hỏi, gần đây có ga tàu điện ngầm không?"
+        ],
+        [
+          "Người đi đường",
+          "有，往前走，经过商店以后向右转。",
+          "Yǒu, wǎng qián zǒu, jīngguò shāngdiàn yǐhòu xiàng yòu zhuǎn.",
+          "Có, đi về phía trước, qua cửa hàng rồi rẽ phải."
+        ],
+        [
+          "Minh",
+          "从这儿走到地铁站要多长时间？",
+          "Cóng zhèr zǒu dào dìtiězhàn yào duō cháng shíjiān?",
+          "Đi bộ từ đây đến ga mất bao lâu?"
+        ],
+        [
+          "Người đi đường",
+          "大概十分钟，入口就在银行旁边。",
+          "Dàgài shí fēnzhōng, rùkǒu jiù zài yínháng pángbiān.",
+          "Khoảng mười phút, lối vào ở ngay cạnh ngân hàng."
+        ],
+        [
+          "Minh",
+          "我看到地图了，谢谢您！",
+          "Wǒ kàn dào dìtú le, xièxie nín!",
+          "Tôi thấy bản đồ rồi, cảm ơn bác!"
+        ],
+        [
+          "Người đi đường",
+          "不客气。注意方向，别走错了。",
+          "Bú kèqi. Zhùyì fāngxiàng, bié zǒu cuò le.",
+          "Không có gì. Chú ý hướng đi, đừng đi nhầm nhé."
+        ]
+      ],
+      "reading": {
+        "hanzi": "今天小明第一次坐地铁去学校。他先看地图，可是走错了方向。在商店门口，他问了一位老人。老人告诉他往回走，再向左转。十分钟后，小明终于找到入口，也按时到达了学校，没有迟到。",
+        "pinyin": "Jīntiān Xiǎo Míng dì yī cì zuò dìtiě qù xuéxiào. Tā xiān kàn dìtú, kěshì zǒu cuò le fāngxiàng. Zài shāngdiàn ménkǒu, tā wèn le yí wèi lǎorén. Lǎorén gàosu tā wǎng huí zǒu, zài xiàng zuǒ zhuǎn. Shí fēnzhōng hòu, Xiǎo Míng zhōngyú zhǎo dào rùkǒu, yě ànshí dàodá le xuéxiào, méiyǒu chídào.",
+        "meaning": "Hôm nay Minh lần đầu đi tàu điện ngầm đến trường. Cậu xem bản đồ trước nhưng đi nhầm hướng. Ở cửa hàng, cậu hỏi một cụ già. Cụ bảo cậu đi ngược lại rồi rẽ trái. Mười phút sau Minh tìm được lối vào và đến trường đúng giờ, không bị muộn."
+      },
+      "practice": [
+        "Dựa vào bản đồ, hỏi và trả lời thời gian đi từ ba địa điểm khác nhau.",
+        "Đứng ở hai vị trí trong phòng và dùng 过来 / 过去 để hướng dẫn bạn di chuyển.",
+        "Kể lại việc Minh tìm được ga bằng ba câu có 先、再、终于."
+      ],
+      "homework": "Vẽ đường từ nhà đến một địa điểm quen thuộc. Viết năm câu chỉ đường, nêu thời gian cần đi và một mốc nhận biết.",
+      "sentenceTokens": [
+        "我",
+        "终于",
+        "找到",
+        "地铁站",
+        "了"
+      ],
+      "sentenceMeaning": "Cuối cùng tôi đã tìm thấy ga tàu điện ngầm.",
+      "sentenceAlternatives": [
+        "我终于找到了地铁站",
+        "终于我找到地铁站了",
+        "终于我找到了地铁站"
+      ],
+      "mistake": {
+        "wrong": "我找地铁站到了。",
+        "correct": "我找到地铁站了。",
+        "explanation": "Bổ ngữ kết quả 到 đứng ngay sau động từ 找, trước tân ngữ 地铁站."
+      },
+      "quiz": [
+        {
+          "question": "Trong bài này, “入口” nghĩa là gì?",
+          "choices": [
+            "Lối vào",
+            "Lối ra",
+            "Vé tàu"
+          ],
+          "correct": "Lối vào",
+          "explanation": "入口 là lối vào; 出口 là lối ra."
+        },
+        {
+          "question": "从学校___车站要十分钟。 Điền từ còn thiếu.",
+          "choices": [
+            "到",
+            "把",
+            "被"
+          ],
+          "correct": "到",
+          "explanation": "Mẫu 从 A 到 B chỉ từ điểm A đến điểm B."
+        },
+        {
+          "question": "Câu nào khẳng định đã tìm thấy nhà ga?",
+          "choices": [
+            "我找到车站了。",
+            "我想找车站。",
+            "我正在找车站。"
+          ],
+          "correct": "我找到车站了。",
+          "explanation": "找到 nêu kết quả tìm thấy; hai câu còn lại chỉ dự định hoặc đang tìm."
+        },
+        {
+          "question": "Người nói đứng ở cửa và gọi bạn lại gần mình. Chọn câu phù hợp.",
+          "choices": [
+            "你走过来吧。",
+            "你走过去吧。",
+            "你已经走了。"
+          ],
+          "correct": "你走过来吧。",
+          "explanation": "过来 chỉ hướng di chuyển về phía người nói."
+        },
+        {
+          "question": "Theo hội thoại, lối vào ga ở đâu?",
+          "choices": [
+            "银行旁边",
+            "学校里面",
+            "医院后面"
+          ],
+          "correct": "银行旁边",
+          "explanation": "Người chỉ đường nói 入口就在银行旁边."
+        },
+        {
+          "question": "Theo bài đọc, ai chỉ đường cho Minh?",
+          "choices": [
+            "一位老人",
+            "一位老师",
+            "一个同学"
+          ],
+          "correct": "一位老人",
+          "explanation": "Minh hỏi một cụ già ở cửa hàng."
+        },
+        {
+          "question": "Theo bài đọc, Minh có đến trường muộn không?",
+          "choices": [
+            "Không, cậu đến đúng giờ",
+            "Có, cậu muộn mười phút",
+            "Cậu không đến trường"
+          ],
+          "correct": "Không, cậu đến đúng giờ",
+          "explanation": "Câu cuối nêu 按时到达了学校，没有迟到."
+        }
+      ]
+    },
+    {
+      "title": "Chuẩn bị chuyến đi và đặt phòng",
+      "topic": [
+        "请帮我订一间房。",
+        "Qǐng bāng wǒ dìng yì jiān fáng.",
+        "Xin giúp tôi đặt một phòng."
+      ],
+      "description": "Trao đổi thông tin chuyến đi, kể kinh nghiệm đã có và nhấn mạnh thời điểm hoặc phương tiện của một việc đã xảy ra.",
+      "objectives": [
+        "Nêu được ngày đi, số đêm ở và vật cần mang trong một chuyến đi.",
+        "Dùng 过 để kể trải nghiệm và 是…的 để hỏi chi tiết việc đã xảy ra.",
+        "Dùng 一…就… để nối hai hành động xảy ra sát nhau."
+      ],
+      "preparation": [
+        "Chuẩn bị phiếu đặt phòng giả định có ngày đến, ngày đi và số người.",
+        "Ôn ngày tháng, số đếm, 次 và các phương tiện giao thông."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động: chuyến đi gần nhất",
+          "minutes": 5,
+          "teacher": "Hỏi học viên đã từng đi đâu; giữ câu trả lời ngắn và không yêu cầu thông tin riêng tư.",
+          "learner": "Kể một chuyến đi thật hoặc tưởng tượng."
+        },
+        {
+          "title": "Từ vựng chuẩn bị hành lý",
+          "minutes": 10,
+          "teacher": "Dùng hình hoặc thẻ từ để phân biệt hành lý, phòng, vé và giấy tờ.",
+          "learner": "Chọn sáu thứ hoặc việc cần chuẩn bị trước khi đi."
+        },
+        {
+          "title": "Trải nghiệm và chi tiết quá khứ",
+          "minutes": 15,
+          "teacher": "So sánh 去过 với 是去年去的; trình bày 一到…就… bằng lịch trình.",
+          "learner": "Đặt một câu trải nghiệm, một câu hỏi chi tiết và một câu nối hành động."
+        },
+        {
+          "title": "Đặt phòng và đọc lịch trình",
+          "minutes": 15,
+          "teacher": "Phân vai khách và nhân viên; cho tìm số đêm, ngày đến và việc làm sau khi đến nơi.",
+          "learner": "Điền phiếu đặt phòng từ hội thoại rồi tóm tắt bài đọc."
+        },
+        {
+          "title": "Tình huống du lịch",
+          "minutes": 15,
+          "teacher": "Thay ngày đi và số người trên phiếu để buộc học viên trao đổi thông tin.",
+          "learner": "Đóng vai đặt phòng, làm sắp xếp câu và mini test."
+        },
+        {
+          "title": "Kiểm tra trước chuyến đi",
+          "minutes": 5,
+          "teacher": "Yêu cầu mỗi người nhắc một việc cần kiểm tra và một việc làm khi đến nơi.",
+          "learner": "Nói hai câu gắn với kế hoạch chuyến đi của mình."
+        }
+      ],
+      "vocabulary": [
+        [
+          "旅行",
+          "lǚxíng",
+          "lữ hành",
+          "đi du lịch; chuyến đi",
+          "🧳"
+        ],
+        [
+          "护照",
+          "hùzhào",
+          "hộ chiếu",
+          "hộ chiếu",
+          "🛂"
+        ],
+        [
+          "行李",
+          "xíngli",
+          "hành lí",
+          "hành lý",
+          "🎒"
+        ],
+        [
+          "宾馆",
+          "bīnguǎn",
+          "tân quán",
+          "khách sạn",
+          "🏨"
+        ],
+        [
+          "房间",
+          "fángjiān",
+          "phòng gian",
+          "phòng",
+          "🛏️"
+        ],
+        [
+          "订",
+          "dìng",
+          "đính",
+          "đặt trước; đặt mua",
+          "📅"
+        ],
+        [
+          "机票",
+          "jīpiào",
+          "cơ phiếu",
+          "vé máy bay",
+          "🎫"
+        ],
+        [
+          "出发",
+          "chūfā",
+          "xuất phát",
+          "khởi hành",
+          "🛫"
+        ],
+        [
+          "离开",
+          "líkāi",
+          "li khai",
+          "rời đi",
+          "🚶"
+        ],
+        [
+          "检查",
+          "jiǎnchá",
+          "kiểm tra",
+          "kiểm tra",
+          "🔍"
+        ],
+        [
+          "带",
+          "dài",
+          "đái",
+          "mang theo; dẫn theo",
+          "👜"
+        ],
+        [
+          "地址",
+          "dìzhǐ",
+          "địa chỉ",
+          "địa chỉ",
+          "📍"
+        ]
+      ],
+      "grammar": [
+        [
+          "Kể trải nghiệm",
+          "Chủ ngữ + động từ + 过 + tân ngữ",
+          "过 nói đã từng trải nghiệm một việc. Có thể thêm số lần; không dùng 过 để chỉ riêng một hành động đang diễn ra.",
+          "我去过上海两次。",
+          "Wǒ qù guo Shànghǎi liǎng cì.",
+          "Tôi đã từng đến Thượng Hải hai lần."
+        ],
+        [
+          "Nhấn mạnh chi tiết việc đã xảy ra",
+          "Chủ ngữ + 是 + thời gian / cách thức / địa điểm + động từ + 的",
+          "Khi người nói và người nghe đã biết sự việc có xảy ra, 是…的 dùng để hỏi hoặc nhấn mạnh thời gian, nơi chốn, cách thức của việc đó.",
+          "我是坐火车来的。",
+          "Wǒ shì zuò huǒchē lái de.",
+          "Tôi đến đây bằng tàu hỏa."
+        ],
+        [
+          "Việc thứ hai xảy ra ngay sau việc thứ nhất",
+          "一 + hành động 1，就 + hành động 2",
+          "一…就… diễn tả vừa xảy ra việc đầu thì việc sau xảy ra hoặc được thực hiện ngay.",
+          "我一到宾馆，就给你打电话。",
+          "Wǒ yí dào bīnguǎn, jiù gěi nǐ dǎ diànhuà.",
+          "Tôi vừa đến khách sạn là gọi cho bạn ngay."
+        ]
+      ],
+      "dialogue": [
+        [
+          "Khách",
+          "您好，我想订一间房。",
+          "Nín hǎo, wǒ xiǎng dìng yì jiān fáng.",
+          "Chào anh/chị, tôi muốn đặt một phòng."
+        ],
+        [
+          "Nhân viên",
+          "您哪天来，住几个晚上？",
+          "Nín nǎ tiān lái, zhù jǐ ge wǎnshang?",
+          "Anh/chị đến ngày nào và ở mấy đêm?"
+        ],
+        [
+          "Khách",
+          "我星期五来，住两个晚上。",
+          "Wǒ xīngqīwǔ lái, zhù liǎng ge wǎnshang.",
+          "Tôi đến thứ Sáu và ở hai đêm."
+        ],
+        [
+          "Nhân viên",
+          "好的。您以前来过我们宾馆吗？",
+          "Hǎo de. Nín yǐqián lái guo wǒmen bīnguǎn ma?",
+          "Vâng. Trước đây anh/chị đã từng đến khách sạn chúng tôi chưa?"
+        ],
+        [
+          "Khách",
+          "来过，我是去年和朋友一起来的。",
+          "Lái guo, wǒ shì qùnián hé péngyou yìqǐ lái de.",
+          "Rồi, năm ngoái tôi đến cùng bạn."
+        ],
+        [
+          "Nhân viên",
+          "欢迎您再来。出发前请检查一下我们的地址。",
+          "Huānyíng nín zài lái. Chūfā qián qǐng jiǎnchá yíxià wǒmen de dìzhǐ.",
+          "Rất vui được đón anh/chị trở lại. Trước khi đi, vui lòng kiểm tra lại địa chỉ của chúng tôi."
+        ]
+      ],
+      "reading": {
+        "hanzi": "小兰下周要去上海旅行。她已经订好了机票和宾馆，准备住三个晚上。出发前，她检查了护照，也把宾馆地址写在本子上。她打算一到宾馆就给家人打电话，然后和朋友一起去附近看看。",
+        "pinyin": "Xiǎo Lán xià zhōu yào qù Shànghǎi lǚxíng. Tā yǐjīng dìng hǎo le jīpiào hé bīnguǎn, zhǔnbèi zhù sān ge wǎnshang. Chūfā qián, tā jiǎnchá le hùzhào, yě bǎ bīnguǎn dìzhǐ xiě zài běnzi shàng. Tā dǎsuàn yí dào bīnguǎn jiù gěi jiārén dǎ diànhuà, ránhòu hé péngyou yìqǐ qù fùjìn kànkan.",
+        "meaning": "Tuần sau Lan sẽ đi Thượng Hải du lịch. Cô đã đặt vé máy bay và khách sạn, định ở ba đêm. Trước khi khởi hành, cô kiểm tra hộ chiếu và ghi địa chỉ khách sạn vào sổ. Cô định vừa đến khách sạn là gọi cho gia đình, rồi cùng bạn đi xem khu vực gần đó."
+      },
+      "practice": [
+        "Đóng vai đặt phòng: nêu ngày đến, số đêm và hỏi địa chỉ.",
+        "Viết hai câu đã từng trải nghiệm với 过, rồi hỏi thêm một chi tiết bằng 是…的.",
+        "Kể ba bước sau khi đến khách sạn, dùng 一…就… và 然后."
+      ],
+      "homework": "Viết một lịch trình du lịch sáu câu, có một trải nghiệm cũ, một việc cần chuẩn bị và một hành động sẽ làm ngay khi đến nơi.",
+      "sentenceTokens": [
+        "我",
+        "一到宾馆",
+        "就",
+        "给家人",
+        "打电话"
+      ],
+      "sentenceMeaning": "Tôi vừa đến khách sạn là gọi điện cho gia đình ngay.",
+      "sentenceAlternatives": [
+        "一到宾馆我就给家人打电话"
+      ],
+      "mistake": {
+        "wrong": "我是坐火车的来。",
+        "correct": "我是坐火车来的。",
+        "explanation": "Trong câu nhấn mạnh cách đến nơi, 的 đặt sau cụm động từ 来, không đặt trước 来."
+      },
+      "quiz": [
+        {
+          "question": "“行李” nghĩa là gì?",
+          "choices": [
+            "Hành lý",
+            "Địa chỉ",
+            "Vé máy bay"
+          ],
+          "correct": "Hành lý",
+          "explanation": "行李 là đồ đạc mang theo trong chuyến đi."
+        },
+        {
+          "question": "Điền động từ: 我想___一间房。",
+          "choices": [
+            "订",
+            "穿",
+            "借给"
+          ],
+          "correct": "订",
+          "explanation": "订房 là đặt phòng trước."
+        },
+        {
+          "question": "Câu nào nói một trải nghiệm đã từng có?",
+          "choices": [
+            "我去过上海。",
+            "我正在去上海。",
+            "我明天去上海。"
+          ],
+          "correct": "我去过上海。",
+          "explanation": "过 đánh dấu trải nghiệm đã từng đến Thượng Hải."
+        },
+        {
+          "question": "“我是坐火车来的” nhấn mạnh thông tin nào?",
+          "choices": [
+            "Phương tiện đến nơi",
+            "Số người đi cùng",
+            "Thời gian ở khách sạn"
+          ],
+          "correct": "Phương tiện đến nơi",
+          "explanation": "坐火车 là cách thức di chuyển được đặt trong khung 是…的."
+        },
+        {
+          "question": "我一到宾馆，___给你打电话。 Điền từ nối.",
+          "choices": [
+            "就",
+            "虽然",
+            "把"
+          ],
+          "correct": "就",
+          "explanation": "一…就… nối việc đến khách sạn với việc gọi điện ngay sau đó."
+        },
+        {
+          "question": "Theo hội thoại, khách muốn ở mấy đêm?",
+          "choices": [
+            "两个晚上",
+            "三个晚上",
+            "五个晚上"
+          ],
+          "correct": "两个晚上",
+          "explanation": "Khách nói 住两个晚上; đừng nhầm với ba đêm trong bài đọc."
+        },
+        {
+          "question": "Theo bài đọc, Lan ghi thông tin gì vào sổ?",
+          "choices": [
+            "宾馆地址",
+            "朋友的生日",
+            "机票价格"
+          ],
+          "correct": "宾馆地址",
+          "explanation": "Cô ghi địa chỉ khách sạn: 把宾馆地址写在本子上."
+        },
+        {
+          "question": "Theo bài đọc, Lan sẽ làm gì ngay khi đến khách sạn?",
+          "choices": [
+            "给家人打电话",
+            "买一张地图",
+            "回学校上课"
+          ],
+          "correct": "给家人打电话",
+          "explanation": "Cô dự định 一到宾馆就给家人打电话."
+        }
+      ]
+    },
+    {
+      "title": "Mua sắm và so sánh lựa chọn",
+      "topic": [
+        "这件外套比那件更合适。",
+        "Zhè jiàn wàitào bǐ nà jiàn gèng héshì.",
+        "Chiếc áo khoác này phù hợp hơn chiếc kia."
+      ],
+      "description": "So sánh hai sản phẩm, nhận xét độ phù hợp và giải thích lý do lựa chọn.",
+      "objectives": [
+        "Hỏi được giá, màu sắc và đề nghị thử một món hàng.",
+        "Dùng 比…更… và 跟…一样… để so sánh hai lựa chọn.",
+        "Dùng 不但…而且… để nêu hai ưu điểm có liên quan."
+      ],
+      "preparation": [
+        "Chuẩn bị hai hình sản phẩm có giá, màu và đặc điểm khác nhau.",
+        "Ôn lượng từ 件 và các từ chỉ màu sắc, giá tiền."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động: chọn một món hàng",
+          "minutes": 5,
+          "teacher": "Đưa hai sản phẩm và hỏi học viên muốn chọn món nào, vì sao.",
+          "learner": "Nêu một lựa chọn và một lý do bằng câu ngắn."
+        },
+        {
+          "title": "Từ vựng tại cửa hàng",
+          "minutes": 10,
+          "teacher": "Làm mẫu hỏi giá, xin thử và nói 合适; phân biệt nghĩa tiếng Việt của 价格 và 质量.",
+          "learner": "Đọc thẻ từ rồi hỏi đáp theo thông tin sản phẩm."
+        },
+        {
+          "title": "Ba mẫu so sánh",
+          "minutes": 15,
+          "teacher": "Dạy 比…更…、跟…一样…、不但…而且… bằng hai chiếc áo.",
+          "learner": "Viết ba câu, mỗi câu sử dụng một mẫu vừa học."
+        },
+        {
+          "title": "Mua hàng theo vai",
+          "minutes": 15,
+          "teacher": "Cho đóng vai hội thoại; hướng dẫn tìm màu, giá và quyết định trong bài đọc.",
+          "learner": "Làm khách và nhân viên, sau đó tóm tắt món nhân vật chọn."
+        },
+        {
+          "title": "Giải thích quyết định",
+          "minutes": 15,
+          "teacher": "Đưa thêm giới hạn ngân sách để người học cân nhắc lựa chọn.",
+          "learner": "So sánh hai món bằng bốn câu; làm bài sắp xếp và mini test."
+        },
+        {
+          "title": "Chốt bài",
+          "minutes": 5,
+          "teacher": "Sửa lỗi dùng 很 ngay sau 比 trong mẫu so sánh đang học.",
+          "learner": "Nói một câu so sánh và một câu có hai ưu điểm."
+        }
+      ],
+      "vocabulary": [
+        [
+          "外套",
+          "wàitào",
+          "ngoại sáo",
+          "áo khoác ngoài",
+          "🧥"
+        ],
+        [
+          "合适",
+          "héshì",
+          "hợp thích",
+          "phù hợp; vừa vặn",
+          "✅"
+        ],
+        [
+          "价格",
+          "jiàgé",
+          "giá cách",
+          "giá cả",
+          "🏷️"
+        ],
+        [
+          "便宜",
+          "piányi",
+          "tiện nghi",
+          "rẻ",
+          "💰"
+        ],
+        [
+          "质量",
+          "zhìliàng",
+          "chất lượng",
+          "chất lượng",
+          "🔎"
+        ],
+        [
+          "颜色",
+          "yánsè",
+          "nhan sắc",
+          "màu sắc",
+          "🎨"
+        ],
+        [
+          "试",
+          "shì",
+          "thí",
+          "thử",
+          "👕"
+        ],
+        [
+          "选择",
+          "xuǎnzé",
+          "tuyển trạch",
+          "lựa chọn",
+          "🔀"
+        ],
+        [
+          "件",
+          "jiàn",
+          "kiện",
+          "lượng từ cho quần áo và một số sự việc",
+          "👚"
+        ],
+        [
+          "舒服",
+          "shūfu",
+          "thư phục",
+          "thoải mái; dễ chịu",
+          "🙂"
+        ],
+        [
+          "付款",
+          "fùkuǎn",
+          "phó khoản",
+          "thanh toán",
+          "💳"
+        ],
+        [
+          "一共",
+          "yígòng",
+          "nhất cộng",
+          "tổng cộng",
+          "🧮"
+        ]
+      ],
+      "grammar": [
+        [
+          "So sánh hơn",
+          "A + 比 + B + 更 / 还 + tính từ",
+          "比 giới thiệu đối tượng so sánh. 更 hoặc 还 có thể tăng sắc thái “còn… hơn”; không thêm 很 vào vị trí đó trong mẫu này.",
+          "这件外套比那件更合适。",
+          "Zhè jiàn wàitào bǐ nà jiàn gèng héshì.",
+          "Chiếc áo khoác này phù hợp hơn chiếc kia."
+        ],
+        [
+          "Nói hai thứ giống nhau",
+          "A + 跟 + B + 一样 + tính từ",
+          "一样 cho biết cùng mức độ hoặc giống nhau về đặc điểm được nêu. Phủ định thường dùng 不一样.",
+          "这件跟那件一样舒服。",
+          "Zhè jiàn gēn nà jiàn yíyàng shūfu.",
+          "Chiếc này thoải mái như chiếc kia."
+        ],
+        [
+          "Bổ sung một ưu điểm",
+          "不但 + ý 1，而且 + ý 2",
+          "不但…而且… nêu hai đặc điểm hoặc sự việc cùng đúng, trong đó ý sau bổ sung và nhấn mạnh hơn.",
+          "这件衣服不但好看，而且很舒服。",
+          "Zhè jiàn yīfu búdàn hǎokàn, érqiě hěn shūfu.",
+          "Chiếc áo này không chỉ đẹp mà còn rất thoải mái."
+        ]
+      ],
+      "dialogue": [
+        [
+          "Khách",
+          "我可以试一下这件蓝色外套吗？",
+          "Wǒ kěyǐ shì yíxià zhè jiàn lánsè wàitào ma?",
+          "Tôi có thể thử chiếc áo khoác màu xanh này không?"
+        ],
+        [
+          "Nhân viên",
+          "当然可以。您觉得大小合适吗？",
+          "Dāngrán kěyǐ. Nín juéde dàxiǎo héshì ma?",
+          "Tất nhiên được. Anh/chị thấy kích cỡ có vừa không?"
+        ],
+        [
+          "Khách",
+          "很合适。它跟那件红色的一样贵吗？",
+          "Hěn héshì. Tā gēn nà jiàn hóngsè de yíyàng guì ma?",
+          "Rất vừa. Nó có đắt bằng chiếc màu đỏ kia không?"
+        ],
+        [
+          "Nhân viên",
+          "不一样。蓝色的一百八十块，红色的二百块。",
+          "Bù yíyàng. Lánsè de yì bǎi bāshí kuài, hóngsè de èr bǎi kuài.",
+          "Không. Chiếc màu xanh một trăm tám mươi tệ, chiếc màu đỏ hai trăm tệ."
+        ],
+        [
+          "Khách",
+          "蓝色的不但便宜，而且穿着很舒服。我要这件。",
+          "Lánsè de búdàn piányi, érqiě chuān zhe hěn shūfu. Wǒ yào zhè jiàn.",
+          "Chiếc màu xanh không chỉ rẻ mà mặc còn rất thoải mái. Tôi lấy chiếc này."
+        ],
+        [
+          "Nhân viên",
+          "好的，请到这边付款。",
+          "Hǎo de, qǐng dào zhè biān fùkuǎn.",
+          "Vâng, mời anh/chị sang bên này thanh toán."
+        ]
+      ],
+      "reading": {
+        "hanzi": "小雨想买一件上班穿的外套。她试了两件，红色的很好看，但是有点儿大。蓝色的大小合适，比红色的便宜二十块。她觉得衣服不但要好看，而且要穿着舒服，最后选择了蓝色的。",
+        "pinyin": "Xiǎo Yǔ xiǎng mǎi yí jiàn shàngbān chuān de wàitào. Tā shì le liǎng jiàn, hóngsè de hěn hǎokàn, dànshì yǒudiǎnr dà. Lánsè de dàxiǎo héshì, bǐ hóngsè de piányi èrshí kuài. Tā juéde yīfu búdàn yào hǎokàn, érqiě yào chuān zhe shūfu, zuìhòu xuǎnzé le lánsè de.",
+        "meaning": "Vũ muốn mua một chiếc áo khoác mặc đi làm. Cô thử hai chiếc; chiếc đỏ đẹp nhưng hơi rộng. Chiếc xanh vừa vặn và rẻ hơn chiếc đỏ hai mươi tệ. Cô thấy quần áo không chỉ cần đẹp mà mặc còn phải thoải mái, nên cuối cùng chọn chiếc xanh."
+      },
+      "practice": [
+        "Hỏi giá và xin thử hai món hàng giả định; nói món nào vừa hơn.",
+        "Viết một câu so sánh hơn và một câu so sánh ngang bằng về hai sản phẩm.",
+        "Đóng vai giải thích lựa chọn trong ngân sách cho trước, dùng 不但…而且…."
+      ],
+      "homework": "Chọn hai món đồ trong nhà, viết năm câu so sánh về màu sắc, giá hoặc mức độ tiện dụng; kết luận bạn thích món nào.",
+      "sentenceTokens": [
+        "这件外套",
+        "比",
+        "那件",
+        "更",
+        "合适"
+      ],
+      "sentenceMeaning": "Chiếc áo khoác này phù hợp hơn chiếc kia.",
+      "mistake": {
+        "wrong": "这件外套比那件很合适。",
+        "correct": "这件外套比那件更合适。",
+        "explanation": "Trong mẫu so sánh này dùng tính từ trực tiếp hoặc 更 + tính từ; 很 không diễn đạt ý “hơn” sau 比."
+      },
+      "quiz": [
+        {
+          "question": "Khi thử áo, “合适” thường nghĩa là gì?",
+          "choices": [
+            "Vừa vặn, phù hợp",
+            "Đang giảm cân",
+            "Hết hàng"
+          ],
+          "correct": "Vừa vặn, phù hợp",
+          "explanation": "大小合适 nói kích cỡ vừa; 合适 cũng dùng rộng hơn với nghĩa phù hợp."
+        },
+        {
+          "question": "Điền từ so sánh: 这件外套___那件便宜。",
+          "choices": [
+            "比",
+            "把",
+            "被"
+          ],
+          "correct": "比",
+          "explanation": "A 比 B + tính từ là mẫu so sánh hơn."
+        },
+        {
+          "question": "“这件跟那件一样舒服” diễn tả điều gì?",
+          "choices": [
+            "Hai chiếc thoải mái như nhau",
+            "Chiếc này rẻ hơn",
+            "Chiếc kia không thoải mái"
+          ],
+          "correct": "Hai chiếc thoải mái như nhau",
+          "explanation": "跟…一样舒服 so sánh ngang bằng về độ thoải mái."
+        },
+        {
+          "question": "这件衣服不但好看，___很舒服。 Chọn từ nối.",
+          "choices": [
+            "而且",
+            "所以",
+            "但是"
+          ],
+          "correct": "而且",
+          "explanation": "不但…而且… nêu hai ưu điểm cùng tồn tại."
+        },
+        {
+          "question": "Theo hội thoại, áo màu xanh giá bao nhiêu?",
+          "choices": [
+            "一百八十块",
+            "二百块",
+            "八十块"
+          ],
+          "correct": "一百八十块",
+          "explanation": "Nhân viên báo chiếc xanh 180 tệ và chiếc đỏ 200 tệ."
+        },
+        {
+          "question": "Theo bài đọc, áo đỏ có điểm nào chưa phù hợp?",
+          "choices": [
+            "有点儿大",
+            "太短了",
+            "没有口袋"
+          ],
+          "correct": "有点儿大",
+          "explanation": "Bài đọc nêu chiếc đỏ đẹp nhưng hơi rộng."
+        },
+        {
+          "question": "Theo bài đọc, Vũ mua áo để làm gì?",
+          "choices": [
+            "上班穿",
+            "送给老师",
+            "参加比赛"
+          ],
+          "correct": "上班穿",
+          "explanation": "Ngay câu đầu: 一件上班穿的外套."
+        },
+        {
+          "question": "“一共二百块” có nghĩa là gì?",
+          "choices": [
+            "Tổng cộng hai trăm tệ",
+            "Mỗi ngày hai trăm tệ",
+            "Rẻ hơn hai trăm tệ"
+          ],
+          "correct": "Tổng cộng hai trăm tệ",
+          "explanation": "一共 nêu tổng số hoặc tổng tiền."
+        }
+      ]
+    },
+    {
+      "title": "Sức khỏe và thói quen hằng ngày",
+      "topic": [
+        "最近我睡得越来越好了。",
+        "Zuìjìn wǒ shuì de yuè lái yuè hǎo le.",
+        "Gần đây tôi ngủ ngày càng tốt hơn."
+      ],
+      "description": "Nói thay đổi về thói quen và trạng thái, hỏi thăm người khác và đưa lời nhắc đơn giản.",
+      "objectives": [
+        "Mô tả một trạng thái sức khỏe và một thói quen bằng câu rõ nghĩa.",
+        "Dùng 越来越… và 越…越… để nói sự thay đổi hoặc quan hệ giữa hai mức độ.",
+        "Hiểu 得 đọc děi khi diễn tả việc cần làm và phân biệt với 得 trong 睡得好."
+      ],
+      "preparation": [
+        "Chuẩn bị lịch sinh hoạt một ngày và ba thẻ tình huống hỏi thăm.",
+        "Ôn các từ ngủ, nghỉ ngơi, uống nước và mẫu hỏi 怎么了."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động: hôm nay bạn thế nào",
+          "minutes": 5,
+          "teacher": "Hỏi thăm bằng tình huống giả định, tránh yêu cầu kể bệnh sử cá nhân.",
+          "learner": "Chọn một thẻ và nói trạng thái của nhân vật."
+        },
+        {
+          "title": "Từ vựng thói quen và sức khỏe",
+          "minutes": 10,
+          "teacher": "Giải thích 习惯、精神、注意; đọc mẫu các từ về trạng thái cơ thể.",
+          "learner": "Ghép từ với hình và tạo hai câu mô tả đơn giản."
+        },
+        {
+          "title": "Nói thay đổi và việc cần làm",
+          "minutes": 15,
+          "teacher": "So sánh 越来越 với 越…越…; làm rõ hai cách đọc de/děi của 得.",
+          "learner": "Viết câu về thời tiết hoặc giấc ngủ, rồi nói một việc cần làm."
+        },
+        {
+          "title": "Hỏi thăm và đọc hiểu",
+          "minutes": 15,
+          "teacher": "Phân vai hai người bạn; hỏi nhân vật đã thay đổi thói quen nào.",
+          "learner": "Đọc hội thoại và tìm thông tin cụ thể trong bài đọc."
+        },
+        {
+          "title": "Luyện nói theo tình huống",
+          "minutes": 15,
+          "teacher": "Giao tình huống thức khuya, lịch bận hoặc cần nghỉ; tập trung diễn đạt ngôn ngữ.",
+          "learner": "Đưa lời nhắc lịch sự, sắp xếp câu và làm mini test."
+        },
+        {
+          "title": "Chốt cách dùng",
+          "minutes": 5,
+          "teacher": "Nêu hai câu có 得 để học viên đọc đúng theo chức năng.",
+          "learner": "Đọc câu và giải thích ngắn ý nghĩa của 得 trong mỗi câu."
+        }
+      ],
+      "vocabulary": [
+        [
+          "最近",
+          "zuìjìn",
+          "tối cận",
+          "gần đây",
+          "🗓️"
+        ],
+        [
+          "习惯",
+          "xíguàn",
+          "tập quán",
+          "thói quen; quen với",
+          "🔁"
+        ],
+        [
+          "锻炼",
+          "duànliàn",
+          "đoán luyện",
+          "rèn luyện; tập thể dục",
+          "🏃"
+        ],
+        [
+          "身体",
+          "shēntǐ",
+          "thân thể",
+          "cơ thể; sức khỏe",
+          "🧍"
+        ],
+        [
+          "健康",
+          "jiànkāng",
+          "kiện khang",
+          "khỏe mạnh; sức khỏe",
+          "🌿"
+        ],
+        [
+          "头痛",
+          "tóutòng",
+          "đầu thống",
+          "đau đầu",
+          "🤕"
+        ],
+        [
+          "感冒",
+          "gǎnmào",
+          "cảm mạo",
+          "cảm; bị cảm",
+          "🤧"
+        ],
+        [
+          "发烧",
+          "fāshāo",
+          "phát thiêu",
+          "sốt",
+          "🌡️"
+        ],
+        [
+          "休息",
+          "xiūxi",
+          "hưu tức",
+          "nghỉ ngơi",
+          "🛌"
+        ],
+        [
+          "检查",
+          "jiǎnchá",
+          "kiểm tra",
+          "kiểm tra; khám trong ngữ cảnh phù hợp",
+          "🔍"
+        ],
+        [
+          "注意",
+          "zhùyì",
+          "chú ý",
+          "chú ý",
+          "👀"
+        ],
+        [
+          "精神",
+          "jīngshen",
+          "tinh thần",
+          "tinh thần; sự tỉnh táo",
+          "✨"
+        ]
+      ],
+      "grammar": [
+        [
+          "Thay đổi dần theo thời gian",
+          "越来越 + tính từ / động từ tâm lý",
+          "越来越 diễn tả mức độ tăng dần. Phần sau thường là tính từ hoặc trạng thái tâm lý, không phải một hành động bất kỳ.",
+          "最近我睡得越来越好了。",
+          "Zuìjìn wǒ shuì de yuè lái yuè hǎo le.",
+          "Gần đây tôi ngủ ngày càng tốt hơn."
+        ],
+        [
+          "Hai mức độ thay đổi cùng nhau",
+          "越 + vế 1，越 + vế 2",
+          "Mức độ ở vế thứ nhất thay đổi thì mức độ ở vế thứ hai cũng thay đổi. Chủ ngữ có thể giống hoặc khác nhau.",
+          "天气越热，我越想喝水。",
+          "Tiānqì yuè rè, wǒ yuè xiǎng hē shuǐ.",
+          "Trời càng nóng, tôi càng muốn uống nước."
+        ],
+        [
+          "Nói việc cần làm với 得",
+          "Chủ ngữ + 得（děi）+ hành động",
+          "得 đọc děi có nghĩa là phải/cần làm trong hoàn cảnh cụ thể. Phân biệt với trợ từ 得 đọc nhẹ de trong 睡得好.",
+          "明天要早起，我得早点儿睡觉。",
+          "Míngtiān yào zǎoqǐ, wǒ děi zǎo diǎnr shuìjiào.",
+          "Mai phải dậy sớm, tôi cần ngủ sớm hơn."
+        ]
+      ],
+      "dialogue": [
+        [
+          "An",
+          "你今天怎么没精神？",
+          "Nǐ jīntiān zěnme méi jīngshen?",
+          "Sao hôm nay bạn có vẻ thiếu tỉnh táo?"
+        ],
+        [
+          "Minh",
+          "我昨晚睡得太晚了，现在有点儿头痛。",
+          "Wǒ zuówǎn shuì de tài wǎn le, xiànzài yǒudiǎnr tóutòng.",
+          "Tối qua tôi ngủ muộn quá, giờ hơi đau đầu."
+        ],
+        [
+          "An",
+          "今天事情多吗？有时间休息一下吗？",
+          "Jīntiān shìqing duō ma? Yǒu shíjiān xiūxi yíxià ma?",
+          "Hôm nay bạn có nhiều việc không? Có thời gian nghỉ một chút không?"
+        ],
+        [
+          "Minh",
+          "下午没有课，我准备早点儿回家。",
+          "Xiàwǔ méiyǒu kè, wǒ zhǔnbèi zǎo diǎnr huí jiā.",
+          "Chiều không có tiết, tôi định về nhà sớm hơn."
+        ],
+        [
+          "An",
+          "明天还要早起，你得注意休息。",
+          "Míngtiān hái yào zǎoqǐ, nǐ děi zhùyì xiūxi.",
+          "Mai còn phải dậy sớm, bạn cần chú ý nghỉ ngơi."
+        ],
+        [
+          "Minh",
+          "谢谢。如果一直不舒服，我就去看医生。",
+          "Xièxie. Rúguǒ yìzhí bù shūfu, wǒ jiù qù kàn yīshēng.",
+          "Cảm ơn. Nếu vẫn thấy khó chịu, tôi sẽ đi khám."
+        ]
+      ],
+      "reading": {
+        "hanzi": "小李以前常常很晚才睡觉，早上起床以后没有精神。最近他决定改变这个习惯，晚上少看手机，也安排时间散步。两周以后，他觉得自己睡得越来越好了。周末他和朋友见面，还介绍了自己的新安排。",
+        "pinyin": "Xiǎo Lǐ yǐqián chángcháng hěn wǎn cái shuìjiào, zǎoshang qǐchuáng yǐhòu méiyǒu jīngshen. Zuìjìn tā juédìng gǎibiàn zhège xíguàn, wǎnshang shǎo kàn shǒujī, yě ānpái shíjiān sànbù. Liǎng zhōu yǐhòu, tā juéde zìjǐ shuì de yuè lái yuè hǎo le. Zhōumò tā hé péngyou jiànmiàn, hái jièshào le zìjǐ de xīn ānpái.",
+        "meaning": "Trước đây Lý thường ngủ rất muộn, sáng dậy không tỉnh táo. Gần đây anh quyết định đổi thói quen, buổi tối ít xem điện thoại và dành thời gian đi dạo. Sau hai tuần, anh thấy mình ngủ ngày càng tốt hơn. Cuối tuần gặp bạn, anh còn kể về lịch sinh hoạt mới."
+      },
+      "practice": [
+        "Dùng thẻ tình huống để hỏi thăm và trả lời về trạng thái của một nhân vật.",
+        "Viết một câu 越来越… về sự thay đổi và một câu 越…越… có hai vế.",
+        "Đọc cặp câu 我得休息 / 我睡得很好 và chỉ ra cách đọc, nghĩa của 得."
+      ],
+      "homework": "Viết năm câu về một thói quen muốn điều chỉnh hoặc một nhân vật tưởng tượng. Dùng một câu 越来越… và một câu có 得 děi.",
+      "sentenceTokens": [
+        "最近",
+        "我",
+        "睡得",
+        "越来越",
+        "好",
+        "了"
+      ],
+      "sentenceMeaning": "Gần đây tôi ngủ ngày càng tốt hơn.",
+      "sentenceAlternatives": [
+        "我最近睡得越来越好了"
+      ],
+      "mistake": {
+        "wrong": "天气越热，我想喝水越。",
+        "correct": "天气越热，我越想喝水。",
+        "explanation": "Với ý “càng… càng…”, 越 đứng trước phần biểu thị mức độ thay đổi ở mỗi vế. Ở vế sau, đặt 越 trước 想喝水, không đặt ở cuối câu."
+      },
+      "quiz": [
+        {
+          "question": "“最近” chỉ thời gian nào?",
+          "choices": [
+            "Gần đây",
+            "Năm sau",
+            "Hôm kia"
+          ],
+          "correct": "Gần đây",
+          "explanation": "最近 dùng cho khoảng thời gian gần thời điểm nói."
+        },
+        {
+          "question": "“越来越好” có nghĩa là gì?",
+          "choices": [
+            "Ngày càng tốt hơn",
+            "Tốt giống nhau",
+            "Tốt hơn đúng một lần"
+          ],
+          "correct": "Ngày càng tốt hơn",
+          "explanation": "越来越 mô tả mức độ tăng dần theo thời gian."
+        },
+        {
+          "question": "天气___热，我___想喝水。 Chọn cặp phù hợp với ý “càng… càng…”.",
+          "choices": [
+            "越 / 越",
+            "先 / 再",
+            "虽然 / 但是"
+          ],
+          "correct": "越 / 越",
+          "explanation": "越…越… liên kết hai mức độ thay đổi cùng nhau."
+        },
+        {
+          "question": "Trong “我得早点儿睡觉”, 得 đọc và hiểu thế nào?",
+          "choices": [
+            "děi — phải/cần",
+            "de — trợ từ bổ ngữ",
+            "dé — đạt được"
+          ],
+          "correct": "děi — phải/cần",
+          "explanation": "得 đứng trước hành động cần làm và đọc děi trong câu này."
+        },
+        {
+          "question": "Theo hội thoại, Minh định làm gì vào buổi chiều?",
+          "choices": [
+            "早点儿回家",
+            "继续上课",
+            "去买手机"
+          ],
+          "correct": "早点儿回家",
+          "explanation": "Minh nói chiều không có tiết và định về nhà sớm hơn."
+        },
+        {
+          "question": "Theo bài đọc, trước đây Lý thường có thói quen nào?",
+          "choices": [
+            "Rất muộn mới ngủ",
+            "Dậy lúc bốn giờ",
+            "Mỗi ngày đều đi du lịch"
+          ],
+          "correct": "Rất muộn mới ngủ",
+          "explanation": "Câu đầu nêu 常常很晚才睡觉."
+        },
+        {
+          "question": "Theo bài đọc, Lý cảm nhận thay đổi sau bao lâu?",
+          "choices": [
+            "两周",
+            "两天",
+            "两年"
+          ],
+          "correct": "两周",
+          "explanation": "Bài đọc ghi 两周以后, tức sau hai tuần."
+        }
+      ]
+    },
+    {
+      "title": "Sắp xếp nhà cửa và đồ dùng",
+      "topic": [
+        "请把书放在桌子上。",
+        "Qǐng bǎ shū fàng zài zhuōzi shàng.",
+        "Hãy đặt sách lên bàn."
+      ],
+      "description": "Đưa chỉ dẫn sắp xếp đồ vật, mô tả trạng thái trong phòng và nhấn mạnh mức độ phủ định.",
+      "objectives": [
+        "Dùng câu 把 để yêu cầu đặt hoặc xử lý một đồ vật đã xác định.",
+        "Dùng 着 để mô tả trạng thái đang được duy trì.",
+        "Miêu tả một căn phòng bằng ba đến bốn câu, có vị trí và trạng thái đồ vật."
+      ],
+      "preparation": [
+        "Chuẩn bị hình một phòng chưa gọn và hình sau khi sắp xếp.",
+        "Ôn từ chỉ vị trí 上、下、里、旁边 và động từ 放、开、关."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động: đồ vật ở đâu",
+          "minutes": 5,
+          "teacher": "Cho quan sát hình phòng và hỏi vị trí ba đồ vật.",
+          "learner": "Trả lời bằng 在 + địa điểm."
+        },
+        {
+          "title": "Từ vựng nhà cửa",
+          "minutes": 10,
+          "teacher": "Giới thiệu đồ dùng và động từ sắp xếp; phân biệt 整理 với 打扫 qua ví dụ.",
+          "learner": "Ghép đồ vật với hành động phù hợp và đọc thành câu."
+        },
+        {
+          "title": "Chỉ dẫn và trạng thái",
+          "minutes": 15,
+          "teacher": "Dạy 把 + đồ vật + hành động có kết quả/vị trí; minh họa cửa đang mở với 着.",
+          "learner": "Nói ba chỉ dẫn và hai câu mô tả trạng thái."
+        },
+        {
+          "title": "Hội thoại trong phòng",
+          "minutes": 15,
+          "teacher": "Phân vai hai người cùng dọn phòng; hướng dẫn đọc và tìm vị trí sau khi dọn.",
+          "learner": "Đóng vai và vẽ lại vị trí đồ vật từ bài đọc."
+        },
+        {
+          "title": "Thiết kế góc học tập",
+          "minutes": 15,
+          "teacher": "Giao nhiệm vụ sắp xếp góc học tập và yêu cầu giải thích bằng câu 把.",
+          "learner": "Đưa chỉ dẫn cho bạn, làm sắp xếp câu và mini test."
+        },
+        {
+          "title": "Chốt bài",
+          "minutes": 5,
+          "teacher": "Kiểm tra câu 把 có kết quả hoặc vị trí rõ ràng và sửa câu còn thiếu.",
+          "learner": "Nói một câu chỉ dẫn hoàn chỉnh và một câu dùng 着."
+        }
+      ],
+      "vocabulary": [
+        [
+          "打扫",
+          "dǎsǎo",
+          "đả tảo",
+          "quét dọn; dọn vệ sinh",
+          "🧹"
+        ],
+        [
+          "整理",
+          "zhěnglǐ",
+          "chỉnh lí",
+          "sắp xếp cho gọn",
+          "🗂️"
+        ],
+        [
+          "干净",
+          "gānjìng",
+          "can tịnh",
+          "sạch sẽ",
+          "✨"
+        ],
+        [
+          "屋子",
+          "wūzi",
+          "ốc tử",
+          "căn phòng; căn nhà",
+          "🏠"
+        ],
+        [
+          "桌子",
+          "zhuōzi",
+          "trác tử",
+          "bàn",
+          "🪑"
+        ],
+        [
+          "椅子",
+          "yǐzi",
+          "ỷ tử",
+          "ghế",
+          "🪑"
+        ],
+        [
+          "冰箱",
+          "bīngxiāng",
+          "băng tương",
+          "tủ lạnh",
+          "🧊"
+        ],
+        [
+          "搬",
+          "bān",
+          "ban",
+          "chuyển; mang chuyển",
+          "📦"
+        ],
+        [
+          "放",
+          "fàng",
+          "phóng",
+          "đặt; để",
+          "📚"
+        ],
+        [
+          "关",
+          "guān",
+          "quan",
+          "đóng; tắt",
+          "🚪"
+        ],
+        [
+          "开",
+          "kāi",
+          "khai",
+          "mở; bật",
+          "🔓"
+        ],
+        [
+          "安静",
+          "ānjìng",
+          "an tĩnh",
+          "yên tĩnh",
+          "🤫"
+        ]
+      ],
+      "grammar": [
+        [
+          "Xử lý đồ vật bằng câu 把",
+          "Chủ ngữ + 把 + đồ vật xác định + động từ + kết quả / vị trí",
+          "Câu 把 nêu cách xử lý một đối tượng đã xác định. Phần sau động từ cần diễn đạt đủ kết quả, hướng hoặc vị trí trong các mẫu đang học.",
+          "请把书放在桌子上。",
+          "Qǐng bǎ shū fàng zài zhuōzi shàng.",
+          "Hãy đặt sách lên bàn."
+        ],
+        [
+          "Mô tả trạng thái với 着",
+          "Động từ + 着",
+          "着 đọc nhẹ zhe, diễn tả trạng thái còn tiếp diễn sau một hành động hoặc trạng thái đang được duy trì. 开着 không có nghĩa là đang thực hiện động tác mở.",
+          "窗户开着，屋子里很凉快。",
+          "Chuānghu kāi zhe, wūzi lǐ hěn liángkuai.",
+          "Cửa sổ đang mở, trong phòng rất mát."
+        ],
+        [
+          "Phủ định mạnh một đặc điểm",
+          "一点儿也不 + tính từ / động từ tâm lý",
+          "一点儿也不 nhấn mạnh “không… chút nào”. Nó khác với 有点儿 + tính từ, nghĩa là “hơi…”.",
+          "这个房间一点儿也不小。",
+          "Zhège fángjiān yìdiǎnr yě bù xiǎo.",
+          "Căn phòng này không nhỏ chút nào."
+        ]
+      ],
+      "dialogue": [
+        [
+          "An",
+          "今天我们一起整理房间吧。",
+          "Jīntiān wǒmen yìqǐ zhěnglǐ fángjiān ba.",
+          "Hôm nay mình cùng sắp xếp phòng nhé."
+        ],
+        [
+          "Minh",
+          "好。桌子上的书放在哪儿？",
+          "Hǎo. Zhuōzi shàng de shū fàng zài nǎr?",
+          "Được. Sách trên bàn để ở đâu?"
+        ],
+        [
+          "An",
+          "请把书放在椅子上，我先擦桌子。",
+          "Qǐng bǎ shū fàng zài yǐzi shàng, wǒ xiān cā zhuōzi.",
+          "Bạn đặt sách lên ghế giúp nhé, tôi lau bàn trước."
+        ],
+        [
+          "Minh",
+          "窗户开着，要关上吗？",
+          "Chuānghu kāi zhe, yào guān shàng ma?",
+          "Cửa sổ đang mở, có cần đóng lại không?"
+        ],
+        [
+          "An",
+          "先不用，屋子里一点儿也不冷。",
+          "Xiān bú yòng, wūzi lǐ yìdiǎnr yě bù lěng.",
+          "Tạm thời chưa cần, trong phòng không lạnh chút nào."
+        ],
+        [
+          "Minh",
+          "整理好了！现在看起来干净多了。",
+          "Zhěnglǐ hǎo le! Xiànzài kàn qǐlái gānjìng duō le.",
+          "Sắp xếp xong rồi! Giờ nhìn sạch sẽ hơn nhiều."
+        ]
+      ],
+      "reading": {
+        "hanzi": "星期天，小安和弟弟一起打扫屋子。她先把桌子上的书放到椅子上，再认真擦桌子。弟弟把水果放进冰箱，也把门关好了。整理以后，桌子上只放着一盏灯和一本书，房间看起来很干净。",
+        "pinyin": "Xīngqītiān, Xiǎo Ān hé dìdi yìqǐ dǎsǎo wūzi. Tā xiān bǎ zhuōzi shàng de shū fàng dào yǐzi shàng, zài rènzhēn cā zhuōzi. Dìdi bǎ shuǐguǒ fàng jìn bīngxiāng, yě bǎ mén guān hǎo le. Zhěnglǐ yǐhòu, zhuōzi shàng zhǐ fàng zhe yì zhǎn dēng hé yì běn shū, fángjiān kàn qǐlái hěn gānjìng.",
+        "meaning": "Chủ nhật, An cùng em trai dọn nhà. Cô chuyển sách trên bàn sang ghế rồi lau bàn kỹ. Em trai cho trái cây vào tủ lạnh và đóng cửa cẩn thận. Sau khi sắp xếp, trên bàn chỉ còn đặt một chiếc đèn và một quyển sách; căn phòng trông rất sạch."
+      },
+      "practice": [
+        "Nhìn hình phòng chưa gọn và đưa ba chỉ dẫn có 把.",
+        "Mô tả trạng thái cửa, cửa sổ hoặc đồ vật trong phòng bằng 着.",
+        "So sánh 有点儿冷 với 一点儿也不冷, rồi tự đặt hai câu đúng ngữ cảnh."
+      ],
+      "homework": "Viết sáu câu về việc sắp xếp góc học tập, có hai câu 把 và một câu mô tả trạng thái với 着.",
+      "sentenceTokens": [
+        "请",
+        "把书",
+        "放在",
+        "桌子上"
+      ],
+      "sentenceMeaning": "Hãy đặt sách lên bàn.",
+      "mistake": {
+        "wrong": "请把书放。",
+        "correct": "请把书放在桌子上。",
+        "explanation": "Trong chỉ dẫn này cần nói rõ đặt sách ở đâu. Bổ sung vị trí sau 放 để câu 把 hoàn chỉnh."
+      },
+      "quiz": [
+        {
+          "question": "“整理房间” gần nghĩa nhất với cách nói nào?",
+          "choices": [
+            "Sắp xếp phòng cho gọn",
+            "Đặt phòng khách sạn",
+            "Rời khỏi phòng"
+          ],
+          "correct": "Sắp xếp phòng cho gọn",
+          "explanation": "整理 nhấn mạnh sắp xếp, thu dọn có trật tự."
+        },
+        {
+          "question": "Điền từ: 请___书放在桌子上。",
+          "choices": [
+            "把",
+            "比",
+            "从"
+          ],
+          "correct": "把",
+          "explanation": "把 đưa đồ vật cần xử lý lên trước động từ."
+        },
+        {
+          "question": "“窗户开着” chủ yếu mô tả điều gì?",
+          "choices": [
+            "Trạng thái cửa sổ đang mở",
+            "Ai đó sẽ mở cửa sổ",
+            "Cửa sổ chưa từng mở"
+          ],
+          "correct": "Trạng thái cửa sổ đang mở",
+          "explanation": "着 duy trì trạng thái của hành động 开."
+        },
+        {
+          "question": "“一点儿也不冷” nghĩa là gì?",
+          "choices": [
+            "Không lạnh chút nào",
+            "Hơi lạnh",
+            "Ngày càng lạnh"
+          ],
+          "correct": "Không lạnh chút nào",
+          "explanation": "一点儿也不 là cách phủ định nhấn mạnh."
+        },
+        {
+          "question": "Theo hội thoại, An muốn đặt sách ở đâu trước khi lau bàn?",
+          "choices": [
+            "椅子上",
+            "冰箱里",
+            "门后面"
+          ],
+          "correct": "椅子上",
+          "explanation": "An nói 请把书放在椅子上."
+        },
+        {
+          "question": "Theo bài đọc, em trai cho gì vào tủ lạnh?",
+          "choices": [
+            "水果",
+            "书",
+            "衣服"
+          ],
+          "correct": "水果",
+          "explanation": "弟弟把水果放进冰箱: em trai cho trái cây vào tủ lạnh."
+        },
+        {
+          "question": "Theo bài đọc, sau khi dọn, trên bàn còn những gì?",
+          "choices": [
+            "Một chiếc đèn và một quyển sách",
+            "Một chiếc ghế và hai cái túi",
+            "Chỉ có trái cây"
+          ],
+          "correct": "Một chiếc đèn và một quyển sách",
+          "explanation": "桌子上只放着一盏灯和一本书."
+        },
+        {
+          "question": "Chọn câu chỉ dẫn đầy đủ và tự nhiên.",
+          "choices": [
+            "请把门关好。",
+            "请把门关。",
+            "请门把关好。"
+          ],
+          "correct": "请把门关好。",
+          "explanation": "关好 nêu kết quả đóng cửa cẩn thận; vị trí đúng là 把 + 门 + 关好."
+        }
+      ]
+    },
+    {
+      "title": "Hợp tác và giao việc ở nơi làm việc",
+      "topic": [
+        "我们先把这件事讨论清楚。",
+        "Wǒmen xiān bǎ zhè jiàn shì tǎolùn qīngchu.",
+        "Chúng ta bàn rõ việc này trước."
+      ],
+      "description": "Hiểu yêu cầu công việc, xác nhận người phụ trách và giải thích điều kiện để hoàn thành nhiệm vụ.",
+      "objectives": [
+        "Nêu được ai phụ trách một nhiệm vụ và khi nào cần hoàn thành.",
+        "Dùng 让 + người + hành động để thuật lại yêu cầu hoặc phân công.",
+        "Dùng 只有…才… và bổ ngữ 得 để nói điều kiện, cách thực hiện công việc."
+      ],
+      "preparation": [
+        "Chuẩn bị ba thẻ nhiệm vụ giả định: thông báo họp, chuẩn bị tài liệu, kiểm tra phòng.",
+        "Ôn câu hỏi 谁、什么时候 và mẫu 把 đã học."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động: làm việc theo nhóm",
+          "minutes": 5,
+          "teacher": "Đưa một việc chung cần ba người và hỏi cách chia nhiệm vụ.",
+          "learner": "Chọn một việc mình có thể phụ trách."
+        },
+        {
+          "title": "Từ vựng công việc",
+          "minutes": 10,
+          "teacher": "Làm rõ 任务、负责、要求 và 解决 bằng ví dụ trong nhóm học.",
+          "learner": "Ghép người với nhiệm vụ và nói câu có 负责."
+        },
+        {
+          "title": "Yêu cầu và điều kiện",
+          "minutes": 15,
+          "teacher": "Dạy 让、只有…才… và mẫu lặp động từ với 得 khi có tân ngữ.",
+          "learner": "Thuật lại một yêu cầu, một điều kiện và một nhận xét về cách làm."
+        },
+        {
+          "title": "Họp nhóm ngắn",
+          "minutes": 15,
+          "teacher": "Phân vai quản lý và nhân viên; yêu cầu xác định nhiệm vụ, thời hạn trong hội thoại và bài đọc.",
+          "learner": "Ghi ba thông tin chính, rồi đọc lại theo vai."
+        },
+        {
+          "title": "Giải quyết một nhiệm vụ",
+          "minutes": 15,
+          "teacher": "Giao tình huống thiếu tài liệu trước cuộc họp và cho học viên đề xuất cách xử lý.",
+          "learner": "Thảo luận bốn lượt, hoàn thành sắp xếp câu và mini test."
+        },
+        {
+          "title": "Xác nhận lại công việc",
+          "minutes": 5,
+          "teacher": "Yêu cầu mỗi người nhắc lại việc cần làm để kiểm tra hiểu đúng.",
+          "learner": "Nói rõ người làm, hành động và thời gian hoàn thành."
+        }
+      ],
+      "vocabulary": [
+        [
+          "会议",
+          "huìyì",
+          "hội nghị",
+          "cuộc họp",
+          "👥"
+        ],
+        [
+          "同事",
+          "tóngshì",
+          "đồng sự",
+          "đồng nghiệp",
+          "🤝"
+        ],
+        [
+          "经理",
+          "jīnglǐ",
+          "kinh lí",
+          "quản lý; giám đốc bộ phận",
+          "🧑‍💼"
+        ],
+        [
+          "任务",
+          "rènwù",
+          "nhậm vụ",
+          "nhiệm vụ",
+          "📋"
+        ],
+        [
+          "负责",
+          "fùzé",
+          "phụ trách",
+          "phụ trách; chịu trách nhiệm",
+          "✅"
+        ],
+        [
+          "讨论",
+          "tǎolùn",
+          "thảo luận",
+          "thảo luận",
+          "💬"
+        ],
+        [
+          "办法",
+          "bànfǎ",
+          "biện pháp",
+          "cách; biện pháp",
+          "💡"
+        ],
+        [
+          "解决",
+          "jiějué",
+          "giải quyết",
+          "giải quyết",
+          "🧩"
+        ],
+        [
+          "迟到",
+          "chídào",
+          "trì đáo",
+          "đến muộn",
+          "⏰"
+        ],
+        [
+          "通知",
+          "tōngzhī",
+          "thông tri",
+          "thông báo",
+          "📣"
+        ],
+        [
+          "要求",
+          "yāoqiú",
+          "yêu cầu",
+          "yêu cầu",
+          "📝"
+        ],
+        [
+          "合作",
+          "hézuò",
+          "hợp tác",
+          "hợp tác",
+          "🤲"
+        ]
+      ],
+      "grammar": [
+        [
+          "Thuật lại yêu cầu hoặc phân công",
+          "Người 1 + 让 + người 2 + hành động",
+          "让 có thể diễn tả bảo, yêu cầu, để hoặc cho phép ai làm việc gì tùy ngữ cảnh. Người thực hiện hành động đứng sau 让.",
+          "经理让我准备会议。",
+          "Jīnglǐ ràng wǒ zhǔnbèi huìyì.",
+          "Quản lý giao tôi chuẩn bị cuộc họp."
+        ],
+        [
+          "Điều kiện cần",
+          "只有 + điều kiện，才 + kết quả",
+          "只有…才… nhấn mạnh phải có điều kiện nêu trước thì mới có thể đạt kết quả. Không dùng thay cho mọi câu “nếu… thì…”.",
+          "只有把问题说清楚，大家才能找到办法。",
+          "Zhǐyǒu bǎ wèntí shuō qīngchu, dàjiā cái néng zhǎo dào bànfǎ.",
+          "Chỉ khi nói rõ vấn đề, mọi người mới tìm được cách giải quyết."
+        ],
+        [
+          "Nhận xét cách làm khi có tân ngữ",
+          "Chủ ngữ + động từ + tân ngữ + động từ + 得 + nhận xét",
+          "Một cách tự nhiên để giữ tân ngữ và bổ ngữ 得 là lặp lại động từ. Cũng có thể đưa tân ngữ lên đầu trong ngữ cảnh phù hợp.",
+          "他说汉语说得很清楚。",
+          "Tā shuō Hànyǔ shuō de hěn qīngchu.",
+          "Anh ấy nói tiếng Trung rất rõ."
+        ]
+      ],
+      "dialogue": [
+        [
+          "Quản lý",
+          "明天上午有一个会议，请你通知同事。",
+          "Míngtiān shàngwǔ yǒu yí ge huìyì, qǐng nǐ tōngzhī tóngshì.",
+          "Sáng mai có một cuộc họp, nhờ bạn thông báo cho đồng nghiệp."
+        ],
+        [
+          "An",
+          "好的。会议几点开始？",
+          "Hǎo de. Huìyì jǐ diǎn kāishǐ?",
+          "Vâng. Cuộc họp bắt đầu mấy giờ?"
+        ],
+        [
+          "Quản lý",
+          "九点开始。小王负责准备房间。",
+          "Jiǔ diǎn kāishǐ. Xiǎo Wáng fùzé zhǔnbèi fángjiān.",
+          "Bắt đầu lúc chín giờ. Vương phụ trách chuẩn bị phòng."
+        ],
+        [
+          "An",
+          "我需要把今天的问题也写下来吗？",
+          "Wǒ xūyào bǎ jīntiān de wèntí yě xiě xiàlai ma?",
+          "Tôi có cần ghi lại vấn đề hôm nay không?"
+        ],
+        [
+          "Quản lý",
+          "需要。只有先了解问题，大家才能一起解决。",
+          "Xūyào. Zhǐyǒu xiān liǎojiě wèntí, dàjiā cái néng yìqǐ jiějué.",
+          "Cần. Chỉ khi hiểu vấn đề trước, mọi người mới có thể cùng giải quyết."
+        ],
+        [
+          "An",
+          "明白了，我下午就完成。",
+          "Míngbai le, wǒ xiàwǔ jiù wánchéng.",
+          "Tôi hiểu rồi, chiều nay tôi sẽ hoàn thành."
+        ]
+      ],
+      "reading": {
+        "hanzi": "王经理让小安通知同事参加明天的会议。小安先确认时间，再把通知发给大家。她还把需要讨论的问题写了下来。小王负责准备房间，他们一起检查了桌椅。两个人分工合作，很快就完成了准备工作。",
+        "pinyin": "Wáng jīnglǐ ràng Xiǎo Ān tōngzhī tóngshì cānjiā míngtiān de huìyì. Xiǎo Ān xiān quèrèn shíjiān, zài bǎ tōngzhī fā gěi dàjiā. Tā hái bǎ xūyào tǎolùn de wèntí xiě le xiàlai. Xiǎo Wáng fùzé zhǔnbèi fángjiān, tāmen yìqǐ jiǎnchá le zhuōyǐ. Liǎng ge rén fēngōng hézuò, hěn kuài jiù wánchéng le zhǔnbèi gōngzuò.",
+        "meaning": "Quản lý Vương giao An thông báo cho đồng nghiệp dự cuộc họp ngày mai. An xác nhận thời gian trước rồi gửi thông báo cho mọi người. Cô còn ghi lại vấn đề cần thảo luận. Bạn Tiểu Vương phụ trách chuẩn bị phòng; họ cùng kiểm tra bàn ghế. Hai người phân công hợp tác nên nhanh chóng hoàn thành việc chuẩn bị."
+      },
+      "practice": [
+        "Chia ba nhiệm vụ trong một nhóm và nói ai 负责 việc nào.",
+        "Thuật lại hai yêu cầu của quản lý hoặc giáo viên bằng 让.",
+        "Nói một điều kiện cần với 只有…才… và xác nhận lại nhiệm vụ bằng câu đầy đủ."
+      ],
+      "homework": "Viết sáu câu về việc chuẩn bị một cuộc họp hoặc buổi học nhóm. Nêu người phụ trách, thời gian và một vấn đề cần giải quyết.",
+      "sentenceTokens": [
+        "经理",
+        "让",
+        "我",
+        "通知同事",
+        "参加会议"
+      ],
+      "sentenceMeaning": "Quản lý giao tôi thông báo cho đồng nghiệp tham gia cuộc họp.",
+      "mistake": {
+        "wrong": "他说汉语很清楚得。",
+        "correct": "他说汉语说得很清楚。",
+        "explanation": "得 đứng sau động từ được bổ nghĩa. Khi giữ tân ngữ 汉语 trong mẫu này, lặp lại 说 rồi mới thêm 得很清楚."
+      },
+      "quiz": [
+        {
+          "question": "“负责” nghĩa là gì trong “小王负责准备房间”?",
+          "choices": [
+            "Phụ trách",
+            "Bỏ quên",
+            "Từ chối"
+          ],
+          "correct": "Phụ trách",
+          "explanation": "负责 nêu người chịu trách nhiệm về một công việc."
+        },
+        {
+          "question": "Trong “经理让我准备会议”, ai chuẩn bị cuộc họp?",
+          "choices": [
+            "我",
+            "经理的朋友",
+            "所有客人"
+          ],
+          "correct": "我",
+          "explanation": "Người đứng sau 让 là người thực hiện hành động 准备会议."
+        },
+        {
+          "question": "只有先了解问题，大家___能找到办法。 Điền từ phù hợp.",
+          "choices": [
+            "才",
+            "又",
+            "却"
+          ],
+          "correct": "才",
+          "explanation": "只有…才… diễn tả điều kiện cần để đạt kết quả."
+        },
+        {
+          "question": "Chọn câu nhận xét cách nói có trật tự đúng.",
+          "choices": [
+            "他说汉语说得很清楚。",
+            "他说汉语很清楚得。",
+            "他得说汉语清楚很。"
+          ],
+          "correct": "他说汉语说得很清楚。",
+          "explanation": "Mẫu đang học là động từ + tân ngữ + động từ + 得 + nhận xét."
+        },
+        {
+          "question": "Theo hội thoại, cuộc họp bắt đầu mấy giờ?",
+          "choices": [
+            "九点",
+            "八点",
+            "十点"
+          ],
+          "correct": "九点",
+          "explanation": "Quản lý nói 九点开始."
+        },
+        {
+          "question": "Theo hội thoại, ai phụ trách chuẩn bị phòng?",
+          "choices": [
+            "小王",
+            "An",
+            "Khách tham dự"
+          ],
+          "correct": "小王",
+          "explanation": "Quản lý phân công 小王负责准备房间."
+        },
+        {
+          "question": "Theo bài đọc, An làm gì trước khi gửi thông báo?",
+          "choices": [
+            "确认时间",
+            "买机票",
+            "打扫厨房"
+          ],
+          "correct": "确认时间",
+          "explanation": "Bài đọc nêu 先确认时间，再把通知发给大家."
+        }
+      ]
+    },
+    {
+      "title": "Trải nghiệm và khám phá văn hóa",
+      "topic": [
+        "除了北京，我还去过上海。",
+        "Chúle Běijīng, wǒ hái qù guo Shànghǎi.",
+        "Ngoài Bắc Kinh, tôi còn từng đến Thượng Hải."
+      ],
+      "description": "Kể trải nghiệm, bổ sung thông tin và bày tỏ cảm nhận cá nhân về một nơi hoặc một hoạt động.",
+      "objectives": [
+        "Kể được một trải nghiệm với thời gian, địa điểm và cảm nhận rõ ràng.",
+        "Dùng 除了…还… để bổ sung một trải nghiệm hoặc hoạt động.",
+        "Dùng 对…来说 và 虽然…可是… để diễn đạt góc nhìn và ý tương phản."
+      ],
+      "preparation": [
+        "Chuẩn bị một hình về thành phố, lễ hội hoặc hoạt động văn hóa muốn giới thiệu.",
+        "Ôn 过 và từ chỉ thời gian quá khứ; có thể chọn trải nghiệm tưởng tượng."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động: một nơi đáng nhớ",
+          "minutes": 5,
+          "teacher": "Cho xem hình và hỏi một địa điểm hoặc hoạt động người học nhớ rõ.",
+          "learner": "Nêu tên nơi hoặc hoạt động và một cảm nhận ngắn."
+        },
+        {
+          "title": "Từ vựng trải nghiệm",
+          "minutes": 10,
+          "teacher": "Giới thiệu 文化、经历、印象; minh họa 有趣 và 热闹 bằng tình huống.",
+          "learner": "Ghép từ với hình và đặt câu nhận xét."
+        },
+        {
+          "title": "Bổ sung và bày tỏ góc nhìn",
+          "minutes": 15,
+          "teacher": "Dạy 除了…还…、对…来说、虽然…可是… bằng cùng một chuyến đi.",
+          "learner": "Viết ba câu với ba chức năng khác nhau."
+        },
+        {
+          "title": "Hội thoại và câu chuyện",
+          "minutes": 15,
+          "teacher": "Yêu cầu tìm địa điểm, thời gian và cảm nhận trong hội thoại, bài đọc.",
+          "learner": "Đọc theo vai rồi tóm tắt trải nghiệm của nhân vật bằng ba câu."
+        },
+        {
+          "title": "Chia sẻ trải nghiệm",
+          "minutes": 15,
+          "teacher": "Giao nhiệm vụ kể một hoạt động có cả điểm thú vị và một khó khăn.",
+          "learner": "Nói bốn đến năm câu, trả lời câu hỏi của bạn và làm mini test."
+        },
+        {
+          "title": "Chốt bài",
+          "minutes": 5,
+          "teacher": "Nhắc phân biệt bổ sung với loại trừ trong cách dùng 除了.",
+          "learner": "Tạo một câu 除了…还… và nói rõ cả hai việc đều đã thực hiện."
+        }
+      ],
+      "vocabulary": [
+        [
+          "经历",
+          "jīnglì",
+          "kinh lịch",
+          "trải nghiệm; trải qua",
+          "🧳"
+        ],
+        [
+          "城市",
+          "chéngshì",
+          "thành thị",
+          "thành phố",
+          "🏙️"
+        ],
+        [
+          "文化",
+          "wénhuà",
+          "văn hóa",
+          "văn hóa",
+          "🏮"
+        ],
+        [
+          "节日",
+          "jiérì",
+          "tiết nhật",
+          "ngày lễ",
+          "🎉"
+        ],
+        [
+          "礼物",
+          "lǐwù",
+          "lễ vật",
+          "quà tặng",
+          "🎁"
+        ],
+        [
+          "参观",
+          "cānguān",
+          "tham quan",
+          "tham quan",
+          "🏛️"
+        ],
+        [
+          "发现",
+          "fāxiàn",
+          "phát hiện",
+          "phát hiện; nhận ra",
+          "🔎"
+        ],
+        [
+          "有趣",
+          "yǒuqù",
+          "hữu thú",
+          "thú vị",
+          "😊"
+        ],
+        [
+          "热闹",
+          "rènao",
+          "nhiệt náo",
+          "nhộn nhịp; náo nhiệt",
+          "🎊"
+        ],
+        [
+          "印象",
+          "yìnxiàng",
+          "ấn tượng",
+          "ấn tượng",
+          "💭"
+        ],
+        [
+          "特别",
+          "tèbié",
+          "đặc biệt",
+          "đặc biệt; rất",
+          "✨"
+        ],
+        [
+          "记得",
+          "jìde",
+          "kí đắc",
+          "nhớ; còn nhớ",
+          "🧠"
+        ]
+      ],
+      "grammar": [
+        [
+          "Bổ sung thông tin",
+          "除了 + A（以外），还 / 也 + B",
+          "Trong mẫu bổ sung này, A và B đều có. Nó khác với 除了 A，其他人都… thường loại A khỏi nhóm được nói đến.",
+          "除了北京，我还去过上海。",
+          "Chúle Běijīng, wǒ hái qù guo Shànghǎi.",
+          "Ngoài Bắc Kinh, tôi còn từng đến Thượng Hải."
+        ],
+        [
+          "Nêu góc nhìn của một người",
+          "对 + người + 来说，nhận xét",
+          "对…来说 giới hạn nhận xét vào góc nhìn hoặc hoàn cảnh của người được nói đến.",
+          "对我来说，这次旅行很有意义。",
+          "Duì wǒ lái shuō, zhè cì lǚxíng hěn yǒu yìyì.",
+          "Đối với tôi, chuyến đi này rất có ý nghĩa."
+        ],
+        [
+          "Nêu hai ý tương phản",
+          "虽然 + ý 1，可是 / 但是 + ý 2",
+          "虽然 thừa nhận tình huống thứ nhất; 可是 hoặc 但是 giới thiệu ý sau trái với điều người nghe có thể dự đoán.",
+          "虽然天气很冷，可是街上很热闹。",
+          "Suīrán tiānqì hěn lěng, kěshì jiē shàng hěn rènao.",
+          "Mặc dù trời lạnh, ngoài phố vẫn rất nhộn nhịp."
+        ]
+      ],
+      "dialogue": [
+        [
+          "An",
+          "你去过哪些中国城市？",
+          "Nǐ qù guo nǎxiē Zhōngguó chéngshì?",
+          "Bạn đã từng đến những thành phố nào ở Trung Quốc?"
+        ],
+        [
+          "Minh",
+          "除了北京，我还去过上海。",
+          "Chúle Běijīng, wǒ hái qù guo Shànghǎi.",
+          "Ngoài Bắc Kinh, tôi còn từng đến Thượng Hải."
+        ],
+        [
+          "An",
+          "哪次旅行给你的印象最深？",
+          "Nǎ cì lǚxíng gěi nǐ de yìnxiàng zuì shēn?",
+          "Chuyến đi nào để lại ấn tượng sâu nhất với bạn?"
+        ],
+        [
+          "Minh",
+          "去年春节去北京那次。虽然很冷，可是特别热闹。",
+          "Qùnián Chūnjié qù Běijīng nà cì. Suīrán hěn lěng, kěshì tèbié rènao.",
+          "Chuyến đến Bắc Kinh dịp Tết năm ngoái. Tuy lạnh nhưng rất nhộn nhịp."
+        ],
+        [
+          "An",
+          "你还记得在那里做了什么吗？",
+          "Nǐ hái jìde zài nàli zuò le shénme ma?",
+          "Bạn còn nhớ đã làm gì ở đó không?"
+        ],
+        [
+          "Minh",
+          "记得。我和朋友参观了几个地方，也一起吃饭聊天。",
+          "Jìde. Wǒ hé péngyou cānguān le jǐ ge dìfang, yě yìqǐ chīfàn liáotiān.",
+          "Còn chứ. Tôi cùng bạn tham quan vài nơi và cùng ăn uống, trò chuyện."
+        ]
+      ],
+      "reading": {
+        "hanzi": "去年春节，小安第一次到北京看朋友。虽然天气很冷，可是朋友们让她觉得很温暖。除了参观有名的地方，她还和大家一起做饭、聊天。对她来说，最有意思的不是买礼物，而是听朋友介绍自己的生活。",
+        "pinyin": "Qùnián Chūnjié, Xiǎo Ān dì yī cì dào Běijīng kàn péngyou. Suīrán tiānqì hěn lěng, kěshì péngyoumen ràng tā juéde hěn wēnnuǎn. Chúle cānguān yǒumíng de dìfang, tā hái hé dàjiā yìqǐ zuò fàn, liáotiān. Duì tā lái shuō, zuì yǒu yìsi de bú shì mǎi lǐwù, ér shì tīng péngyou jièshào zìjǐ de shēnghuó.",
+        "meaning": "Tết năm ngoái, An lần đầu đến Bắc Kinh thăm bạn. Tuy trời lạnh, bạn bè khiến cô cảm thấy ấm áp. Ngoài tham quan những nơi nổi tiếng, cô còn cùng mọi người nấu ăn và trò chuyện. Với cô, điều thú vị nhất không phải mua quà mà là nghe bạn kể về cuộc sống của họ."
+      },
+      "practice": [
+        "Kể một trải nghiệm với ba thông tin: khi nào, ở đâu, cảm thấy thế nào.",
+        "Bổ sung một hoạt động bằng 除了…还… và kiểm tra rằng cả hai hoạt động đều có thật trong câu chuyện.",
+        "Nói một điểm khó khăn và một điểm tích cực bằng 虽然…可是…."
+      ],
+      "homework": "Viết một đoạn sáu câu về một nơi đã đến hoặc muốn xây dựng thành tình huống tưởng tượng. Có một câu 除了…还… và một câu 对我来说….",
+      "sentenceTokens": [
+        "除了北京",
+        "我",
+        "还",
+        "去过",
+        "上海"
+      ],
+      "sentenceMeaning": "Ngoài Bắc Kinh, tôi còn từng đến Thượng Hải.",
+      "sentenceAlternatives": [
+        "我除了北京还去过上海"
+      ],
+      "mistake": {
+        "wrong": "对来说我，这次旅行很有意思。",
+        "correct": "对我来说，这次旅行很有意思。",
+        "explanation": "Trong mẫu câu đang học, đặt người được nói đến giữa 对 và 来说: 对 + người + 来说. Vì vậy dùng 对我来说."
+      },
+      "quiz": [
+        {
+          "question": "“印象” nghĩa là gì?",
+          "choices": [
+            "Ấn tượng",
+            "Lịch làm việc",
+            "Số điện thoại"
+          ],
+          "correct": "Ấn tượng",
+          "explanation": "给人留下印象 hoặc 印象很深 đều nói về ấn tượng."
+        },
+        {
+          "question": "除了北京，我___去过上海。 Chọn từ bổ sung.",
+          "choices": [
+            "还",
+            "才",
+            "把"
+          ],
+          "correct": "还",
+          "explanation": "除了…还… cho biết cả Bắc Kinh và Thượng Hải đều là nơi đã đến."
+        },
+        {
+          "question": "“对我来说” tương ứng với cách nói nào?",
+          "choices": [
+            "Đối với tôi",
+            "Đi về phía tôi",
+            "Trả đồ cho tôi"
+          ],
+          "correct": "Đối với tôi",
+          "explanation": "Cụm này giới thiệu góc nhìn cá nhân."
+        },
+        {
+          "question": "虽然天气很冷，___街上很热闹。 Chọn từ nối tương phản.",
+          "choices": [
+            "可是",
+            "为了",
+            "或者"
+          ],
+          "correct": "可是",
+          "explanation": "虽然…可是… nêu sự tương phản giữa trời lạnh và phố vẫn nhộn nhịp."
+        },
+        {
+          "question": "Theo hội thoại, chuyến nào để lại ấn tượng sâu nhất với Minh?",
+          "choices": [
+            "Đi Bắc Kinh dịp Tết năm ngoái",
+            "Đi Thượng Hải hôm qua",
+            "Đi học sáng nay"
+          ],
+          "correct": "Đi Bắc Kinh dịp Tết năm ngoái",
+          "explanation": "Minh trả lời 去年春节去北京那次."
+        },
+        {
+          "question": "Theo bài đọc, ngoài tham quan, An còn làm gì?",
+          "choices": [
+            "Nấu ăn và trò chuyện cùng mọi người",
+            "Làm việc ở khách sạn",
+            "Mua một căn nhà"
+          ],
+          "correct": "Nấu ăn và trò chuyện cùng mọi người",
+          "explanation": "Bài đọc ghi 她还和大家一起做饭、聊天."
+        },
+        {
+          "question": "Điều gì thú vị nhất đối với An trong bài đọc?",
+          "choices": [
+            "Nghe bạn kể về cuộc sống",
+            "Mua quà thật đắt",
+            "Đi một mình cả ngày"
+          ],
+          "correct": "Nghe bạn kể về cuộc sống",
+          "explanation": "Phần cuối nhấn mạnh 听朋友介绍自己的生活."
+        }
+      ]
+    },
+    {
+      "title": "Tìm đồ thất lạc và xử lý nhầm lẫn",
+      "topic": [
+        "我的包被别人拿错了。",
+        "Wǒ de bāo bèi biérén ná cuò le.",
+        "Túi của tôi bị người khác cầm nhầm."
+      ],
+      "description": "Mô tả một sự cố, suy đoán thận trọng và nhờ hỗ trợ để giải quyết.",
+      "objectives": [
+        "Nêu được món đồ, đặc điểm và nơi nhìn thấy lần cuối trong một tình huống thất lạc.",
+        "Dùng 被 để kể việc xảy ra với một đồ vật và dùng 可能 để phân biệt suy đoán với sự thật đã biết.",
+        "Dùng 把…找回来 / 拿回来 để nói kết quả lấy lại đồ vật."
+      ],
+      "preparation": [
+        "Chuẩn bị hai hình túi giống màu nhưng có đặc điểm khác nhau.",
+        "Ôn màu sắc, vị trí và từ chỉ thời gian 刚才、现在."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động: xác định món đồ",
+          "minutes": 5,
+          "teacher": "Đưa hai hình gần giống nhau và hỏi điểm khác biệt.",
+          "learner": "Mô tả mỗi món bằng hai đặc điểm."
+        },
+        {
+          "title": "Từ vựng xử lý sự cố",
+          "minutes": 10,
+          "teacher": "Giới thiệu 钱包、拿错、联系、还; đọc rõ 还 huán trong hành động trả lại.",
+          "learner": "Ghép từ với tình huống và đặt hai câu nhờ giúp đỡ."
+        },
+        {
+          "title": "Sự việc, suy đoán và kết quả",
+          "minutes": 15,
+          "teacher": "Dạy 被 + hành động có kết quả, 可能 + suy đoán và 把…找回来.",
+          "learner": "Phân loại câu đã xác nhận và câu suy đoán; viết một câu cho mỗi mẫu."
+        },
+        {
+          "title": "Nhờ quầy dịch vụ hỗ trợ",
+          "minutes": 15,
+          "teacher": "Phân vai khách và nhân viên; yêu cầu ghi đúng màu, địa điểm và kết quả.",
+          "learner": "Đóng vai rồi đọc câu chuyện và trả lời bằng chứng cụ thể."
+        },
+        {
+          "title": "Giải quyết tình huống mới",
+          "minutes": 15,
+          "teacher": "Đổi đồ vật từ túi sang điện thoại và cung cấp hai chi tiết để người học xác nhận.",
+          "learner": "Tạo hội thoại nhờ hỗ trợ, làm sắp xếp câu và mini test."
+        },
+        {
+          "title": "Chốt cách nói lịch sự",
+          "minutes": 5,
+          "teacher": "Nhắc dùng 可能 khi chưa có thông tin chắc chắn và nói rõ yêu cầu hỗ trợ.",
+          "learner": "Nói một câu suy đoán và một câu nhờ giúp đỡ."
+        }
+      ],
+      "vocabulary": [
+        [
+          "钱包",
+          "qiánbāo",
+          "tiền bao",
+          "ví tiền",
+          "👛"
+        ],
+        [
+          "手机",
+          "shǒujī",
+          "thủ cơ",
+          "điện thoại di động",
+          "📱"
+        ],
+        [
+          "着急",
+          "zháojí",
+          "trứ cấp",
+          "lo lắng; sốt ruột",
+          "😟"
+        ],
+        [
+          "帮助",
+          "bāngzhù",
+          "bang trợ",
+          "giúp đỡ",
+          "🤝"
+        ],
+        [
+          "拿",
+          "ná",
+          "nã",
+          "cầm; lấy",
+          "✋"
+        ],
+        [
+          "错",
+          "cuò",
+          "thác",
+          "sai; nhầm",
+          "❌"
+        ],
+        [
+          "还",
+          "huán",
+          "hoàn",
+          "trả lại",
+          "↩️"
+        ],
+        [
+          "找到",
+          "zhǎodào",
+          "trảo đáo",
+          "tìm thấy",
+          "🔎"
+        ],
+        [
+          "服务",
+          "fúwù",
+          "phục vụ",
+          "phục vụ; dịch vụ",
+          "ℹ️"
+        ],
+        [
+          "联系",
+          "liánxì",
+          "liên hệ",
+          "liên hệ",
+          "☎️"
+        ],
+        [
+          "号码",
+          "hàomǎ",
+          "hiệu mã",
+          "số; mã số",
+          "🔢"
+        ],
+        [
+          "刚才",
+          "gāngcái",
+          "cương tài",
+          "lúc nãy; vừa rồi",
+          "⏱️"
+        ]
+      ],
+      "grammar": [
+        [
+          "Kể việc xảy ra với một đối tượng",
+          "Đối tượng + 被 + người thực hiện + động từ + phần bổ sung",
+          "被 đưa đối tượng chịu tác động lên đầu câu. Trong tình huống này, 拿错了 cho biết kết quả bị cầm nhầm. Có thể lược người thực hiện nếu không biết hoặc không cần nêu.",
+          "我的包被别人拿错了。",
+          "Wǒ de bāo bèi biérén ná cuò le.",
+          "Túi của tôi bị người khác cầm nhầm."
+        ],
+        [
+          "Nói lấy lại hoặc tìm lại đồ",
+          "把 + đồ vật + 找 / 拿 + 回来",
+          "回来 có thể diễn tả việc trở về phía người nói hoặc lấy lại vật về chỗ cần có. Cần chọn 找回来 khi tìm lại, 拿回来 khi mang/cầm trở lại.",
+          "谢谢你帮我把钱包找回来。",
+          "Xièxie nǐ bāng wǒ bǎ qiánbāo zhǎo huílai.",
+          "Cảm ơn bạn đã giúp tôi tìm lại ví."
+        ],
+        [
+          "Đưa ra suy đoán",
+          "Chủ ngữ + 可能 + hành động / trạng thái",
+          "可能 cho biết người nói chưa chắc chắn. Dùng khi suy đoán nguyên nhân hoặc vị trí, thay vì khẳng định điều chưa được xác nhận.",
+          "他可能拿错包了。",
+          "Tā kěnéng ná cuò bāo le.",
+          "Có thể anh ấy đã cầm nhầm túi."
+        ]
+      ],
+      "dialogue": [
+        [
+          "Khách",
+          "您好，我找不到我的蓝色包了。",
+          "Nín hǎo, wǒ zhǎo bu dào wǒ de lánsè bāo le.",
+          "Chào anh/chị, tôi không tìm thấy túi màu xanh của mình."
+        ],
+        [
+          "Nhân viên",
+          "您刚才把包放在哪儿？",
+          "Nín gāngcái bǎ bāo fàng zài nǎr?",
+          "Lúc nãy anh/chị để túi ở đâu?"
+        ],
+        [
+          "Khách",
+          "我把它放在门旁边的椅子上了。",
+          "Wǒ bǎ tā fàng zài mén pángbiān de yǐzi shàng le.",
+          "Tôi để trên ghế cạnh cửa."
+        ],
+        [
+          "Nhân viên",
+          "请别着急，我先帮您联系一下同事。",
+          "Qǐng bié zháojí, wǒ xiān bāng nín liánxì yíxià tóngshì.",
+          "Xin đừng quá lo, tôi sẽ giúp liên hệ với đồng nghiệp trước."
+        ],
+        [
+          "Nhân viên",
+          "查到了！一位客人拿错了包，他正往这边来。",
+          "Chá dào le! Yí wèi kèrén ná cuò le bāo, tā zhèng wǎng zhè biān lái.",
+          "Đã kiểm tra ra rồi! Một vị khách cầm nhầm túi và đang quay lại đây."
+        ],
+        [
+          "Khách",
+          "太好了，谢谢你们的帮助。",
+          "Tài hǎo le, xièxie nǐmen de bāngzhù.",
+          "Tốt quá, cảm ơn mọi người đã giúp."
+        ]
+      ],
+      "reading": {
+        "hanzi": "小王在车站买水以后，发现自己的包不见了。他先告诉服务人员包的颜色和刚才坐的位置，没有马上离开。十分钟后，一位客人回来了，说自己拿错了包。小王检查以后，把对方的包也还给了他。",
+        "pinyin": "Xiǎo Wáng zài chēzhàn mǎi shuǐ yǐhòu, fāxiàn zìjǐ de bāo bú jiàn le. Tā xiān gàosu fúwù rényuán bāo de yánsè hé gāngcái zuò de wèizhi, méiyǒu mǎshàng líkāi. Shí fēnzhōng hòu, yí wèi kèrén huílai le, shuō zìjǐ ná cuò le bāo. Xiǎo Wáng jiǎnchá yǐhòu, bǎ duìfāng de bāo yě huán gěi le tā.",
+        "meaning": "Sau khi mua nước ở ga, Vương phát hiện không thấy túi của mình. Anh báo nhân viên dịch vụ màu túi và chỗ vừa ngồi, không rời đi ngay. Mười phút sau, một vị khách quay lại nói đã cầm nhầm túi. Sau khi kiểm tra, Vương cũng trả lại túi của người kia."
+      },
+      "practice": [
+        "Mô tả một món đồ bằng màu sắc, đặc điểm và nơi nhìn thấy lần cuối.",
+        "Viết một câu có 被 về sự việc đã xác nhận và một câu 可能 về điều chưa chắc chắn.",
+        "Đóng vai nhờ quầy dịch vụ giúp tìm lại đồ; kết thúc bằng lời cảm ơn."
+      ],
+      "homework": "Viết một câu chuyện ngắn sáu câu về một lần nhầm đồ tưởng tượng. Nêu sự cố, cách hỏi giúp và kết quả, có một câu 被.",
+      "sentenceTokens": [
+        "我的包",
+        "被",
+        "别人",
+        "拿错",
+        "了"
+      ],
+      "sentenceMeaning": "Túi của tôi bị người khác cầm nhầm.",
+      "mistake": {
+        "wrong": "我的包别人被拿错了。",
+        "correct": "我的包被别人拿错了。",
+        "explanation": "Trong mẫu bị động này, 被 đứng trước người thực hiện hành động: 被 + 别人 + 拿错了."
+      },
+      "quiz": [
+        {
+          "question": "Trong tình huống trả lại ví, “还” đọc thế nào?",
+          "choices": [
+            "huán",
+            "hái",
+            "hàn"
+          ],
+          "correct": "huán",
+          "explanation": "还 huán nghĩa là trả lại; 还 hái thường nghĩa là vẫn, còn hoặc thêm."
+        },
+        {
+          "question": "我的包___别人拿错了。 Điền từ chỉ bị động.",
+          "choices": [
+            "被",
+            "比",
+            "从"
+          ],
+          "correct": "被",
+          "explanation": "被 giới thiệu người thực hiện hành động tác động lên 我的包."
+        },
+        {
+          "question": "“他可能拿错包了” thể hiện mức độ chắc chắn nào?",
+          "choices": [
+            "Là suy đoán, chưa chắc chắn",
+            "Chắc chắn hoàn toàn",
+            "Khẳng định việc đó không xảy ra"
+          ],
+          "correct": "Là suy đoán, chưa chắc chắn",
+          "explanation": "可能 đánh dấu khả năng, không phải sự việc đã được xác nhận."
+        },
+        {
+          "question": "“帮我把钱包找回来” yêu cầu điều gì?",
+          "choices": [
+            "Giúp tìm lại ví",
+            "Mua cho tôi ví mới",
+            "Đặt ví sang chỗ khác"
+          ],
+          "correct": "Giúp tìm lại ví",
+          "explanation": "找回来 nhấn mạnh tìm lại vật đã mất khỏi chỗ cần có."
+        },
+        {
+          "question": "Theo hội thoại, túi của khách màu gì?",
+          "choices": [
+            "蓝色",
+            "黑色",
+            "红色"
+          ],
+          "correct": "蓝色",
+          "explanation": "Khách mở đầu bằng 我的蓝色包."
+        },
+        {
+          "question": "Theo hội thoại, túi được để ở đâu lúc trước?",
+          "choices": [
+            "Trên ghế cạnh cửa",
+            "Trong tủ lạnh",
+            "Trên tàu điện ngầm"
+          ],
+          "correct": "Trên ghế cạnh cửa",
+          "explanation": "Khách nói 门旁边的椅子上."
+        },
+        {
+          "question": "Theo bài đọc, Vương có rời ga ngay không?",
+          "choices": [
+            "Không",
+            "Có",
+            "Bài đọc nói anh đã lên máy bay"
+          ],
+          "correct": "Không",
+          "explanation": "Bài đọc nêu 没有马上离开."
+        },
+        {
+          "question": "Theo bài đọc, vì sao người khách quay lại?",
+          "choices": [
+            "Vì đã cầm nhầm túi",
+            "Vì muốn mua vé mới",
+            "Vì quên gọi điện cho bạn"
+          ],
+          "correct": "Vì đã cầm nhầm túi",
+          "explanation": "Người khách nói 自己拿错了包 rồi quay lại."
+        }
+      ]
+    },
+    {
+      "title": "Đề xuất và thống nhất kế hoạch",
+      "topic": [
+        "只要大家有时间，我们就一起去。",
+        "Zhǐyào dàjiā yǒu shíjiān, wǒmen jiù yìqǐ qù.",
+        "Chỉ cần mọi người có thời gian, chúng ta sẽ cùng đi."
+      ],
+      "description": "Đưa đề xuất, hỏi lựa chọn và thống nhất điều kiện để cùng tham gia một hoạt động.",
+      "objectives": [
+        "Đưa ra một đề xuất và nói đồng ý hoặc giải thích lựa chọn khác.",
+        "Phân biệt 还是 trong câu hỏi lựa chọn với 或者 trong câu kể.",
+        "Dùng 只要…就… và 谁都… để nói điều kiện đủ và phạm vi người tham gia."
+      ],
+      "preparation": [
+        "Chuẩn bị ba lựa chọn hoạt động cuối tuần với ngày, nơi và thời tiết giả định.",
+        "Ôn 只有…才… để đối chiếu với 只要…就…."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Khởi động: chọn hoạt động chung",
+          "minutes": 5,
+          "teacher": "Cho ba lựa chọn và hỏi học viên thích hoạt động nào.",
+          "learner": "Chọn một hoạt động và nêu một lý do."
+        },
+        {
+          "title": "Từ vựng trao đổi ý kiến",
+          "minutes": 10,
+          "teacher": "Giới thiệu 建议、同意、认为、约定; làm mẫu nhận lời và đề xuất thay đổi.",
+          "learner": "Hỏi đáp theo cặp với ít nhất bốn từ mới."
+        },
+        {
+          "title": "Điều kiện và lựa chọn",
+          "minutes": 15,
+          "teacher": "So sánh 只要…就… với 只有…才…; hướng dẫn 还是/或者 và 谁都….",
+          "learner": "Phân loại ba kiểu câu, rồi tự tạo một câu cho mỗi kiểu."
+        },
+        {
+          "title": "Thống nhất trong hội thoại",
+          "minutes": 15,
+          "teacher": "Cho đọc hội thoại và tìm quyết định cuối cùng; hướng dẫn theo dõi kế hoạch đổi khi trời mưa.",
+          "learner": "Ghi ngày, giờ, địa điểm và điều kiện của hoạt động."
+        },
+        {
+          "title": "Thảo luận có thay đổi",
+          "minutes": 15,
+          "teacher": "Đưa thêm một điều kiện như có mưa hoặc một bạn bận, yêu cầu điều chỉnh kế hoạch.",
+          "learner": "Thống nhất phương án mới bằng bốn lượt nói, sau đó làm mini test."
+        },
+        {
+          "title": "Xác nhận cuộc hẹn",
+          "minutes": 5,
+          "teacher": "Yêu cầu nhắc lại kế hoạch cuối cùng để tránh hiểu nhầm.",
+          "learner": "Nói ngày, giờ, nơi hẹn và một điều kiện đã thống nhất."
+        }
+      ],
+      "vocabulary": [
+        [
+          "建议",
+          "jiànyì",
+          "kiến nghị",
+          "đề xuất; lời khuyên",
+          "💡"
+        ],
+        [
+          "同意",
+          "tóngyì",
+          "đồng ý",
+          "đồng ý",
+          "👍"
+        ],
+        [
+          "认为",
+          "rènwéi",
+          "nhận vi",
+          "cho rằng; nhận định",
+          "💭"
+        ],
+        [
+          "当然",
+          "dāngrán",
+          "đương nhiên",
+          "tất nhiên",
+          "✅"
+        ],
+        [
+          "可能",
+          "kěnéng",
+          "khả năng",
+          "có thể; có khả năng",
+          "❔"
+        ],
+        [
+          "简单",
+          "jiǎndān",
+          "giản đơn",
+          "đơn giản",
+          "🧩"
+        ],
+        [
+          "方便",
+          "fāngbiàn",
+          "phương tiện",
+          "thuận tiện",
+          "🚉"
+        ],
+        [
+          "重要",
+          "zhòngyào",
+          "trọng yếu",
+          "quan trọng",
+          "⭐"
+        ],
+        [
+          "参加",
+          "cānjiā",
+          "tham gia",
+          "tham gia",
+          "👥"
+        ],
+        [
+          "选择",
+          "xuǎnzé",
+          "tuyển trạch",
+          "lựa chọn",
+          "🔀"
+        ],
+        [
+          "改变",
+          "gǎibiàn",
+          "cải biến",
+          "thay đổi",
+          "🔄"
+        ],
+        [
+          "约定",
+          "yuēdìng",
+          "ước định",
+          "hẹn; thống nhất với nhau",
+          "🤝"
+        ]
+      ],
+      "grammar": [
+        [
+          "Điều kiện đủ",
+          "只要 + điều kiện，就 + kết quả",
+          "只要…就… nhấn mạnh chỉ cần đáp ứng điều kiện nêu trước thì đủ để có kết quả. Phân biệt với 只有…才… nhấn mạnh điều kiện bắt buộc.",
+          "只要大家有时间，我们就一起去。",
+          "Zhǐyào dàjiā yǒu shíjiān, wǒmen jiù yìqǐ qù.",
+          "Chỉ cần mọi người có thời gian, chúng ta sẽ cùng đi."
+        ],
+        [
+          "Hỏi lựa chọn và nêu lựa chọn",
+          "A 还是 B？ / A 或者 B",
+          "还是 thường dùng trong câu hỏi yêu cầu chọn một trong hai phương án. 或者 thường nối các khả năng trong câu kể.",
+          "你想周六去还是周日去？",
+          "Nǐ xiǎng zhōuliù qù háishi zhōurì qù?",
+          "Bạn muốn đi thứ Bảy hay Chủ nhật?"
+        ],
+        [
+          "Nói mọi người đều có thể",
+          "谁 + 都 + vị ngữ",
+          "谁都… trong câu trần thuật nghĩa là ai cũng…. Tương tự, 什么都… có thể nói điều gì cũng…; cần đọc theo ngữ cảnh, không xem 谁 luôn là câu hỏi.",
+          "这个活动谁都可以参加。",
+          "Zhège huódòng shéi dōu kěyǐ cānjiā.",
+          "Hoạt động này ai cũng có thể tham gia."
+        ]
+      ],
+      "dialogue": [
+        [
+          "An",
+          "周末我们一起练习汉语吧。你想周六还是周日？",
+          "Zhōumò wǒmen yìqǐ liànxí Hànyǔ ba. Nǐ xiǎng zhōuliù háishi zhōurì?",
+          "Cuối tuần mình cùng luyện tiếng Trung nhé. Bạn muốn thứ Bảy hay Chủ nhật?"
+        ],
+        [
+          "Minh",
+          "我觉得周六比较方便。去图书馆怎么样？",
+          "Wǒ juéde zhōuliù bǐjiào fāngbiàn. Qù túshūguǎn zěnmeyàng?",
+          "Tôi thấy thứ Bảy thuận tiện hơn. Đến thư viện thì sao?"
+        ],
+        [
+          "An",
+          "我同意。只要大家有时间，就都可以来。",
+          "Wǒ tóngyì. Zhǐyào dàjiā yǒu shíjiān, jiù dōu kěyǐ lái.",
+          "Tôi đồng ý. Chỉ cần mọi người có thời gian thì đều có thể đến."
+        ],
+        [
+          "Minh",
+          "我先问问小兰，她也想参加。",
+          "Wǒ xiān wènwen Xiǎo Lán, tā yě xiǎng cānjiā.",
+          "Để tôi hỏi Lan trước, cô ấy cũng muốn tham gia."
+        ],
+        [
+          "An",
+          "那我们约定上午十点在图书馆门口见。",
+          "Nà wǒmen yuēdìng shàngwǔ shí diǎn zài túshūguǎn ménkǒu jiàn.",
+          "Vậy mình hẹn mười giờ sáng gặp ở cửa thư viện."
+        ],
+        [
+          "Minh",
+          "好，如果有变化，我会提前联系你。",
+          "Hǎo, rúguǒ yǒu biànhuà, wǒ huì tíqián liánxì nǐ.",
+          "Được, nếu có thay đổi tôi sẽ liên hệ trước với bạn."
+        ]
+      ],
+      "reading": {
+        "hanzi": "我们本来打算周六去公园练习汉语，但是天气预报说可能下雨。小兰建议改去图书馆，大家都同意了。那里离地铁站很近，也比较安静。我们约好上午十点见面，谁想参加都可以提前告诉小兰。",
+        "pinyin": "Wǒmen běnlái dǎsuàn zhōuliù qù gōngyuán liànxí Hànyǔ, dànshì tiānqì yùbào shuō kěnéng xiàyǔ. Xiǎo Lán jiànyì gǎi qù túshūguǎn, dàjiā dōu tóngyì le. Nàli lí dìtiězhàn hěn jìn, yě bǐjiào ānjìng. Wǒmen yuē hǎo shàngwǔ shí diǎn jiànmiàn, shéi xiǎng cānjiā dōu kěyǐ tíqián gàosu Xiǎo Lán.",
+        "meaning": "Ban đầu chúng tôi định đến công viên luyện tiếng Trung vào thứ Bảy, nhưng dự báo nói có thể mưa. Lan đề xuất đổi sang thư viện, mọi người đều đồng ý. Chỗ đó gần ga tàu điện ngầm và khá yên tĩnh. Chúng tôi hẹn mười giờ sáng; ai muốn tham gia có thể báo trước cho Lan."
+      },
+      "practice": [
+        "Đề xuất một hoạt động rồi mời bạn nêu ý kiến đồng ý hoặc phương án khác.",
+        "Đặt hai câu hỏi lựa chọn bằng 还是 và hai câu kể có 或者.",
+        "Nêu một điều kiện đủ với 只要…就… rồi xác nhận thời gian, địa điểm cuộc hẹn."
+      ],
+      "homework": "Viết một đoạn hội thoại sáu lượt để thống nhất hoạt động cuối tuần. Có câu hỏi 还是, một điều kiện với 只要 và lời xác nhận cuối cùng.",
+      "sentenceTokens": [
+        "只要",
+        "大家有时间",
+        "我们",
+        "就",
+        "一起去"
+      ],
+      "sentenceMeaning": "Chỉ cần mọi người có thời gian, chúng ta sẽ cùng đi.",
+      "sentenceAlternatives": [
+        "我们只要大家有时间就一起去",
+        "只要我们大家有时间就一起去"
+      ],
+      "mistake": {
+        "wrong": "谁可以都参加这个活动。",
+        "correct": "谁都可以参加这个活动。",
+        "explanation": "Khi nói “ai cũng có thể”, thứ tự là 谁 + 都 + 可以 + hành động."
+      },
+      "quiz": [
+        {
+          "question": "“我同意你的建议” nghĩa là gì?",
+          "choices": [
+            "Tôi đồng ý với đề xuất của bạn",
+            "Tôi quên cuộc hẹn của bạn",
+            "Tôi chưa hiểu địa chỉ của bạn"
+          ],
+          "correct": "Tôi đồng ý với đề xuất của bạn",
+          "explanation": "同意 là đồng ý, 建议 là đề xuất hoặc lời khuyên."
+        },
+        {
+          "question": "只要有时间，我们___一起去。 Chọn từ phù hợp.",
+          "choices": [
+            "就",
+            "才",
+            "却"
+          ],
+          "correct": "就",
+          "explanation": "Cặp cấu trúc đúng là 只要…就…."
+        },
+        {
+          "question": "Điền từ vào câu hỏi yêu cầu chọn ngày: 你周六去___周日去？",
+          "choices": [
+            "还是",
+            "或者",
+            "所以"
+          ],
+          "correct": "还是",
+          "explanation": "还是 dùng trong câu hỏi lựa chọn giữa thứ Bảy và Chủ nhật."
+        },
+        {
+          "question": "Điền từ vào câu kể nêu hai khả năng: 我们可以坐地铁___坐公共汽车去。",
+          "choices": [
+            "或者",
+            "还是",
+            "虽然"
+          ],
+          "correct": "或者",
+          "explanation": "Câu kể nêu các phương án nên dùng 或者."
+        },
+        {
+          "question": "“谁都可以参加” nói về phạm vi nào?",
+          "choices": [
+            "Ai cũng có thể tham gia",
+            "Chỉ một người được tham gia",
+            "Không ai được tham gia"
+          ],
+          "correct": "Ai cũng có thể tham gia",
+          "explanation": "谁都… trong câu trần thuật mang nghĩa bao quát mọi người."
+        },
+        {
+          "question": "Theo hội thoại, hai bạn hẹn ở đâu?",
+          "choices": [
+            "图书馆门口",
+            "公园里面",
+            "车站出口"
+          ],
+          "correct": "图书馆门口",
+          "explanation": "An đề nghị gặp ở cửa thư viện lúc mười giờ sáng."
+        },
+        {
+          "question": "Theo bài đọc, vì sao nhóm đổi địa điểm?",
+          "choices": [
+            "Có dự báo có thể mưa",
+            "Thư viện đóng cửa",
+            "Mọi người không thích học"
+          ],
+          "correct": "Có dự báo có thể mưa",
+          "explanation": "天气预报说可能下雨 là lý do nhóm đổi từ công viên sang thư viện."
+        },
+        {
+          "question": "Theo bài đọc, ai muốn tham gia nên báo trước cho ai?",
+          "choices": [
+            "小兰",
+            "王经理",
+            "一位老人"
+          ],
+          "correct": "小兰",
+          "explanation": "Câu cuối yêu cầu 提前告诉小兰."
+        }
+      ]
+    },
+    {
+      "title": "Ôn tổng hợp: tổ chức chuyến đi học tập",
+      "topic": [
+        "我们一起把这次活动安排好。",
+        "Wǒmen yìqǐ bǎ zhè cì huódòng ānpái hǎo.",
+        "Chúng ta cùng sắp xếp tốt hoạt động lần này."
+      ],
+      "description": "Vận dụng ngôn ngữ đã học để phân công, chuẩn bị, xử lý thay đổi và kể lại kết quả một hoạt động nhóm.",
+      "objectives": [
+        "Lập được kế hoạch sáu đến tám câu có thời gian, địa điểm, phân công và phương án thay đổi.",
+        "Dùng kết hợp câu 把, câu điều kiện và câu bổ sung thông tin trong một hội thoại tự nhiên.",
+        "Đọc một câu chuyện ngắn, xác định các chi tiết chính và tóm tắt kết quả bằng tiếng Trung."
+      ],
+      "preparation": [
+        "Chuẩn bị bảng kế hoạch gồm người tham gia, nơi đến, giờ hẹn và việc cần chuẩn bị.",
+        "Xem lại ba lỗi cá nhân từ các bài trước và chọn hai cấu trúc cần ôn."
+      ],
+      "lessonPlan": [
+        {
+          "title": "Xác định nhiệm vụ cuối khóa",
+          "minutes": 5,
+          "teacher": "Giao tình huống tổ chức chuyến đi học tập, nêu rõ sản phẩm cần hoàn thành.",
+          "learner": "Chọn vai và ghi mục tiêu của nhóm."
+        },
+        {
+          "title": "Ôn từ theo nhiệm vụ",
+          "minutes": 10,
+          "teacher": "Ôn 12 từ bằng nhóm chức năng: lên kế hoạch, phối hợp, kiểm tra và tổng kết.",
+          "learner": "Chọn từ phù hợp cho từng ô trong bảng kế hoạch."
+        },
+        {
+          "title": "Ôn ba cấu trúc trọng tâm",
+          "minutes": 15,
+          "teacher": "Cho sửa câu 把 thiếu kết quả, hoàn thành câu 如果 và nối hai ưu điểm bằng 不但…而且….",
+          "learner": "Sửa lỗi, giải thích ngắn và tạo câu dùng trong kế hoạch của nhóm."
+        },
+        {
+          "title": "Đóng vai xử lý thay đổi",
+          "minutes": 15,
+          "teacher": "Thông báo một thay đổi như trời mưa hoặc một người đến muộn để nhóm điều chỉnh.",
+          "learner": "Hỏi lại, đề xuất cách xử lý và xác nhận kế hoạch mới."
+        },
+        {
+          "title": "Đọc hiểu và đánh giá",
+          "minutes": 15,
+          "teacher": "Cho đọc bài tổng hợp, yêu cầu nêu bằng chứng khi chọn đáp án và phản hồi về bài trình bày.",
+          "learner": "Tóm tắt bài đọc, làm mini test và hoàn thiện kế hoạch sáu đến tám câu."
+        },
+        {
+          "title": "Tổng kết hành trình học",
+          "minutes": 5,
+          "teacher": "Ghi nhận tiến bộ theo mục tiêu giao tiếp và chỉ ra một nội dung cần tiếp tục luyện.",
+          "learner": "Nêu một điều đã làm được, một lỗi đã sửa và bước học tiếp theo."
+        }
+      ],
+      "vocabulary": [
+        [
+          "计划",
+          "jìhuà",
+          "kế hoạch",
+          "kế hoạch; lên kế hoạch",
+          "📋"
+        ],
+        [
+          "安排",
+          "ānpái",
+          "an bài",
+          "sắp xếp; bố trí",
+          "🗓️"
+        ],
+        [
+          "参加",
+          "cānjiā",
+          "tham gia",
+          "tham gia",
+          "👥"
+        ],
+        [
+          "联系",
+          "liánxì",
+          "liên hệ",
+          "liên hệ",
+          "☎️"
+        ],
+        [
+          "准备",
+          "zhǔnbèi",
+          "chuẩn bị",
+          "chuẩn bị",
+          "🎒"
+        ],
+        [
+          "检查",
+          "jiǎnchá",
+          "kiểm tra",
+          "kiểm tra",
+          "🔍"
+        ],
+        [
+          "解决",
+          "jiějué",
+          "giải quyết",
+          "giải quyết",
+          "🧩"
+        ],
+        [
+          "完成",
+          "wánchéng",
+          "hoàn thành",
+          "hoàn thành",
+          "🏁"
+        ],
+        [
+          "经验",
+          "jīngyàn",
+          "kinh nghiệm",
+          "kinh nghiệm",
+          "💡"
+        ],
+        [
+          "总结",
+          "zǒngjié",
+          "tổng kết",
+          "tổng kết",
+          "📝"
+        ],
+        [
+          "继续",
+          "jìxù",
+          "kế tục",
+          "tiếp tục",
+          "➡️"
+        ],
+        [
+          "博物馆",
+          "bówùguǎn",
+          "bác vật quán",
+          "bảo tàng",
+          "🏛️"
+        ]
+      ],
+      "grammar": [
+        [
+          "Ôn câu 把 có kết quả",
+          "把 + đối tượng xác định + động từ + 好 / 清楚 / vị trí",
+          "Kiểm tra người nghe đã biết đối tượng nào và hành động sẽ tạo ra kết quả gì. Dùng 安排好、说清楚 hoặc một vị trí cụ thể để câu đủ ý.",
+          "我们先把时间和地点说清楚。",
+          "Wǒmen xiān bǎ shíjiān hé dìdiǎn shuō qīngchu.",
+          "Chúng ta nói rõ thời gian và địa điểm trước."
+        ],
+        [
+          "Ôn phương án theo điều kiện",
+          "如果 + tình huống，就 + cách xử lý",
+          "如果…就… giúp chuẩn bị cách làm khi một tình huống xảy ra. Vế sau cần đáp ứng đúng điều kiện của vế trước.",
+          "如果下雨，我们就坐地铁去。",
+          "Rúguǒ xiàyǔ, wǒmen jiù zuò dìtiě qù.",
+          "Nếu trời mưa, chúng ta sẽ đi bằng tàu điện ngầm."
+        ],
+        [
+          "Ôn bổ sung hai kết quả tích cực",
+          "不但 + ý 1，而且 + ý 2",
+          "Dùng để tổng kết hai điều cùng đạt được trong hoạt động. Đảm bảo hai vế cùng nói về chủ thể và có quan hệ bổ sung.",
+          "这次活动不但很有趣，而且让我们学到了很多。",
+          "Zhè cì huódòng búdàn hěn yǒuqù, érqiě ràng wǒmen xué dào le hěn duō.",
+          "Hoạt động này không chỉ thú vị mà còn giúp chúng tôi học được nhiều điều."
+        ]
+      ],
+      "dialogue": [
+        [
+          "An",
+          "我们周六几点出发？",
+          "Wǒmen zhōuliù jǐ diǎn chūfā?",
+          "Thứ Bảy mình khởi hành lúc mấy giờ?"
+        ],
+        [
+          "Minh",
+          "九点。你负责联系同学，我准备地图。",
+          "Jiǔ diǎn. Nǐ fùzé liánxì tóngxué, wǒ zhǔnbèi dìtú.",
+          "Chín giờ. Bạn phụ trách liên hệ các bạn học, tôi chuẩn bị bản đồ."
+        ],
+        [
+          "An",
+          "如果下雨，我们怎么去？",
+          "Rúguǒ xiàyǔ, wǒmen zěnme qù?",
+          "Nếu trời mưa, mình đi bằng cách nào?"
+        ],
+        [
+          "Minh",
+          "下雨的话，就坐地铁。",
+          "Xiàyǔ de huà, jiù zuò dìtiě.",
+          "Nếu mưa thì đi tàu điện ngầm."
+        ],
+        [
+          "An",
+          "好，我会把时间和地点告诉大家。",
+          "Hǎo, wǒ huì bǎ shíjiān hé dìdiǎn gàosu dàjiā.",
+          "Được, tôi sẽ báo thời gian và địa điểm cho mọi người."
+        ],
+        [
+          "Minh",
+          "参观以后，我们一起总结这次活动。",
+          "Cānguān yǐhòu, wǒmen yìqǐ zǒngjié zhè cì huódòng.",
+          "Sau khi tham quan, chúng ta cùng tổng kết hoạt động này."
+        ]
+      ],
+      "reading": {
+        "hanzi": "周六，我们班去参观一个博物馆。出发前，小安检查了人数，小明准备了地图。因为下雨，大家决定坐地铁去。到达以后，我们先看介绍，再一起参观。活动结束后，每个人都用汉语说了自己的想法。",
+        "pinyin": "Zhōuliù, wǒmen bān qù cānguān yí ge bówùguǎn. Chūfā qián, Xiǎo Ān jiǎnchá le rénshù, Xiǎo Míng zhǔnbèi le dìtú. Yīnwèi xiàyǔ, dàjiā juédìng zuò dìtiě qù. Dàodá yǐhòu, wǒmen xiān kàn jièshào, zài yìqǐ cānguān. Huódòng jiéshù hòu, měi ge rén dōu yòng Hànyǔ shuō le zìjǐ de xiǎngfǎ.",
+        "meaning": "Thứ Bảy, lớp chúng tôi đi tham quan một bảo tàng. Trước khi đi, An kiểm tra số người, Minh chuẩn bị bản đồ. Vì trời mưa, cả nhóm quyết định đi tàu điện ngầm. Đến nơi, chúng tôi xem phần giới thiệu trước rồi cùng tham quan. Sau hoạt động, mỗi người đều nói suy nghĩ của mình bằng tiếng Trung."
+      },
+      "practice": [
+        "Lập kế hoạch sáu đến tám câu cho một hoạt động nhóm: thời gian, nơi đến, phân công và đồ cần chuẩn bị.",
+        "Đổi một điều kiện trong kế hoạch rồi đóng vai thống nhất phương án mới bằng 如果…就….",
+        "Kể lại kết quả hoạt động bằng bốn câu, có một câu 不但…而且… và một điều muốn cải thiện."
+      ],
+      "homework": "Viết bài tổng kết tám câu hoặc thu âm khoảng một phút về một hoạt động thật hay tưởng tượng. Tự đánh dấu câu 把, câu điều kiện và ba từ vựng đã vận dụng; sửa ít nhất một lỗi sau khi xem lại.",
+      "sentenceTokens": [
+        "我们",
+        "一起",
+        "把这次活动",
+        "安排好"
+      ],
+      "sentenceMeaning": "Chúng ta cùng sắp xếp tốt hoạt động lần này.",
+      "sentenceAlternatives": [
+        "我们把这次活动一起安排好"
+      ],
+      "mistake": {
+        "wrong": "如果下雨，所以我们坐地铁去。",
+        "correct": "如果下雨，我们就坐地铁去。",
+        "explanation": "Nếu nêu điều kiện giả định, dùng 如果…就…. 因为…所以… dùng khi giải thích nguyên nhân và kết quả."
+      },
+      "quiz": [
+        {
+          "question": "“总结这次活动” nghĩa là gì?",
+          "choices": [
+            "Tổng kết hoạt động lần này",
+            "Hủy tất cả cuộc hẹn",
+            "Mua thêm vé"
+          ],
+          "correct": "Tổng kết hoạt động lần này",
+          "explanation": "总结 là nhìn lại và rút ra những điểm chính sau một hoạt động."
+        },
+        {
+          "question": "Chọn câu 把 đầy đủ, tự nhiên.",
+          "choices": [
+            "我们把时间说清楚。",
+            "我们把时间说。",
+            "我们时间把清楚说。"
+          ],
+          "correct": "我们把时间说清楚。",
+          "explanation": "说清楚 diễn tả kết quả nói rõ, làm câu 把 đầy đủ ý."
+        },
+        {
+          "question": "如果下雨，我们___坐地铁去。 Điền từ nối.",
+          "choices": [
+            "就",
+            "所以",
+            "虽然"
+          ],
+          "correct": "就",
+          "explanation": "Cặp liên kết điều kiện là 如果…就…."
+        },
+        {
+          "question": "这次活动不但有趣，___让我们学到了很多。 Chọn từ phù hợp.",
+          "choices": [
+            "而且",
+            "但是",
+            "或者"
+          ],
+          "correct": "而且",
+          "explanation": "不但…而且… bổ sung một kết quả tích cực."
+        },
+        {
+          "question": "Theo hội thoại, ai chuẩn bị bản đồ?",
+          "choices": [
+            "Minh",
+            "An",
+            "Người quản lý khách sạn"
+          ],
+          "correct": "Minh",
+          "explanation": "Minh nói 我准备地图."
+        },
+        {
+          "question": "Theo hội thoại, sau khi tham quan nhóm sẽ làm gì?",
+          "choices": [
+            "一起总结这次活动",
+            "马上去买外套",
+            "继续找钱包"
+          ],
+          "correct": "一起总结这次活动",
+          "explanation": "Lượt cuối hội thoại nêu nhiệm vụ tổng kết sau tham quan."
+        },
+        {
+          "question": "Theo bài đọc, An kiểm tra gì trước khi khởi hành?",
+          "choices": [
+            "人数",
+            "衣服的价格",
+            "宾馆的房间"
+          ],
+          "correct": "人数",
+          "explanation": "小安检查了人数: An kiểm tra số người."
+        },
+        {
+          "question": "Theo bài đọc, vì sao cả nhóm chọn tàu điện ngầm?",
+          "choices": [
+            "因为下雨",
+            "因为地图丢了",
+            "因为每个人都迟到"
+          ],
+          "correct": "因为下雨",
+          "explanation": "Bài đọc ghi rõ 因为下雨，大家决定坐地铁去."
+        },
+        {
+          "question": "Theo bài đọc, sau hoạt động mỗi người làm gì?",
+          "choices": [
+            "Nói suy nghĩ của mình bằng tiếng Trung",
+            "Viết lại toàn bộ một cuốn sách",
+            "Đăng ký một khách sạn"
+          ],
+          "correct": "Nói suy nghĩ của mình bằng tiếng Trung",
+          "explanation": "Câu cuối nêu 每个人都用汉语说了自己的想法."
+        }
+      ]
+    }
+  ]
+}

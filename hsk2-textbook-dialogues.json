@@ -1,0 +1,601 @@
+{
+  "version": 1,
+  "level": 2,
+  "source": {
+    "title": "Giáo trình chuẩn HSK 2",
+    "fileName": "2.GIÁO TRÌNH HSK2_CHUAN.pdf",
+    "pdfPageCount": 160,
+    "section": "课文",
+    "translationNote": "Chữ Hán và Pinyin theo giáo trình HSK 2 chuẩn; bản dịch tiếng Việt đối chiếu sát ngữ cảnh."
+  },
+  "lessons": [
+    {
+      "number": 1,
+      "titleZh": "九月去北京旅游最好",
+      "titlePinyin": "Jiǔyuè qù Běijīng lǚyóu zuì hǎo",
+      "titleVi": "Tháng 9 đi Bắc Kinh du lịch là thích hợp nhất",
+      "pdfStartPage": 1,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在学校",
+          "sceneVi": "Ở trường học",
+          "pdfPages": [
+            1
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "我要去北京旅游，你觉得什么时候去最好？",
+              "py": "Wǒ yào qù Běijīng lǚyóu, nǐ juéde shénme shíhou qù zuì hǎo?",
+              "vi": "Tôi muốn đi Bắc Kinh du lịch, bạn thấy khi nào đi là đẹp nhất?"
+            },
+            {
+              "speaker": "B",
+              "zh": "九月去北京旅游最好。",
+              "py": "Jiǔyuè qù Běijīng lǚyóu zuì hǎo.",
+              "vi": "Tháng chín đi Bắc Kinh du lịch là đẹp nhất."
+            },
+            {
+              "speaker": "A",
+              "zh": "为什么？",
+              "py": "Wèishénme?",
+              "vi": "Tại sao vậy?"
+            },
+            {
+              "speaker": "B",
+              "zh": "九月的北京天气不冷也不热。",
+              "py": "Jiǔyuè de Běijīng tiānqì bù lěng yě bú rè.",
+              "vi": "Thời tiết Bắc Kinh vào tháng chín không lạnh cũng không nóng."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "看照片",
+          "sceneVi": "Xem ảnh",
+          "pdfPages": [
+            2
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你喜欢踢足球吗？",
+              "py": "Nǐ xǐhuan tī zúqiú ma?",
+              "vi": "Bạn có thích đá bóng không?"
+            },
+            {
+              "speaker": "B",
+              "zh": "非常喜欢。",
+              "py": "Fēicháng xǐhuan.",
+              "vi": "Rất thích."
+            },
+            {
+              "speaker": "A",
+              "zh": "下午我们一起去踢足球吧。",
+              "py": "Xiàwǔ wǒmen yìqǐ qù tī zúqiú ba.",
+              "vi": "Chiều nay chúng mình cùng nhau đi đá bóng nhé."
+            },
+            {
+              "speaker": "B",
+              "zh": "好啊！",
+              "py": "Hǎo a!",
+              "vi": "Được chứ!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "titleZh": "我每天六点起床",
+      "titlePinyin": "Wǒ měitiān liù diǎn qǐchuáng",
+      "titleVi": "Ngày nào tôi cũng dậy lúc 6 giờ",
+      "pdfStartPage": 10,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在运动场",
+          "sceneVi": "Ở sân vận động",
+          "pdfPages": [
+            10
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你很少生病，是不是喜欢运动？",
+              "py": "Nǐ hěn shǎo shēngbìng, shì bu shì xǐhuan yùndòng?",
+              "vi": "Bạn rất ít khi bị ốm, có phải thích vận động không?"
+            },
+            {
+              "speaker": "B",
+              "zh": "是啊，我每天早上都要出去跑步。",
+              "py": "Shì a, wǒ měitiān zǎoshang dōu yào chūqù pǎobù.",
+              "vi": "Đúng vậy, sáng nào tôi cũng phải ra ngoài chạy bộ."
+            },
+            {
+              "speaker": "A",
+              "zh": "你每天几点起床？",
+              "py": "Nǐ měitiān jǐ diǎn qǐchuáng?",
+              "vi": "Hằng ngày bạn thức dậy lúc mấy giờ?"
+            },
+            {
+              "speaker": "B",
+              "zh": "我每天六点起床。",
+              "py": "Wǒ měitiān liù diǎn qǐchuáng.",
+              "vi": "Ngày nào tôi cũng thức dậy lúc sáu giờ."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在医院",
+          "sceneVi": "Ở bệnh viện",
+          "pdfPages": [
+            11
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "吃药了吗？现在身体怎么样？",
+              "py": "Chī yào le ma? Xiànzài shēntǐ zěnmeyàng?",
+              "vi": "Uống thuốc chưa? Bây giờ trong người thế nào rồi?"
+            },
+            {
+              "speaker": "B",
+              "zh": "吃了。现在好多了。",
+              "py": "Chī le. Xiànzài hǎo duō le.",
+              "vi": "Uống rồi. Giờ đỡ nhiều rồi."
+            },
+            {
+              "speaker": "A",
+              "zh": "什么时候能出院？",
+              "py": "Shénme shíhou néng chūyuàn?",
+              "vi": "Khi nào thì có thể xuất viện?"
+            },
+            {
+              "speaker": "B",
+              "zh": "医生说下个星期。",
+              "py": "Yīshēng shuō xià ge xīngqī.",
+              "vi": "Bác sĩ nói tuần sau."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "titleZh": "左边那个红色的是我的",
+      "titlePinyin": "Zuǒbian nàge hóngsè de shì wǒ de",
+      "titleVi": "Cái màu đỏ bên trái là của tôi",
+      "pdfStartPage": 20,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在操场",
+          "sceneVi": "Ở sân trường",
+          "pdfPages": [
+            20
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "这块手表是你的吗？",
+              "py": "Zhè kuài shǒubiǎo shì nǐ de ma?",
+              "vi": "Chiếc đồng hồ này là của bạn à?"
+            },
+            {
+              "speaker": "B",
+              "zh": "不是我的。是我爸爸的。",
+              "py": "Bú shì wǒ de. Shì wǒ bàba de.",
+              "vi": "Không phải của tôi. Là của bố tôi đấy."
+            },
+            {
+              "speaker": "A",
+              "zh": "多少钱买的？",
+              "py": "Duōshao qián mǎi de?",
+              "vi": "Mua bao nhiêu tiền vậy?"
+            },
+            {
+              "speaker": "B",
+              "zh": "三千多块。",
+              "py": "Sānqiān duō kuài.",
+              "vi": "Hơn ba nghìn tệ."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在教室",
+          "sceneVi": "Ở phòng học",
+          "pdfPages": [
+            21
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "这是谁的自行车？",
+              "py": "Zhè shì shéi de zìxíngchē?",
+              "vi": "Đây là xe đạp của ai?"
+            },
+            {
+              "speaker": "B",
+              "zh": "左边那个红色的是我的，右边那个是王方的。",
+              "py": "Zuǒbian nàge hóngsè de shì wǒ de, yòubian nàge shì Wáng Fāng de.",
+              "vi": "Cái màu đỏ bên trái là của tôi, cái bên phải là của Vương Phương."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "titleZh": "这个工作是他帮我介绍的",
+      "titlePinyin": "Zhège gōngzuò shì tā bāng wǒ jièshào de",
+      "titleVi": "Công việc này là anh ấy giới thiệu cho tôi",
+      "pdfStartPage": 30,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在办公室",
+          "sceneVi": "Ở văn phòng",
+          "pdfPages": [
+            30
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你认识谢朋吗？",
+              "py": "Nǐ rènshi Xiè Péng ma?",
+              "vi": "Bạn có quen Tạ Bằng không?"
+            },
+            {
+              "speaker": "B",
+              "zh": "认识，我们是大学同学。",
+              "py": "Rènshi, wǒmen shì dàxué tóngxué.",
+              "vi": "Có quen, chúng tôi là bạn học đại học."
+            },
+            {
+              "speaker": "A",
+              "zh": "这个工作是他帮我介绍的。",
+              "py": "Zhège gōngzuò shì tā bāng wǒ jièshào de.",
+              "vi": "Công việc này chính là anh ấy giới thiệu giúp tôi đấy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "titleZh": "就买这件吧",
+      "titlePinyin": "Jiù mǎi zhè jiàn ba",
+      "titleVi": "Mua chiếc này đi",
+      "pdfStartPage": 40,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在商店",
+          "sceneVi": "Trong cửa hàng",
+          "pdfPages": [
+            40
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你觉得这件衣服怎么样？",
+              "py": "Nǐ juéde zhè jiàn yīfu zěnmeyàng?",
+              "vi": "Bạn thấy chiếc áo này thế nào?"
+            },
+            {
+              "speaker": "B",
+              "zh": "颜色很好，但是有点儿大。",
+              "py": "Yánsè hěn hǎo, dànshì yǒudiǎnr dà.",
+              "vi": "Màu sắc rất đẹp, nhưng hơi rộng một chút."
+            },
+            {
+              "speaker": "A",
+              "zh": "这件小的怎么样？",
+              "py": "Zhè jiàn xiǎo de zěnmeyàng?",
+              "vi": "Chiếc cỡ nhỏ này thì sao?"
+            },
+            {
+              "speaker": "B",
+              "zh": "这件不错，就买这件吧。",
+              "py": "Zhè jiàn búcuò, jiù mǎi zhè jiàn ba.",
+              "vi": "Chiếc này khá ổn, mua chiếc này đi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "titleZh": "你怎么不吃了？",
+      "titlePinyin": "Nǐ zěnme bù chī le?",
+      "titleVi": "Sao bạn không ăn nữa?",
+      "pdfStartPage": 50,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在饭馆",
+          "sceneVi": "Ở quán ăn",
+          "pdfPages": [
+            50
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你今天怎么吃得这么少？",
+              "py": "Nǐ jīntiān zěnme chī de zhème shǎo?",
+              "vi": "Hôm nay sao bạn ăn ít thế?"
+            },
+            {
+              "speaker": "B",
+              "zh": "我牙疼，不能吃太多东西。",
+              "py": "Wǒ yá téng, bù néng chī tài duō dōngxi.",
+              "vi": "Tôi bị đau răng, không ăn được nhiều đồ ăn."
+            },
+            {
+              "speaker": "A",
+              "zh": "去医院看了吗？",
+              "py": "Qù yīyuàn kàn le ma?",
+              "vi": "Đi bệnh viện khám chưa?"
+            },
+            {
+              "speaker": "B",
+              "zh": "看了，医生说多喝水，多休息。",
+              "py": "Kàn le, yīshēng shuō duō hē shuǐ, duō xiūxi.",
+              "vi": "Khám rồi, bác sĩ bảo uống nhiều nước và nghỉ ngơi nhiều."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "titleZh": "你家离公司远吗？",
+      "titlePinyin": "Nǐ jiā lí gōngsī yuǎn ma?",
+      "titleVi": "Nhà bạn cách công ty xa không?",
+      "pdfStartPage": 60,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在路上",
+          "sceneVi": "Ở trên đường",
+          "pdfPages": [
+            60
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你家离公司远吗？",
+              "py": "Nǐ jiā lí gōngsī yuǎn ma?",
+              "vi": "Nhà bạn cách công ty có xa không?"
+            },
+            {
+              "speaker": "B",
+              "zh": "很远，坐公共汽车要一个多小时呢。",
+              "py": "Hěn yuǎn, zuò gōnggòng qìchē yào yí ge duō xiǎoshí ne.",
+              "vi": "Rất xa, đi xe buýt mất hơn một tiếng lận."
+            },
+            {
+              "speaker": "A",
+              "zh": "坐地铁呢？",
+              "py": "Zuò dìtiě ne?",
+              "vi": "Còn đi tàu điện ngầm thì sao?"
+            },
+            {
+              "speaker": "B",
+              "zh": "坐地铁快一点儿，半个小时就到了。",
+              "py": "Zuò dìtiě kuài yìdiǎnr, bàn ge xiǎoshí jiù dào le.",
+              "vi": "Đi tàu điện ngầm nhanh hơn một chút, nửa tiếng là đến rồi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "titleZh": "让我想想再告诉你",
+      "titlePinyin": "Ràng wǒ xiǎngxiang zài gàosu nǐ",
+      "titleVi": "Để tôi suy nghĩ rồi nói cho bạn biết nhé",
+      "pdfStartPage": 70,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在教室",
+          "sceneVi": "Ở phòng học",
+          "pdfPages": [
+            70
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "我们晚上去唱歌，你去不去？",
+              "py": "Wǒmen wǎnshang qù chànggē, nǐ qù bu qù?",
+              "vi": "Tối nay chúng tôi đi hát karaoke, bạn đi không?"
+            },
+            {
+              "speaker": "B",
+              "zh": "今天事情有点儿多，让我想想再告诉你吧。",
+              "py": "Jīntiān shìqing yǒudiǎnr duō, ràng wǒ xiǎngxiang zài gàosu nǐ ba.",
+              "vi": "Hôm nay việc hơi nhiều, để tôi suy nghĩ rồi nói lại với bạn nhé."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "titleZh": "题太多，我没做完",
+      "titlePinyin": "Tí tài duō, wǒ méi zuò wán",
+      "titleVi": "Bài tập nhiều quá, tôi chưa làm xong",
+      "pdfStartPage": 80,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "考试后",
+          "sceneVi": "Sau giờ thi",
+          "pdfPages": [
+            80
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "今天的考试你考得怎么样？",
+              "py": "Jīntiān de kǎoshì nǐ kǎo de zěnmeyàng?",
+              "vi": "Kỳ thi hôm nay bạn làm bài thế nào?"
+            },
+            {
+              "speaker": "B",
+              "zh": "题太多了，我没做完。",
+              "py": "Tí tài duō le, wǒ méi zuò wán.",
+              "vi": "Đề thi nhiều câu quá, tôi làm không kịp."
+            },
+            {
+              "speaker": "A",
+              "zh": "听力部分难不难？",
+              "py": "Tīnglì bùfen nán bu nán?",
+              "vi": "Phần nghe có khó không?"
+            },
+            {
+              "speaker": "B",
+              "zh": "听力还好，我都听懂了。",
+              "py": "Tīnglì hái hǎo, wǒ dōu tīng dǒng le.",
+              "vi": "Nghe thì cũng tạm, tôi đều nghe hiểu được."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "titleZh": "别找了，手机在桌子上呢",
+      "titlePinyin": "Bié zhǎo le, shǒujī zài zhuōzi shang ne",
+      "titleVi": "Đừng tìm nữa, điện thoại ở trên bàn kìa",
+      "pdfStartPage": 90,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在家里",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            90
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你在找什么呢？",
+              "py": "Nǐ zài zhǎo shénme ne?",
+              "vi": "Bạn đang tìm cái gì vậy?"
+            },
+            {
+              "speaker": "B",
+              "zh": "你看见我的手机了吗？",
+              "py": "Nǐ kànjiàn wǒ de shǒujī le ma?",
+              "vi": "Bạn có thấy điện thoại của tôi đâu không?"
+            },
+            {
+              "speaker": "A",
+              "zh": "别找了，手机在桌子上呢，电脑旁边。",
+              "py": "Bié zhǎo le, shǒujī zài zhuōzi shang ne, diànnǎo pángbiān.",
+              "vi": "Đừng tìm nữa, điện thoại ở trên bàn kìa, ngay cạnh máy tính ấy."
+            },
+            {
+              "speaker": "B",
+              "zh": "看到了，谢谢！",
+              "py": "Kàndào le, xièxie!",
+              "vi": "Thấy rồi, cảm ơn nhé!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "titleZh": "他比我小三岁",
+      "titlePinyin": "Tā bǐ wǒ xiǎo sān suì",
+      "titleVi": "Anh ấy nhỏ hơn tôi 3 tuổi",
+      "pdfStartPage": 100,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在公司",
+          "sceneVi": "Ở công ty",
+          "pdfPages": [
+            100
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "新来的那个同事多大？",
+              "py": "Xīn lái de nàge tóngshì duō dà?",
+              "vi": "Đồng nghiệp mới đến bao nhiêu tuổi vậy?"
+            },
+            {
+              "speaker": "B",
+              "zh": "他比我小三岁，今年二十二岁。",
+              "py": "Tā bǐ wǒ xiǎo sān suì, jīnnián èrshí'èr suì.",
+              "vi": "Cậu ấy nhỏ hơn tôi ba tuổi, năm nay hai mươi hai tuổi."
+            },
+            {
+              "speaker": "A",
+              "zh": "他汉语说得真好！",
+              "py": "Tā Hànyǔ shuō de zhēn hǎo!",
+              "vi": "Cậu ấy nói tiếng Trung tốt thật đấy!"
+            },
+            {
+              "speaker": "B",
+              "zh": "是啊，他以前在北京留学过两年。",
+              "py": "Shì a, tā yǐqián zài Běijīng liúxué guo liǎng nián.",
+              "vi": "Đúng thế, trước đây cậu ấy từng du học ở Bắc Kinh hai năm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "titleZh": "你穿得太少了",
+      "titlePinyin": "Nǐ chuān de tài shǎo le",
+      "titleVi": "Bạn mặc ít quá rồi",
+      "pdfStartPage": 110,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在门口",
+          "sceneVi": "Ở cửa ra vào",
+          "pdfPages": [
+            110
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "今天外面刮大风，非常冷。",
+              "py": "Jīntiān wàimian guā dà fēng, fēicháng lěng.",
+              "vi": "Hôm nay bên ngoài gió to lắm, lạnh buốt luôn."
+            },
+            {
+              "speaker": "B",
+              "zh": "真的吗？我穿得太少了。",
+              "py": "Zhēn de ma? Wǒ chuān de tài shǎo le.",
+              "vi": "Thật sao? Thế thì tôi mặc ít quá rồi."
+            },
+            {
+              "speaker": "A",
+              "zh": "再穿一件厚衣服吧，别感冒了。",
+              "py": "Zài chuān yí jiàn hòu yīfu ba, bié gǎnmào le.",
+              "vi": "Mặc thêm một chiếc áo dày nữa đi, kẻo bị cảm lạnh đấy."
+            },
+            {
+              "speaker": "B",
+              "zh": "好的，我这就去拿。",
+              "py": "Hǎo de, wǒ zhè jiù qù ná.",
+              "vi": "Được rồi, tôi đi lấy ngay đây."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

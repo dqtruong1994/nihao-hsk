@@ -1,0 +1,10 @@
+name = "nihao-hsk"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "."
+
+# Ràng buộc cơ sở dữ liệu Cloudflare D1 (Miễn phí 5,000,000 lượt đọc/ngày)
+[[d1_databases]]
+binding = "DB"
+database_name = "nihao-hsk-db"
+database_id = "your-d1-database-id-here" # Điền ID sau khi chạy: npx wrangler d1 create nihao-hsk-db
+

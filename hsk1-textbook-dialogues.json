@@ -1,0 +1,1732 @@
+{
+  "version": 1,
+  "level": 1,
+  "source": {
+    "title": "Giáo trình chuẩn HSK 1",
+    "fileName": "1.GIÁO TRÌNH HSK1_GIAM DUNG LUONG.pdf",
+    "pdfPageCount": 147,
+    "section": "课文",
+    "translationNote": "Chữ Hán và Pinyin được đối chiếu bản scan; bản dịch tiếng Việt hỗ trợ học tập."
+  },
+  "lessons": [
+    {
+      "number": 1,
+      "titleZh": "你好！",
+      "titlePinyin": "Nǐ hǎo!",
+      "titleVi": "Xin chào!",
+      "pdfStartPage": 14,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "",
+          "sceneVi": "",
+          "pdfPages": [
+            14
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你好！",
+              "py": "Nǐ hǎo!",
+              "vi": "Chào anh!"
+            },
+            {
+              "speaker": "B",
+              "zh": "你好！",
+              "py": "Nǐ hǎo!",
+              "vi": "Chào anh!"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "",
+          "sceneVi": "",
+          "pdfPages": [
+            14
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "您好！",
+              "py": "Nín hǎo!",
+              "vi": "Chào ông!"
+            },
+            {
+              "speaker": "B",
+              "zh": "你们好！",
+              "py": "Nǐmen hǎo!",
+              "vi": "Chào anh chị!"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "",
+          "sceneVi": "",
+          "pdfPages": [
+            14
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "对不起！",
+              "py": "Duìbuqǐ!",
+              "vi": "Xin lỗi!"
+            },
+            {
+              "speaker": "B",
+              "zh": "没关系！",
+              "py": "Méi guānxi!",
+              "vi": "Không sao đâu!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "titleZh": "谢谢你！",
+      "titlePinyin": "Xièxie nǐ!",
+      "titleVi": "Cảm ơn bạn!",
+      "pdfStartPage": 20,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "",
+          "sceneVi": "",
+          "pdfPages": [
+            20
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "谢谢！",
+              "py": "Xièxie!",
+              "vi": "Cảm ơn!"
+            },
+            {
+              "speaker": "B",
+              "zh": "不谢！",
+              "py": "Bú xiè!",
+              "vi": "Không cần cảm ơn đâu!"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "",
+          "sceneVi": "",
+          "pdfPages": [
+            20
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "谢谢你！",
+              "py": "Xièxie nǐ!",
+              "vi": "Cảm ơn cô!"
+            },
+            {
+              "speaker": "B",
+              "zh": "不客气！",
+              "py": "Bú kèqi!",
+              "vi": "Đừng khách sáo!"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "",
+          "sceneVi": "",
+          "pdfPages": [
+            20
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "再见！",
+              "py": "Zàijiàn!",
+              "vi": "Tạm biệt!"
+            },
+            {
+              "speaker": "B",
+              "zh": "再见！",
+              "py": "Zàijiàn!",
+              "vi": "Tạm biệt!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "titleZh": "你叫什么名字？",
+      "titlePinyin": "Nǐ jiào shénme míngzi?",
+      "titleVi": "Bạn tên là gì?",
+      "pdfStartPage": 26,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在学校",
+          "sceneVi": "Ở trường",
+          "pdfPages": [
+            26
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你叫什么名字？",
+              "py": "Nǐ jiào shénme míngzi?",
+              "vi": "Cô tên là gì?"
+            },
+            {
+              "speaker": "B",
+              "zh": "我叫李月。",
+              "py": "Wǒ jiào Lǐ Yuè.",
+              "vi": "Tôi tên là Lý Nguyệt."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在教室",
+          "sceneVi": "Trong lớp học",
+          "pdfPages": [
+            27
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你是老师吗？",
+              "py": "Nǐ shì lǎoshī ma?",
+              "vi": "Cô là giáo viên phải không?"
+            },
+            {
+              "speaker": "B",
+              "zh": "我不是老师，我是学生。",
+              "py": "Wǒ bú shì lǎoshī, wǒ shì xuésheng.",
+              "vi": "Tôi không phải là giáo viên, tôi là học sinh."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在学校",
+          "sceneVi": "Ở trường",
+          "pdfPages": [
+            27
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你是中国人吗？",
+              "py": "Nǐ shì Zhōngguó rén ma?",
+              "vi": "Bạn là người Trung Quốc phải không?"
+            },
+            {
+              "speaker": "B",
+              "zh": "我不是中国人，我是美国人。",
+              "py": "Wǒ bú shì Zhōngguó rén, wǒ shì Měiguó rén.",
+              "vi": "Mình không phải người Trung Quốc, mình là người Mỹ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "titleZh": "她是我的汉语老师。",
+      "titlePinyin": "Tā shì wǒ de Hànyǔ lǎoshī.",
+      "titleVi": "Cô ấy là giáo viên tiếng Trung của tôi.",
+      "pdfStartPage": 34,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在教室",
+          "sceneVi": "Trong lớp học",
+          "pdfPages": [
+            34
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "她是谁？",
+              "py": "Tā shì shéi?",
+              "vi": "Cô ấy là ai vậy?"
+            },
+            {
+              "speaker": "B",
+              "zh": "她是我的汉语老师，她叫李月。",
+              "py": "Tā shì wǒ de Hànyǔ lǎoshī, tā jiào Lǐ Yuè.",
+              "vi": "Cô ấy là giáo viên tiếng Trung của tôi, cô tên là Lý Nguyệt."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在图书馆",
+          "sceneVi": "Ở thư viện",
+          "pdfPages": [
+            35
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你是哪国人？",
+              "py": "Nǐ shì nǎ guó rén?",
+              "vi": "Anh là người nước nào?"
+            },
+            {
+              "speaker": "B",
+              "zh": "我是美国人。你呢？",
+              "py": "Wǒ shì Měiguó rén. Nǐ ne?",
+              "vi": "Tôi là người Mỹ. Còn cô?",
+              "sentences": [
+                {
+                  "zh": "我是美国人。",
+                  "py": "Wǒ shì Měiguó rén.",
+                  "vi": "Tôi là người Mỹ."
+                },
+                {
+                  "zh": "你呢？",
+                  "py": "Nǐ ne?",
+                  "vi": "Còn cô?"
+                }
+              ]
+            },
+            {
+              "speaker": "A",
+              "zh": "我是中国人。",
+              "py": "Wǒ shì Zhōngguó rén.",
+              "vi": "Tôi là người Trung Quốc."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "看照片",
+          "sceneVi": "Xem ảnh",
+          "pdfPages": [
+            35
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "他是谁？",
+              "py": "Tā shì shéi?",
+              "vi": "Anh ấy là ai thế?"
+            },
+            {
+              "speaker": "B",
+              "zh": "他是我同学。",
+              "py": "Tā shì wǒ tóngxué.",
+              "vi": "Anh ấy là bạn cùng lớp của tôi."
+            },
+            {
+              "speaker": "A",
+              "zh": "她呢？她是你同学吗？",
+              "py": "Tā ne? Tā shì nǐ tóngxué ma?",
+              "vi": "Còn cô ấy? Cô ấy là bạn cùng lớp của cô à?",
+              "sentences": [
+                {
+                  "zh": "她呢？",
+                  "py": "Tā ne?",
+                  "vi": "Còn cô ấy?"
+                },
+                {
+                  "zh": "她是你同学吗？",
+                  "py": "Tā shì nǐ tóngxué ma?",
+                  "vi": "Cô ấy là bạn cùng lớp của cô à?"
+                }
+              ]
+            },
+            {
+              "speaker": "B",
+              "zh": "她不是我同学，她是我朋友。",
+              "py": "Tā bú shì wǒ tóngxué, tā shì wǒ péngyou.",
+              "vi": "Cô ấy không phải bạn cùng lớp, cô ấy là bạn của tôi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "titleZh": "她女儿今年二十岁。",
+      "titlePinyin": "Tā nǚ'ér jīnnián èrshí suì.",
+      "titleVi": "Con gái cô ấy năm nay hai mươi tuổi.",
+      "pdfStartPage": 42,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在学校",
+          "sceneVi": "Ở trường",
+          "pdfPages": [
+            42
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你家有几口人？",
+              "py": "Nǐ jiā yǒu jǐ kǒu rén?",
+              "vi": "Nhà anh có mấy người?"
+            },
+            {
+              "speaker": "B",
+              "zh": "我家有三口人。",
+              "py": "Wǒ jiā yǒu sān kǒu rén.",
+              "vi": "Nhà tôi có ba người."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在办公室",
+          "sceneVi": "Trong văn phòng",
+          "pdfPages": [
+            43
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你女儿几岁了？",
+              "py": "Nǐ nǚ'ér jǐ suì le?",
+              "vi": "Con gái cô mấy tuổi rồi?"
+            },
+            {
+              "speaker": "B",
+              "zh": "她今年四岁了。",
+              "py": "Tā jīnnián sì suì le.",
+              "vi": "Năm nay cháu được bốn tuổi rồi."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在办公室",
+          "sceneVi": "Trong văn phòng",
+          "pdfPages": [
+            43
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "李老师多大了？",
+              "py": "Lǐ lǎoshī duō dà le?",
+              "vi": "Cô Lý bao nhiêu tuổi rồi?"
+            },
+            {
+              "speaker": "B",
+              "zh": "她今年50岁了。",
+              "py": "Tā jīnnián wǔshí suì le.",
+              "vi": "Năm nay cô ấy năm mươi tuổi rồi."
+            },
+            {
+              "speaker": "A",
+              "zh": "她女儿呢？",
+              "py": "Tā nǚ'ér ne?",
+              "vi": "Còn con gái cô ấy?"
+            },
+            {
+              "speaker": "B",
+              "zh": "她女儿今年20岁。",
+              "py": "Tā nǚ'ér jīnnián èrshí suì.",
+              "vi": "Con gái cô ấy năm nay hai mươi tuổi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "titleZh": "我会说汉语。",
+      "titlePinyin": "Wǒ huì shuō Hànyǔ.",
+      "titleVi": "Tôi biết nói tiếng Trung Quốc.",
+      "pdfStartPage": 52,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在学校",
+          "sceneVi": "Ở trường",
+          "pdfPages": [
+            52
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你会说汉语吗？",
+              "py": "Nǐ huì shuō Hànyǔ ma?",
+              "vi": "Bạn có biết nói tiếng Trung không?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我会说汉语。",
+              "py": "Wǒ huì shuō Hànyǔ.",
+              "vi": "Tôi biết nói tiếng Trung.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "你妈妈会说汉语吗？",
+              "py": "Nǐ māma huì shuō Hànyǔ ma?",
+              "vi": "Mẹ bạn có biết nói tiếng Trung không?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "她不会说。",
+              "py": "Tā bú huì shuō.",
+              "vi": "Mẹ tôi không biết nói.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在厨房",
+          "sceneVi": "Trong nhà bếp",
+          "pdfPages": [
+            53
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "中国菜好吃吗？",
+              "py": "Zhōngguó cài hǎochī ma?",
+              "vi": "Món ăn Trung Quốc có ngon không?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "中国菜很好吃。",
+              "py": "Zhōngguó cài hěn hǎochī.",
+              "vi": "Món ăn Trung Quốc rất ngon.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "你会做中国菜吗？",
+              "py": "Nǐ huì zuò Zhōngguó cài ma?",
+              "vi": "Bạn có biết nấu món Trung Quốc không?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "我不会做。",
+              "py": "Wǒ bú huì zuò.",
+              "vi": "Tôi không biết nấu.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在图书馆",
+          "sceneVi": "Ở thư viện",
+          "pdfPages": [
+            53
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你会写汉字吗？",
+              "py": "Nǐ huì xiě Hànzì ma?",
+              "vi": "Bạn có biết viết chữ Hán không?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我会写。",
+              "py": "Wǒ huì xiě.",
+              "vi": "Tôi biết viết.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "这个字怎么写？",
+              "py": "Zhège zì zěnme xiě?",
+              "vi": "Chữ này viết thế nào?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "对不起，这个字我会读，不会写。",
+              "py": "Duìbuqǐ, zhège zì wǒ huì dú, bú huì xiě.",
+              "vi": "Xin lỗi, chữ này tôi biết đọc nhưng không biết viết.",
+              "turn": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "titleZh": "今天几号？",
+      "titlePinyin": "Jīntiān jǐ hào?",
+      "titleVi": "Hôm nay là ngày mấy?",
+      "pdfStartPage": 60,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在银行",
+          "sceneVi": "Ở ngân hàng",
+          "pdfPages": [
+            60
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "请问，今天几号？",
+              "py": "Qǐngwèn, jīntiān jǐ hào?",
+              "vi": "Xin hỏi hôm nay là ngày mấy?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "今天9月1号。",
+              "py": "Jīntiān jiǔ yuè yī hào.",
+              "vi": "Hôm nay là ngày 1 tháng 9.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "今天星期几？",
+              "py": "Jīntiān xīngqī jǐ?",
+              "vi": "Hôm nay là thứ mấy?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "星期三。",
+              "py": "Xīngqī sān.",
+              "vi": "Thứ tư.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "看日历",
+          "sceneVi": "Xem lịch",
+          "pdfPages": [
+            61
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "昨天是几月几号？",
+              "py": "Zuótiān shì jǐ yuè jǐ hào?",
+              "vi": "Hôm qua là ngày mấy tháng mấy?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "昨天是8月31号，星期二。",
+              "py": "Zuótiān shì bā yuè sānshíyī hào, xīngqī èr.",
+              "vi": "Hôm qua là ngày 31 tháng 8, thứ ba.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "明天呢？",
+              "py": "Míngtiān ne?",
+              "vi": "Còn ngày mai?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "明天是9月2号，星期四。",
+              "py": "Míngtiān shì jiǔ yuè èr hào, xīngqī sì.",
+              "vi": "Ngày mai là ngày 2 tháng 9, thứ năm.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在咖啡馆儿",
+          "sceneVi": "Ở quán cà phê",
+          "pdfPages": [
+            61
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "明天星期六，你去学校吗？",
+              "py": "Míngtiān xīngqī liù, nǐ qù xuéxiào ma?",
+              "vi": "Ngày mai là thứ bảy, bạn có đến trường không?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我去学校。",
+              "py": "Wǒ qù xuéxiào.",
+              "vi": "Tôi đến trường.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "你去学校做什么？",
+              "py": "Nǐ qù xuéxiào zuò shénme?",
+              "vi": "Bạn đến trường làm gì?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "我去学校看书。",
+              "py": "Wǒ qù xuéxiào kàn shū.",
+              "vi": "Tôi đến trường đọc sách.",
+              "turn": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "titleZh": "我想喝茶。",
+      "titlePinyin": "Wǒ xiǎng hē chá.",
+      "titleVi": "Tôi muốn uống trà.",
+      "pdfStartPage": 68,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在饭馆儿",
+          "sceneVi": "Ở quán ăn",
+          "pdfPages": [
+            68
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你想喝什么？",
+              "py": "Nǐ xiǎng hē shénme?",
+              "vi": "Bạn muốn uống gì?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我想喝茶。",
+              "py": "Wǒ xiǎng hē chá.",
+              "vi": "Tôi muốn uống trà.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "你想吃什么？",
+              "py": "Nǐ xiǎng chī shénme?",
+              "vi": "Bạn muốn ăn gì?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "我想吃米饭。",
+              "py": "Wǒ xiǎng chī mǐfàn.",
+              "vi": "Tôi muốn ăn cơm.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在客厅",
+          "sceneVi": "Trong phòng khách",
+          "pdfPages": [
+            69
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "下午你想做什么？",
+              "py": "Xiàwǔ nǐ xiǎng zuò shénme?",
+              "vi": "Buổi chiều bạn muốn làm gì?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "下午我想去商店。",
+              "py": "Xiàwǔ wǒ xiǎng qù shāngdiàn.",
+              "vi": "Buổi chiều tôi muốn đến cửa hàng.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "你想买什么？",
+              "py": "Nǐ xiǎng mǎi shénme?",
+              "vi": "Bạn muốn mua gì?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "我想买一个杯子。",
+              "py": "Wǒ xiǎng mǎi yí ge bēizi.",
+              "vi": "Tôi muốn mua một cái cốc.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在商店",
+          "sceneVi": "Ở cửa hàng",
+          "pdfPages": [
+            69
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你好！",
+              "py": "Nǐ hǎo!",
+              "vi": "Chào bạn!",
+              "turn": 1
+            },
+            {
+              "speaker": "A",
+              "zh": "这个杯子多少钱？",
+              "py": "Zhège bēizi duōshao qián?",
+              "vi": "Cái cốc này bao nhiêu tiền?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "28块。",
+              "py": "Èrshíbā kuài.",
+              "vi": "28 tệ.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "那个杯子多少钱？",
+              "py": "Nàge bēizi duōshao qián?",
+              "vi": "Cái cốc kia bao nhiêu tiền?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "那个杯子18块钱。",
+              "py": "Nàge bēizi shíbā kuài qián.",
+              "vi": "Cái cốc kia giá 18 tệ.",
+              "turn": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "titleZh": "你儿子在哪儿工作？",
+      "titlePinyin": "Nǐ érzi zài nǎr gōngzuò?",
+      "titleVi": "Con trai anh làm việc ở đâu?",
+      "pdfStartPage": 76,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            76
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "小猫在哪儿？",
+              "py": "Xiǎo māo zài nǎr?",
+              "vi": "Con mèo nhỏ ở đâu?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "小猫在那儿。",
+              "py": "Xiǎo māo zài nàr.",
+              "vi": "Con mèo nhỏ ở đằng kia.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "小狗在哪儿？",
+              "py": "Xiǎo gǒu zài nǎr?",
+              "vi": "Con chó nhỏ ở đâu?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "小狗在椅子下面。",
+              "py": "Xiǎo gǒu zài yǐzi xiàmiàn.",
+              "vi": "Con chó nhỏ ở dưới ghế.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在车站",
+          "sceneVi": "Ở bến xe",
+          "pdfPages": [
+            77
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你在哪儿工作？",
+              "py": "Nǐ zài nǎr gōngzuò?",
+              "vi": "Anh làm việc ở đâu?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我在学校工作。",
+              "py": "Wǒ zài xuéxiào gōngzuò.",
+              "vi": "Tôi làm việc ở trường học.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "你儿子在哪儿工作？",
+              "py": "Nǐ érzi zài nǎr gōngzuò?",
+              "vi": "Con trai anh làm việc ở đâu?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "我儿子在医院工作，他是医生。",
+              "py": "Wǒ érzi zài yīyuàn gōngzuò, tā shì yīshēng.",
+              "vi": "Con trai tôi làm việc ở bệnh viện, nó là bác sĩ.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "打电话",
+          "sceneVi": "Gọi điện thoại",
+          "pdfPages": [
+            77
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你爸爸在家吗？",
+              "py": "Nǐ bàba zài jiā ma?",
+              "vi": "Bố bạn có ở nhà không?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "不在家。",
+              "py": "Bú zài jiā.",
+              "vi": "Bố tôi không có ở nhà.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "他在哪儿呢？",
+              "py": "Tā zài nǎr ne?",
+              "vi": "Ông ấy đang ở đâu?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "他在医院。",
+              "py": "Tā zài yīyuàn.",
+              "vi": "Ông ấy ở bệnh viện.",
+              "turn": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "titleZh": "我能坐这儿吗？",
+      "titlePinyin": "Wǒ néng zuò zhèr ma?",
+      "titleVi": "Tôi có thể ngồi ở đây được không?",
+      "pdfStartPage": 84,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在办公室",
+          "sceneVi": "Trong văn phòng",
+          "pdfPages": [
+            84
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "桌子上有什么？",
+              "py": "Zhuōzi shang yǒu shénme?",
+              "vi": "Trên bàn có gì?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "桌子上有一个电脑和一本书。",
+              "py": "Zhuōzi shang yǒu yí ge diànnǎo hé yì běn shū.",
+              "vi": "Trên bàn có một chiếc máy tính và một quyển sách.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "杯子在哪儿？",
+              "py": "Bēizi zài nǎr?",
+              "vi": "Cái cốc ở đâu?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "杯子在桌子里。",
+              "py": "Bēizi zài zhuōzi li.",
+              "vi": "Cái cốc ở trong bàn.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在健身房",
+          "sceneVi": "Ở phòng tập thể dục",
+          "pdfPages": [
+            85
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "前面那个人叫什么名字？",
+              "py": "Qiánmiàn nàge rén jiào shénme míngzi?",
+              "vi": "Người ở phía trước tên là gì?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "她叫王方，在医院工作。",
+              "py": "Tā jiào Wáng Fāng, zài yīyuàn gōngzuò.",
+              "vi": "Cô ấy tên Vương Phương, làm việc ở bệnh viện.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "后面那个人呢？",
+              "py": "Hòumiàn nàge rén ne?",
+              "vi": "Còn người ở phía sau?",
+              "turn": 3
+            },
+            {
+              "speaker": "A",
+              "zh": "他叫什么名字？",
+              "py": "Tā jiào shénme míngzi?",
+              "vi": "Anh ấy tên là gì?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "他叫谢朋，在商店工作。",
+              "py": "Tā jiào Xiè Péng, zài shāngdiàn gōngzuò.",
+              "vi": "Anh ấy tên Tạ Bằng, làm việc ở cửa hàng.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在图书馆",
+          "sceneVi": "Ở thư viện",
+          "pdfPages": [
+            85
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "这儿有人吗？",
+              "py": "Zhèr yǒu rén ma?",
+              "vi": "Chỗ này có ai ngồi chưa?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "没有。",
+              "py": "Méi yǒu.",
+              "vi": "Chưa có.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "我能坐这儿吗？",
+              "py": "Wǒ néng zuò zhèr ma?",
+              "vi": "Tôi có thể ngồi ở đây không?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "请坐。",
+              "py": "Qǐng zuò.",
+              "vi": "Mời ngồi.",
+              "turn": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "titleZh": "现在几点？",
+      "titlePinyin": "Xiànzài jǐ diǎn?",
+      "titleVi": "Bây giờ là mấy giờ?",
+      "pdfStartPage": 94,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在图书馆",
+          "sceneVi": "Ở thư viện",
+          "pdfPages": [
+            94
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "现在几点？",
+              "py": "Xiànzài jǐ diǎn?",
+              "vi": "Bây giờ là mấy giờ?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "现在十点十分。",
+              "py": "Xiànzài shí diǎn shí fēn.",
+              "vi": "Bây giờ là mười giờ mười phút.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "中午几点吃饭？",
+              "py": "Zhōngwǔ jǐ diǎn chī fàn?",
+              "vi": "Buổi trưa mấy giờ ăn cơm?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "十二点吃饭。",
+              "py": "Shí'èr diǎn chī fàn.",
+              "vi": "Mười hai giờ ăn cơm.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            95
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "爸爸什么时候回家？",
+              "py": "Bàba shénme shíhou huí jiā?",
+              "vi": "Khi nào bố về nhà?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "下午五点。",
+              "py": "Xiàwǔ wǔ diǎn.",
+              "vi": "Năm giờ chiều.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "我们什么时候去看电影？",
+              "py": "Wǒmen shénme shíhou qù kàn diànyǐng?",
+              "vi": "Khi nào chúng ta đi xem phim?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "六点三十分。",
+              "py": "Liù diǎn sānshí fēn.",
+              "vi": "Sáu giờ ba mươi phút.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            95
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "我星期一去北京。",
+              "py": "Wǒ xīngqī yī qù Běijīng.",
+              "vi": "Thứ Hai tôi đi Bắc Kinh.",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "你想在北京住几天？",
+              "py": "Nǐ xiǎng zài Běijīng zhù jǐ tiān?",
+              "vi": "Bạn định ở Bắc Kinh mấy ngày?",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "住三天。",
+              "py": "Zhù sān tiān.",
+              "vi": "Ở ba ngày.",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "星期五前能回家吗？",
+              "py": "Xīngqī wǔ qián néng huí jiā ma?",
+              "vi": "Có thể về nhà trước thứ Sáu không?",
+              "turn": 4
+            },
+            {
+              "speaker": "A",
+              "zh": "能。",
+              "py": "Néng.",
+              "vi": "Có thể.",
+              "turn": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "titleZh": "明天天气怎么样？",
+      "titlePinyin": "Míngtiān tiānqì zěnmeyàng?",
+      "titleVi": "Ngày mai thời tiết thế nào?",
+      "pdfStartPage": 102,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在路上",
+          "sceneVi": "Trên đường",
+          "pdfPages": [
+            102
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "昨天北京的天气怎么样？",
+              "py": "Zuótiān Běijīng de tiānqì zěnmeyàng?",
+              "vi": "Hôm qua thời tiết ở Bắc Kinh thế nào?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "太热了。",
+              "py": "Tài rè le.",
+              "vi": "Nóng quá.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "明天呢？",
+              "py": "Míngtiān ne?",
+              "vi": "Còn ngày mai thì sao?",
+              "turn": 3
+            },
+            {
+              "speaker": "A",
+              "zh": "明天天气怎么样？",
+              "py": "Míngtiān tiānqì zěnmeyàng?",
+              "vi": "Ngày mai thời tiết thế nào?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "明天天气很好，不冷不热。",
+              "py": "Míngtiān tiānqì hěn hǎo, bù lěng bú rè.",
+              "vi": "Ngày mai thời tiết rất đẹp, không lạnh cũng không nóng.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在健身房",
+          "sceneVi": "Ở phòng tập thể dục",
+          "pdfPages": [
+            103
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "今天会下雨吗？",
+              "py": "Jīntiān huì xià yǔ ma?",
+              "vi": "Hôm nay có mưa không?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "今天不会下雨。",
+              "py": "Jīntiān bú huì xià yǔ.",
+              "vi": "Hôm nay sẽ không mưa.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "王小姐今天会来吗？",
+              "py": "Wáng xiǎojiě jīntiān huì lái ma?",
+              "vi": "Hôm nay cô Vương có đến không?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "不会来，天气太冷了。",
+              "py": "Bú huì lái, tiānqì tài lěng le.",
+              "vi": "Cô ấy sẽ không đến, trời lạnh quá.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在病房",
+          "sceneVi": "Trong phòng bệnh",
+          "pdfPages": [
+            103
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你身体怎么样？",
+              "py": "Nǐ shēntǐ zěnmeyàng?",
+              "vi": "Sức khỏe của bạn thế nào?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我身体不太好。",
+              "py": "Wǒ shēntǐ bú tài hǎo.",
+              "vi": "Sức khỏe của tôi không tốt lắm.",
+              "turn": 2
+            },
+            {
+              "speaker": "B",
+              "zh": "天气太热了，不爱吃饭。",
+              "py": "Tiānqì tài rè le, bú ài chī fàn.",
+              "vi": "Trời nóng quá, tôi không muốn ăn cơm.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "你多吃些水果，多喝水。",
+              "py": "Nǐ duō chī xiē shuǐguǒ, duō hē shuǐ.",
+              "vi": "Bạn hãy ăn thêm trái cây và uống nhiều nước.",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "谢谢你，医生。",
+              "py": "Xièxie nǐ, yīshēng.",
+              "vi": "Cảm ơn bác sĩ.",
+              "turn": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "titleZh": "他在学做中国菜呢。",
+      "titlePinyin": "Tā zài xué zuò Zhōngguó cài ne.",
+      "titleVi": "Anh ấy đang học nấu món ăn Trung Quốc.",
+      "pdfStartPage": 110,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "打电话",
+          "sceneVi": "Gọi điện thoại",
+          "pdfPages": [
+            110
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "喂，你在做什么呢？",
+              "py": "Wèi, nǐ zài zuò shénme ne?",
+              "vi": "A lô, bạn đang làm gì vậy?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我在看书呢。",
+              "py": "Wǒ zài kàn shū ne.",
+              "vi": "Tôi đang đọc sách.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "大卫也在看书吗？",
+              "py": "Dàwèi yě zài kàn shū ma?",
+              "vi": "David cũng đang đọc sách à?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "他没看书，他在学做中国菜呢。",
+              "py": "Tā méi kàn shū, tā zài xué zuò Zhōngguó cài ne.",
+              "vi": "Anh ấy không đọc sách, anh ấy đang học nấu món ăn Trung Quốc.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在咖啡馆儿",
+          "sceneVi": "Ở quán cà phê",
+          "pdfPages": [
+            111
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "昨天上午你在做什么呢？",
+              "py": "Zuótiān shàngwǔ nǐ zài zuò shénme ne?",
+              "vi": "Sáng hôm qua bạn đang làm gì?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我在睡觉呢。",
+              "py": "Wǒ zài shuì jiào ne.",
+              "vi": "Tôi đang ngủ.",
+              "turn": 2
+            },
+            {
+              "speaker": "B",
+              "zh": "你呢？",
+              "py": "Nǐ ne?",
+              "vi": "Còn bạn?",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "我在家看电视呢。",
+              "py": "Wǒ zài jiā kàn diànshì ne.",
+              "vi": "Tôi đang xem tivi ở nhà.",
+              "turn": 3
+            },
+            {
+              "speaker": "A",
+              "zh": "你喜欢看电视吗？",
+              "py": "Nǐ xǐhuan kàn diànshì ma?",
+              "vi": "Bạn thích xem tivi không?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "我不喜欢看电视，我喜欢看电影。",
+              "py": "Wǒ bù xǐhuan kàn diànshì, wǒ xǐhuan kàn diànyǐng.",
+              "vi": "Tôi không thích xem tivi, tôi thích xem phim.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在学校办公室",
+          "sceneVi": "Trong văn phòng của trường",
+          "pdfPages": [
+            111
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "82304155，这是李老师的电话吗？",
+              "py": "Bā èr sān líng sì yāo wǔ wǔ, zhè shì Lǐ lǎoshī de diànhuà ma?",
+              "vi": "82304155, đây có phải số điện thoại của cô Lý không?",
+              "turn": 1,
+              "audioText": "八二三零四幺五五，这是李老师的电话吗？"
+            },
+            {
+              "speaker": "B",
+              "zh": "不是，她的电话是82304156。",
+              "py": "Bú shì, tā de diànhuà shì bā èr sān líng sì yāo wǔ liù.",
+              "vi": "Không phải, số điện thoại của cô ấy là 82304156.",
+              "turn": 2,
+              "audioText": "不是，她的电话是八二三零四幺五六。"
+            },
+            {
+              "speaker": "A",
+              "zh": "好，我现在给她打电话。",
+              "py": "Hǎo, wǒ xiànzài gěi tā dǎ diànhuà.",
+              "vi": "Được, bây giờ tôi gọi điện cho cô ấy.",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "她在工作呢，你下午打吧。",
+              "py": "Tā zài gōngzuò ne, nǐ xiàwǔ dǎ ba.",
+              "vi": "Cô ấy đang làm việc, bạn hãy gọi vào buổi chiều nhé.",
+              "turn": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "titleZh": "她买了不少衣服。",
+      "titlePinyin": "Tā mǎile bùshǎo yīfu.",
+      "titleVi": "Cô ấy đã mua nhiều quần áo.",
+      "pdfStartPage": 116,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在宿舍",
+          "sceneVi": "Ở ký túc xá",
+          "pdfPages": [
+            116
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "昨天上午你去哪儿了？",
+              "py": "Zuótiān shàngwǔ nǐ qù nǎr le?",
+              "vi": "Sáng hôm qua bạn đi đâu vậy?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我去商店买东西了。",
+              "py": "Wǒ qù shāngdiàn mǎi dōngxi le.",
+              "vi": "Tôi đã đến cửa hàng mua đồ.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "你买什么了？",
+              "py": "Nǐ mǎi shénme le?",
+              "vi": "Bạn đã mua gì?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "我买了一点儿苹果。",
+              "py": "Wǒ mǎile yìdiǎnr píngguǒ.",
+              "vi": "Tôi đã mua một ít táo.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在公司",
+          "sceneVi": "Trong công ty",
+          "pdfPages": [
+            117
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你看见张先生了吗？",
+              "py": "Nǐ kànjiàn Zhāng xiānsheng le ma?",
+              "vi": "Bạn có thấy ông Trương không?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "看见了，他去学开车了。",
+              "py": "Kànjiàn le, tā qù xué kāi chē le.",
+              "vi": "Có thấy, ông ấy đi học lái xe rồi.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "他什么时候能回来？",
+              "py": "Tā shénme shíhou néng huílái?",
+              "vi": "Khi nào ông ấy có thể quay lại?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "40分钟后回来。",
+              "py": "Sìshí fēnzhōng hòu huílái.",
+              "vi": "Bốn mươi phút nữa ông ấy quay lại.",
+              "turn": 4,
+              "audioText": "四十分钟后回来。"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在商店门口",
+          "sceneVi": "Trước cửa hàng",
+          "pdfPages": [
+            117
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "王方的衣服太漂亮了！",
+              "py": "Wáng Fāng de yīfu tài piàoliang le!",
+              "vi": "Quần áo của Vương Phương đẹp quá!",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "是啊，她买了不少衣服。",
+              "py": "Shì a, tā mǎile bùshǎo yīfu.",
+              "vi": "Đúng vậy, cô ấy đã mua khá nhiều quần áo.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "你买什么了？",
+              "py": "Nǐ mǎi shénme le?",
+              "vi": "Bạn đã mua gì?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "我没买，这些都是王方的东西。",
+              "py": "Wǒ méi mǎi, zhèxiē dōu shì Wáng Fāng de dōngxi.",
+              "vi": "Tôi không mua gì, tất cả những thứ này đều là đồ của Vương Phương.",
+              "turn": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "titleZh": "我是坐飞机来的。",
+      "titlePinyin": "Wǒ shì zuò fēijī lái de.",
+      "titleVi": "Tôi đáp máy bay đến đây.",
+      "pdfStartPage": 124,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在餐桌旁",
+          "sceneVi": "Ở bàn ăn",
+          "pdfPages": [
+            124
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你和李小姐是什么时候认识的？",
+              "py": "Nǐ hé Lǐ xiǎojiě shì shénme shíhou rènshi de?",
+              "vi": "Bạn và cô Lý quen nhau khi nào?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我们是2011年9月认识的。",
+              "py": "Wǒmen shì èr líng yī yī nián jiǔ yuè rènshi de.",
+              "vi": "Chúng tôi quen nhau vào tháng Chín năm 2011.",
+              "turn": 2,
+              "audioText": "我们是二零一一年九月认识的。"
+            },
+            {
+              "speaker": "A",
+              "zh": "你们在哪儿认识的？",
+              "py": "Nǐmen zài nǎr rènshi de?",
+              "vi": "Các bạn quen nhau ở đâu?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "我们是在学校认识的，她是我大学同学。",
+              "py": "Wǒmen shì zài xuéxiào rènshi de, tā shì wǒ dàxué tóngxué.",
+              "vi": "Chúng tôi quen nhau ở trường, cô ấy là bạn học đại học của tôi.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在饭店门口",
+          "sceneVi": "Trước khách sạn",
+          "pdfPages": [
+            125
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "你们是怎么来饭店的？",
+              "py": "Nǐmen shì zěnme lái fàndiàn de?",
+              "vi": "Các bạn đến khách sạn bằng cách nào?",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "我们是坐出租车来的。",
+              "py": "Wǒmen shì zuò chūzūchē lái de.",
+              "vi": "Chúng tôi đi taxi đến.",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "李先生呢？",
+              "py": "Lǐ xiānsheng ne?",
+              "vi": "Còn ông Lý thì sao?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "他是和朋友一起开车来的。",
+              "py": "Tā shì hé péngyou yìqǐ kāi chē lái de.",
+              "vi": "Ông ấy cùng bạn lái xe đến.",
+              "turn": 4
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在公司",
+          "sceneVi": "Trong công ty",
+          "pdfPages": [
+            125
+          ],
+          "lines": [
+            {
+              "speaker": "A",
+              "zh": "很高兴认识您！",
+              "py": "Hěn gāoxìng rènshi nín!",
+              "vi": "Rất vui được biết cô!",
+              "turn": 1
+            },
+            {
+              "speaker": "A",
+              "zh": "李小姐。",
+              "py": "Lǐ xiǎojiě.",
+              "vi": "Cô Lý.",
+              "turn": 1
+            },
+            {
+              "speaker": "B",
+              "zh": "认识你我也很高兴！",
+              "py": "Rènshi nǐ wǒ yě hěn gāoxìng!",
+              "vi": "Tôi cũng rất vui được biết bạn!",
+              "turn": 2
+            },
+            {
+              "speaker": "A",
+              "zh": "听张先生说，您是坐飞机来北京的？",
+              "py": "Tīng Zhāng xiānsheng shuō, nín shì zuò fēijī lái Běijīng de?",
+              "vi": "Nghe ông Trương nói, cô đã đáp máy bay đến Bắc Kinh phải không?",
+              "turn": 3
+            },
+            {
+              "speaker": "B",
+              "zh": "是的。",
+              "py": "Shì de.",
+              "vi": "Đúng vậy.",
+              "turn": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

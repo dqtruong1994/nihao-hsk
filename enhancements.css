@@ -1,0 +1,331 @@
+/* ================================================================
+   你好 HSK - Enhancements & Modern UI Components
+   ================================================================ */
+
+/* SRS Review Modal */
+.srs-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(18, 20, 36, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: srsFadeIn 0.25s ease-out;
+}
+.srs-modal-card {
+  width: min(560px, 100%);
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 90vh;
+}
+.srs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 22px 24px 16px;
+  border-bottom: 1px solid #eef0f8;
+}
+.srs-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  color: #6657d9;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.srs-header h2 {
+  margin: 4px 0 0;
+  font-size: 20px;
+  color: #1a1e36;
+}
+.srs-close {
+  background: #f1f3f9;
+  border: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  color: #626880;
+  transition: all 0.2s;
+}
+.srs-close:hover {
+  background: #e2e5f1;
+  color: #1a1e36;
+}
+.srs-progress-bar {
+  height: 6px;
+  background: #eef0f8;
+  width: 100%;
+}
+.srs-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6657d9, #00b4d8);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+.srs-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+.srs-card-meta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  color: #7b809a;
+  margin-bottom: 14px;
+}
+.srs-level-pill {
+  background: #f0edff;
+  color: #6657d9;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.srs-flip-card {
+  width: 100%;
+  min-height: 250px;
+  background: #fbfbfe;
+  border: 2px solid #e7e9f8;
+  border-radius: 20px;
+  padding: 24px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+.srs-flip-card:hover {
+  border-color: #6657d9;
+  box-shadow: 0 10px 30px rgba(102, 87, 217, 0.1);
+}
+.srs-hanzi {
+  font-size: 64px;
+  font-family: STKaiti, KaiTi, 'KaiTi SC', serif;
+  color: #1a1e36;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.srs-hint {
+  color: #8b90a6;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.srs-pinyin {
+  font-size: 24px;
+  font-weight: 700;
+  color: #6657d9;
+  margin: 6px 0;
+}
+.srs-hv {
+  font-size: 14px;
+  color: #b5830e;
+  font-weight: 600;
+}
+.srs-meaning {
+  font-size: 18px;
+  color: #2b304c;
+  margin-top: 6px;
+  font-weight: 600;
+}
+.srs-audio-slot {
+  margin-top: 14px;
+}
+.srs-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+.srs-btn {
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 10px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-align: center;
+}
+.srs-btn:hover {
+  transform: translateY(-2px);
+}
+.srs-btn small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 4px;
+  opacity: 0.85;
+}
+.srs-bad {
+  background: #ffe6e8;
+  color: #bd2739;
+}
+.srs-medium {
+  background: #fff4d5;
+  color: #946900;
+}
+.srs-good {
+  background: #ddfaed;
+  color: #0d835f;
+}
+.srs-complete {
+  text-align: center;
+  padding: 20px 10px;
+}
+.srs-trophy {
+  font-size: 64px;
+  margin-bottom: 12px;
+}
+.srs-complete h3 {
+  font-size: 22px;
+  color: #1a1e36;
+  margin: 0 0 10px;
+}
+.srs-complete p {
+  color: #626880;
+  margin: 6px 0;
+}
+
+/* Hanzi Canvas Pad Modal */
+.hanzi-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(18, 20, 36, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: srsFadeIn 0.2s ease-out;
+}
+.hanzi-modal-card {
+  width: min(440px, 100%);
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+  padding: 24px;
+  text-align: center;
+}
+.hanzi-grid-box {
+  width: 260px;
+  height: 260px;
+  margin: 16px auto;
+  position: relative;
+  border: 3px solid #6657d9;
+  border-radius: 12px;
+  background: #ffffff;
+  /* Rice grid background */
+  background-image:
+    linear-gradient(to right, rgba(220, 220, 235, 0.7) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(220, 220, 235, 0.7) 1px, transparent 1px),
+    linear-gradient(45deg, transparent 49.5%, rgba(230, 230, 245, 0.9) 50%, transparent 50.5%),
+    linear-gradient(-45deg, transparent 49.5%, rgba(230, 230, 245, 0.9) 50%, transparent 50.5%);
+  background-size: 100% 100%;
+}
+.hanzi-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  touch-action: none;
+}
+.hanzi-guide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 190px;
+  font-family: STKaiti, KaiTi, 'KaiTi SC', serif;
+  color: rgba(102, 87, 217, 0.14);
+  pointer-events: none;
+  line-height: 1;
+}
+.hanzi-toolbar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+}
+.hanzi-btn {
+  border: 1px solid #d9d5ff;
+  background: #f5f3ff;
+  color: #6657d9;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.hanzi-btn:hover {
+  background: #ece8ff;
+}
+
+/* Quick review banner on Home */
+.home-review-cta {
+  background: linear-gradient(135deg, #f7f5ff 0%, #edf8fc 100%);
+  border: 1.5px solid #dcd4ff;
+  border-radius: 18px;
+  padding: 18px 22px;
+  margin: 20px 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 4px 18px rgba(102, 87, 217, 0.08);
+}
+.home-review-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.home-review-icon {
+  font-size: 32px;
+  background: #fff;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(102, 87, 217, 0.12);
+}
+.home-review-btn {
+  background: #6657d9;
+  color: #fff;
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(102, 87, 217, 0.35);
+  transition: all 0.2s;
+}
+.home-review-btn:hover {
+  background: #5344c9;
+  transform: translateY(-1px);
+}
+
+@keyframes srsFadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}

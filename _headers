@@ -1,0 +1,18 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: microphone=(), camera=(), geolocation=()
+
+# Cache static assets (images, fonts, audio) for 1 week
+/*.png
+  Cache-Control: public, max-age=604800, immutable
+/*.jpg
+  Cache-Control: public, max-age=604800, immutable
+/*.svg
+  Cache-Control: public, max-age=604800, immutable
+/*.woff2
+  Cache-Control: public, max-age=604800, immutable
+/*.json
+  Cache-Control: public, max-age=86400
+

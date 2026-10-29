@@ -1,0 +1,12 @@
+{
+  "cleanUrls": false,
+  "headers": [
+    {
+      "source": "**/*",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    }
+  ]
+}
+

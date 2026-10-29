@@ -1,0 +1,18 @@
+{
+  "short_name": "你好 HSK",
+  "name": "你好 HSK · Học tiếng Trung mỗi ngày",
+  "description": "Góc tự học tiếng Trung với HSK 1, HSK 2 và HSK 3: bài giảng, flashcard SRS, hội thoại giáo trình và bài kiểm tra.",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6657d9",
+  "orientation": "portrait"
+}

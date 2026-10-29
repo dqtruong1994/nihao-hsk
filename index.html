@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6657d9">
+  <meta name="description" content="Góc tự học tiếng Trung với HSK 1, HSK 2 và HSK 3: bài giảng, flashcard, hội thoại, luyện tập và kiểm tra bằng tiếng Việt.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="你好 HSK · Học tiếng Trung mỗi ngày">
+  <meta property="og:description" content="Khóa học tiếng Trung HSK 1, HSK 2 và HSK 3: 36 bài học, flashcard SRS, hội thoại giáo trình và bài kiểm tra kèm giải thích.">
+  <meta property="og:image" content="/favicon.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>你好 HSK · Học tiếng Trung mỗi ngày</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="enhancements.css">
+  <script>
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(r => r.forEach(reg => reg.unregister()));
+      }
+    }
+  </script>
+  <script src="auth.js"></script>
+  <script src="data-store.js"></script>
+  <script src="dictionary.js"></script>
+  <script src="chinese-audio.js"></script>
+  <script src="hanzi-canvas.js"></script>
+  <script src="gamification.js" defer></script>
+  <script src="srs-engine.js" defer></script>
+  <script src="learner-sync.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <div id="siteAnnouncementBanner" style="background:#fef3c7; border-bottom:1px solid #fde68a; color:#92400e; font-size:13px; font-weight:600; padding:8px 16px; text-align:center;" hidden></div>
+  <div class="shell">
+    <header class="top">
+      <a class="logo" href="#home" aria-label="你好 HSK — Trang chủ"><b lang="zh">中</b><span><strong>你好 HSK</strong><small>CHẬM MÀ CHẮC</small></span></a>
+      <nav class="site-nav" id="dynamicNav" aria-label="Điều hướng chính">
+        <a href="#home" data-route="home" class="active" aria-current="page">Trang chủ</a>
+        <a href="#hsk1" data-route="hsk1">HSK 1</a>
+        <a href="#hsk2" data-route="hsk2">HSK 2</a>
+        <a href="#hsk3" data-route="hsk3">HSK 3</a>
+        <a href="#dict" data-route="dict">📖 Tra từ điển</a>
+        <a href="#notebook" data-route="notebook">⭐ Sổ tay</a>
+      </nav>
+      <div id="authHeaderSlot" style="display:flex; align-items:center; gap:8px;">
+        <button type="button" id="headerLoginBtn" style="background:#6657d9; color:#fff; border:0; padding:7px 14px; border-radius:9px; font-weight:700; font-size:13px; cursor:pointer;" onclick="window.HSKAuth?.openAuthModal()">Đăng nhập</button>
+      </div>
+    </header>
+    <main class="view" id="main">
+      <div id="home" class="home">
+        <div class="home-inner">
+          <section class="intro" aria-labelledby="homeTitle">
+            <div class="intro-copy">
+              <div class="eyebrow"><span></span> MỖI NGÀY MỘT CHÚT TIẾN BỘ</div>
+              <p class="greeting" id="greeting">你好！Chào bạn đến với góc học tiếng Trung.</p>
+              <h1 id="homeTitle">Chậm mà chắc.<br><em>Cùng học tiếng Trung.</em></h1>
+              <p class="intro-description">Từ những thanh điệu đầu tiên đến những cuộc hội thoại hằng ngày. Chọn lộ trình của bạn và bắt đầu từng bài một.</p>
+              <div class="intro-actions"><a class="primary-action" href="#hsk1" id="continueLink"><span id="continueText">Bắt đầu với HSK 1</span><span aria-hidden="true">↗</span></a><a class="text-action" href="#hsk3">Khám phá HSK 3 <span aria-hidden="true">→</span></a></div>
+              <div class="intro-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h14v16H5zM8 8h8M8 12h5M8 16h8"/></svg> Bài giảng tiếng Việt · Học theo nhịp của bạn</div>
+            </div>
+            <div class="intro-art" aria-hidden="true">
+              <span class="art-orbit orbit-one"></span><span class="art-orbit orbit-two"></span>
+              <span class="art-spark spark-one">✳</span><span class="art-spark spark-two">✦</span>
+              <div class="character-card card-ni"><span lang="zh">你</span><small>nǐ</small></div>
+              <div class="character-card card-hao"><span lang="zh">好</span><small>hǎo</small></div>
+              <div class="art-caption"><span>你好</span> nǐ hǎo <i>·</i> xin chào</div>
+              <div class="art-seal" lang="zh">学习</div>
+            </div>
+          </section>
+          <section class="journey" aria-label="Tiến độ học tập">
+            <div class="journey-label"><span class="journey-icon" aria-hidden="true">↗</span><div><strong>Hành trình của bạn</strong><small>Mỗi bài học là một bước tiến.</small></div></div>
+            <div class="journey-stat"><strong id="totalCompleted">0<span>/36</span></strong><small>bài hoàn thành</small></div>
+            <div class="journey-stat"><strong id="totalXP">0</strong><small>XP tích lũy</small></div>
+            <div class="journey-stat" style="cursor:pointer;" onclick="window.SRSEngine?.openReviewModal()" title="Bấm để mở flashcard ôn tập"><strong id="totalReview">0</strong><small>từ đến hạn ôn ↗</small></div>
+          </section>
+          <div class="home-review-cta" id="homeReviewCTA">
+            <div class="home-review-left">
+              <span class="home-review-icon" aria-hidden="true">🔁</span>
+              <div>
+                <strong style="display:block; font-size:16px; color:#1a1e36;">Ôn tập ngắt quãng (SRS) hôm nay</strong>
+                <small style="color:#626880;" id="homeReviewSubtitle">Luyện trí nhớ dài hạn với flashcard đến hạn của bạn.</small>
+              </div>
+            </div>
+            <button type="button" class="home-review-btn" onclick="window.SRSEngine?.openReviewModal()">🎯 Bắt đầu ôn tập</button>
+          </div>
+          <section class="courses" aria-labelledby="coursesTitle">
+            <div class="section-heading"><div><span class="section-kicker">LỘ TRÌNH HỌC TẬP</span><h2 id="coursesTitle">Hôm nay, bạn muốn học gì?</h2></div><span class="course-count">3 cấp độ · 36 bài học</span></div>
+            <div class="course-grid">
+              <article class="course-card course-one">
+                <div class="course-top"><span class="level-tag">NỀN TẢNG · BEGINNER</span><span class="course-number" aria-hidden="true">01</span></div>
+                <h3>HSK 1 <span lang="zh">起步</span></h3>
+                <p>Làm quen với Pinyin, thanh điệu, từ vựng cơ bản và những câu giao tiếp đầu tiên.</p>
+                <div class="course-meta"><span>12 bài học</span><span>Flashcard & hội thoại</span></div>
+                <div class="course-progress-label"><span id="hsk1ProgressText">0/12 bài hoàn thành</span><b id="hsk1Percent">0%</b></div>
+                <div class="course-progress" role="progressbar" aria-label="Tiến độ HSK 1" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="hsk1Progress"><span></span></div>
+                <a href="#hsk1" class="course-link"><span id="hsk1Action">Bắt đầu HSK 1</span><span aria-hidden="true">→</span></a>
+              </article>
+              <article class="course-card course-two">
+                <div class="course-top"><span class="level-tag">TIẾP NỐI · ELEMENTARY</span><span class="course-number" aria-hidden="true">02</span></div>
+                <h3>HSK 2 <span lang="zh">进步</span></h3>
+                <p>Mở rộng cách diễn đạt, luyện ngữ pháp và tự tin hơn trong các tình huống hằng ngày.</p>
+                <div class="course-meta"><span>12 bài học</span><span>Luyện tập & mini test</span></div>
+                <div class="course-progress-label"><span id="hsk2ProgressText">0/12 bài hoàn thành</span><b id="hsk2Percent">0%</b></div>
+                <div class="course-progress" role="progressbar" aria-label="Tiến độ HSK 2" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="hsk2Progress"><span></span></div>
+                <a href="#hsk2" class="course-link"><span id="hsk2Action">Bắt đầu HSK 2</span><span aria-hidden="true">→</span></a>
+              </article>
+              <article class="course-card course-three">
+                <div class="course-top"><span class="level-tag">MỞ RỘNG · INTERMEDIATE</span><span class="course-number" aria-hidden="true">03</span></div>
+                <h3>HSK 3 <span lang="zh">成长</span></h3>
+                <p>Kết nối ý tưởng, kể lại trải nghiệm và mở rộng hội thoại qua những chủ đề gần gũi trong cuộc sống.</p>
+                <div class="course-meta"><span>12 bài học</span><span>Từ vựng & ngữ pháp</span></div>
+                <div class="course-progress-label"><span id="hsk3ProgressText">0/12 bài hoàn thành</span><b id="hsk3Percent">0%</b></div>
+                <div class="course-progress" role="progressbar" aria-label="Tiến độ HSK 3" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="hsk3Progress"><span></span></div>
+                <a href="#hsk3" class="course-link"><span id="hsk3Action">Bắt đầu HSK 3</span><span aria-hidden="true">→</span></a>
+              </article>
+            </div>
+          </section>
+          <section class="method" aria-labelledby="methodTitle"><h2 id="methodTitle">Một nhịp học dễ duy trì</h2><div class="method-grid"><div><span>01</span><p><strong>Hiểu bài</strong><small>Đọc bài giảng, xem ví dụ và nghe từ vựng.</small></p></div><div><span>02</span><p><strong>Thử sức</strong><small>Lật flashcard, ghép từ và luyện hội thoại.</small></p></div><div><span>03</span><p><strong>Ghi nhớ</strong><small>Đạt từ 85% để qua bài. Ôn lại sau 1–3–7 ngày.</small></p></div></div></section>
+          <footer><span><b lang="zh">你好</b> Học một chút, tiến xa hơn.</span><span data-sync-status>Đang kết nối lớp học…</span></footer>
+        </div>
+      </div>
+      <section id="courseView" class="course-view" hidden aria-label="Nội dung khóa học">
+        <iframe id="frame-hsk1" class="frame" title="HSK 1 — Bài giảng và luyện tập" hidden></iframe>
+        <iframe id="frame-hsk2" class="frame" title="HSK 2 — Bài giảng và luyện tập" hidden></iframe>
+        <iframe id="frame-hsk3" class="frame" title="HSK 3 — Bài giảng và luyện tập" loading="lazy" hidden></iframe>
+      </section>
+      <section id="dictView" class="course-view" hidden aria-label="Tra cứu từ điển"></section>
+      <section id="notebookView" class="course-view" hidden aria-label="Sổ tay từ vựng"></section>
+    </main>
+  </div>
+</body>
+</html>
