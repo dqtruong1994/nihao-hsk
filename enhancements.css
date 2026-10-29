@@ -2,6 +2,15 @@
    你好 HSK - Enhancements & Modern UI Components
    ================================================================ */
 
+/* Global & modal hidden rule */
+.hanzi-modal-overlay[hidden],
+.hanzi-modal-overlay.hidden,
+.srs-modal-overlay[hidden],
+.srs-modal-overlay.hidden,
+[hidden] {
+  display: none !important;
+}
+
 /* SRS Review Modal */
 .srs-modal-overlay {
   position: fixed;

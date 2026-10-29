@@ -130,10 +130,26 @@
         </div>
       `;
       document.body.appendChild(modal);
-      document.getElementById('srsCloseBtn').onclick = () => { modal.hidden = true; };
+      const closeSRS = () => {
+        modal.hidden = true;
+        modal.classList.add('hidden');
+        modal.style.setProperty('display', 'none', 'important');
+      };
+      document.getElementById('srsCloseBtn').onclick = closeSRS;
+      modal.onclick = (e) => {
+        if (e.target === modal) closeSRS();
+      };
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.hidden && modal.style.display !== 'none') {
+          closeSRS();
+        }
+      });
     }
 
     modal.hidden = false;
+    modal.classList.remove('hidden');
+    modal.style.removeProperty('display');
+    modal.style.setProperty('display', 'flex', 'important');
     let currentIndex = 0;
     const total = dueCards.length;
 
@@ -160,6 +176,8 @@
         `;
         document.getElementById('srsDoneBtn').onclick = () => {
           modal.hidden = true;
+          modal.classList.add('hidden');
+          modal.style.setProperty('display', 'none', 'important');
           if (typeof window.refreshHome === 'function') window.refreshHome();
         };
         return;

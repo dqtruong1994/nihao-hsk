@@ -4,6 +4,15 @@
 (() => {
   'use strict';
 
+  function closeHanziPad() {
+    const modal = document.getElementById('hanziWritingModal');
+    if (modal) {
+      modal.hidden = true;
+      modal.classList.add('hidden');
+      modal.style.setProperty('display', 'none', 'important');
+    }
+  }
+
   function openHanziPad(character, pinyin = '', meaning = '') {
     let modal = document.getElementById('hanziWritingModal');
     if (!modal) {
@@ -17,7 +26,7 @@
               <span class="srs-kicker">LUYỆN NÉT THUẬN BÚT</span>
               <h3 id="hanziTitle" style="margin:2px 0 0; font-size:18px;">Tập viết chữ Hán</h3>
             </div>
-            <button type="button" class="srs-close" id="hanziCloseBtn" aria-label="Đóng">✕</button>
+            <button type="button" class="srs-close" id="hanziCloseBtn" aria-label="Đóng bảng viết">✕</button>
           </div>
           <div style="margin: 10px 0 4px;">
             <span id="hanziPinyinDisplay" style="font-size:20px; font-weight:700; color:#6657d9;"></span>
@@ -32,14 +41,36 @@
             <button type="button" class="hanzi-btn" id="hanziToggleGuideBtn">👁️ Ẩn/Hiện chữ mẫu</button>
             <button type="button" class="hanzi-btn" id="hanziAudioBtn">🔊 Nghe đọc</button>
           </div>
-          <p style="font-size:12px; color:#888ea8; margin-top:12px;">Dùng chuột hoặc ngón tay để viết vào ô mễ tự cách.</p>
+          <p style="font-size:12px; color:#888ea8; margin:10px 0 12px;">Dùng chuột hoặc ngón tay để viết vào ô mễ tự cách.</p>
+          <button type="button" class="btn" id="hanziDoneBtn" style="width:100%; background:#f1f5f9; color:#334155; border:1px solid #cbd5e1; padding:9px; border-radius:10px; font-weight:700; cursor:pointer;">✕ Đóng bảng viết</button>
         </div>
       `;
       document.body.appendChild(modal);
-      document.getElementById('hanziCloseBtn').onclick = () => { modal.hidden = true; };
+
+      document.getElementById('hanziCloseBtn').onclick = (e) => {
+        e.stopPropagation();
+        closeHanziPad();
+      };
+      const doneBtn = document.getElementById('hanziDoneBtn');
+      if (doneBtn) doneBtn.onclick = (e) => {
+        e.stopPropagation();
+        closeHanziPad();
+      };
+      modal.onclick = (e) => {
+        if (e.target === modal) closeHanziPad();
+      };
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.hidden && modal.style.display !== 'none') {
+          closeHanziPad();
+        }
+      });
     }
 
     modal.hidden = false;
+    modal.classList.remove('hidden');
+    modal.style.removeProperty('display');
+    modal.style.setProperty('display', 'flex', 'important');
+
     document.getElementById('hanziPinyinDisplay').textContent = pinyin;
     document.getElementById('hanziMeaningDisplay').textContent = meaning ? `(${meaning})` : '';
     const guide = document.getElementById('hanziGuideChar');
@@ -118,6 +149,7 @@
   }
 
   window.HanziPad = {
-    open: openHanziPad
+    open: openHanziPad,
+    close: closeHanziPad
   };
 })();
