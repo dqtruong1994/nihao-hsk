@@ -6,8 +6,8 @@ main = "_worker.js"
 directory = "."
 binding = "ASSETS"
 
-# Ràng buộc cơ sở dữ liệu Cloudflare D1 (Miễn phí 5,000,000 lượt đọc/ngày)
-[[d1_databases]]
-binding = "DB"
-database_name = "nihao-hsk-db"
-database_id = "your-d1-database-id-here"
+# Khi nào bạn tạo Database D1 trên Cloudflare thì mới mở phần này và điền ID thật:
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "nihao-hsk-db"
+# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
