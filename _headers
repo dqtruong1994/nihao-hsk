@@ -2,7 +2,7 @@
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: microphone=(), camera=(), geolocation=()
+  Permissions-Policy: microphone=(self), camera=(), geolocation=()
 
 # Cache static assets (images, fonts, audio) for 1 week
 /*.png
