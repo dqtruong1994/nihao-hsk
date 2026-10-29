@@ -5,19 +5,53 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[char]));
 
+  const instances = new Map();
+
+  window.HSKTextbook = {
+    instances,
+    syncLesson(lessonNumber, level, textNumber = 1) {
+      const num = Number(lessonNumber);
+      if (isNaN(num) || num < 1) return;
+      if (level) {
+        const inst = instances.get(Number(level));
+        if (inst) inst.setLesson(num, false, textNumber);
+      } else {
+        instances.forEach(inst => inst.setLesson(num, false, textNumber));
+      }
+    },
+    setLesson(level, lessonNumber, textNumber = 1) {
+      this.syncLesson(lessonNumber, level, textNumber);
+    }
+  };
+
+  window.addEventListener('hsk-lesson-changed', event => {
+    const { level, lesson, text } = event.detail || {};
+    if (lesson) window.HSKTextbook.syncLesson(lesson, level, text || 1);
+  });
+
   document.querySelectorAll('[data-textbook-dialogues]').forEach(root => {
-    const storageKey = `hsk-textbook-${root.dataset.textbookLevel}-selection`;
-    let book;
+    const level = Number(root.dataset.textbookLevel) || 1;
+    const storageKey = `hsk-textbook-${level}-selection`;
+    let book = null;
     let selectedLesson = 1;
     let selectedText = 1;
     let showPinyin = true;
     let showTranslation = true;
+    let pendingLesson = null;
+    let pendingText = null;
 
+    // Ưu tiên đọc bài học hiện tại đang mở ở thanh bài học bên trái (hsk1Lesson hoặc hsk2Lesson)
     try {
-      const saved = JSON.parse(localStorage.getItem(storageKey));
-      if (Number.isInteger(saved?.lesson)) selectedLesson = saved.lesson;
-      if (Number.isInteger(saved?.text)) selectedText = saved.text;
-    } catch { /* Reading remains available without local storage. */ }
+      const courseKey = level === 1 ? 'hsk1Lesson' : `hsk${level}Lesson`;
+      const activeCur = localStorage.getItem(courseKey);
+      if (activeCur !== null && !isNaN(Number(activeCur))) {
+        selectedLesson = Number(activeCur) + 1;
+      } else {
+        const saved = JSON.parse(localStorage.getItem(storageKey));
+        if (Number.isInteger(saved?.lesson)) selectedLesson = saved.lesson;
+        if (Number.isInteger(saved?.text)) selectedText = saved.text;
+      }
+    } catch { /* LocalStorage fallback */ }
 
     const remember = () => {
       try { localStorage.setItem(storageKey, JSON.stringify({ lesson: selectedLesson, text: selectedText })); }
@@ -43,6 +77,7 @@
       const pages = [...new Set(text.pdfPages)].join(', ');
       const rows = sentenceRows(text);
       const panel = root.querySelector('.textbook-text-panel');
+      if (!panel) return;
       panel.id = `textbook-panel-${book.level}`;
       panel.setAttribute('aria-labelledby', `textbook-tab-${book.level}-${text.number}`);
       panel.classList.toggle('textbook-hide-pinyin', !showPinyin);
@@ -60,10 +95,10 @@
             <div class="textbook-sentence-content">
               <div class="textbook-hanzi" lang="zh-CN">${escapeHTML(sentence.zh)}</div>
               <div class="textbook-pinyin" lang="zh-Latn">${escapeHTML(sentence.py)}</div>
-              <div class="textbook-sentence-audio">${window.HSKAudio.controls({
+              <div class="textbook-sentence-audio">${window.HSKAudio?.controls ? window.HSKAudio.controls({
                 text: sentence.audioText || sentence.zh,
                 label: `Bài ${lesson.number}, 课文 ${text.number}, ${sentence.speaker}: ${sentence.zh}`
-              })}</div>
+              }) : ''}</div>
               <div class="textbook-translation">${escapeHTML(sentence.vi)}</div>
             </div>
           </article>`).join('')}
@@ -77,11 +112,13 @@
       });
       const activeTab = root.querySelector(`[data-textbook-text="${text.number}"]`);
       activeTab?.setAttribute('aria-controls', panel.id);
-      root.querySelector('.textbook-announcement').textContent = `Bài ${lesson.number}, 课文 ${text.number}, ${rows.length} câu hội thoại.`;
+      const ann = root.querySelector('.textbook-announcement');
+      if (ann) ann.textContent = `Bài ${lesson.number}, 课文 ${text.number}, ${rows.length} câu hội thoại.`;
       remember();
     }
 
     function renderLesson() {
+      if (!book || !book.lessons || !book.lessons.length) return;
       const lesson = currentLesson();
       selectedLesson = lesson.number;
       if (!lesson.texts.some(text => text.number === selectedText)) selectedText = lesson.texts[0].number;
@@ -89,7 +126,7 @@
         <div class="textbook-intro">
           <span class="textbook-eyebrow">GIÁO TRÌNH CHUẨN HSK ${book.level} · ${book.lessons.length} BÀI</span>
           <h2>Hội thoại trong giáo trình</h2>
-          <p>Chọn bài trong sách, sau đó chọn từng <span lang="zh-CN">课文</span>. Nghe từng câu và nói theo; có thể ẩn Pinyin hoặc bản dịch để tự luyện.</p>
+          <p>Tự động đồng bộ với bài học bạn đang chọn ở thanh bên trái. Bạn cũng có thể chọn từng bài trong sách hoặc từng <span lang="zh-CN">课文</span> để tự luyện.</p>
         </div>
         <div class="textbook-selector">
           <label for="textbook-lesson-${book.level}">Bài trong giáo trình</label>
@@ -113,19 +150,37 @@
           </div>
         </div>
         <div class="textbook-text-panel" role="tabpanel" tabindex="0"></div>
-        <p class="textbook-source">Chữ Hán được đối chiếu với giáo trình HSK ${book.level} đã cung cấp. Pinyin và bản dịch tiếng Việt hỗ trợ luyện tập. Nút nghe dùng giọng tiếng Trung của thiết bị.</p>
+        <p class="textbook-source">Chữ Hán được đối chiếu với giáo trình HSK ${book.level} chuẩn. Pinyin và bản dịch tiếng Việt hỗ trợ luyện tập. Nút nghe dùng giọng tiếng Trung của thiết bị.</p>
         <div class="textbook-announcement" role="status" aria-live="polite"></div>`;
       renderText();
     }
 
-    function changeLesson(number, focusSelector) {
-      if (!book.lessons.some(lesson => lesson.number === number)) return;
-      window.HSKAudio.stop();
+    function changeLesson(number, focusSelector, textNumber = 1) {
+      if (!book) {
+        pendingLesson = number;
+        pendingText = textNumber;
+        return;
+      }
+      const target = book.lessons.find(lesson => lesson.number === number);
+      if (!target) return;
+      if (window.HSKAudio?.stop) window.HSKAudio.stop();
+      try { window.speechSynthesis?.cancel(); } catch {}
       selectedLesson = number;
-      selectedText = 1;
+      selectedText = textNumber || 1;
       renderLesson();
-      if (focusSelector) root.querySelector('[data-textbook-lesson]').focus({ preventScroll: true });
+      if (focusSelector) {
+        const sel = root.querySelector('[data-textbook-lesson]');
+        if (sel) sel.focus({ preventScroll: true });
+      }
     }
+
+    const instance = {
+      level,
+      setLesson: changeLesson,
+      getBook: () => book,
+      getCurrentLesson: () => selectedLesson
+    };
+    instances.set(level, instance);
 
     root.addEventListener('change', event => {
       if (event.target.matches('[data-textbook-lesson]')) changeLesson(Number(event.target.value), true);
@@ -139,7 +194,8 @@
       if (button.hasAttribute('data-textbook-step')) {
         changeLesson(selectedLesson + Number(button.dataset.textbookStep), true);
       } else if (button.hasAttribute('data-textbook-text')) {
-        window.HSKAudio.stop();
+        if (window.HSKAudio?.stop) window.HSKAudio.stop();
+        try { window.speechSynthesis?.cancel(); } catch {}
         selectedText = Number(button.dataset.textbookText);
         renderText();
       } else if (button.hasAttribute('data-textbook-toggle')) {
@@ -149,7 +205,8 @@
         const shown = isPinyin ? showPinyin : showTranslation;
         button.setAttribute('aria-pressed', String(shown));
         button.textContent = `${shown ? 'Ẩn' : 'Hiện'} ${isPinyin ? 'Pinyin' : 'bản dịch'}`;
-        root.querySelector('.textbook-text-panel').classList.toggle(isPinyin ? 'textbook-hide-pinyin' : 'textbook-hide-translation', !shown);
+        const panel = root.querySelector('.textbook-text-panel');
+        if (panel) panel.classList.toggle(isPinyin ? 'textbook-hide-pinyin' : 'textbook-hide-translation', !shown);
       }
     });
 
@@ -175,6 +232,12 @@
             text.lines.every(line => line.speaker && line.zh && line.py && line.vi))
         )) throw new Error('Invalid textbook content');
         book = data;
+        if (pendingLesson) {
+          selectedLesson = pendingLesson;
+          selectedText = pendingText || 1;
+          pendingLesson = null;
+          pendingText = null;
+        }
         renderLesson();
       } catch {
         root.innerHTML = '<div class="textbook-load-error" role="alert"><h2>Chưa tải được hội thoại</h2><p>Kiểm tra kết nối rồi thử tải lại nội dung giáo trình.</p><button type="button" class="btn" data-textbook-retry>Tải lại hội thoại</button></div>';
