@@ -249,7 +249,16 @@
       const response = await fetch('hsk3-lessons.json');
       if (!response.ok) throw new Error('Không tải được nội dung.');
       const data = await response.json();
-      if (!Array.isArray(data.lessons) || data.lessons.length !== 12 || data.lessons.some(lesson => !Array.isArray(lesson.quiz) || !lesson.quiz.length || lesson.quiz.some(item => !Array.isArray(item.choices) || !item.choices.includes(item.correct)))) throw new Error('Giáo án đang được cập nhật.');
+      if (!Array.isArray(data.lessons) || data.lessons.length < 1) throw new Error('Giáo án đang được cập nhật.');
+      data.lessons.forEach(lesson => {
+        if (Array.isArray(lesson.quiz)) {
+          lesson.quiz.forEach(item => {
+            if (!item.correct && Array.isArray(item.choices) && Number.isInteger(item.answer)) {
+              item.correct = item.choices[item.answer];
+            }
+          });
+        }
+      });
       course = data; lessons = data.lessons;
       openLesson(current);
       if (window.HSKMockExam && localStorage.getItem('hskOpenExam') === 'hsk3') {

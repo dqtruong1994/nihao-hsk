@@ -252,7 +252,8 @@
             "有我早就想好了，请你吃饭。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: V + 好 - Được dùng sau động từ diễn tả hành động được hoàn thành và làm người ta cảm thấy hài lòng."
+          "explanation": "Cấu trúc: V + 好 - Được dùng sau động từ diễn tả hành động được hoàn thành và làm người ta cảm thấy hài lòng.",
+          "correct": "我早就想好了，请你吃饭。"
         },
         {
           "question": "Đoạn hội thoại \"谈周末的打算\" diễn ra trong ngữ cảnh nào?",
@@ -263,7 +264,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 谈周末的打算 (Nói về kế hoạch cuối tuần)."
+          "explanation": "Ngữ cảnh bài khóa: 谈周末的打算 (Nói về kế hoạch cuối tuần).",
+          "correct": "Nói về kế hoạch cuối tuần"
         }
       ]
     },
@@ -532,7 +534,8 @@
             "有周经理出去了，不在办公室。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: V + 来 / 去 - Biểu thị xu hướng của động tác so với vị trí của người nói (hướng lại gần dùng 来, ra xa dùng 去)."
+          "explanation": "Cấu trúc: V + 来 / 去 - Biểu thị xu hướng của động tác so với vị trí của người nói (hướng lại gần dùng 来, ra xa dùng 去).",
+          "correct": "周经理出去了，不在办公室。"
         },
         {
           "question": "Đoạn hội thoại \"下山的路上\" diễn ra trong ngữ cảnh nào?",
@@ -543,7 +546,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 下山的路上 (Trên đường xuống núi)."
+          "explanation": "Ngữ cảnh bài khóa: 下山的路上 (Trên đường xuống núi).",
+          "correct": "Trên đường xuống núi"
         }
       ]
     },
@@ -805,7 +809,8 @@
             "有茶或者咖啡都可以。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: 还是 (câu hỏi) / 或者 (câu kể) - 还是 dùng trong câu hỏi lựa chọn; 或者 dùng trong câu trần thuật biểu thị một trong các khả năng."
+          "explanation": "Cấu trúc: 还是 (câu hỏi) / 或者 (câu kể) - 还是 dùng trong câu hỏi lựa chọn; 或者 dùng trong câu trần thuật biểu thị một trong các khả năng.",
+          "correct": "茶或者咖啡都可以。"
         },
         {
           "question": "Đoạn hội thoại \"在小丽家\" diễn ra trong ngữ cảnh nào?",
@@ -816,7 +821,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在小丽家 (Ở nhà của chị Lệ)."
+          "explanation": "Ngữ cảnh bài khóa: 在小丽家 (Ở nhà của chị Lệ).",
+          "correct": "Ở nhà của chị Lệ"
         }
       ]
     },
@@ -1063,7 +1069,8 @@
             "有这家超市的蛋糕又便宜又好吃。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: 又 + Tính từ 1 + 又 + Tính từ 2 - Biểu thị hai đặc điểm hoặc trạng thái cùng tồn tại đồng thời trên một đối tượng."
+          "explanation": "Cấu trúc: 又 + Tính từ 1 + 又 + Tính từ 2 - Biểu thị hai đặc điểm hoặc trạng thái cùng tồn tại đồng thời trên một đối tượng.",
+          "correct": "这家超市的蛋糕又便宜又好吃。"
         },
         {
           "question": "Đoạn hội thoại \"在教室\" diễn ra trong ngữ cảnh nào?",
@@ -1074,7 +1081,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在教室 (Trong lớp học)."
+          "explanation": "Ngữ cảnh bài khóa: 在教室 (Trong lớp học).",
+          "correct": "Trong lớp học"
         }
       ]
     },
@@ -1300,7 +1308,8 @@
             "有我最近越来越胖了。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: Tính từ / V + 了 - Biểu thị sự xuất hiện tình huống mới hoặc có sự thay đổi về trạng thái."
+          "explanation": "Cấu trúc: Tính từ / V + 了 - Biểu thị sự xuất hiện tình huống mới hoặc có sự thay đổi về trạng thái.",
+          "correct": "我最近越来越胖了。"
         },
         {
           "question": "Đoạn hội thoại \"在小丽家\" diễn ra trong ngữ cảnh nào?",
@@ -1311,7 +1320,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在小丽家 (Tại nhà chị Lệ)."
+          "explanation": "Ngữ cảnh bài khóa: 在小丽家 (Tại nhà chị Lệ).",
+          "correct": "Tại nhà chị Lệ"
         }
       ]
     },
@@ -1559,7 +1569,8 @@
             "有怎么突然找不到了？"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: V + 得 / 不 + Kết quả/Hướng - Biểu thị có hay không có khả năng đạt được kết quả nào đó trong điều kiện khách quan."
+          "explanation": "Cấu trúc: V + 得 / 不 + Kết quả/Hướng - Biểu thị có hay không có khả năng đạt được kết quả nào đó trong điều kiện khách quan.",
+          "correct": "怎么突然找不到了？"
         },
         {
           "question": "Đoạn hội thoại \"在客厅\" diễn ra trong ngữ cảnh nào?",
@@ -1570,7 +1581,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在客厅 (Trong phòng khách)."
+          "explanation": "Ngữ cảnh bài khóa: 在客厅 (Trong phòng khách).",
+          "correct": "Trong phòng khách"
         }
       ]
     },
@@ -1797,7 +1809,8 @@
             "有我跟她都认识五年了。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: Chủ ngữ + V + (Tân ngữ + V) + Khoảng thời gian - Biểu thị thời gian kéo dài của một động tác hoặc trạng thái."
+          "explanation": "Cấu trúc: Chủ ngữ + V + (Tân ngữ + V) + Khoảng thời gian - Biểu thị thời gian kéo dài của một động tác hoặc trạng thái.",
+          "correct": "我跟她都认识五年了。"
         },
         {
           "question": "Đoạn hội thoại \"在办公室\" diễn ra trong ngữ cảnh nào?",
@@ -1808,7 +1821,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在办公室 (Trong văn phòng)."
+          "explanation": "Ngữ cảnh bài khóa: 在办公室 (Trong văn phòng).",
+          "correct": "Trong văn phòng"
         }
       ]
     },
@@ -2062,7 +2076,8 @@
             "有你明天再去一次吧。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: 又 (đã lặp lại) / 再 (sắp lặp lại) - 又 thường dùng cho hành động đã tái diễn trong quá khứ; 再 dùng cho hành động sẽ lặp lại trong tương lai."
+          "explanation": "Cấu trúc: 又 (đã lặp lại) / 再 (sắp lặp lại) - 又 thường dùng cho hành động đã tái diễn trong quá khứ; 再 dùng cho hành động sẽ lặp lại trong tương lai.",
+          "correct": "你明天再去一次吧。"
         },
         {
           "question": "Đoạn hội thoại \"在休息室\" diễn ra trong ngữ cảnh nào?",
@@ -2073,7 +2088,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在休息室 (Trong phòng giải lao)."
+          "explanation": "Ngữ cảnh bài khóa: 在休息室 (Trong phòng giải lao).",
+          "correct": "Trong phòng giải lao"
         }
       ]
     },
@@ -2299,7 +2315,8 @@
             "有雨越下越大。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: 越 A 越 B - Biểu thị B thay đổi theo mức độ tăng dần của A (càng... càng...)."
+          "explanation": "Cấu trúc: 越 A 越 B - Biểu thị B thay đổi theo mức độ tăng dần của A (càng... càng...).",
+          "correct": "雨越下越大。"
         },
         {
           "question": "Đoạn hội thoại \"在教室\" diễn ra trong ngữ cảnh nào?",
@@ -2310,7 +2327,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在教室 (Trong lớp học)."
+          "explanation": "Ngữ cảnh bài khóa: 在教室 (Trong lớp học).",
+          "correct": "Trong lớp học"
         }
       ]
     },
@@ -2550,7 +2568,8 @@
             "有数学比历史难多了。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: A 比 B + Tính từ + 得多 / 多了 / 一点儿 - So sánh mức độ chênh lệch giữa hai đối tượng."
+          "explanation": "Cấu trúc: A 比 B + Tính từ + 得多 / 多了 / 一点儿 - So sánh mức độ chênh lệch giữa hai đối tượng.",
+          "correct": "数学比历史难多了。"
         },
         {
           "question": "Đoạn hội thoại \"在教室\" diễn ra trong ngữ cảnh nào?",
@@ -2561,7 +2580,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在教室 (Trong lớp học)."
+          "explanation": "Ngữ cảnh bài khóa: 在教室 (Trong lớp học).",
+          "correct": "Trong lớp học"
         }
       ]
     },
@@ -2829,7 +2849,8 @@
             "有别忘了把空调关了。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: A 把 B + V + 了 / 在 / 到... - Nhấn mạnh sự xử lý, tác động của chủ ngữ làm thay đổi vị trí, trạng thái của tân ngữ."
+          "explanation": "Cấu trúc: A 把 B + V + 了 / 在 / 到... - Nhấn mạnh sự xử lý, tác động của chủ ngữ làm thay đổi vị trí, trạng thái của tân ngữ.",
+          "correct": "别忘了把空调关了。"
         },
         {
           "question": "Đoạn hội thoại \"在教室\" diễn ra trong ngữ cảnh nào?",
@@ -2840,7 +2861,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在教室 (Trong lớp học)."
+          "explanation": "Ngữ cảnh bài khóa: 在教室 (Trong lớp học).",
+          "correct": "Trong lớp học"
         }
       ]
     },
@@ -3073,7 +3095,8 @@
             "有八点上课，他七点半就来了。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: 才 (chậm, muộn, khó) / 就 (sớm, nhanh, dễ) - 才 nhấn mạnh hành động xảy ra muộn hơn dự kiến; 就 nhấn mạnh hành động xảy ra sớm hoặc mau chóng."
+          "explanation": "Cấu trúc: 才 (chậm, muộn, khó) / 就 (sớm, nhanh, dễ) - 才 nhấn mạnh hành động xảy ra muộn hơn dự kiến; 就 nhấn mạnh hành động xảy ra sớm hoặc mau chóng.",
+          "correct": "八点上课，他七点半就来了。"
         },
         {
           "question": "Đoạn hội thoại \"在家\" diễn ra trong ngữ cảnh nào?",
@@ -3084,7 +3107,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在家 (Ở nhà)."
+          "explanation": "Ngữ cảnh bài khóa: 在家 (Ở nhà).",
+          "correct": "Ở nhà"
         }
       ]
     },
@@ -3324,7 +3348,8 @@
             "有我是走回来的。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: V + 起来 / 过来 / 回去 / 走出来... - Kết hợp giữa động từ hành động và bổ ngữ xu hướng kép diễn tả chiều chuyển động cụ thể."
+          "explanation": "Cấu trúc: V + 起来 / 过来 / 回去 / 走出来... - Kết hợp giữa động từ hành động và bổ ngữ xu hướng kép diễn tả chiều chuyển động cụ thể.",
+          "correct": "我是走回来的。"
         },
         {
           "question": "Đoạn hội thoại \"在家\" diễn ra trong ngữ cảnh nào?",
@@ -3335,7 +3360,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在家 (Ở nhà)."
+          "explanation": "Ngữ cảnh bài khóa: 在家 (Ở nhà).",
+          "correct": "Ở nhà"
         }
       ]
     },
@@ -3589,7 +3615,8 @@
             "有你把水果拿过来。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: A 把 B + Động từ + Bổ ngữ kết quả / phương hướng - Biểu thị tác động làm vật di chuyển theo hướng hoặc đạt trạng thái mới."
+          "explanation": "Cấu trúc: A 把 B + Động từ + Bổ ngữ kết quả / phương hướng - Biểu thị tác động làm vật di chuyển theo hướng hoặc đạt trạng thái mới.",
+          "correct": "你把水果拿过来。"
         },
         {
           "question": "Đoạn hội thoại \"在家\" diễn ra trong ngữ cảnh nào?",
@@ -3600,7 +3627,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在家 (Ở nhà)."
+          "explanation": "Ngữ cảnh bài khóa: 在家 (Ở nhà).",
+          "correct": "Ở nhà"
         }
       ]
     },
@@ -3883,7 +3911,8 @@
             "有除了汉语以外，他还会说英语。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: 除了 A (以外)，都/还 B - Biểu thị ngoại trừ (nếu đi với 都) hoặc ngoài A ra còn bổ sung thêm B (nếu đi với 还/也)."
+          "explanation": "Cấu trúc: 除了 A (以外)，都/还 B - Biểu thị ngoại trừ (nếu đi với 都) hoặc ngoài A ra còn bổ sung thêm B (nếu đi với 还/也).",
+          "correct": "除了汉语以外，他还会说英语。"
         },
         {
           "question": "Đoạn hội thoại \"在办公室\" diễn ra trong ngữ cảnh nào?",
@@ -3894,7 +3923,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在办公室 (Trong văn phòng)."
+          "explanation": "Ngữ cảnh bài khóa: 在办公室 (Trong văn phòng).",
+          "correct": "Trong văn phòng"
         }
       ]
     },
@@ -4149,7 +4179,8 @@
             "有如果明天下雨，我们就不去爬山了。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: 如果 A (的话)，(主语) 就 B - Diễn tả câu giả thiết điều kiện: Nếu... thì..."
+          "explanation": "Cấu trúc: 如果 A (的话)，(主语) 就 B - Diễn tả câu giả thiết điều kiện: Nếu... thì...",
+          "correct": "如果明天下雨，我们就不去爬山了。"
         },
         {
           "question": "Đoạn hội thoại \"在公司\" diễn ra trong ngữ cảnh nào?",
@@ -4160,7 +4191,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在公司 (Trong công ty)."
+          "explanation": "Ngữ cảnh bài khóa: 在公司 (Trong công ty).",
+          "correct": "Trong công ty"
         }
       ]
     },
@@ -4400,7 +4432,8 @@
             "有休息休息 / 锻炼锻炼"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: AB AB - Lặp lại động từ có hai âm tiết để diễn tả hành động diễn ra trong thời gian ngắn hoặc thử làm."
+          "explanation": "Cấu trúc: AB AB - Lặp lại động từ có hai âm tiết để diễn tả hành động diễn ra trong thời gian ngắn hoặc thử làm.",
+          "correct": "休息休息 / 锻炼锻炼"
         },
         {
           "question": "Đoạn hội thoại \"在公司\" diễn ra trong ngữ cảnh nào?",
@@ -4411,7 +4444,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在公司 (Trong công ty)."
+          "explanation": "Ngữ cảnh bài khóa: 在公司 (Trong công ty).",
+          "correct": "Trong công ty"
         }
       ]
     },
@@ -4673,7 +4707,8 @@
             "有只要努力，就一定能学好汉语。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: 只要 A，就 B - Biểu thị điều kiện đủ: Chỉ cần có A thì sẽ dẫn đến kết quả B."
+          "explanation": "Cấu trúc: 只要 A，就 B - Biểu thị điều kiện đủ: Chỉ cần có A thì sẽ dẫn đến kết quả B.",
+          "correct": "只要努力，就一定能学好汉语。"
         },
         {
           "question": "Đoạn hội thoại \"在打电话\" diễn ra trong ngữ cảnh nào?",
@@ -4684,7 +4719,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在打电话 (Nói chuyện qua điện thoại)."
+          "explanation": "Ngữ cảnh bài khóa: 在打电话 (Nói chuyện qua điện thoại).",
+          "correct": "Nói chuyện qua điện thoại"
         }
       ]
     },
@@ -4910,7 +4946,8 @@
             "有你没看出来吗？"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: V + 出来 / 起来 / 下去 - 出来的 nghĩa mở rộng chỉ nhận ra, phân biệt được; 起来 chỉ bắt đầu; 下去 chỉ tiếp tục."
+          "explanation": "Cấu trúc: V + 出来 / 起来 / 下去 - 出来的 nghĩa mở rộng chỉ nhận ra, phân biệt được; 起来 chỉ bắt đầu; 下去 chỉ tiếp tục.",
+          "correct": "你没看出来吗？"
         },
         {
           "question": "Đoạn hội thoại \"在家\" diễn ra trong ngữ cảnh nào?",
@@ -4921,7 +4958,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在家 (Ở nhà)."
+          "explanation": "Ngữ cảnh bài khóa: 在家 (Ở nhà).",
+          "correct": "Ở nhà"
         }
       ]
     },
@@ -5154,7 +5192,8 @@
             "有我被他影响了。"
           ],
           "answer": 0,
-          "explanation": "Cấu trúc: A 被 (B) + Động từ + Thành phần khác - Diễn tả chủ ngữ tiếp nhận tác động một cách bị động."
+          "explanation": "Cấu trúc: A 被 (B) + Động từ + Thành phần khác - Diễn tả chủ ngữ tiếp nhận tác động một cách bị động.",
+          "correct": "我被他影响了。"
         },
         {
           "question": "Đoạn hội thoại \"在休息室\" diễn ra trong ngữ cảnh nào?",
@@ -5165,7 +5204,8 @@
             "Ở siêu thị"
           ],
           "answer": 0,
-          "explanation": "Ngữ cảnh bài khóa: 在休息室 (Trong phòng giải lao)."
+          "explanation": "Ngữ cảnh bài khóa: 在休息室 (Trong phòng giải lao).",
+          "correct": "Trong phòng giải lao"
         }
       ]
     }
