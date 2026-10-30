@@ -223,7 +223,8 @@
     async function load() {
       root.innerHTML = '<p class="textbook-loading" role="status">Đang tải hội thoại giáo trình…</p>';
       try {
-        const response = await fetch(root.dataset.textbookSource);
+        const source = root.dataset.textbookSource || `hsk${root.dataset.textbookLevel || level || 1}-textbook-dialogues.json`;
+        const response = await fetch(source);
         if (!response.ok) throw new Error('Textbook unavailable');
         const data = await response.json();
         if (!Array.isArray(data.lessons) || !data.lessons.length || !data.lessons.every(lesson =>
