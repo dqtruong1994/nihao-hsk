@@ -1,6 +1,7 @@
 /**
  * Floating Hands-Free Audio Immersion Player (Máy Nghe Thụ Động)
  * Tự động phát hội thoại giáo trình HSK liên tục chạy nền kèm phụ đề Hán tự - Pinyin - Dịch nghĩa
+ * Tích hợp tính năng Luyện Nói & Thu Âm (Voice Shadowing, Recording & Playback, So sánh phát âm)
  */
 (() => {
   'use strict';
@@ -32,6 +33,21 @@
 
   let triggerEl = null;
   let cardEl = null;
+
+  // Voice Shadowing & Recording State
+  let mediaRecorder = null;
+  let audioStream = null;
+  let recordedChunks = [];
+  let recordedAudioUrl = null;
+  let userAudioPlayer = null;
+  let isRecording = false;
+  let isPlayingUserAudio = false;
+  let isPlayingSample = false;
+  let isComparing = false;
+  let recordTimer = null;
+  let recordSeconds = 0;
+  let speechRecognizer = null;
+  let recognizedText = '';
 
   function initPlayerDOM() {
     if (triggerEl) return;
@@ -89,6 +105,32 @@
           <div class="immersion-meaning-text" id="immersionMeaning">Xin chào!</div>
         </div>
 
+        <!-- Thanh Luyện Nói & Thu Âm (Voice Shadowing & Recording Dock) -->
+        <div class="immersion-voice-dock" id="immersionVoiceDock">
+          <div class="immersion-voice-row">
+            <button type="button" class="immersion-v-btn rec-btn" id="immersionRecBtn" title="Bắt đầu thu âm giọng bạn">
+              <span class="v-icon rec-dot">●</span>
+              <span id="immersionRecLabel">Thu âm</span>
+            </button>
+            <button type="button" class="immersion-v-btn play-user-btn" id="immersionPlayUserBtn" title="Nghe lại giọng bạn vừa thu" disabled>
+              <span class="v-icon">🎧</span>
+              <span id="immersionPlayUserLabel">Nghe lại</span>
+            </button>
+            <button type="button" class="immersion-v-btn native-sample-btn" id="immersionNativeSampleBtn" title="Nghe giọng đọc bản ngữ câu này">
+              <span class="v-icon">🔊</span>
+              <span id="immersionSampleLabel">Mẫu chuẩn</span>
+            </button>
+            <button type="button" class="immersion-v-btn compare-btn" id="immersionCompareBtn" title="So sánh: Nghe mẫu trước, nghe bạn sau" disabled>
+              <span class="v-icon">⚖️</span>
+              <span id="immersionCompareLabel">So sánh</span>
+            </button>
+          </div>
+          <div class="immersion-voice-feedback" id="immersionVoiceFeedback" data-type="idle">
+            <span class="feedback-icon" id="immersionFeedbackIcon">💡</span>
+            <span class="feedback-text" id="immersionFeedbackText">Bấm <b>Thu âm</b> để luyện nói theo câu này</span>
+          </div>
+        </div>
+
         <div class="immersion-controls">
           <div style="font-size:12px; font-weight:700; color:#64748b;" id="immersionProgressText">
             1 / ${currentPlaylist.length}
@@ -123,6 +165,7 @@
     document.getElementById('immersionMinBtn').onclick = hideCard;
     document.getElementById('immersionCloseBtn').onclick = () => {
       stopPlayback();
+      resetVoiceRecording();
       hideCard();
     };
 
@@ -141,6 +184,19 @@
     document.getElementById('immersionNextBtn').onclick = () => {
       nextSentence();
     };
+
+    // Voice Toolbar Buttons
+    const recBtn = document.getElementById('immersionRecBtn');
+    if (recBtn) recBtn.onclick = toggleRecording;
+
+    const playUserBtn = document.getElementById('immersionPlayUserBtn');
+    if (playUserBtn) playUserBtn.onclick = () => playUserAudio();
+
+    const sampleBtn = document.getElementById('immersionNativeSampleBtn');
+    if (sampleBtn) sampleBtn.onclick = () => playNativeSample();
+
+    const compareBtn = document.getElementById('immersionCompareBtn');
+    if (compareBtn) compareBtn.onclick = () => compareAudio();
 
     // Rate Buttons
     cardEl.querySelectorAll('[data-rate]').forEach(btn => {
@@ -169,15 +225,407 @@
     // Level Select
     const lvlSelect = document.getElementById('immersionLevelSelect');
     lvlSelect.onchange = () => {
+      resetVoiceRecording();
       loadLevelData(lvlSelect.value);
     };
 
     // Lesson Select
     const lsnSelect = document.getElementById('immersionLessonSelect');
     lsnSelect.onchange = () => {
+      resetVoiceRecording();
       filterPlaylistByLesson(lsnSelect.value);
     };
   }
+
+  // ==========================================
+  // VOICE RECORDING & SHADOWING SYSTEM
+  // ==========================================
+
+  function toggleRecording() {
+    if (isRecording) {
+      stopRecording();
+    } else {
+      startRecording();
+    }
+  }
+
+  async function startRecording() {
+    // 1. Tạm dừng phát tự động nếu đang chạy
+    if (isPlaying) {
+      pausePlayback();
+    }
+
+    // 2. Dừng phát âm thanh người dùng / mẫu nếu đang phát
+    stopUserAudio();
+    stopNativeSpeech();
+
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      setVoiceFeedback('Trình duyệt chưa hỗ trợ thu âm qua Microphone.', 'error');
+      return;
+    }
+
+    try {
+      audioStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch (err) {
+      setVoiceFeedback('Không thể truy cập Mic. Hãy cho phép quyền Microphone trên trình duyệt.', 'error');
+      return;
+    }
+
+    recordedChunks = [];
+    recognizedText = '';
+
+    try {
+      let options = {};
+      if (typeof MediaRecorder !== 'undefined') {
+        if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) {
+          options = { mimeType: 'audio/webm;codecs=opus' };
+        } else if (MediaRecorder.isTypeSupported('audio/webm')) {
+          options = { mimeType: 'audio/webm' };
+        } else if (MediaRecorder.isTypeSupported('audio/mp4')) {
+          options = { mimeType: 'audio/mp4' };
+        }
+      }
+      mediaRecorder = new MediaRecorder(audioStream, options);
+    } catch (e) {
+      mediaRecorder = new MediaRecorder(audioStream);
+    }
+
+    mediaRecorder.ondataavailable = (e) => {
+      if (e.data && e.data.size > 0) {
+        recordedChunks.push(e.data);
+      }
+    };
+
+    mediaRecorder.onstop = () => {
+      if (recordedChunks.length > 0) {
+        if (recordedAudioUrl) {
+          URL.revokeObjectURL(recordedAudioUrl);
+        }
+        const mimeType = mediaRecorder.mimeType || 'audio/webm';
+        const audioBlob = new Blob(recordedChunks, { type: mimeType });
+        recordedAudioUrl = URL.createObjectURL(audioBlob);
+
+        const replayBtn = document.getElementById('immersionPlayUserBtn');
+        const compareBtn = document.getElementById('immersionCompareBtn');
+        if (replayBtn) replayBtn.disabled = false;
+        if (compareBtn) compareBtn.disabled = false;
+
+        // Nếu đã có kết quả nhận diện từ trước đó
+        if (recognizedText) {
+          evaluatePronunciation(recognizedText);
+        } else {
+          setVoiceFeedback('✅ Đã thu xong! Bấm <b>🎧 Nghe lại</b> hoặc <b>⚖️ So sánh</b>.', 'ready');
+        }
+      }
+    };
+
+    mediaRecorder.start();
+    isRecording = true;
+    recordSeconds = 0;
+    updateRecordUI();
+
+    // Bộ đếm thời gian (tối đa 12s cho 1 câu nói)
+    clearInterval(recordTimer);
+    recordTimer = setInterval(() => {
+      recordSeconds++;
+      updateRecordUI();
+      if (recordSeconds >= 12) {
+        stopRecording();
+      }
+    }, 1000);
+
+    setVoiceFeedback('🔴 Đang thu âm... Hãy đọc to câu tiếng Trung ở trên!', 'recording');
+
+    // Kích hoạt nhận diện tiếng Trung nếu hỗ trợ
+    startSpeechRecognition();
+  }
+
+  function stopRecording() {
+    if (!isRecording) return;
+    isRecording = false;
+    clearInterval(recordTimer);
+
+    if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+      try {
+        mediaRecorder.stop();
+      } catch (e) {}
+    }
+
+    if (audioStream) {
+      audioStream.getTracks().forEach(t => t.stop());
+      audioStream = null;
+    }
+
+    updateRecordUI();
+
+    if (speechRecognizer) {
+      try { speechRecognizer.stop(); } catch (e) {}
+    }
+  }
+
+  function updateRecordUI() {
+    const recBtn = document.getElementById('immersionRecBtn');
+    const recLabel = document.getElementById('immersionRecLabel');
+    if (!recBtn || !recLabel) return;
+
+    if (isRecording) {
+      recBtn.classList.add('is-recording');
+      recLabel.textContent = `Dừng (${recordSeconds}s)`;
+    } else {
+      recBtn.classList.remove('is-recording');
+      recLabel.textContent = recordedAudioUrl ? 'Thu lại' : 'Thu âm';
+    }
+  }
+
+  function playUserAudio(onEndedCallback) {
+    if (!recordedAudioUrl) return;
+
+    if (isPlayingUserAudio) {
+      stopUserAudio();
+      return;
+    }
+
+    if (isPlaying) {
+      pausePlayback();
+    }
+    stopNativeSpeech();
+
+    userAudioPlayer = new Audio(recordedAudioUrl);
+    isPlayingUserAudio = true;
+    updateUserAudioBtnState();
+    setVoiceFeedback('🎧 Đang phát giọng bạn vừa thu...', 'playing');
+
+    userAudioPlayer.onended = () => {
+      isPlayingUserAudio = false;
+      userAudioPlayer = null;
+      updateUserAudioBtnState();
+      setVoiceFeedback('✅ Đã phát xong giọng bạn! Bấm <b>🔊 Mẫu chuẩn</b> để đối chiếu.', 'ready');
+      if (typeof onEndedCallback === 'function') onEndedCallback();
+    };
+
+    userAudioPlayer.onerror = () => {
+      isPlayingUserAudio = false;
+      userAudioPlayer = null;
+      updateUserAudioBtnState();
+      setVoiceFeedback('⚠️ Lỗi khi phát bản thu âm.', 'error');
+    };
+
+    userAudioPlayer.play().catch(() => {
+      isPlayingUserAudio = false;
+      userAudioPlayer = null;
+      updateUserAudioBtnState();
+    });
+  }
+
+  function stopUserAudio() {
+    if (userAudioPlayer) {
+      userAudioPlayer.pause();
+      userAudioPlayer = null;
+    }
+    isPlayingUserAudio = false;
+    updateUserAudioBtnState();
+  }
+
+  function updateUserAudioBtnState() {
+    const replayBtn = document.getElementById('immersionPlayUserBtn');
+    const replayLabel = document.getElementById('immersionPlayUserLabel');
+    if (!replayBtn) return;
+
+    if (isPlayingUserAudio) {
+      replayBtn.classList.add('is-playing-user');
+      if (replayLabel) replayLabel.textContent = 'Dừng';
+    } else {
+      replayBtn.classList.remove('is-playing-user');
+      if (replayLabel) replayLabel.textContent = 'Nghe lại';
+    }
+  }
+
+  function playNativeSample(onEndedCallback) {
+    if (!currentPlaylist.length) return;
+    const item = currentPlaylist[currentIndex];
+    if (!item || !item.zh) return;
+
+    if (isPlaying) pausePlayback();
+    stopUserAudio();
+    stopNativeSpeech();
+
+    const sampleBtn = document.getElementById('immersionNativeSampleBtn');
+    if (sampleBtn) sampleBtn.classList.add('is-playing-sample');
+    isPlayingSample = true;
+    setVoiceFeedback(`🔊 Đang đọc mẫu chuẩn: "${item.zh}"`, 'playing');
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(item.zh);
+      u.lang = 'zh-CN';
+      u.rate = playbackRate;
+
+      const voices = window.speechSynthesis.getVoices();
+      const zhVoice = voices.find(v => v.lang.includes('zh') || v.lang.includes('cmn'));
+      if (zhVoice) u.voice = zhVoice;
+
+      u.onend = () => {
+        isPlayingSample = false;
+        if (sampleBtn) sampleBtn.classList.remove('is-playing-sample');
+        if (!isComparing) {
+          setVoiceFeedback('Bấm <b>🎙️ Thu âm</b> để luyện phát âm theo câu này', 'ready');
+        }
+        if (typeof onEndedCallback === 'function') onEndedCallback();
+      };
+
+      u.onerror = () => {
+        isPlayingSample = false;
+        if (sampleBtn) sampleBtn.classList.remove('is-playing-sample');
+        if (typeof onEndedCallback === 'function') onEndedCallback();
+      };
+
+      window.speechSynthesis.speak(u);
+    } else {
+      isPlayingSample = false;
+      if (sampleBtn) sampleBtn.classList.remove('is-playing-sample');
+      if (typeof onEndedCallback === 'function') onEndedCallback();
+    }
+  }
+
+  function stopNativeSpeech() {
+    if ('speechSynthesis' in window) {
+      try { window.speechSynthesis.cancel(); } catch (e) {}
+    }
+    isPlayingSample = false;
+    const sampleBtn = document.getElementById('immersionNativeSampleBtn');
+    if (sampleBtn) sampleBtn.classList.remove('is-playing-sample');
+  }
+
+  function compareAudio() {
+    if (!recordedAudioUrl) return;
+
+    const compareBtn = document.getElementById('immersionCompareBtn');
+    if (compareBtn) compareBtn.classList.add('is-comparing');
+    isComparing = true;
+
+    setVoiceFeedback('1️⃣ Đang nghe giọng mẫu chuẩn...', 'playing');
+    playNativeSample(() => {
+      setVoiceFeedback('2️⃣ Đang chuyển sang giọng của bạn...', 'playing');
+      setTimeout(() => {
+        playUserAudio(() => {
+          isComparing = false;
+          if (compareBtn) compareBtn.classList.remove('is-comparing');
+          setVoiceFeedback('✨ So sánh hoàn tất! Hãy nghe lại để chỉnh ngữ điệu.', 'success');
+        });
+      }, 500);
+    });
+  }
+
+  function startSpeechRecognition() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) return;
+
+    try {
+      speechRecognizer = new SpeechRecognition();
+      speechRecognizer.lang = 'zh-CN';
+      speechRecognizer.interimResults = false;
+      speechRecognizer.maxAlternatives = 1;
+
+      speechRecognizer.onresult = (event) => {
+        if (event.results && event.results[0] && event.results[0][0]) {
+          recognizedText = (event.results[0][0].transcript || '').trim();
+          if (!isRecording) {
+            evaluatePronunciation(recognizedText);
+          }
+        }
+      };
+
+      speechRecognizer.onerror = () => {
+        // Lỗi mic hoặc nhận diện không ảnh hưởng đến luồng thu âm
+      };
+
+      speechRecognizer.start();
+    } catch (e) {
+      // Bỏ qua lỗi Speech Recognition
+    }
+  }
+
+  function evaluatePronunciation(userTranscript) {
+    if (!currentPlaylist.length) return;
+    const item = currentPlaylist[currentIndex];
+    if (!item || !item.zh || !userTranscript) return;
+
+    const clean = str => str.replace(/[\s\p{P}\p{S}]/gu, '').toLowerCase();
+    const targetClean = clean(item.zh);
+    const userClean = clean(userTranscript);
+
+    if (!userClean) return;
+
+    if (targetClean === userClean) {
+      setVoiceFeedback(`🎉 Chuẩn xác 100%! Nhận diện: <b>"${userTranscript}"</b>`, 'success');
+    } else if (targetClean.includes(userClean) || userClean.includes(targetClean)) {
+      setVoiceFeedback(`👍 Rất tốt! Nhận diện: <b>"${userTranscript}"</b> (Khớp ngữ điệu)`, 'success');
+    } else {
+      let matchCount = 0;
+      for (const char of userClean) {
+        if (targetClean.includes(char)) matchCount++;
+      }
+      const ratio = Math.round((matchCount / Math.max(targetClean.length, 1)) * 100);
+      if (ratio >= 50) {
+        setVoiceFeedback(`👍 Gần chuẩn (${ratio}%)! Bạn đọc: <b>"${userTranscript}"</b>`, 'info');
+      } else {
+        setVoiceFeedback(`🗣️ Nhận diện: <b>"${userTranscript}"</b>. Bấm <b>⚖️ So sánh</b> để chỉnh phát âm nhé!`, 'info');
+      }
+    }
+  }
+
+  function resetVoiceRecording() {
+    stopRecording();
+    stopUserAudio();
+    stopNativeSpeech();
+
+    if (recordedAudioUrl) {
+      URL.revokeObjectURL(recordedAudioUrl);
+      recordedAudioUrl = null;
+    }
+    recordedChunks = [];
+    recognizedText = '';
+    isComparing = false;
+
+    const replayBtn = document.getElementById('immersionPlayUserBtn');
+    const compareBtn = document.getElementById('immersionCompareBtn');
+    if (replayBtn) {
+      replayBtn.disabled = true;
+      replayBtn.classList.remove('is-playing-user');
+      const label = document.getElementById('immersionPlayUserLabel');
+      if (label) label.textContent = 'Nghe lại';
+    }
+    if (compareBtn) {
+      compareBtn.disabled = true;
+      compareBtn.classList.remove('is-comparing');
+    }
+
+    updateRecordUI();
+    setVoiceFeedback('Bấm <b>Thu âm</b> để luyện nói theo câu này', 'idle');
+  }
+
+  function setVoiceFeedback(msg, type = 'idle') {
+    const iconEl = document.getElementById('immersionFeedbackIcon');
+    const textEl = document.getElementById('immersionFeedbackText');
+    const boxEl = document.getElementById('immersionVoiceFeedback');
+    if (!textEl || !boxEl) return;
+
+    let icon = '💡';
+    if (type === 'recording') icon = '🔴';
+    else if (type === 'playing') icon = '🎵';
+    else if (type === 'success') icon = '🎉';
+    else if (type === 'error') icon = '⚠️';
+    else if (type === 'info') icon = '🗣️';
+    else if (type === 'ready') icon = '✅';
+
+    if (iconEl) iconEl.textContent = icon;
+    textEl.innerHTML = msg;
+    boxEl.dataset.type = type;
+  }
+
+  // ==========================================
+  // PLAYLIST & DATA LOADING
+  // ==========================================
 
   async function loadLevelData(levelKey) {
     let fileName = '';
@@ -277,7 +725,7 @@
     isPlaying = false;
     clearTimeout(pauseTimer);
     if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
+      try { window.speechSynthesis.cancel(); } catch (e) {}
     }
     updateUIState();
   }
@@ -349,20 +797,21 @@
     if (!isPlaying) return;
 
     if (repeatMode === 'loop-one') {
-      // Lặp lại câu hiện tại
       playCurrentSentence();
     } else if (repeatMode === 'loop-all') {
       currentIndex = (currentIndex + 1) % currentPlaylist.length;
+      resetVoiceRecording();
       playCurrentSentence();
     } else if (repeatMode === 'continuous') {
       if (currentIndex < currentPlaylist.length - 1) {
         currentIndex++;
+        resetVoiceRecording();
         playCurrentSentence();
       } else {
-        // Hết bài, tự động chuyển sang bài kế tiếp
         const lsnSelect = document.getElementById('immersionLessonSelect');
         if (lsnSelect && lsnSelect.selectedIndex < lsnSelect.options.length - 1) {
           lsnSelect.selectedIndex++;
+          resetVoiceRecording();
           filterPlaylistByLesson(lsnSelect.value);
           startPlayback();
         } else {
@@ -378,12 +827,14 @@
     } else {
       currentIndex = currentPlaylist.length - 1;
     }
+    resetVoiceRecording();
     renderCurrentSentence();
     if (isPlaying) playCurrentSentence();
   }
 
   function nextSentence() {
     currentIndex = (currentIndex + 1) % currentPlaylist.length;
+    resetVoiceRecording();
     renderCurrentSentence();
     if (isPlaying) playCurrentSentence();
   }
@@ -423,7 +874,10 @@
     hide: hideCard,
     toggle: toggleCard,
     play: startPlayback,
-    pause: pausePlayback
+    pause: pausePlayback,
+    record: toggleRecording,
+    playUser: playUserAudio,
+    playSample: playNativeSample,
+    compare: compareAudio
   };
 })();
-
