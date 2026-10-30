@@ -234,11 +234,13 @@
 .hanzi-grid-box {
   width: 260px;
   height: 260px;
-  margin: 16px auto;
+  margin: 12px auto 10px;
   position: relative;
   border: 3px solid #6657d9;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(102, 87, 217, 0.12);
   /* Rice grid background */
   background-image:
     linear-gradient(to right, rgba(220, 220, 235, 0.7) 1px, transparent 1px),
@@ -262,11 +264,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 190px;
+  font-size: 175px;
   font-family: STKaiti, KaiTi, 'KaiTi SC', serif;
-  color: rgba(102, 87, 217, 0.14);
+  color: rgba(102, 87, 217, 0.15);
   pointer-events: none;
   line-height: 1;
+  user-select: none;
+  overflow: hidden;
+  text-align: center;
+}
+.hanzi-char-chip {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 9px;
+  padding: 5px 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.hanzi-char-chip:hover {
+  border-color: #6657d9;
+  color: #6657d9;
+}
+.hanzi-char-chip.active {
+  background: #6657d9;
+  color: #ffffff;
+  border-color: #6657d9;
+  box-shadow: 0 2px 6px rgba(102, 87, 217, 0.3);
 }
 .hanzi-toolbar {
   display: flex;
