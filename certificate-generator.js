@@ -287,3 +287,4 @@
     download: exportToCanvasPNG
   };
 })();
+

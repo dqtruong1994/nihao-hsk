@@ -146,10 +146,11 @@
       } catch {}
     }
 
-    // 1. Cập nhật nút Đổi theme trên Header
+    // 1. Cập nhật nút Đổi theme trên Header (icon gọn gàng)
     const btn = document.getElementById('themePickerBtn');
     if (btn) {
-      btn.innerHTML = `<span>${theme.icon}</span> <span>${theme.id === 'default' ? 'Đổi giao diện' : theme.name.split(' (')[0]}</span>`;
+      btn.innerHTML = `<span>${theme.icon}</span>`;
+      btn.title = `Giao diện: ${theme.name.split(' (')[0]} (Bấm để đổi)`;
     }
 
     // 2. Cập nhật câu slogan / tagline

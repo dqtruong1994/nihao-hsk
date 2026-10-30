@@ -59,19 +59,34 @@
         <a href="#hsk1" data-route="hsk1">HSK 1</a>
         <a href="#hsk2" data-route="hsk2">HSK 2</a>
         <a href="#hsk3" data-route="hsk3">HSK 3</a>
-        <a href="#dict" data-route="dict">📖 Tra từ điển</a>
-        <a href="#notebook" data-route="notebook">⭐ Sổ tay</a>
-        <a href="javascript:void(0)" onclick="window.HSKSpeechTrainer?.open()" title="Luyện phát âm câu mẫu bằng giọng nói AI">🎙️ Luyện nói</a>
-        <a href="javascript:void(0)" onclick="window.HSKTypingGame?.open()" title="Thử thách gõ Pinyin ra chữ Hán trong 60 giây">⌨️ Gõ Pinyin</a>
-        <a href="javascript:void(0)" onclick="window.HSKSkillDrills?.open()" title="Luyện theo chuyên đề ngữ pháp, bẫy thi và nghe hiểu">🎯 Chuyên đề</a>
+        <a href="#dict" data-route="dict">Từ điển</a>
+        <a href="#notebook" data-route="notebook">Sổ tay</a>
+        <div class="nav-dropdown" id="navPracticeDropdown">
+          <button type="button" class="nav-dropdown-btn">
+            <span>Luyện tập</span>
+            <span style="font-size:10px; opacity:0.65;">▾</span>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="javascript:void(0)" onclick="window.HSKSpeechTrainer?.open()">🎙️ Luyện phát âm AI</a>
+            <a href="javascript:void(0)" onclick="window.HSKTypingGame?.open()">⌨️ Game gõ Pinyin</a>
+            <a href="javascript:void(0)" onclick="window.HSKSkillDrills?.open()">⚡ Đấu trường 4 kỹ năng</a>
+            <a href="javascript:void(0)" onclick="window.SRSEngine?.open()">🗂️ Flashcards SRS</a>
+            <a href="#exam" onclick="window.location.hash='exam'">📝 Thi thử HSK</a>
+            <a href="javascript:void(0)" onclick="window.HSKCertificate?.open()">🎓 Nhận chứng chỉ</a>
+            <a href="javascript:void(0)" onclick="window.HSKImmersionPlayer?.show()">🎧 Nghe thụ động</a>
+          </div>
+        </div>
       </nav>
-      <div id="authHeaderSlot" style="display:flex; align-items:center; gap:8px;">
-        <button type="button" class="sound-toggle-btn" onclick="window.HSKAudioFX?.toggleMute()" title="Bật/Tắt âm thanh hiệu ứng" style="background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:9px; padding:6px 10px; font-size:14px; cursor:pointer;">🔊</button>
-        <button type="button" onclick="window.HSKCertificate?.open()" title="Nhận chứng chỉ tốt nghiệp HSK" style="background:#fef3c7; border:1.5px solid #f59e0b; color:#b45309; border-radius:9px; padding:6px 10px; font-size:12.5px; font-weight:700; cursor:pointer;">🎓 Chứng chỉ</button>
-        <button type="button" id="themePickerBtn" class="theme-header-btn" onclick="window.HSKTheme?.openModal()" title="Đổi giao diện Mùa & Lễ hội"><span>🎨</span> <span>Đổi giao diện</span></button>
-        <button type="button" id="pwaHeaderInstallBtn" class="pwa-header-btn" onclick="window.HSKPWA?.install()" title="Cài đặt App về điện thoại hoặc máy tính"><span>📲</span> <span>Cài App</span></button>
-        <button type="button" id="headerRankBadge" class="header-rank-badge rank-iron" onclick="window.Gamification?.openRankModal()" title="Cấp bậc Rank & Nhiệm vụ hàng ngày">🛡️ Sắt · 0 XP</button>
-        <button type="button" id="headerLoginBtn" style="background:#6657d9; color:#fff; border:0; padding:7px 14px; border-radius:9px; font-weight:700; font-size:13px; cursor:pointer;" onclick="window.HSKAuth?.openAuthModal()">Đăng nhập</button>
+      <div id="authHeaderSlot" class="header-action-cluster">
+        <button type="button" id="spotlightHeaderBtn" class="header-search-pill" onclick="window.HSKSpotlight?.open()" title="Tìm kiếm nhanh (Ctrl + K)">
+          <span style="font-size:13px;">🔍</span>
+          <span class="spotlight-btn-text">Tìm kiếm</span>
+          <kbd class="search-kbd">Ctrl K</kbd>
+        </button>
+        <div id="dailyGoalSlot" style="display:inline-flex;"></div>
+        <button type="button" class="header-circle-btn sound-toggle-btn" onclick="window.HSKAudioFX?.toggleMute()" title="Bật/Tắt âm thanh hiệu ứng">🔊</button>
+        <button type="button" id="themePickerBtn" class="header-circle-btn theme-header-circle-btn" onclick="window.HSKTheme?.openModal()" title="Đổi giao diện Mùa & Lễ hội"><span>🎨</span></button>
+        <button type="button" id="headerLoginBtn" class="btn-login-header" onclick="window.HSKAuth?.openAuthModal()"><span>👤</span> <span>Đăng nhập</span></button>
       </div>
     </header>
     <main class="view" id="main">

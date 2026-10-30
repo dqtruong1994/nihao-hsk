@@ -60,15 +60,25 @@
   function initDailyGoalDOM() {
     if (pillEl) return;
 
-    // 1. Header Pill Widget Injection
-    const nav = document.querySelector('.site-nav') || document.querySelector('.nav') || document.querySelector('header nav');
-    if (nav) {
+    // 1. Header Pill Widget Injection (ưu tiên slot riêng trong Action Cluster)
+    const slot = document.getElementById('dailyGoalSlot');
+    if (slot) {
       pillEl = document.createElement('div');
       pillEl.id = 'dailyGoalHeaderPill';
       pillEl.className = 'daily-goal-pill';
       pillEl.title = 'Xem tiến độ mục tiêu học hôm nay';
       pillEl.onclick = openModal;
-      nav.appendChild(pillEl);
+      slot.appendChild(pillEl);
+    } else {
+      const nav = document.querySelector('.site-nav') || document.querySelector('.nav') || document.querySelector('header nav');
+      if (nav) {
+        pillEl = document.createElement('div');
+        pillEl.id = 'dailyGoalHeaderPill';
+        pillEl.className = 'daily-goal-pill';
+        pillEl.title = 'Xem tiến độ mục tiêu học hôm nay';
+        pillEl.onclick = openModal;
+        nav.appendChild(pillEl);
+      }
     }
 
     // 2. Modal Dialog
@@ -304,3 +314,4 @@
     getTargetXP
   };
 })();
+

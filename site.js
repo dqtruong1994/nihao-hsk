@@ -59,6 +59,36 @@
     }
   }
 
+  // Quản lý đóng mở Dropdown User Menu
+  window.HSKHeaderMenu = {
+    toggleUserMenu: (e) => {
+      e?.stopPropagation();
+      const wrap = document.getElementById('userMenuWrap');
+      const menu = document.getElementById('userMenuDropdown');
+      if (!wrap || !menu) return;
+      const isOpen = !menu.classList.contains('hidden');
+      if (isOpen) {
+        menu.classList.add('hidden');
+        wrap.classList.remove('active');
+      } else {
+        menu.classList.remove('hidden');
+        wrap.classList.add('active');
+      }
+    },
+    closeUserMenu: () => {
+      const wrap = document.getElementById('userMenuWrap');
+      const menu = document.getElementById('userMenuDropdown');
+      if (menu) menu.classList.add('hidden');
+      if (wrap) wrap.classList.remove('active');
+    }
+  };
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#userMenuWrap')) {
+      window.HSKHeaderMenu.closeUserMenu();
+    }
+  });
+
   function renderAuthHeader() {
     const slot = document.getElementById('authHeaderSlot');
     if (!slot) return;
@@ -70,98 +100,145 @@
     const themeObj = window.HSKTheme?.getThemesList?.()?.find(t => t.id === currentThemeId);
     const themeIcon = themeObj ? themeObj.icon : '🎨';
     const themeLabel = themeObj && themeObj.id !== 'default' ? themeObj.name.split(' (')[0] : 'Đổi giao diện';
-    const themeHtml = `
-      <button type="button" id="themePickerBtn" class="theme-header-btn" onclick="window.HSKTheme?.openModal()" title="Đổi giao diện Mùa & Lễ hội">
-        <span>${themeIcon}</span>
-        <span>${themeLabel}</span>
-      </button>
-    `;
-
-    const pwaHtml = isStandalone ? '' : `
-      <button type="button" id="pwaHeaderInstallBtn" class="pwa-header-btn" onclick="window.HSKPWA?.install()" title="Cài đặt App về điện thoại hoặc máy tính">
-        <span>📲</span>
-        <span>Cài App</span>
-      </button>
-    `;
-
-    const rankHtml = `
-      <button type="button" id="headerRankBadge" class="header-rank-badge ${rankInfo.current.bgClass}" onclick="window.Gamification?.openRankModal()" title="Bấm để xem Cấp bậc Rank và Nhiệm vụ hàng ngày">
-        <span style="font-size:15px;">${rankInfo.current.icon}</span>
-        <span>${rankInfo.current.name}</span>
-        <span style="opacity:0.65; font-size:10px;">•</span>
-        <span style="color:${rankInfo.current.color}; font-weight:800;">${xp} XP</span>
-      </button>
-    `;
 
     const searchHtml = `
-      <button type="button" onclick="window.HSKSpotlight?.open()" title="Tìm kiếm nhanh (Ctrl + K)" class="spotlight-header-btn" style="padding:6px 12px; border-radius:9px; font-size:12.5px;">
-        <span>🔍</span>
+      <button type="button" id="spotlightHeaderBtn" class="header-search-pill" onclick="window.HSKSpotlight?.open()" title="Tìm kiếm nhanh (Ctrl + K)">
+        <span style="font-size:13px;">🔍</span>
         <span class="spotlight-btn-text">Tìm kiếm</span>
-        <kbd class="spotlight-shortcut-badge" style="font-size:10px; padding:2px 5px;">Ctrl K</kbd>
+        <kbd class="search-kbd">Ctrl K</kbd>
       </button>
     `;
 
+    const dailyGoalHtml = `<div id="dailyGoalSlot" style="display:inline-flex;"></div>`;
+
     const soundHtml = `
-      <button type="button" class="sound-toggle-btn" onclick="window.HSKAudioFX?.toggleMute()" title="Bật/Tắt âm thanh hiệu ứng" style="background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:9px; padding:6px 10px; font-size:13.5px; cursor:pointer;">${window.HSKAudioFX?.isMuted() ? '🔇' : '🔊'}</button>
+      <button type="button" class="header-circle-btn sound-toggle-btn" onclick="window.HSKAudioFX?.toggleMute()" title="Bật/Tắt âm thanh hiệu ứng">
+        ${window.HSKAudioFX?.isMuted() ? '🔇' : '🔊'}
+      </button>
     `;
 
-    const certHtml = `
-      <button type="button" onclick="window.HSKCertificate?.open()" title="Nhận chứng chỉ tốt nghiệp HSK" style="background:#fef3c7; border:1.5px solid #f59e0b; color:#b45309; border-radius:9px; padding:6px 10px; font-size:12px; font-weight:700; cursor:pointer;">🎓 Chứng chỉ</button>
+    const themeHtml = `
+      <button type="button" id="themePickerBtn" class="header-circle-btn theme-header-circle-btn" onclick="window.HSKTheme?.openModal()" title="Giao diện: ${themeLabel} (Bấm để đổi)">
+        <span>${themeIcon}</span>
+      </button>
     `;
 
+    let userHtml = '';
     if (user) {
       const isAdmin = user.role === 'admin';
-      slot.innerHTML = `
-        ${searchHtml}
-        ${soundHtml}
-        ${certHtml}
-        ${themeHtml}
-        ${pwaHtml}
-        ${rankHtml}
-        <span style="font-size:13px; font-weight:600; color:#475467; display:inline-flex; align-items:center; gap:6px;">
-          <span style="display:inline-block; width:26px; height:26px; line-height:26px; text-align:center; border-radius:50%; background:#e0e7ff; color:#4338ca; font-size:12px; font-weight:800;">${(user.name || user.username || 'U')[0].toUpperCase()}</span>
-          <span>${user.name || user.username}</span>
-          <span style="font-size:11px; padding:2px 7px; border-radius:6px; background:${isAdmin ? '#fee2e2; color:#991b1b;' : '#e0e7ff; color:#3730a3;'} font-weight:700;">${isAdmin ? 'Admin' : 'Học viên'}</span>
-        </span>
-        ${isAdmin ? '<a href="admin.html" style="background:#4f46e5; color:#fff; text-decoration:none; padding:6px 12px; border-radius:8px; font-size:12px; font-weight:700; display:inline-flex; align-items:center; gap:4px; box-shadow:0 1px 2px rgba(0,0,0,0.08);">🛠 Quản trị</a>' : ''}
-        <button type="button" id="headerLogoutBtn" style="background:transparent; border:1px solid #d0d5dd; color:#475467; padding:5px 10px; border-radius:8px; font-size:12px; font-weight:600; cursor:pointer;" onclick="window.HSKAuth?.logout(); location.reload();">Thoát</button>
+      userHtml = `
+        <div class="user-menu-wrap" id="userMenuWrap">
+          <button type="button" class="user-menu-trigger" id="userMenuTrigger" onclick="window.HSKHeaderMenu.toggleUserMenu(event)">
+            <span class="user-avatar-circle">${(user.name || user.username || 'U')[0].toUpperCase()}</span>
+            <span class="user-display-name">${user.name || user.username}</span>
+            <span class="user-chevron">▾</span>
+          </button>
+          <div class="user-menu-dropdown hidden" id="userMenuDropdown">
+            <div class="user-dropdown-header">
+              <div class="user-dropdown-avatar">${(user.name || user.username || 'U')[0].toUpperCase()}</div>
+              <div class="user-dropdown-info">
+                <div class="user-dropdown-name">${user.name || user.username}</div>
+                <div class="user-dropdown-role ${isAdmin ? 'admin' : ''}">${isAdmin ? 'Quản trị viên' : 'Học viên'}</div>
+              </div>
+            </div>
+            <div class="user-dropdown-rank" onclick="window.Gamification?.openRankModal(); window.HSKHeaderMenu.closeUserMenu();" title="Bấm để xem Cấp bậc Rank và Nhiệm vụ">
+              <span style="font-size:18px;">${rankInfo.current.icon}</span>
+              <div style="flex:1;">
+                <div style="font-size:10.5px; color:#64748b; font-weight:700;">CẤP BẬC RANK</div>
+                <div style="font-size:13px; font-weight:800; color:#1e1b4b;">${rankInfo.current.name} · ${xp} XP</div>
+              </div>
+              <span style="font-size:12px; color:#94a3b8;">→</span>
+            </div>
+            <div class="user-dropdown-divider"></div>
+            <a class="user-dropdown-item" href="javascript:void(0)" onclick="window.HSKCertificate?.open(); window.HSKHeaderMenu.closeUserMenu();">
+              <span>🎓</span> <span>Chứng chỉ HSK</span>
+            </a>
+            ${!isStandalone ? `
+              <a class="user-dropdown-item" href="javascript:void(0)" onclick="window.HSKPWA?.install(); window.HSKHeaderMenu.closeUserMenu();">
+                <span>📲</span> <span>Cài đặt ứng dụng (PWA)</span>
+              </a>
+            ` : ''}
+            ${isAdmin ? `
+              <a class="user-dropdown-item admin" href="admin.html">
+                <span>🛠️</span> <span>Trang Quản trị Hệ Thống</span>
+              </a>
+            ` : ''}
+            <div class="user-dropdown-divider"></div>
+            <button type="button" class="user-dropdown-item logout" onclick="window.HSKAuth?.logout(); location.reload();">
+              <span>🚪</span> <span>Đăng xuất</span>
+            </button>
+          </div>
+        </div>
       `;
     } else {
-      slot.innerHTML = `
-        ${searchHtml}
-        ${soundHtml}
-        ${certHtml}
-        ${themeHtml}
-        ${pwaHtml}
-        ${rankHtml}
-        <button type="button" id="headerLoginBtn" style="background:#6657d9; color:#fff; border:0; padding:7px 15px; border-radius:9px; font-weight:700; font-size:13px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.12);" onclick="window.HSKAuth?.openAuthModal()">Đăng nhập</button>
+      userHtml = `
+        <button type="button" id="headerLoginBtn" class="btn-login-header" onclick="window.HSKAuth?.openAuthModal()">
+          <span>👤</span> <span>Đăng nhập</span>
+        </button>
       `;
+    }
+
+    slot.className = 'header-action-cluster';
+    slot.innerHTML = `
+      ${searchHtml}
+      ${dailyGoalHtml}
+      ${soundHtml}
+      ${themeHtml}
+      ${userHtml}
+    `;
+
+    // Khởi tạo/Cập nhật daily goal pill vào slot
+    if (window.HSKDailyGoal) {
+      setTimeout(() => {
+        const slotEl = document.getElementById('dailyGoalSlot');
+        const pill = document.getElementById('dailyGoalHeaderPill');
+        if (slotEl && pill && pill.parentElement !== slotEl) {
+          slotEl.appendChild(pill);
+        }
+      }, 50);
     }
   }
 
   function renderMenus() {
     const nav = document.getElementById('dynamicNav');
     if (!nav) return;
-    const baseNavMenus = [
+    const currentRoute = location.hash.slice(1) || 'home';
+
+    const coreLinks = [
       { label: 'Trang chủ', route: 'home', url: '#home' },
       { label: 'HSK 1', route: 'hsk1', url: '#hsk1' },
       { label: 'HSK 2', route: 'hsk2', url: '#hsk2' },
       { label: 'HSK 3', route: 'hsk3', url: '#hsk3' },
-      { label: '📖 Từ điển', route: 'dict', url: '#dict' },
-      { label: '⭐ Sổ tay', route: 'notebook', url: '#notebook' },
-      { label: '🎙️ Luyện nói', route: 'speech', url: 'javascript:void(0)', onclick: 'window.HSKSpeechTrainer?.open()' },
-      { label: '⌨️ Gõ Pinyin', route: 'typing', url: 'javascript:void(0)', onclick: 'window.HSKTypingGame?.open()' },
-      { label: '🎯 Chuyên đề', route: 'drills', url: 'javascript:void(0)', onclick: 'window.HSKSkillDrills?.open()' },
-      { label: '🏆 Rank', route: 'rank', url: 'javascript:void(0)', onclick: 'window.Gamification?.openRankModal()' }
+      { label: 'Từ điển', route: 'dict', url: '#dict' },
+      { label: 'Sổ tay', route: 'notebook', url: '#notebook' }
     ];
-    const menus = window.HSKData ? window.HSKData.getMenus().filter(m => m.visible !== false) : baseNavMenus;
-    const currentRoute = location.hash.slice(1) || 'home';
-    nav.innerHTML = menus.map(m => {
+
+    let html = coreLinks.map(m => {
       const active = (m.route === currentRoute || (m.route === 'home' && (!currentRoute || currentRoute === 'home'))) ? 'active' : '';
       const ariaCurrent = active ? 'aria-current="page"' : '';
-      const clickAttr = m.onclick ? `onclick="${m.onclick}"` : '';
-      return `<a href="${m.url}" data-route="${m.route}" class="${active}" ${ariaCurrent} ${clickAttr}>${m.label}</a>`;
+      return `<a href="${m.url}" data-route="${m.route}" class="${active}" ${ariaCurrent}>${m.label}</a>`;
     }).join('');
+
+    // Dropdown Luyện tập gọn gàng
+    html += `
+      <div class="nav-dropdown" id="navPracticeDropdown">
+        <button type="button" class="nav-dropdown-btn">
+          <span>Luyện tập</span>
+          <span style="font-size:10px; opacity:0.65;">▾</span>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="javascript:void(0)" onclick="window.HSKSpeechTrainer?.open()">🎙️ Luyện phát âm AI</a>
+          <a href="javascript:void(0)" onclick="window.HSKTypingGame?.open()">⌨️ Game gõ Pinyin</a>
+          <a href="javascript:void(0)" onclick="window.HSKSkillDrills?.open()">⚡ Đấu trường 4 kỹ năng</a>
+          <a href="javascript:void(0)" onclick="window.SRSEngine?.open()">🗂️ Flashcards SRS</a>
+          <a href="#exam" onclick="window.location.hash='exam'">📝 Thi thử HSK</a>
+          <a href="javascript:void(0)" onclick="window.HSKCertificate?.open()">🎓 Nhận chứng chỉ</a>
+          <a href="javascript:void(0)" onclick="window.HSKImmersionPlayer?.show()">🎧 Nghe thụ động</a>
+        </div>
+      </div>
+    `;
+
+    nav.innerHTML = html;
   }
 
   function refreshHome() {
