@@ -1,0 +1,433 @@
+/* ================================================================
+   THEME & SEASONAL EVENT TEMPLATES
+   Hỗ trợ 5 chủ đề: Mặc định, Halloween, Tết Nguyên Đán, Trung Thu, Tình Yêu
+   ================================================================ */
+
+/* --- 1. Theme Variables & Styles --- */
+
+/* 🎃 THEME: HALLOWEEN */
+[data-theme="halloween"] {
+  --purple: #ea580c !important;
+  --purple-light: #ffedd5 !important;
+  --paper: #1c1917 !important;
+  --ink: #fafaf9 !important;
+  --muted: #a8a29e !important;
+  --line: #292524 !important;
+  --green: #84cc16 !important;
+  --p: #ea580c !important;
+  --p2: #451a03 !important;
+  --bg: #1c1917 !important;
+  --mut: #a8a29e !important;
+}
+[data-theme="halloween"] .top {
+  background: rgba(28, 25, 23, 0.92) !important;
+  border-bottom-color: #292524 !important;
+}
+[data-theme="halloween"] .site-nav a {
+  color: #a8a29e !important;
+}
+[data-theme="halloween"] .site-nav a:hover {
+  background: #292524 !important;
+  color: #fb923c !important;
+}
+[data-theme="halloween"] .site-nav a.active {
+  background: #451a03 !important;
+  color: #fb923c !important;
+}
+[data-theme="halloween"] .character-card,
+[data-theme="halloween"] .journey,
+[data-theme="halloween"] .course-card,
+[data-theme="halloween"] .art-caption {
+  background: #292524 !important;
+  border-color: #44403c !important;
+  color: #fafaf9 !important;
+}
+[data-theme="halloween"] .card-ni {
+  background: #451a03 !important;
+  color: #fb923c !important;
+  border-color: #7c2d12 !important;
+}
+[data-theme="halloween"] .card-hao {
+  background: #3b0764 !important;
+  color: #d8b4fe !important;
+  border-color: #581c87 !important;
+}
+[data-theme="halloween"] .home-rank-card {
+  background: linear-gradient(135deg, #451a03 0%, #292524 100%) !important;
+  border-color: #ea580c !important;
+}
+[data-theme="halloween"] .home-rank-card strong {
+  color: #fed7aa !important;
+}
+[data-theme="halloween"] .home-review-cta {
+  background: #292524 !important;
+  border-color: #44403c !important;
+}
+[data-theme="halloween"] .home-review-cta strong {
+  color: #f5f5f4 !important;
+}
+[data-theme="halloween"] .drill-cat-card {
+  background: #292524 !important;
+  border-color: #44403c !important;
+  color: #fafaf9 !important;
+}
+
+/* 🧧 THEME: TẾT NGUYÊN ĐÁN (XUÂN TIẾT - 春节) */
+[data-theme="tet"] {
+  --purple: #dc2626 !important;
+  --purple-light: #fee2e2 !important;
+  --paper: #fffbf5 !important;
+  --ink: #450a0a !important;
+  --muted: #991b1b !important;
+  --line: #fecaca !important;
+  --green: #15803d !important;
+  --p: #dc2626 !important;
+  --p2: #fee2e2 !important;
+  --bg: #fffbf5 !important;
+  --mut: #991b1b !important;
+}
+[data-theme="tet"] .top {
+  background: rgba(255, 251, 245, 0.95) !important;
+  border-bottom: 2px solid #f87171 !important;
+}
+[data-theme="tet"] .logo>b {
+  background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3) !important;
+}
+[data-theme="tet"] .site-nav a:hover {
+  background: #fee2e2 !important;
+  color: #b91c1c !important;
+}
+[data-theme="tet"] .site-nav a.active {
+  background: #fecaca !important;
+  color: #991b1b !important;
+}
+[data-theme="tet"] .character-card {
+  border-color: #fca5a5 !important;
+}
+[data-theme="tet"] .card-ni {
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+}
+[data-theme="tet"] .card-hao {
+  background: #fffbeb !important;
+  color: #b45309 !important;
+  border-color: #fde68a !important;
+}
+[data-theme="tet"] .home-rank-card {
+  background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%) !important;
+  border-color: #f87171 !important;
+}
+[data-theme="tet"] .primary-action {
+  background: linear-gradient(135deg, #dc2626, #ea580c) !important;
+  box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3) !important;
+}
+
+/* 🥮 THEME: TRUNG THU (TRUNG THU TIẾT - 中秋节) */
+[data-theme="midautumn"] {
+  --purple: #0284c7 !important;
+  --purple-light: #e0f2fe !important;
+  --paper: #f8fafc !important;
+  --ink: #0f172a !important;
+  --muted: #475569 !important;
+  --line: #cbd5e1 !important;
+  --green: #0d9488 !important;
+  --p: #0284c7 !important;
+  --p2: #e0f2fe !important;
+  --bg: #f8fafc !important;
+  --mut: #475569 !important;
+}
+[data-theme="midautumn"] .top {
+  background: rgba(248, 250, 252, 0.95) !important;
+  border-bottom: 2px solid #bae6fd !important;
+}
+[data-theme="midautumn"] .logo>b {
+  background: linear-gradient(135deg, #0284c7, #0369a1) !important;
+}
+[data-theme="midautumn"] .site-nav a.active {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+}
+[data-theme="midautumn"] .card-ni {
+  background: #fef9c3 !important;
+  color: #a16207 !important;
+  border-color: #fde047 !important;
+}
+[data-theme="midautumn"] .card-hao {
+  background: #e0f2fe !important;
+  color: #0284c7 !important;
+  border-color: #7dd3fc !important;
+}
+[data-theme="midautumn"] .home-rank-card {
+  background: linear-gradient(135deg, #e0f2fe 0%, #fef9c3 100%) !important;
+  border-color: #38bdf8 !important;
+}
+
+/* 💖 THEME: TÌNH YÊU / VALENTINE / THẤT TỊCH (QIXI - 七夕) */
+[data-theme="love"] {
+  --purple: #e11d48 !important;
+  --purple-light: #ffe4e6 !important;
+  --paper: #fff5f6 !important;
+  --ink: #4c0519 !important;
+  --muted: #9f1239 !important;
+  --line: #fecdd3 !important;
+  --green: #059669 !important;
+  --p: #e11d48 !important;
+  --p2: #ffe4e6 !important;
+  --bg: #fff5f6 !important;
+  --mut: #9f1239 !important;
+}
+[data-theme="love"] .top {
+  background: rgba(255, 245, 246, 0.95) !important;
+  border-bottom: 2px solid #fda4af !important;
+}
+[data-theme="love"] .logo>b {
+  background: linear-gradient(135deg, #e11d48, #db2777) !important;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25) !important;
+}
+[data-theme="love"] .site-nav a.active {
+  background: #ffe4e6 !important;
+  color: #be123c !important;
+}
+[data-theme="love"] .card-ni {
+  background: #ffe4e6 !important;
+  color: #e11d48 !important;
+  border-color: #fbcfe8 !important;
+}
+[data-theme="love"] .card-hao {
+  background: #fdf2f8 !important;
+  color: #db2777 !important;
+  border-color: #f472b6 !important;
+}
+[data-theme="love"] .home-rank-card {
+  background: linear-gradient(135deg, #ffe4e6 0%, #fdf2f8 100%) !important;
+  border-color: #fb7185 !important;
+}
+[data-theme="love"] .primary-action {
+  background: linear-gradient(135deg, #e11d48, #f43f5e) !important;
+  box-shadow: 0 5px 15px rgba(225, 29, 72, 0.3) !important;
+}
+
+/* --- 2. Header Theme Button --- */
+.theme-header-btn {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 7px 12px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.theme-header-btn:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+[data-theme="halloween"] .theme-header-btn {
+  background: #292524 !important;
+  color: #fed7aa !important;
+  border-color: #7c2d12 !important;
+}
+[data-theme="tet"] .theme-header-btn {
+  background: #fee2e2 !important;
+  color: #b91c1c !important;
+  border-color: #fca5a5 !important;
+}
+[data-theme="midautumn"] .theme-header-btn {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+  border-color: #7dd3fc !important;
+}
+[data-theme="love"] .theme-header-btn {
+  background: #ffe4e6 !important;
+  color: #be123c !important;
+  border-color: #fda4af !important;
+}
+
+/* --- 3. Festive Floating Particles Container --- */
+.theme-particles-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+.theme-particle {
+  position: absolute;
+  top: -40px;
+  user-select: none;
+  animation: themeFall linear infinite;
+  opacity: 0.85;
+}
+@keyframes themeFall {
+  0% {
+    transform: translateY(0) rotate(0deg) translateX(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg) translateX(25px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg) translateX(-20px);
+    opacity: 0;
+  }
+}
+
+/* --- 4. Theme Picker Modal --- */
+.theme-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: themeFadeIn 0.2s ease-out;
+}
+.theme-modal-overlay[hidden],
+.theme-modal-overlay.hidden {
+  display: none !important;
+}
+.theme-modal-card {
+  width: min(580px, 100%);
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+  padding: 24px 28px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+[data-theme="halloween"] .theme-modal-card {
+  background: #1c1917 !important;
+  color: #fafaf9 !important;
+  border: 1px solid #44403c !important;
+}
+
+.theme-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.theme-modal-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e1b4b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+[data-theme="halloween"] .theme-modal-title {
+  color: #fed7aa !important;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+.theme-card-option {
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.theme-card-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.theme-card-option.active {
+  border-width: 2.5px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+.theme-card-option[data-id="default"].active { border-color: #6657d9; }
+.theme-card-option[data-id="halloween"].active { border-color: #ea580c; }
+.theme-card-option[data-id="tet"].active { border-color: #dc2626; }
+.theme-card-option[data-id="midautumn"].active { border-color: #0284c7; }
+.theme-card-option[data-id="love"].active { border-color: #e11d48; }
+
+.theme-option-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.theme-option-icon {
+  font-size: 30px;
+}
+.theme-option-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e1b4b;
+}
+.theme-option-desc {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+.theme-color-palette {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.theme-color-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.theme-active-badge {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  background: #dcfce7;
+  color: #166534;
+  padding: 3px 8px;
+  border-radius: 999px;
+  display: none;
+}
+.theme-card-option.active .theme-active-badge {
+  display: inline-block;
+}
+
+/* Toggle particle switch */
+.theme-switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-top: 18px;
+  border: 1px solid #e2e8f0;
+}
+[data-theme="halloween"] .theme-switch-row {
+  background: #292524 !important;
+  border-color: #44403c !important;
+}
+
+@keyframes themeFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}

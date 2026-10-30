@@ -819,13 +819,27 @@
   function renderSettingsTab(container) {
     const siteTitle = localStorage.getItem('hsk_site_title') || '你好 HSK · Học tiếng Trung mỗi ngày';
     const announcement = localStorage.getItem('hsk_site_announcement') || 'Chào mừng các bạn đến với góc tự học tiếng Trung HSK 1, 2, 3!';
+    const sysTheme = localStorage.getItem('hsk_system_default_theme') || 'default';
 
     container.innerHTML = `
       <div class="admin-card">
         <div class="card-header">
-          <h3>Cài đặt Giao diện Website</h3>
+          <h3>Cài đặt Giao diện Website & Mùa Lễ Hội</h3>
         </div>
         <form id="settingsForm" style="display:flex; flex-direction:column; gap:16px; max-width:600px;">
+          <div class="form-group">
+            <label>Giao diện Mùa lễ hội mặc định của hệ thống (Seasonal Event Theme)</label>
+            <select id="cfgSystemTheme" class="form-control" style="font-weight:700;">
+              <option value="default" ${sysTheme === 'default' ? 'selected' : ''}>🌸 Mặc định (Tím thanh lịch - Hiện đại)</option>
+              <option value="halloween" ${sysTheme === 'halloween' ? 'selected' : ''}>🎃 Lễ hội Halloween (Bí ngô ma thuật & dơi đêm)</option>
+              <option value="tet" ${sysTheme === 'tet' ? 'selected' : ''}>🧧 Tết Nguyên Đán (Xuân tiết may mắn & đèn lồng đỏ)</option>
+              <option value="midautumn" ${sysTheme === 'midautumn' ? 'selected' : ''}>🥮 Tết Trung Thu (Trăng rằm vàng & Thỏ ngọc)</option>
+              <option value="love" ${sysTheme === 'love' ? 'selected' : ''}>💖 Mùa Tình Yêu (Valentine / Thất Tịch Qixi)</option>
+            </select>
+            <small style="color:#64748b; font-size:12px; margin-top:4px; display:block;">
+              Khi quản trị viên đặt theme này, toàn bộ trang web và học viên truy cập sẽ tự động đổi màu sắc và hiệu ứng lễ hội tương ứng.
+            </small>
+          </div>
           <div class="form-group">
             <label>Tiêu đề Trang web (Site Title)</label>
             <input type="text" id="cfgSiteTitle" class="form-control" value="${siteTitle}">
@@ -859,9 +873,15 @@
 
     document.getElementById('settingsForm').onsubmit = (e) => {
       e.preventDefault();
+      const chosenTheme = document.getElementById('cfgSystemTheme').value;
+      localStorage.setItem('hsk_system_default_theme', chosenTheme);
+      localStorage.setItem('hsk_current_theme', chosenTheme);
       localStorage.setItem('hsk_site_title', document.getElementById('cfgSiteTitle').value);
       localStorage.setItem('hsk_site_announcement', document.getElementById('cfgAnnouncement').value);
-      alert('Đã lưu cấu hình website thành công.');
+      if (window.HSKTheme) {
+        window.HSKTheme.setTheme(chosenTheme, true);
+      }
+      alert('Đã lưu cấu hình website và cập nhật chủ đề lễ hội thành công!');
     };
 
     document.getElementById('btnExportJSON').onclick = () => {

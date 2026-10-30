@@ -66,6 +66,17 @@
     const rankInfo = window.Gamification?.getRankProgress?.() || { current: { icon: '🛡️', name: 'Sắt', bgClass: 'rank-iron', color: '#71717a' } };
     const xp = window.Gamification?.getTotalXP?.() || 0;
     const isStandalone = window.matchMedia?.('(display-mode: standalone)')?.matches || window.navigator?.standalone;
+    const currentThemeId = window.HSKTheme?.getTheme?.() || 'default';
+    const themeObj = window.HSKTheme?.getThemesList?.()?.find(t => t.id === currentThemeId);
+    const themeIcon = themeObj ? themeObj.icon : '🎨';
+    const themeLabel = themeObj && themeObj.id !== 'default' ? themeObj.name.split(' (')[0] : 'Đổi giao diện';
+    const themeHtml = `
+      <button type="button" id="themePickerBtn" class="theme-header-btn" onclick="window.HSKTheme?.openModal()" title="Đổi giao diện Mùa & Lễ hội">
+        <span>${themeIcon}</span>
+        <span>${themeLabel}</span>
+      </button>
+    `;
+
     const pwaHtml = isStandalone ? '' : `
       <button type="button" id="pwaHeaderInstallBtn" class="pwa-header-btn" onclick="window.HSKPWA?.install()" title="Cài đặt App về điện thoại hoặc máy tính">
         <span>📲</span>
@@ -85,6 +96,7 @@
     if (user) {
       const isAdmin = user.role === 'admin';
       slot.innerHTML = `
+        ${themeHtml}
         ${pwaHtml}
         ${rankHtml}
         <span style="font-size:13px; font-weight:600; color:#475467; display:inline-flex; align-items:center; gap:6px;">
@@ -97,6 +109,7 @@
       `;
     } else {
       slot.innerHTML = `
+        ${themeHtml}
         ${pwaHtml}
         ${rankHtml}
         <button type="button" id="headerLoginBtn" style="background:#6657d9; color:#fff; border:0; padding:7px 15px; border-radius:9px; font-weight:700; font-size:13px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.12);" onclick="window.HSKAuth?.openAuthModal()">Đăng nhập</button>
