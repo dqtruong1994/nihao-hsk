@@ -637,7 +637,7 @@
     let fileName = '';
     if (levelKey === 'hsk1') fileName = 'hsk1-textbook-dialogues.json';
     else if (levelKey === 'hsk2') fileName = 'hsk2-textbook-dialogues.json';
-    else if (levelKey === 'hsk3') fileName = 'hsk3-lessons.json';
+    else if (levelKey === 'hsk3') fileName = 'hsk3-textbook-dialogues.json';
 
     try {
       if (!loadedLevelData[levelKey]) {
