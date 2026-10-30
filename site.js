@@ -385,6 +385,11 @@
       });
       try { localStorage.setItem('hskLastCourse', route); } catch {}
       document.title = 'HSK ' + route.slice(-1) + ' · 你好 HSK';
+      try {
+        if (window.HSKImmersionPlayer && typeof window.HSKImmersionPlayer.setLevel === 'function') {
+          window.HSKImmersionPlayer.setLevel(route);
+        }
+      } catch (e) {}
     } else {
       // Default fallback
       if (home) home.hidden = false;

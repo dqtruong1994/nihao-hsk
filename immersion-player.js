@@ -6,6 +6,12 @@
 (() => {
   'use strict';
 
+  // Không khởi tạo player thứ 2 nếu trang đang chạy bên trong iframe (như hsk1/2/3 trong index.html)
+  // để tránh hiện tượng double nút nổi ở góc dưới
+  if (window.self !== window.top) {
+    return;
+  }
+
   const DEFAULT_PLAYLIST = [
     { zh: '你好！', py: 'Nǐ hǎo!', vi: 'Xin chào!' },
     { zh: '您好！', py: 'Nín hǎo!', vi: 'Chào bạn (kính ngữ)!' },
@@ -869,6 +875,15 @@
     initPlayerDOM();
   }
 
+  function setLevel(levelKey) {
+    const lvlSelect = document.getElementById('immersionLevelSelect');
+    if (lvlSelect && lvlSelect.value !== levelKey) {
+      lvlSelect.value = levelKey;
+      resetVoiceRecording();
+      loadLevelData(levelKey);
+    }
+  }
+
   window.HSKImmersionPlayer = {
     show: showCard,
     hide: hideCard,
@@ -878,6 +893,7 @@
     record: toggleRecording,
     playUser: playUserAudio,
     playSample: playNativeSample,
-    compare: compareAudio
+    compare: compareAudio,
+    setLevel: setLevel
   };
 })();
