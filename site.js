@@ -93,9 +93,28 @@
       </button>
     `;
 
+    const searchHtml = `
+      <button type="button" onclick="window.HSKSpotlight?.open()" title="Tìm kiếm nhanh (Ctrl + K)" class="spotlight-header-btn" style="padding:6px 12px; border-radius:9px; font-size:12.5px;">
+        <span>🔍</span>
+        <span class="spotlight-btn-text">Tìm kiếm</span>
+        <kbd class="spotlight-shortcut-badge" style="font-size:10px; padding:2px 5px;">Ctrl K</kbd>
+      </button>
+    `;
+
+    const soundHtml = `
+      <button type="button" class="sound-toggle-btn" onclick="window.HSKAudioFX?.toggleMute()" title="Bật/Tắt âm thanh hiệu ứng" style="background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:9px; padding:6px 10px; font-size:13.5px; cursor:pointer;">${window.HSKAudioFX?.isMuted() ? '🔇' : '🔊'}</button>
+    `;
+
+    const certHtml = `
+      <button type="button" onclick="window.HSKCertificate?.open()" title="Nhận chứng chỉ tốt nghiệp HSK" style="background:#fef3c7; border:1.5px solid #f59e0b; color:#b45309; border-radius:9px; padding:6px 10px; font-size:12px; font-weight:700; cursor:pointer;">🎓 Chứng chỉ</button>
+    `;
+
     if (user) {
       const isAdmin = user.role === 'admin';
       slot.innerHTML = `
+        ${searchHtml}
+        ${soundHtml}
+        ${certHtml}
         ${themeHtml}
         ${pwaHtml}
         ${rankHtml}
@@ -109,6 +128,9 @@
       `;
     } else {
       slot.innerHTML = `
+        ${searchHtml}
+        ${soundHtml}
+        ${certHtml}
         ${themeHtml}
         ${pwaHtml}
         ${rankHtml}

@@ -1,0 +1,263 @@
+/* ================================================================
+   4. DAILY GOAL RING & STREAK TRACKER
+   ================================================================ */
+
+/* Header Pill Widget */
+.daily-goal-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 4px 12px 4px 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.daily-goal-pill:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.daily-goal-ring-mini {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.daily-goal-ring-mini svg {
+  transform: rotate(-90deg);
+}
+.daily-goal-ring-mini-circle-bg {
+  stroke: #e2e8f0;
+  stroke-width: 3.5;
+  fill: none;
+}
+.daily-goal-ring-mini-circle-progress {
+  stroke: #f59e0b;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  fill: none;
+  transition: stroke-dashoffset 0.4s ease;
+}
+.daily-goal-ring-mini-icon {
+  position: absolute;
+  font-size: 11px;
+}
+
+.daily-streak-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #ea580c;
+}
+
+/* Modal Dialog */
+.daily-goal-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  animation: goalFadeIn 0.18s ease-out;
+}
+.daily-goal-modal-overlay[hidden],
+.daily-goal-modal-overlay.hidden {
+  display: none !important;
+}
+
+.daily-goal-card {
+  width: min(440px, 100%);
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: goalZoomIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.daily-goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.daily-goal-title {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 800;
+  color: #1e1b4b;
+}
+.daily-goal-subtitle {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+.daily-goal-close-btn {
+  border: 0;
+  background: #f1f5f9;
+  color: #64748b;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.daily-goal-close-btn:hover {
+  background: #e2e8f0;
+  color: #1e1b4b;
+}
+
+/* Central SVG Progress Display */
+.daily-goal-progress-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+.daily-goal-big-ring {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.daily-goal-big-ring svg {
+  transform: rotate(-90deg);
+}
+.daily-goal-big-ring-bg {
+  stroke: #f1f5f9;
+  stroke-width: 12;
+  fill: none;
+}
+.daily-goal-big-ring-progress {
+  stroke: url(#goalGradient);
+  stroke-width: 12;
+  stroke-linecap: round;
+  fill: none;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.daily-goal-ring-center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.daily-goal-center-xp {
+  font-size: 26px;
+  font-weight: 900;
+  color: #1e1b4b;
+  line-height: 1;
+}
+.daily-goal-center-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+/* 7-Day Streak Calendar Row */
+.daily-streak-calendar {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  background: #f8fafc;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+.streak-day-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.streak-day-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+}
+.streak-day-bubble {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #94a3b8;
+}
+.streak-day-bubble.completed {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #b45309;
+}
+.streak-day-bubble.today {
+  border-color: #6657d9;
+  box-shadow: 0 0 0 3px rgba(102, 87, 217, 0.2);
+}
+
+/* Target Selector */
+.daily-target-selector {
+  display: flex;
+  gap: 8px;
+}
+.daily-target-chip {
+  flex: 1;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.daily-target-chip:hover {
+  background: #f1f5f9;
+}
+.daily-target-chip.active {
+  background: #f5f3ff;
+  border-color: #6657d9;
+}
+.daily-target-chip-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+}
+.daily-target-chip.active .daily-target-chip-title {
+  color: #6657d9;
+}
+.daily-target-chip-xp {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin-top: 2px;
+}
+
+@keyframes goalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes goalZoomIn {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

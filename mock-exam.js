@@ -371,10 +371,15 @@
           ? `✓ Bạn đã vượt qua mức điểm chuẩn (≥ ${data.passScore} điểm) để đạt chứng chỉ HSK ${data.level}.` 
           : `Mức điểm đỗ yêu cầu là ≥ ${data.passScore} điểm. Hãy xem lại các câu giải thích chi tiết bên dưới rồi luyện tập lại nhé.`}
       </p>
-      <div style="margin-top:16px; display:flex; gap:10px; justify-content:center;">
+      <div style="margin-top:16px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
         <button type="button" class="btn" style="background:#fff; color:#1e1b4b; border:1px solid #cbd5e1; font-weight:700;" onclick="window.HSKMockExam.start('${currentExam.levelKey}', 'mainExamHost')">
           🔄 Làm lại đề thi này
         </button>
+        ${passed ? `
+          <button type="button" class="btn" style="background:#b45309; color:#fff; font-weight:800; border:0; padding:10px 18px; border-radius:10px; cursor:pointer; box-shadow:0 4px 14px rgba(180,83,9,0.3);" onclick="if(window.HSKCertificate) window.HSKCertificate.open({ level: 'HSK ${data.level}' })">
+            🎓 Nhận Chứng Chỉ Tốt Nghiệp HSK
+          </button>
+        ` : ''}
       </div>
     `;
 
@@ -382,12 +387,25 @@
     banner.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     // Hiệu ứng pháo hoa và âm thanh nếu đỗ
-    if (passed && window.Gamification) {
-      window.Gamification.confetti();
-      window.Gamification.playSuccessSound();
-      window.Gamification.addXP?.(100);
-    } else if (window.Gamification) {
-      window.Gamification.playErrorSound();
+    if (passed) {
+      if (window.HSKAudioFX) {
+        window.HSKAudioFX.playVictory();
+        window.HSKAudioFX.confetti(120);
+      }
+      if (window.HSKDailyGoal) {
+        window.HSKDailyGoal.addDailyXP(50);
+      }
+      if (window.Gamification) {
+        window.Gamification.confetti();
+        window.Gamification.playSuccessSound();
+        window.Gamification.addXP?.(100);
+      }
+    } else {
+      if (window.HSKAudioFX) {
+        window.HSKAudioFX.playWrong();
+      } else if (window.Gamification) {
+        window.Gamification.playErrorSound();
+      }
     }
   }
 
