@@ -61,6 +61,18 @@
       { hanzi: '咖啡', pinyin: 'kāfēi', hv: 'ca phê', meaning: 'cà phê', level: 'HSK 2', topic: 'Đồ uống' },
       { hanzi: '准备', pinyin: 'zhǔnbèi', hv: 'chuẩn bị', meaning: 'chuẩn bị, định làm', level: 'HSK 2', topic: 'Kế hoạch' },
       { hanzi: '帮助', pinyin: 'bāngzhù', hv: 'bang trợ', meaning: 'giúp đỡ, hỗ trợ', level: 'HSK 2', topic: 'Giao tiếp' },
+      // HSK 2 Mở rộng (Bài 13-15)
+      { hanzi: '铅笔', pinyin: 'qiānbǐ', hv: 'duyên bút', meaning: 'bút chì', level: 'HSK 2', topic: 'Học tập' },
+      { hanzi: '宾馆', pinyin: 'bīnguǎn', hv: 'tân quán', meaning: 'khách sạn', level: 'HSK 2', topic: 'Du lịch' },
+      { hanzi: '路口', pinyin: 'lùkǒu', hv: 'lộ khẩu', meaning: 'ngã tư, giao lộ', level: 'HSK 2', topic: 'Chỉ đường' },
+      { hanzi: '有意思', pinyin: 'yǒu yìsi', hv: 'hữu ý tư', meaning: 'thú vị, có ý nghĩa', level: 'HSK 2', topic: 'Tính từ' },
+      { hanzi: '虽然', pinyin: 'suīrán', hv: 'tuy nhiên', meaning: 'mặc dù, tuy rằng', level: 'HSK 2', topic: 'Liên từ' },
+      { hanzi: '但是', pinyin: 'dànshì', hv: 'đãn thị', meaning: 'nhưng mà', level: 'HSK 2', topic: 'Liên từ' },
+      { hanzi: '新年', pinyin: 'xīnnián', hv: 'tân niên', meaning: 'năm mới, Tết', level: 'HSK 2', topic: 'Lễ hội' },
+      { hanzi: '火车站', pinyin: 'huǒchēzhàn', hv: 'hỏa xa trạm', meaning: 'ga tàu hỏa', level: 'HSK 2', topic: 'Giao thông' },
+      { hanzi: '晴', pinyin: 'qíng', hv: 'tình', meaning: 'nắng ráo, trời quang', level: 'HSK 2', topic: 'Thời tiết' },
+      { hanzi: '阴', pinyin: 'yīn', hv: 'âm', meaning: 'u ám, nhiều mây', level: 'HSK 2', topic: 'Thời tiết' },
+
 
       // HSK 3
       { hanzi: '打算', pinyin: 'dǎsuàn', hv: 'đả toán', meaning: 'dự định, tính toán', level: 'HSK 3', topic: 'Kế hoạch' },
@@ -74,7 +86,34 @@
       { hanzi: '经验', pinyin: 'jīngyàn', hv: 'kinh nghiệm', meaning: 'kinh nghiệm thực tế', level: 'HSK 3', topic: 'Công việc' },
       { hanzi: '影响', pinyin: 'yǐngxiǎng', hv: 'ảnh hưởng', meaning: 'ảnh hưởng, tác động', level: 'HSK 3', topic: 'Ngữ pháp' },
       { hanzi: '解决', pinyin: 'jiějué', hv: 'giải quyết', meaning: 'giải quyết (vấn đề, khó khăn)', level: 'HSK 3', topic: 'Công việc' },
-      { hanzi: '满意', pinyin: 'mǎnyì', hv: 'mãn ý', meaning: 'hài lòng, vừa ý', level: 'HSK 3', topic: 'Cảm xúc' }
+      { hanzi: '满意', pinyin: 'mǎnyì', hv: 'mãn ý', meaning: 'hài lòng, vừa ý', level: 'HSK 3', topic: 'Cảm xúc' },
+      { hanzi: '周末', pinyin: 'zhōumò', hv: 'chu vi mạt', meaning: 'cuối tuần', level: 'HSK 3', topic: 'Thời gian' },
+      { hanzi: '饮料', pinyin: 'yǐnliào', hv: 'ẩm liệu', meaning: 'đồ uống, thức uống', level: 'HSK 3', topic: 'Ăn uống' },
+      { hanzi: '舒服', pinyin: 'shūfu', hv: 'thư phục', meaning: 'thoải mái, dễ chịu', level: 'HSK 3', topic: 'Cảm giác' },
+      { hanzi: '照顾', pinyin: 'zhàogù', hv: 'chiếu cố', meaning: 'chăm sóc, săn sóc', level: 'HSK 3', topic: 'Đời sống' },
+      { hanzi: '感冒', pinyin: 'gǎnmào', hv: 'cảm mạo', meaning: 'cảm cúm', level: 'HSK 3', topic: 'Sức khỏe' },
+      { hanzi: '突然', pinyin: 'tūrán', hv: 'đột nhiên', meaning: 'đột nhiên, bất ngờ', level: 'HSK 3', topic: 'Phó từ' },
+      { hanzi: '清楚', pinyin: 'qīngchu', hv: 'thanh sở', meaning: 'rõ ràng, minh bạch', level: 'HSK 3', topic: 'Tính từ' },
+      { hanzi: '刚才', pinyin: 'gāngcái', hv: 'cương tài', meaning: 'vừa nãy, lúc nãy', level: 'HSK 3', topic: 'Thời gian' },
+      { hanzi: '感兴趣', pinyin: 'gǎn xìngqù', hv: 'cảm hứng thú', meaning: 'có hứng thú, thích thú', level: 'HSK 3', topic: 'Sở thích' },
+      { hanzi: '结婚', pinyin: 'jiéhūn', hv: 'kết hôn', meaning: 'kết hôn, lấy nhau', level: 'HSK 3', topic: 'Đời sống' },
+      { hanzi: '迟到', pinyin: 'chídào', hv: 'trì đáo', meaning: 'đến muộn, trễ giờ', level: 'HSK 3', topic: 'Học tập' },
+      { hanzi: '电梯', pinyin: 'diàntī', hv: 'điện thang', meaning: 'thang máy', level: 'HSK 3', topic: 'Đời sống' },
+      { hanzi: '熊猫', pinyin: 'xióngmāo', hv: 'hùng miêu', meaning: 'gấu trúc', level: 'HSK 3', topic: 'Động vật' },
+      { hanzi: '担心', pinyin: 'dānxīn', hv: 'đam tâm', meaning: 'lo lắng, băn khoăn', level: 'HSK 3', topic: 'Tâm lý' },
+      { hanzi: '方便', pinyin: 'fāngbiàn', hv: 'phương tiện', meaning: 'tiện lợi, thuận tiện', level: 'HSK 3', topic: 'Tính từ' },
+      { hanzi: '空调', pinyin: 'kōngtiáo', hv: 'không điều', meaning: 'máy điều hòa không khí', level: 'HSK 3', topic: 'Đồ gia dụng' },
+      { hanzi: '护照', pinyin: 'hùzhào', hv: 'hộ chiếu', meaning: 'hộ chiếu xuất nhập cảnh', level: 'HSK 3', topic: 'Du lịch' },
+      { hanzi: '行李箱', pinyin: 'xínglixiāng', hv: 'hành lý tương', meaning: 'vali hành lý', level: 'HSK 3', topic: 'Du lịch' },
+      { hanzi: '终于', pinyin: 'zhōngyú', hv: 'chung vu', meaning: 'cuối cùng, rốt cuộc', level: 'HSK 3', topic: 'Phó từ' },
+      { hanzi: '礼物', pinyin: 'lǐwù', hv: 'lễ vật', meaning: 'món quà, quà tặng', level: 'HSK 3', topic: 'Đời sống' },
+      { hanzi: '简单', pinyin: 'jiǎndān', hv: 'giản đơn', meaning: 'đơn giản, dễ dàng', level: 'HSK 3', topic: 'Tính từ' },
+      { hanzi: '留学', pinyin: 'liúxué', hv: 'lưu học', meaning: 'du học', level: 'HSK 3', topic: 'Học tập' },
+      { hanzi: '除了', pinyin: 'chúle', hv: 'trừ liễu', meaning: 'ngoài ra, trừ phi', level: 'HSK 3', topic: 'Liên từ' },
+      { hanzi: '极了', pinyin: 'jí le', hv: 'cực liễu', meaning: 'cực kỳ, hết sức', level: 'HSK 3', topic: 'Phó từ' },
+      { hanzi: '照相机', pinyin: 'zhàoxiàngjī', hv: 'chiếu tượng cơ', meaning: 'máy chụp ảnh', level: 'HSK 3', topic: 'Thiết bị' },
+      { hanzi: '信用卡', pinyin: 'xìnyòngkǎ', hv: 'tín dụng tạp', meaning: 'thẻ tín dụng ngân hàng', level: 'HSK 3', topic: 'Tài chính' },
+
     ];
 
     dictionaryCache = words;

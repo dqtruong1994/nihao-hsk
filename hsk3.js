@@ -6,10 +6,10 @@
   const read = (key, fallback = '') => { try { return localStorage.getItem(key) ?? memory.get(key) ?? fallback; } catch { return memory.get(key) ?? fallback; } };
   const write = (key, value) => { memory.set(key, String(value)); try { localStorage.setItem(key, String(value)); } catch {} };
   const readJSON = (key, fallback) => { try { return JSON.parse(read(key, 'null')) ?? fallback; } catch { return fallback; } };
-  const lessonNumbers = value => Array.isArray(value) ? [...new Set(value)].filter(x => Number.isInteger(x) && x >= 0 && x < 12).sort((a, b) => a - b) : [];
+  const lessonNumbers = value => Array.isArray(value) ? [...new Set(value)].filter(x => Number.isInteger(x) && x >= 0 && x < 20).sort((a, b) => a - b) : [];
   const storedInitialLesson = read('hsk3Lesson', null), hadStoredLesson = storedInitialLesson !== null;
   const initialLesson = parseInt(storedInitialLesson ?? '0', 10);
-  let lessons = [], course = null, current = Number.isInteger(initialLesson) ? Math.max(0, Math.min(11, initialLesson)) : 0;
+  let lessons = [], course = null, current = Number.isInteger(initialLesson) ? Math.max(0, Math.min(19, initialLesson)) : 0;
   let completed = lessonNumbers(readJSON('hsk3done', []));
   let xp = Math.max(0, Math.min(1000000, Number(read('hsk3XP', '0')) || 0));
   let teacherOpen = read('hsk3TeacherOpen') === '1', currentTab = 'learn', profileVersion = -1;
@@ -28,17 +28,17 @@
     if (window.parent !== window) window.parent.postMessage({ type: 'hsk-progress', course: 'hsk3', completed: completed.length, xp, due: dueWords() }, location.origin);
   }
   function updateStats() {
-    const percent = Math.round(completed.length / 12 * 100);
+    const percent = Math.round(completed.length / 20 * 100);
     $('progressPercent').textContent = percent + '%';
     $('progressBar').setAttribute('aria-valuenow', String(percent));
     $('progressBar').firstElementChild.style.width = percent + '%';
-    $('completedCount').textContent = completed.length + '/12';
+    $('completedCount').textContent = completed.length + '/20';
     $('lastScore').textContent = read('hsk3score', '—');
     $('xpStat').textContent = String(xp);
     $('reviewStat').textContent = String(dueWords());
     const streak = Math.max(0, Number(read('hsk3Streak', '0')) || 0);
     $('streakStat').textContent = String(streak);
-    const badges = [completed.length >= 1 && '🌱 Bước đầu HSK 3', completed.length >= 6 && '🌿 Nửa chặng đường', completed.length === 12 && '🏆 Hoàn thành HSK 3', streak >= 3 && '🔥 Ba ngày liên tiếp'].filter(Boolean);
+    const badges = [completed.length >= 1 && '🌱 Bước đầu HSK 3', completed.length >= 10 && '🌿 Nửa chặng đường', completed.length === 20 && '🏆 Hoàn thành HSK 3', streak >= 3 && '🔥 Ba ngày liên tiếp'].filter(Boolean);
     $('badgeStat').textContent = String(badges.length);
     $('achievementBar').innerHTML = badges.map(label => '<span class="achievement">' + escape(label) + '</span>').join('');
     const name = read('hskStudentName').trim();
@@ -195,7 +195,7 @@
     result.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   }
   function switchTab(tab, focus = false) {
-    if (!['learn', 'plan', 'practice', 'quiz'].includes(tab)) return;
+    if (!['learn', 'plan', 'practice', 'quiz', 'textbook'].includes(tab)) return;
     if (currentTab !== tab) window.HSKAudio?.stop();
     currentTab = tab;
     document.querySelectorAll('[data-tab]').forEach(button => {
@@ -203,6 +203,9 @@
       button.setAttribute('aria-selected', String(selected)); button.tabIndex = selected ? 0 : -1;
       $(button.dataset.tab).hidden = !selected;
     });
+    if (tab === 'textbook') {
+      window.HSKTextbook?.syncLesson(current + 1, 3);
+    }
     if (focus) $('tab-' + tab).focus();
   }
   function openLesson(index, userAction = false) {
@@ -228,6 +231,8 @@
     renderNav(); renderLearn(lesson); renderPlan(lesson); renderPractice(lesson); renderQuiz();
     switchTab(userAction ? 'learn' : currentTab); $('lessonContent').hidden = false; notice('');
     $('lessonNavigation').classList.remove('open'); $('lessonMenu').setAttribute('aria-expanded', 'false');
+    window.HSKTextbook?.syncLesson(current + 1, 3);
+    window.dispatchEvent(new CustomEvent('hsk-lesson-changed', { detail: { level: 3, lesson: current + 1 } }));
     markStudy(); updateStats(); notifyParent();
     if (userAction) { window.scrollTo({ top: 0, behavior: 'smooth' }); $('lessonHeading').focus({ preventScroll: true }); }
   }

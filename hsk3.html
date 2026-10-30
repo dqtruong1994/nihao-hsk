@@ -8,6 +8,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="hsk3.css">
   <link rel="stylesheet" href="chinese-audio.css">
+  <link rel="stylesheet" href="textbook-dialogues.css">
   <link rel="stylesheet" href="enhancements.css">
   <link rel="stylesheet" href="mock-exam.css">
   <link rel="stylesheet" href="theme-switcher.css">
@@ -24,6 +25,7 @@
   <script src="chinese-audio.js"></script>
   <script src="learner-sync.js"></script>
   <script src="theme-switcher.js"></script>
+  <script src="textbook-dialogues.js" defer></script>
   <script src="spotlight-search.js" defer></script>
   <script src="immersion-player.js" defer></script>
   <script src="daily-goal.js" defer></script>
@@ -47,9 +49,9 @@
   <div class="app" id="learningApp">
     <aside>
       <div class="brand"><b lang="zh">中</b><span id="brandName">Góc học HSK 3</span><button type="button" id="editName" class="icon-btn" aria-label="Đổi tên học viên">✎</button></div>
-      <div class="course-label">HSK 3 · 12 bài theo chủ đề</div>
+      <div class="course-label">HSK 3 · 20 bài Giáo trình chuẩn BLCU</div>
       <p class="sync-status" data-sync-status aria-live="polite">Đang kết nối lớp học…</p>
-      <button type="button" class="lesson-menu" id="lessonMenu" aria-expanded="false" aria-controls="lessonNavigation">Danh sách 12 bài học <span aria-hidden="true">⌄</span></button>
+      <button type="button" class="lesson-menu" id="lessonMenu" aria-expanded="false" aria-controls="lessonNavigation">Danh sách 20 bài học <span aria-hidden="true">⌄</span></button>
       <div class="lesson-navigation" id="lessonNavigation">
         <nav class="navlist" id="nav" aria-label="Bài học HSK 3"></nav>
         <button type="button" id="teacherMode" class="secondary small">Mở tất cả bài</button>
@@ -59,13 +61,13 @@
     <main>
       <div class="wrap">
         <section class="hero" aria-labelledby="lessonHeading">
-          <div class="eyebrow">HSK 3 · GIAO TIẾP THEO CHỦ ĐỀ</div>
+          <div class="eyebrow">HSK 3 · GIÁO TRÌNH CHUẨN BLCU</div>
           <h1 id="lessonHeading" tabindex="-1">Đang tải giáo án HSK 3…</h1>
           <div id="lessonTopic" class="lesson-topic" lang="zh"></div>
           <div id="lessonPinyin" class="pinyin"></div>
           <div id="lessonVi" class="lesson-vi"></div>
           <div id="topicAudio"></div>
-          <p id="description" class="mut">12 bài học có từ vựng, ngữ pháp, hội thoại và luyện tập.</p>
+          <p id="description" class="mut">20 bài học chuẩn theo Giáo trình HSK 3 BLCU có hội thoại, từ vựng, ngữ pháp và luyện tập.</p>
           <p class="tip">Đạt từ 85% số câu đúng để hoàn thành bài. Ôn từ vựng theo nhịp 1–3–7 ngày.</p>
         </section>
         <p id="courseNotice" class="notice" role="status" hidden></p>
@@ -78,22 +80,26 @@
         <div id="achievementBar" class="achievements"></div>
         <div class="stats">
           <div class="stat"><span>Tiến độ</span><strong id="progressPercent">0%</strong><div id="progressBar" class="bar" role="progressbar" aria-label="Tiến độ HSK 3" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div></div>
-          <div class="stat"><span>Đã hoàn thành</span><strong id="completedCount">0/12</strong></div>
+          <div class="stat"><span>Đã hoàn thành</span><strong id="completedCount">0/20</strong></div>
           <div class="stat"><span>Điểm gần nhất</span><strong id="lastScore">—</strong></div>
         </div>
         <section class="card" id="lessonContent" aria-label="Nội dung bài học" hidden>
           <div class="tabs" role="tablist" aria-label="Phần của bài học">
             <button id="tab-learn" role="tab" type="button" aria-selected="true" aria-controls="learn" data-tab="learn">📘 Bài giảng</button>
+            <button id="tab-textbook" role="tab" type="button" aria-selected="false" aria-controls="textbook" tabindex="-1" data-tab="textbook">💬 Hội thoại</button>
             <button id="tab-plan" role="tab" type="button" aria-selected="false" aria-controls="plan" tabindex="-1" data-tab="plan">🗂 Giáo án</button>
             <button id="tab-practice" role="tab" type="button" aria-selected="false" aria-controls="practice" tabindex="-1" data-tab="practice">✍️ Luyện tập</button>
             <button id="tab-quiz" role="tab" type="button" aria-selected="false" aria-controls="quiz" tabindex="-1" data-tab="quiz">✓ Kiểm tra</button>
           </div>
           <section id="learn" class="panel" role="tabpanel" aria-labelledby="tab-learn"></section>
+          <section id="textbook" class="panel" role="tabpanel" aria-labelledby="tab-textbook" hidden>
+            <div data-textbook-dialogues data-textbook-level="3"></div>
+          </section>
           <section id="plan" class="panel" role="tabpanel" aria-labelledby="tab-plan" hidden></section>
           <section id="practice" class="panel" role="tabpanel" aria-labelledby="tab-practice" hidden></section>
           <section id="quiz" class="panel" role="tabpanel" aria-labelledby="tab-quiz" hidden></section>
         </section>
-        <footer class="course-footer">Giáo án tự biên soạn theo các chủ đề chọn lọc để luyện giao tiếp HSK 3.</footer>
+        <footer class="course-footer">Giáo trình chuẩn HSK 3 (BLCU / Nhân Trí Việt) bản song ngữ Trung - Việt.</footer>
       </div>
     </main>
   </div>

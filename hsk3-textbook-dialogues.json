@@ -1,0 +1,3645 @@
+{
+  "version": 1,
+  "level": 3,
+  "source": {
+    "title": "Giáo trình chuẩn HSK 3",
+    "fileName": "1.GIÁO TRÌNH HSK3 (1).pdf",
+    "pdfPageCount": 249,
+    "section": "课文",
+    "translationNote": "Chữ Hán và Pinyin theo giáo trình HSK 3 chuẩn (BLCU - Đại học Ngôn ngữ Bắc Kinh / Nhân Trí Việt); bản dịch tiếng Việt đối chiếu sát ngữ cảnh."
+  },
+  "lessons": [
+    {
+      "number": 1,
+      "titleZh": "周末你有什么打算？",
+      "titlePinyin": "Zhōumò nǐ yǒu shénme dǎsuàn?",
+      "titleVi": "Anh dự định làm gì vào cuối tuần vậy?",
+      "pdfStartPage": 17,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "谈周末的打算",
+          "sceneVi": "Nói về kế hoạch cuối tuần",
+          "pdfPages": [
+            18
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "周末你有什么打算？",
+              "py": "Zhōumò nǐ yǒu shénme dǎsuàn?",
+              "vi": "Cuối tuần bạn có dự định gì?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我早就想好了，请你吃饭、看电影、喝咖啡。",
+              "py": "Wǒ zǎo jiù xiǎnghǎo le, qǐng nǐ chī fàn, kàn diànyǐng, hē kāfēi.",
+              "vi": "Tôi đã tính trước cả rồi, mời bạn đi ăn cơm, xem phim, uống cà phê."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "请我？",
+              "py": "Qǐng wǒ?",
+              "vi": "Mời tôi?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "是啊，我已经找好饭馆儿了，电影票也买好了。",
+              "py": "Shì a, wǒ yǐjīng zhǎohǎo fànguǎnr le, diànyǐngpiào yě mǎihǎo le.",
+              "vi": "Đúng vậy, tôi đã tìm được quán ăn ngon rồi, vé xem phim cũng mua xong rồi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我还没想好要不要跟你去呢。",
+              "py": "Wǒ hái méi xiǎnghǎo yào bu yào gēn nǐ qù ne.",
+              "vi": "Tôi vẫn chưa nghĩ xong là có nên đi cùng bạn hay không nữa."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            18
+          ],
+          "lines": [
+            {
+              "speaker": "妈妈",
+              "zh": "你一直玩儿电脑游戏，作业写完了吗？",
+              "py": "Nǐ yìzhí wánr diànnǎo yóuxì, zuòyè xiěwán le ma?",
+              "vi": "Con cứ chơi game máy tính suốt, bài tập về nhà đã viết xong chưa?"
+            },
+            {
+              "speaker": "儿子",
+              "zh": "都写完了。",
+              "py": "Dōu xiěwán le.",
+              "vi": "Đều viết xong cả rồi ạ."
+            },
+            {
+              "speaker": "妈妈",
+              "zh": "明天不是有考试吗？你怎么一点儿也不着急？",
+              "py": "Míngtiān bú shì yǒu kǎoshì ma? Nǐ zěnme yìdiǎnr yě bù zháojí?",
+              "vi": "Ngày mai chẳng phải có bài kiểm tra sao? Sao con chẳng lo lắng chút nào vậy?"
+            },
+            {
+              "speaker": "儿子",
+              "zh": "我早就复习好了。",
+              "py": "Wǒ zǎo jiù fùxí hǎo le.",
+              "vi": "Con đã ôn tập xong từ sớm rồi ạ."
+            },
+            {
+              "speaker": "妈妈",
+              "zh": "那也不能一直玩儿啊。",
+              "py": "Nà yě bù néng yìzhí wánr a.",
+              "vi": "Thế cũng không thể chơi suốt thế được."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "聊旅游计划",
+          "sceneVi": "Nói về kế hoạch đi du lịch",
+          "pdfPages": [
+            18
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "下个月我去旅游，你能跟我一起去吗？",
+              "py": "Xià ge yuè wǒ qù lǚyóu, nǐ néng gēn wǒ yìqǐ qù ma?",
+              "vi": "Tháng sau mình đi du lịch, bạn có thể đi cùng mình không?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我还没想好呢。你觉得哪儿最好玩儿？",
+              "py": "Wǒ hái méi xiǎnghǎo ne. Nǐ juéde nǎr zuì hǎowánr?",
+              "vi": "Mình vẫn chưa nghĩ tới nữa. Bạn thấy ở đâu vui nhất?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "南方啊，我们去年就是这个时候去的。",
+              "py": "Nánfāng a, wǒmen qùnián jiù shì zhège shíhou qù de.",
+              "vi": "Miền Nam đấy, năm ngoái bọn mình cũng đi vào thời điểm này."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "南方太热了，北方好一些，不冷也不热。",
+              "py": "Nánfāng tài rè le, běifāng hǎo yìxiē, bù lěng yě bú rè.",
+              "vi": "Miền Nam nóng quá, miền Bắc thì tốt hơn một chút, không lạnh cũng không nóng."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "准备去旅游",
+          "sceneVi": "Chuẩn bị đi du lịch",
+          "pdfPages": [
+            19
+          ],
+          "lines": [
+            {
+              "speaker": "小刚",
+              "zh": "水果、面包、茶都准备好了，我们还带什么？",
+              "py": "Shuǐguǒ, miànbāo, chá dōu zhǔnbèi hǎo le, wǒmen hái dài shénme?",
+              "vi": "Trái cây, bánh mì, trà đều đã chuẩn bị xong cả rồi, chúng ta còn mang gì nữa?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "手机、电脑、地图，一个也不能少。",
+              "py": "Shǒujī, diànnǎo, dìtú, yí ge yě bù néng shǎo.",
+              "vi": "Điện thoại, máy tính, bản đồ, một cái cũng không thể thiếu."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "这些我昨天下午就准备好了。",
+              "py": "Zhèxiē wǒ zuótiān xiàwǔ jiù zhǔnbèi hǎo le.",
+              "vi": "Mấy thứ này chiều hôm qua mình đã chuẩn bị xong rồi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "再多带几件衣服吧。",
+              "py": "Zài duō dài jǐ jiàn yīfu ba.",
+              "vi": "Mang thêm vài bộ quần áo nữa đi."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我们是去旅游，不是搬家，还是少带一些吧。",
+              "py": "Wǒmen shì qù lǚyóu, bú shì bān jiā, háishi shǎo dài yìxiē ba.",
+              "vi": "Chúng ta là đi du lịch, không phải chuyển nhà đâu, cứ mang ít một chút thì hơn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "titleZh": "他什么时候回来？",
+      "titlePinyin": "Tā shénme shíhou huílái?",
+      "titleVi": "Khi nào anh ấy quay về?",
+      "pdfStartPage": 27,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "下山的路上",
+          "sceneVi": "Trên đường xuống núi",
+          "pdfPages": [
+            28
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "休息一下吧。",
+              "py": "Xiūxi yíxià ba.",
+              "vi": "Nghỉ ngơi một lát đi."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "怎么了？",
+              "py": "Zěnme le?",
+              "vi": "Sao vậy?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我现在腿也疼，脚也疼。",
+              "py": "Wǒ xiànzài tuǐ yě téng, jiǎo yě téng.",
+              "vi": "Bây giờ chân mình vừa mỏi vừa đau."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "好，那边树多，我们过去坐一下吧。",
+              "py": "Hǎo, nàbian shù duō, wǒmen guòqu zuò yíxià ba.",
+              "vi": "Được, đằng kia nhiều cây, chúng ta qua đó ngồi một lát đi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "上来的时候我怎么没觉得这么累？",
+              "py": "Shànglai de shíhou wǒ zěnme méi juéde zhème lèi?",
+              "vi": "Lúc leo lên sao mình không cảm thấy mệt thế này nhỉ?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "上山容易下山难，你不知道？",
+              "py": "Shàng shān róngyì xià shān nán, nǐ bù zhīdào?",
+              "vi": "Lên núi thì dễ xuống núi mới khó, bạn không biết sao?"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在打电话",
+          "sceneVi": "Đang gọi điện thoại",
+          "pdfPages": [
+            28
+          ],
+          "lines": [
+            {
+              "speaker": "周太太",
+              "zh": "喂，你好，请问周明在吗？",
+              "py": "Wèi, nǐ hǎo, qǐngwèn Zhōu Míng zài ma?",
+              "vi": "Alo, xin chào, cho hỏi Chu Minh có ở đó không?"
+            },
+            {
+              "speaker": "秘书",
+              "zh": "周经理出去了，不在办公室。",
+              "py": "Zhōu jīnglǐ chūqu le, bú zài bàngōngshì.",
+              "vi": "Giám đốc Chu ra ngoài rồi, không có ở văn phòng."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "他去哪儿了？什么时候回来？",
+              "py": "Tā qù nǎr le? Shénme shíhou huílai?",
+              "vi": "Anh ấy đi đâu rồi? Khi nào thì quay về?"
+            },
+            {
+              "speaker": "秘书",
+              "zh": "他出去办事了，下午回来。",
+              "py": "Tā chūqu bàn shì le, xiàwǔ huílai.",
+              "vi": "Anh ấy đi ra ngoài giải quyết công việc rồi, chiều nay mới về."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "回来了就让他给我打个电话。",
+              "py": "Huílai le jiù ràng tā gěi wǒ dǎ ge diànhuà.",
+              "vi": "Về đến nơi thì bảo anh ấy gọi lại cho tôi một cuộc điện thoại nhé."
+            },
+            {
+              "speaker": "秘书",
+              "zh": "好的，他到了办公室我就告诉他。",
+              "py": "Hǎo de, tā dào le bàngōngshì wǒ jiù gàosu tā.",
+              "vi": "Dạ được, khi nào anh ấy đến văn phòng em sẽ nói với anh ấy ngay."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在楼门口送朋友",
+          "sceneVi": "Tiễn bạn ở trước cửa tòa nhà",
+          "pdfPages": [
+            28
+          ],
+          "lines": [
+            {
+              "speaker": "小刚",
+              "zh": "雨下得真大。你怎么回去？我送你吧。",
+              "py": "Yǔ xià de zhēn dà. Nǐ zěnme huíqu? Wǒ sòng nǐ ba.",
+              "vi": "Mưa to quá. Bạn về bằng cách nào? Để mình đưa bạn về nhé."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "没事，我出去叫辆出租车就行了。",
+              "py": "Méi shì, wǒ chūqu jiào liàng chūzūchē jiù xíng le.",
+              "vi": "Không sao, mình ra ngoài gọi một chiếc taxi là được rồi."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "那你等等，我上楼去给你拿把伞。",
+              "py": "Nà nǐ děngdeng, wǒ shàng lóu qù gěi nǐ ná bǎ sǎn.",
+              "vi": "Vậy bạn đợi một chút, mình lên gác lấy cho bạn cây ô."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "好的。我跟你一起上去吧。",
+              "py": "Hǎo de. Wǒ gēn nǐ yìqǐ shàngqu ba.",
+              "vi": "Được, mình cùng lên trên với bạn nhé."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "你在这儿等吧，我拿了伞就下来。",
+              "py": "Nǐ zài zhèr děng ba, wǒ ná le sǎn jiù xiàlai.",
+              "vi": "Bạn cứ đợi ở đây đi, mình lấy ô xong sẽ xuống ngay."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            29
+          ],
+          "lines": [
+            {
+              "speaker": "周太太",
+              "zh": "你看，我这么胖，怎么办呢？",
+              "py": "Nǐ kàn, wǒ zhème pàng, zěnme bàn ne?",
+              "vi": "Anh xem này, em béo thế này, phải làm sao đây?"
+            },
+            {
+              "speaker": "周明",
+              "zh": "你每天晚上吃了饭就睡觉，也不出去走走，能不胖吗？",
+              "py": "Nǐ měitiān wǎnshang chī le fàn jiù shuìjiào, yě bù chūqu zǒuzou, néng bú pàng ma?",
+              "vi": "Em tối nào ăn cơm xong cũng đi ngủ ngay, lại chẳng ra ngoài đi dạo, làm sao mà không béo được?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "其实我每天都运动。",
+              "py": "Qíshí wǒ měitiān dōu yùndòng.",
+              "vi": "Thực ra ngày nào em cũng vận động đấy chứ."
+            },
+            {
+              "speaker": "周明",
+              "zh": "但是你一点儿也没瘦！你做什么运动了？",
+              "py": "Dànshì nǐ yìdiǎnr yě méi shòu! Nǐ zuò shénme yùndòng le?",
+              "vi": "Nhưng mà em chẳng gầy đi chút nào! Em tập môn thể thao gì thế?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "做饭啊。",
+              "py": "Zuò fàn a.",
+              "vi": "Nấu cơm đấy thôi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "titleZh": "桌子上放着很多饮料",
+      "titlePinyin": "Zhuōzi shang fàng zhe hěn duō yǐnliào",
+      "titleVi": "Trên bàn có rất nhiều thức uống",
+      "pdfStartPage": 36,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在小丽家",
+          "sceneVi": "Ở nhà của chị Lệ",
+          "pdfPages": [
+            37
+          ],
+          "lines": [
+            {
+              "speaker": "小刚",
+              "zh": "明天是晴天还是阴天？",
+              "py": "Míngtiān shì qíngtiān háishi yīntiān?",
+              "vi": "Ngày mai trời nắng hay trời âm u?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "阴天，电视上说多云。怎么了？有事？",
+              "py": "Yīntiān, diànshì shang shuō duōyún. Zěnme le? Yǒu shì?",
+              "vi": "Trời âm u, TV bảo có nhiều mây. Sao thế? Có việc gì à?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "没事，我们明天要去爬山。",
+              "py": "Méi shì, wǒmen míngtiān yào qù pá shān.",
+              "vi": "Không có gì, ngày mai bọn mình định đi leo núi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "爬山的时候要小心点儿。",
+              "py": "Pá shān de shíhou yào xiǎoxīn diǎnr.",
+              "vi": "Lúc leo núi phải cẩn thận đấy nhé."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "好，你也去吗？",
+              "py": "Hǎo, nǐ yě qù ma?",
+              "vi": "Được, bạn cũng đi chứ?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我不去，我有事。",
+              "py": "Wǒ bú qù, wǒ yǒu shì.",
+              "vi": "Mình không đi đâu, mình có việc bận rồi."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在商场",
+          "sceneVi": "Ở cửa hàng bách hóa",
+          "pdfPages": [
+            37
+          ],
+          "lines": [
+            {
+              "speaker": "周太太",
+              "zh": "你觉得这条裤子怎么样？",
+              "py": "Nǐ juéde zhè tiáo kùzi zěnmeyàng?",
+              "vi": "Anh thấy cái quần này thế nào?"
+            },
+            {
+              "speaker": "周明",
+              "zh": "我记得你已经有两条这样的裤子了。",
+              "py": "Wǒ jìde nǐ yǐjīng yǒu liǎng tiáo zhèyàng de kùzi le.",
+              "vi": "Anh nhớ em đã có hai cái quần kiểu này rồi mà."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "那我们再看看别的。",
+              "py": "Nà wǒmen zài kànkan bié de.",
+              "vi": "Vậy chúng ta xem cái khác nữa đi."
+            },
+            {
+              "speaker": "周明",
+              "zh": "这件衬衫怎么样？",
+              "py": "Zhè jiàn chènshān zěnmeyàng?",
+              "vi": "Chiếc áo sơ mi này thế nào?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "还不错，多少钱？",
+              "py": "Hái búcuò, duōshao qián?",
+              "vi": "Cũng đẹp đấy, bao nhiêu tiền thế?"
+            },
+            {
+              "speaker": "周明",
+              "zh": "这上面写着320元。",
+              "py": "Zhè shàngmian xiězhe sān bǎi èrshí yuán.",
+              "vi": "Trên này ghi là 320 tệ."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "买一件。",
+              "py": "Mǎi yí jiàn.",
+              "vi": "Mua một chiếc đi."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在水果店",
+          "sceneVi": "Ở cửa hàng trái cây",
+          "pdfPages": [
+            37
+          ],
+          "lines": [
+            {
+              "speaker": "周太太",
+              "zh": "这些水果真新鲜，我们买西瓜还是苹果？",
+              "py": "Zhèxiē shuǐguǒ zhēn xīnxiān, wǒmen mǎi xīguā háishi píngguǒ?",
+              "vi": "Hoa quả này tươi thật, chúng ta mua dưa hấu hay táo?"
+            },
+            {
+              "speaker": "周明",
+              "zh": "西瓜吧。你看，这上面写着“西瓜不甜不要钱”。",
+              "py": "Xīguā ba. Nǐ kàn, zhè shàngmian xiězhe \"xīguā bù tián bú yào qián\".",
+              "vi": "Dưa hấu đi. Em nhìn xem, trên này ghi \"dưa hấu không ngọt không lấy tiền\" kìa."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "那我们买一个大点儿的吧。",
+              "py": "Nà wǒmen mǎi yí ge dà diǎnr de ba.",
+              "vi": "Vậy chúng ta mua một quả to hơn chút nhé."
+            },
+            {
+              "speaker": "周明",
+              "zh": "再买几个苹果。",
+              "py": "Zài mǎi jǐ ge píngguǒ.",
+              "vi": "Mua thêm mấy quả táo nữa."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "好啊，今天晚上只吃水果不吃饭！",
+              "py": "Hǎo a, jīntiān wǎnshang zhǐ chī shuǐguǒ bù chī fàn!",
+              "vi": "Được thôi, tối nay chỉ ăn hoa quả không ăn cơm!"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "在休息室",
+          "sceneVi": "Trong phòng giải lao",
+          "pdfPages": [
+            38
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "桌子上放着很多饮料，你喝什么？",
+              "py": "Zhuōzi shang fàngzhe hěn duō yǐnliào, nǐ hē shénme?",
+              "vi": "Trên bàn bày nhiều đồ uống thế kia, bạn uống gì?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "茶或者咖啡都可以。你呢？你喝什么？",
+              "py": "Chá huòzhě kāfēi dōu kěyǐ. Nǐ ne? Nǐ hē shénme?",
+              "vi": "Trà hoặc cà phê đều được. Còn bạn? Bạn uống gì?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我喝茶，茶是我的最爱。天冷了或者工作累了的时候，喝杯热茶会很舒服。",
+              "py": "Wǒ hē chá, chá shì wǒ de zuì ài. Tiān lěng le huòzhě gōngzuò lèi le de shíhou, hē bēi rè chá huì hěn shūfu.",
+              "vi": "Tôi uống trà, trà là sở thích lớn nhất của tôi. Trời lạnh hoặc khi công việc mệt mỏi, uống tách trà nóng sẽ rất dễ chịu."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "你喜欢喝什么茶？",
+              "py": "Nǐ xǐhuan hē shénme chá?",
+              "vi": "Bạn thích uống trà gì?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "花茶、绿茶、红茶，我都喜欢。",
+              "py": "Huāchá, lǜchá, hóngchá, wǒ dōu xǐhuan.",
+              "vi": "Trà hoa, trà xanh, hồng trà, tôi đều thích cả."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "titleZh": "她总是笑着跟客人说话",
+      "titlePinyin": "Tā zǒngshì xiàozhe gēn kèrén shuōhuà",
+      "titleVi": "Cô ấy luôn cười khi nói chuyện với khách hàng",
+      "pdfStartPage": 45,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在教室",
+          "sceneVi": "Trong lớp học",
+          "pdfPages": [
+            46
+          ],
+          "lines": [
+            {
+              "speaker": "小明",
+              "zh": "这是你们比赛的照片吗？",
+              "py": "Zhè shì nǐmen bǐsài de zhàopiàn ma?",
+              "vi": "Đây là ảnh các bạn đi thi đấu à?"
+            },
+            {
+              "speaker": "马可",
+              "zh": "是，这是我们比赛后照的。",
+              "py": "Shì, zhè shì wǒmen bǐsài hòu zhào de.",
+              "vi": "Đúng, đây là ảnh chụp sau buổi thi đấu của bọn mình."
+            },
+            {
+              "speaker": "小明",
+              "zh": "照得不错，你们都是一个年级的吗？",
+              "py": "Zhào de búcuò, nǐmen dōu shì yí ge niánjí de ma?",
+              "vi": "Chụp đẹp đấy, các bạn đều học cùng một khối lớp à?"
+            },
+            {
+              "speaker": "马可",
+              "zh": "不是。那个又高又漂亮的女孩儿是二年级的。",
+              "py": "Bú shì. Nàge yòu gāo yòu piàoliang de nǚháir shì èr niánjí de.",
+              "vi": "Không phải. Bạn nữ vừa cao vừa xinh kia học năm hai."
+            },
+            {
+              "speaker": "小明",
+              "zh": "旁边那个拿着书笑的人是谁？",
+              "py": "Pángbiān nàge názhe shū xiào de rén shì shéi?",
+              "vi": "Thế người đứng bên cạnh cầm sách đang cười là ai?"
+            },
+            {
+              "speaker": "马可",
+              "zh": "那是我！",
+              "py": "Nà shì wǒ!",
+              "vi": "Là tôi đấy!"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在教室",
+          "sceneVi": "Trong lớp học",
+          "pdfPages": [
+            46
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "你觉得小红怎么样？",
+              "py": "Nǐ juéde Xiǎohóng zěnmeyàng?",
+              "vi": "Cậu thấy Tiểu Hồng thế nào?"
+            },
+            {
+              "speaker": "同学",
+              "zh": "她又聪明又热情，也很努力。",
+              "py": "Tā yòu cōngming yòu rèqíng, yě hěn nǔlì.",
+              "vi": "Cô ấy vừa thông minh vừa nhiệt tình, lại rất chăm chỉ."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我看她总是笑着回答老师的问题。",
+              "py": "Wǒ kàn tā zǒngshì xiàozhe huídá lǎoshī de wèntí.",
+              "vi": "Mình thấy cô ấy lúc nào cũng tươi cười trả lời câu hỏi của thầy giáo."
+            },
+            {
+              "speaker": "同学",
+              "zh": "她对每个人都笑，也常常对我笑。",
+              "py": "Tā duì měi ge rén dōu xiào, yě chángcháng duì wǒ xiào.",
+              "vi": "Cô ấy mỉm cười với tất cả mọi người, cũng thường hay cười với mình nữa."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "你是不是喜欢她啊？",
+              "py": "Nǐ shì bu shì xǐhuan tā a?",
+              "vi": "Có phải cậu thích cô ấy rồi không?"
+            },
+            {
+              "speaker": "同学",
+              "zh": "喜欢她的人太多了，你看那些拿着鲜花站在门口的，都是等她的。",
+              "py": "Xǐhuan tā de rén tài duō le, nǐ kàn nàxiē názhe xiānhuā zhàn zài ménkǒu de, dōu shì děng tā de.",
+              "vi": "Người thích cô ấy đông lắm, cậu xem mấy người cầm hoa đứng ở cửa kia đều là đợi cô ấy đấy."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在超市门口",
+          "sceneVi": "Ở trước cửa siêu thị",
+          "pdfPages": [
+            46
+          ],
+          "lines": [
+            {
+              "speaker": "小刚",
+              "zh": "我有点儿饿了，我们进超市买点儿东西吧。",
+              "py": "Wǒ yǒudiǎnr è le, wǒmen jìn chāoshì mǎi diǎnr dōngxi ba.",
+              "vi": "Mình hơi đói rồi, chúng ta vào siêu thị mua chút đồ nhé."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "好啊，这家超市的蛋糕又便宜又好吃，一块只要2.99元。",
+              "py": "Hǎo a, zhè jiā chāoshì de dàngāo yòu piányi yòu hǎochī, yí kuài zhǐ yào èr diǎn jiǔ jiǔ yuán.",
+              "vi": "Được thôi, bánh ngọt của siêu thị này vừa rẻ lại vừa ngon, một cái chỉ có 2,99 tệ thôi."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我们买两块儿，回家吃着蛋糕看电视，怎么样？",
+              "py": "Wǒmen mǎi liǎng kuàir, huí jiā chīzhe dàngāo kàn diànshì, zěnmeyàng?",
+              "vi": "Chúng ta mua hai cái nhé, về nhà vừa ăn bánh vừa xem TV, thế nào?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "好啊，我再去买一些喝的。",
+              "py": "Hǎo a, wǒ zài qù mǎi yìxiē hē de.",
+              "vi": "Được chứ, mình đi mua thêm ít đồ uống nữa."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "喝着咖啡吃蛋糕，太好了！",
+              "py": "Hēzhe kāfēi chī dàngāo, tài hǎo le!",
+              "vi": "Vừa uống cà phê vừa ăn bánh ngọt thì tuyệt quá!"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "在饭馆儿",
+          "sceneVi": "Ở quán ăn",
+          "pdfPages": [
+            47
+          ],
+          "lines": [
+            {
+              "speaker": "经理",
+              "zh": "您好！您找谁？",
+              "py": "Nín hǎo! Nín zhǎo shéi?",
+              "vi": "Kính chào quý khách! Bác tìm ai ạ?"
+            },
+            {
+              "speaker": "客人",
+              "zh": "你们这儿是不是有一个又年轻又漂亮的服务员？",
+              "py": "Nǐmen zhèr shì bu shì yǒu yí ge yòu niánqīng yòu piàoliang de fúwùyuán?",
+              "vi": "Chỗ các anh có phải có một cô nhân viên phục vụ vừa trẻ vừa xinh đẹp không?"
+            },
+            {
+              "speaker": "经理",
+              "zh": "我们这儿年轻、漂亮的服务员有很多。",
+              "py": "Wǒmen zhèr niánqīng, piàoliang de fúwùyuán yǒu hěn duō.",
+              "vi": "Dạ ở quán chúng em nhân viên trẻ đẹp thì có nhiều lắm ạ."
+            },
+            {
+              "speaker": "客人",
+              "zh": "她工作又认真又热情。",
+              "py": "Tā gōngzuò yòu rènzhēn yòu rèqíng.",
+              "vi": "Cô ấy làm việc vừa chu đáo lại nhiệt tình nữa."
+            },
+            {
+              "speaker": "经理",
+              "zh": "您能再说说吗？",
+              "py": "Nín néng zài shuōshuo ma?",
+              "vi": "Bác có thể miêu tả thêm một chút được không ạ?"
+            },
+            {
+              "speaker": "客人",
+              "zh": "她总是笑着跟客人说话。",
+              "py": "Tā zǒngshì xiàozhe gēn kèrén shuōhuà.",
+              "vi": "Cô ấy luôn tươi cười khi nói chuyện với khách."
+            },
+            {
+              "speaker": "经理",
+              "zh": "啊，我知道了，您说的是李小美吧？",
+              "py": "À, wǒ zhīdào le, nǐn shuō de shì Lǐ Xiǎoměi ba?",
+              "vi": "À, cháu biết rồi, bác đang nói đến Lý Tiểu Mỹ phải không ạ?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "titleZh": "我最近越来越胖了",
+      "titlePinyin": "Wǒ zuìjìn yuèláiyuè pàng le",
+      "titleVi": "Dạo này em ngày càng béo ra",
+      "pdfStartPage": 53,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在小丽家",
+          "sceneVi": "Tại nhà chị Lệ",
+          "pdfPages": [
+            54
+          ],
+          "lines": [
+            {
+              "speaker": "朋友",
+              "zh": "我听说你身体不舒服，怎么了？",
+              "py": "Wǒ tīngshuō nǐ shēntǐ bù shūfu, zěnme le?",
+              "vi": "Tôi nghe nói bạn thấy trong người không khỏe, sao thế?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "前几天有点儿发烧，现在好多了。",
+              "py": "Qián jǐ tiān yǒudiǎnr fā shāo, xiànzài hǎoduō le.",
+              "vi": "Mấy ngày trước em hơi bị sốt, bây giờ đỡ nhiều rồi."
+            },
+            {
+              "speaker": "朋友",
+              "zh": "喝杯茶吧，这是我为你买的绿茶，很不错。",
+              "py": "Hē bēi chá ba, zhè shì wǒ wèi nǐ mǎi de lǜchá, hěn búcuò.",
+              "vi": "Uống cốc trà nhé, đây là trà xanh tôi mua cho bạn, ngon lắm đấy."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "谢谢，我要吃药，不喝茶了。",
+              "py": "Xièxie, wǒ yào chī yào, bù hē chá le.",
+              "vi": "Cảm ơn bạn, lát nữa em phải uống thuốc nên không uống trà đâu."
+            },
+            {
+              "speaker": "朋友",
+              "zh": "那喝杯水吧。",
+              "py": "Nà hē bēi shuǐ ba.",
+              "vi": "Thế thì uống cốc nước lọc đi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "好的。",
+              "py": "Hǎo de.",
+              "vi": "Vâng ạ."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在打电话",
+          "sceneVi": "Nói chuyện qua điện thoại",
+          "pdfPages": [
+            54
+          ],
+          "lines": [
+            {
+              "speaker": "周太太",
+              "zh": "对不起，我明天不能和你们出去玩儿了。",
+              "py": "Duìbuqǐ, wǒ míngtiān bù néng hé nǐmen chūqu wánr le.",
+              "vi": "Xin lỗi chị nhé, ngày mai tôi không thể đi chơi cùng mọi người được rồi."
+            },
+            {
+              "speaker": "张太太",
+              "zh": "为什么？怎么了？",
+              "py": "Wèishénme? Zěnme le?",
+              "vi": "Sao thế? Có chuyện gì vậy?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "我儿子生病了，我要在家照顾他。",
+              "py": "Wǒ érzi shēng bìng le, wǒ yào zài jiā zhàogù tā.",
+              "vi": "Con trai tôi bị ốm, tôi phải ở nhà chăm sóc nó."
+            },
+            {
+              "speaker": "张太太",
+              "zh": "他吃药了吗？要不要去医院？",
+              "py": "Tā chī yào le ma? Yào bu yào qù yīyuàn?",
+              "vi": "Cháu đã uống thuốc chưa? Có cần đi bệnh viện không?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "不用去医院，昨天吃了感冒药，现在好一些了。",
+              "py": "Búyòng qù yīyuàn, zuótiān chīle gǎnmàoyào, xiànzài hǎo yìxiē le.",
+              "vi": "Không cần đi viện đâu, hôm qua uống thuốc cảm rồi, bây giờ cũng đỡ hơn một chút rồi."
+            },
+            {
+              "speaker": "张太太",
+              "zh": "那我们下次再一起出去玩儿吧。",
+              "py": "Nà wǒmen xià cì zài yìqǐ chūqu wánr ba.",
+              "vi": "Thế thì để lần sau chúng ta lại cùng nhau đi chơi nhé."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在小刚家",
+          "sceneVi": "Tại nhà anh Cương",
+          "pdfPages": [
+            54
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "你最喜欢哪个季节？",
+              "py": "Nǐ zuì xǐhuan nǎge jìjié?",
+              "vi": "Anh thích mùa nào nhất?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "当然是春天，天气不那么冷了，草和树都绿了，花也开了。",
+              "py": "Dāngrán shì chūntiān, tiānqì bú nàme lěng le, cǎo hé shù dōu lǜ le, huā yě kāi le.",
+              "vi": "Đương nhiên là mùa xuân rồi, trời không còn lạnh như trước nữa, cây cỏ đều xanh tươi, hoa cũng nở rộ."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我最喜欢夏天，因为我可以穿漂亮的裙子。",
+              "py": "Wǒ zuì xǐhuan xiàtiān, yīnwèi wǒ kěyǐ chuān piàoliang de qúnzi.",
+              "vi": "Em thì thích nhất mùa hè, bởi vì em có thể mặc những chiếc váy thật đẹp."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "那我也喜欢夏天了。",
+              "py": "Nà wǒ yě xǐhuan xiàtiān le.",
+              "vi": "Thế thì anh cũng thích mùa hè rồi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "怎么？你也有漂亮的裙子？",
+              "py": "Zěnme? Nǐ yě yǒu piàoliang de qúnzi?",
+              "vi": "Sao cơ? Anh cũng có váy đẹp à?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "不，我喜欢看你穿漂亮的裙子。",
+              "py": "Bù, wǒ xǐhuan kàn nǐ chuān piàoliang de qúnzi.",
+              "vi": "Không, anh thích ngắm em mặc váy đẹp."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "在小刚家",
+          "sceneVi": "Tại nhà anh Cương",
+          "pdfPages": [
+            55
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "我最近越来越胖了。",
+              "py": "Wǒ zuìjìn yuè lái yuè pàng le.",
+              "vi": "Dạo này em ngày càng béo ra rồi."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "谁说的？我觉得你越来越漂亮了。",
+              "py": "Shéi shuō de? Wǒ juéde nǐ yuè lái yuè piàoliang le.",
+              "vi": "Ai bảo thế chứ? Anh thấy em ngày càng xinh đẹp hơn đấy."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "你看，这条裙子是去年买的，今年就不能穿了。",
+              "py": "Nǐ kàn, zhè tiáo qúnzi shì qùnián mǎi de, jīnnián jiù bù néng chuān le.",
+              "vi": "Anh nhìn xem, chiếc váy này mua từ năm ngoái, năm nay đã không mặc vừa nữa rồi."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "那是因为你吃得太多了，少吃点儿吧。",
+              "py": "Nà shì yīnwèi nǐ chī de tài duō le, shǎo chī diǎnr ba.",
+              "vi": "Đó là vì em ăn nhiều quá rồi, ăn ít lại chút đi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我做的饭越来越好吃，我能少吃吗？",
+              "py": "Wǒ zuò de fàn yuè lái yuè hǎochī, wǒ néng shǎo chī ma?",
+              "vi": "Cơm em nấu ngày càng ngon, bảo em ăn ít làm sao được?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "titleZh": "怎么突然找不到了？",
+      "titlePinyin": "Zěnme tūrán zhǎobudào le?",
+      "titleVi": "Sao bỗng dưng lại không tìm thấy?",
+      "pdfStartPage": 62,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在客厅",
+          "sceneVi": "Trong phòng khách",
+          "pdfPages": [
+            63
+          ],
+          "lines": [
+            {
+              "speaker": "周明",
+              "zh": "我的眼镜呢？怎么突然找不到了？你看见了吗？",
+              "py": "Wǒ de yǎnjìng ne? Zěnme tūrán zhǎo bu dào le? Nǐ kànjiàn le ma?",
+              "vi": "Kính của anh đâu rồi nhỉ? Sao bỗng nhiên lại tìm không thấy? Em có thấy không?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "我没看见啊。",
+              "py": "Wǒ méi kànjiàn a.",
+              "vi": "Em không thấy đâu cả."
+            },
+            {
+              "speaker": "周明",
+              "zh": "我离不开眼镜，没有眼镜，我一个字也看不清楚。",
+              "py": "Wǒ lí bu kāi yǎnjìng, méiyǒu yǎnjìng, wǒ yí ge zì yě kàn bu qīngchu.",
+              "vi": "Anh không rời cặp kính ra được, không có kính thì anh chẳng nhìn rõ được chữ nào cả."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "你去房间找找，是不是刚才放在桌子上了？",
+              "py": "Nǐ qù fángjiān zhǎozhao, shì bu shì gāngcái fàng zài zhuōzi shang le?",
+              "vi": "Anh vào phòng tìm thử xem, có phải lúc nãy để ở trên bàn không?"
+            },
+            {
+              "speaker": "周明",
+              "zh": "我怎么看得见啊？你快过来帮忙啊。",
+              "py": "Wǒ zěnme kàn de jiàn a? Nǐ kuài guòlai bāng máng a.",
+              "vi": "Anh làm sao mà thấy được cơ chứ? Em mau qua đây giúp anh với."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "好吧，我帮你去找找。",
+              "py": "Hǎo ba, wǒ bāng nǐ qù zhǎozhao.",
+              "vi": "Được rồi, để em vào tìm giúp anh."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在打电话",
+          "sceneVi": "Nói chuyện qua điện thoại",
+          "pdfPages": [
+            63
+          ],
+          "lines": [
+            {
+              "speaker": "同学",
+              "zh": "今天的作业你做完了吗？",
+              "py": "Jīntiān de zuòyè nǐ zuòwán le ma?",
+              "vi": "Bài tập hôm nay cậu đã làm xong chưa?"
+            },
+            {
+              "speaker": "儿子",
+              "zh": "刚做完，你呢？",
+              "py": "Gāng zuòwán, nǐ ne?",
+              "vi": "Tớ vừa làm xong, còn cậu?"
+            },
+            {
+              "speaker": "同学",
+              "zh": "今天这些题特别难，我看不懂，不会做，你能帮我吗？",
+              "py": "Jīntiān zhèxiē tí tèbié nán, wǒ kàn bu dǒng, bú huì zuò, nǐ néng bāng wǒ ma?",
+              "vi": "Hôm nay mấy bài này khó quá, tớ đọc không hiểu, chẳng biết làm thế nào, cậu giúp tớ được không?"
+            },
+            {
+              "speaker": "儿子",
+              "zh": "电话里讲不明白，你来我家吧，我给你讲讲。",
+              "py": "Diànhuà li jiǎng bu míngbai, nǐ lái wǒ jiā ba, wǒ gěi nǐ jiǎngjiang.",
+              "vi": "Qua điện thoại nói khó hiểu lắm, cậu qua nhà tớ đi, tớ giảng cho cậu nghe."
+            },
+            {
+              "speaker": "同学",
+              "zh": "好啊，我锻炼完了就过去。",
+              "py": "Hǎo a, wǒ duànliàn wán le jiù guòqu.",
+              "vi": "Tốt quá, tớ tập thể dục xong sẽ qua ngay."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在休息室",
+          "sceneVi": "Trong phòng giải lao",
+          "pdfPages": [
+            63
+          ],
+          "lines": [
+            {
+              "speaker": "同事",
+              "zh": "你怎么有点儿不高兴？",
+              "py": "Nǐ zěnme yǒudiǎnr bù gāoxìng?",
+              "vi": "Sao trông cậu có vẻ hơi buồn thế?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我想请小丽吃饭，但是找不到好饭馆儿。",
+              "py": "Wǒ xiǎng qǐng Xiǎolì chī fàn, dànshì zhǎo bu dào hǎo fànguǎnr.",
+              "vi": "Tớ muốn mời Tiểu Lệ đi ăn cơm, nhưng mà chưa tìm được quán nào ngon cả."
+            },
+            {
+              "speaker": "同事",
+              "zh": "那你请她听音乐会吧，她喜欢听音乐。",
+              "py": "Nà nǐ qǐng tā tīng yīnyuèhuì ba, tā xǐhuan tīng yīnyuè.",
+              "vi": "Thế thì cậu mời cô ấy đi nghe hòa nhạc đi, cô ấy thích nghe nhạc lắm."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "音乐会人太多，买不到票。",
+              "py": "Yīnyuèhuì rén tài duō, mǎi bu dào piào.",
+              "vi": "Buổi hòa nhạc đông người quá, không mua nổi vé."
+            },
+            {
+              "speaker": "同事",
+              "zh": "那去公园走走，聊聊天儿吧。",
+              "py": "Nà qù gōngyuán zǒuzou, liáoliao tiānr ba.",
+              "vi": "Vậy thì rủ nhau ra công viên đi dạo, trò chuyện tâm sự xem sao."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "公园太大，多累啊。",
+              "py": "Gōngyuán tài dà, duō lèi a.",
+              "vi": "Công viên rộng thế, đi mệt chết đi được."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "在客厅",
+          "sceneVi": "Trong phòng khách",
+          "pdfPages": [
+            64
+          ],
+          "lines": [
+            {
+              "speaker": "周太太",
+              "zh": "你怎么还喝咖啡？",
+              "py": "Nǐ zěnme hái hē kāfēi?",
+              "vi": "Sao anh vẫn còn uống cà phê thế?"
+            },
+            {
+              "speaker": "周明",
+              "zh": "怎么了？",
+              "py": "Zěnme le?",
+              "vi": "Có chuyện gì sao em?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "你不是说晚上睡不着觉吗？",
+              "py": "Nǐ bú shì shuō wǎnshang shuì bu zháo jiào ma?",
+              "vi": "Không phải anh bảo buổi tối hay bị mất ngủ à?"
+            },
+            {
+              "speaker": "周明",
+              "zh": "没事，我只喝一杯。",
+              "py": "Méi shì, wǒ zhǐ hē yì bēi.",
+              "vi": "Không sao đâu, anh chỉ uống một ly thôi mà."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "你还是喝杯牛奶吧，可以睡得更好些。",
+              "py": "Nǐ háishi hē bēi niúnǎi ba, kěyǐ shuì de gèng hǎo xiē.",
+              "vi": "Anh uống ly sữa tươi đi thì hơn, sẽ giúp ngủ ngon hơn đấy."
+            },
+            {
+              "speaker": "周明",
+              "zh": "好吧，牛奶呢？",
+              "py": "Hǎo ba, niúnǎi ne?",
+              "vi": "Được thôi, thế sữa đâu rồi em?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "还没买呢。",
+              "py": "Hái méi mǎi ne.",
+              "vi": "Em vẫn chưa mua đâu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "titleZh": "我跟她都认识五年了",
+      "titlePinyin": "Wǒ gēn tā dōu rènshi wǔ nián le",
+      "titleVi": "Tôi và cô ấy quen nhau được năm năm rồi",
+      "pdfStartPage": 71,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在办公室",
+          "sceneVi": "Trong văn phòng",
+          "pdfPages": [
+            72
+          ],
+          "lines": [
+            {
+              "speaker": "同事",
+              "zh": "那个漂亮的新同事是谁？",
+              "py": "Nàge piàoliang de xīn tóngshì shì shéi?",
+              "vi": "Cô đồng nghiệp mới xinh đẹp kia là ai thế?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "那是小丽。",
+              "py": "Nà shì Xiǎolì.",
+              "vi": "Đó là Tiểu Lệ."
+            },
+            {
+              "speaker": "同事",
+              "zh": "她刚来北京吗？",
+              "py": "Tā gāng lái Běijīng ma?",
+              "vi": "Cô ấy mới đến Bắc Kinh à?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "不，她在北京工作三年了。",
+              "py": "Bù, tā zài Běijīng gōngzuò sān nián le.",
+              "vi": "Không, cô ấy đã làm việc ở Bắc Kinh được 3 năm rồi."
+            },
+            {
+              "speaker": "同事",
+              "zh": "以前她在哪儿工作？",
+              "py": "Yǐqián tā zài nǎr gōngzuò?",
+              "vi": "Trước đây cô ấy làm việc ở đâu?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "她在银行工作了两年以后来的我们公司。",
+              "py": "Tā zài yínháng gōngzuòle liǎng nián yǐhòu lái de wǒmen gōngsī.",
+              "vi": "Cô ấy làm ở ngân hàng hai năm rồi mới chuyển sang công ty mình."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在休息室",
+          "sceneVi": "Trong phòng giải lao",
+          "pdfPages": [
+            72
+          ],
+          "lines": [
+            {
+              "speaker": "同事",
+              "zh": "周末你跟小丽去哪儿玩儿了？",
+              "py": "Zhōumò nǐ gēn Xiǎolì qù nǎr wánr le?",
+              "vi": "Cuối tuần cậu với Tiểu Lệ đi đâu chơi đấy?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我们去唱歌了。",
+              "py": "Wǒmen qù chàng gē le.",
+              "vi": "Bọn tớ đi hát karaoke."
+            },
+            {
+              "speaker": "同事",
+              "zh": "你们唱了多久？",
+              "py": "Nǐmen chàngle duō jiǔ?",
+              "vi": "Các cậu hát bao lâu?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我们唱了两个小时歌，晚上还去听音乐会了。",
+              "py": "Wǒmen chàngle liǎng ge xiǎoshí gē, wǎnshang hái qù tīng yīnyuèhuì le.",
+              "vi": "Bọn tớ hát hai tiếng đồng hồ, buổi tối còn đi nghe hòa nhạc nữa."
+            },
+            {
+              "speaker": "同事",
+              "zh": "你们都对音乐感兴趣吗？",
+              "py": "Nǐmen dōu duì yīnyuè gǎn xìngqù ma?",
+              "vi": "Hai người đều có hứng thú với âm nhạc à?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "她对音乐感兴趣，我对她更感兴趣。",
+              "py": "Tā duì yīnyuè gǎn xìngqù, wǒ duì tā gèng gǎn xìngqù.",
+              "vi": "Cô ấy có hứng thú với âm nhạc, còn tớ thì có hứng thú với cô ấy hơn."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在休息室",
+          "sceneVi": "Trong phòng giải lao",
+          "pdfPages": [
+            72
+          ],
+          "lines": [
+            {
+              "speaker": "小刚",
+              "zh": "我跟小丽下个月结婚，到时候欢迎你来。",
+              "py": "Wǒ gēn Xiǎolì xià ge yuè jié hūn, dào shíhou huānyíng nǐ lái.",
+              "vi": "Tháng sau tớ với Tiểu Lệ kết hôn, lúc đó hoan nghênh cậu đến nhé."
+            },
+            {
+              "speaker": "同事",
+              "zh": "什么？结婚？",
+              "py": "Shénme? Jié hūn?",
+              "vi": "Cái gì cơ? Kết hôn á?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "对啊，突然吗？",
+              "py": "Duì a, tūrán ma?",
+              "vi": "Đúng vậy, bất ngờ lắm hả?"
+            },
+            {
+              "speaker": "同事",
+              "zh": "你们不是刚认识吗？",
+              "py": "Nǐmen bú shì gāng rènshi ma?",
+              "vi": "Không phải hai người vừa mới quen nhau sao?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我跟她都认识五年了。",
+              "py": "Wǒ gēn tā dōu rènshi wǔ nián le.",
+              "vi": "Tớ với cô ấy quen nhau được 5 năm rồi đấy."
+            },
+            {
+              "speaker": "同事",
+              "zh": "你跟她结婚，那我怎么办啊？",
+              "py": "Nǐ gēn tā jié hūn, nà wǒ zěnme bàn a?",
+              "vi": "Cậu cưới cô ấy rồi, thế thì tớ biết làm sao bây giờ?"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "在公司门口",
+          "sceneVi": "Ở trước cửa công ty",
+          "pdfPages": [
+            73
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "你看看手表，怎么迟到了？",
+              "py": "Nǐ kànkan shǒubiǎo, zěnme chídào le?",
+              "vi": "Anh nhìn đồng hồ xem, sao lại đến muộn thế này?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "没迟到啊。",
+              "py": "Méi chídào a.",
+              "vi": "Anh đâu có đến muộn đâu."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "你不是说七点半来接我吗？你迟到了一刻钟。",
+              "py": "Nǐ bú shì shuō qī diǎn bàn lái jiē wǒ ma? Nǐ chídàole yí kè zhōng.",
+              "vi": "Không phải anh bảo bảy rưỡi đến đón em sao? Anh đến muộn hẳn 15 phút rồi đấy."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "现在不是七点半吗？",
+              "py": "Xiànzài bú shì qī diǎn bàn ma?",
+              "vi": "Bây giờ không phải là bảy rưỡi sao?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "已经差一刻八点了！我都在这儿坐了半个小时了。",
+              "py": "Yǐjīng chà yí kè bā diǎn le! Wǒ dōu zài zhèr zuòle bàn ge xiǎoshí le.",
+              "vi": "Đã tám giờ kém mười lăm rồi! Em ngồi ở đây chờ suốt nửa tiếng đồng hồ rồi đấy."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "不是我迟到了，是你的表快了一刻钟。",
+              "py": "Bú shì wǒ chídào le, shì nǐ de biǎo kuàile yí kè zhōng.",
+              "vi": "Không phải anh đến muộn đâu, mà là đồng hồ của em chạy nhanh 15 phút đấy chứ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "titleZh": "你去哪儿我就去哪儿",
+      "titlePinyin": "Nǐ qù nǎr wǒ jiù qù nǎr",
+      "titleVi": "Em đi đâu thì anh đi đến đó",
+      "pdfStartPage": 80,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在休息室",
+          "sceneVi": "Trong phòng giải lao",
+          "pdfPages": [
+            81
+          ],
+          "lines": [
+            {
+              "speaker": "同事",
+              "zh": "听说你最近打算买房子？",
+              "py": "Tīngshuō nǐ zuìjìn dǎsuàn mǎi fángzi?",
+              "vi": "Nghe nói dạo này bạn định mua nhà à?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "是，昨天去看了看，今天又去看了看，明天还要再去看看。",
+              "py": "Shì, zuótiān qù kànle kàn, jīntiān yòu qù kànle kàn, míngtiān hái yào zài qù kànkan.",
+              "vi": "Đúng vậy, hôm qua đi xem một vòng, hôm nay lại đi xem tiếp, ngày mai chắc vẫn phải đi xem nữa."
+            },
+            {
+              "speaker": "同事",
+              "zh": "都不满意吗？",
+              "py": "Dōu bù mǎnyì ma?",
+              "vi": "Đều không ưng ý chỗ nào à?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "一个没有电梯，不方便。一个有电梯，但是在二十层。",
+              "py": "Yí ge méiyǒu diàntī, bù fāngbiàn. Yí ge yǒu diàntī, dànshì zài èrshí céng.",
+              "vi": "Có một căn không có thang máy, bất tiện lắm. Một căn khác có thang máy thì lại ở tận tầng hai mươi."
+            },
+            {
+              "speaker": "同事",
+              "zh": "二十层怎么了？",
+              "py": "Èrshí céng zěnme le?",
+              "vi": "Tầng hai mươi thì có làm sao đâu?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "太高了，往下看多害怕啊！",
+              "py": "Tài gāo le, wǎng xià kàn duō hàipà a!",
+              "vi": "Cao quá, nhìn xuống dưới sợ chết khiếp đi được!"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在学校",
+          "sceneVi": "Ở trường",
+          "pdfPages": [
+            81
+          ],
+          "lines": [
+            {
+              "speaker": "小明",
+              "zh": "听说你下个星期就要回国了？",
+              "py": "Tīngshuō nǐ xià ge xīngqī jiù yào huí guó le?",
+              "vi": "Nghe nói tuần sau cậu sắp về nước rồi à?"
+            },
+            {
+              "speaker": "马可",
+              "zh": "是啊，真不想离开北京。",
+              "py": "Shì a, zhēn bù xiǎng líkāi Běijīng.",
+              "vi": "Ừ, thật sự tớ chẳng muốn rời xa Bắc Kinh chút nào."
+            },
+            {
+              "speaker": "小明",
+              "zh": "我下星期不在北京，不能去机场送你了。",
+              "py": "Wǒ xià xīngqī bú zài Běijīng, bù néng qù jīchǎng sòng nǐ le.",
+              "vi": "Tuần sau tớ không có ở Bắc Kinh nên không ra sân bay tiễn cậu được rồi."
+            },
+            {
+              "speaker": "马可",
+              "zh": "没关系，你忙吧。",
+              "py": "Méi guānxi, nǐ máng ba.",
+              "vi": "Không sao đâu, cậu cứ lo công việc đi."
+            },
+            {
+              "speaker": "小明",
+              "zh": "这个小熊猫送给你，欢迎你以后再到中国来。",
+              "py": "Zhège xiǎo xióngmāo sòng gěi nǐ, huānyíng nǐ yǐhòu zài dào Zhōngguó lái.",
+              "vi": "Chú gấu trúc nhỏ này tặng cậu làm kỷ niệm, hoan nghênh cậu sau này lại sang Trung Quốc chơi nhé."
+            },
+            {
+              "speaker": "马可",
+              "zh": "谢谢。希望以后能再见面。",
+              "py": "Xièxie. Xīwàng yǐhòu néng zài jiàn miàn.",
+              "vi": "Cảm ơn cậu nhiều. Hy vọng sau này chúng mình có dịp gặp lại nhau."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在咖啡厅",
+          "sceneVi": "Ở quán cà phê",
+          "pdfPages": [
+            81
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "小刚，我们坐哪儿？",
+              "py": "Xiǎogāng, wǒmen zuò nǎr?",
+              "vi": "Tiểu Cương, chúng mình ngồi đâu bây giờ?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "你坐哪儿我就坐哪儿。",
+              "py": "Nǐ zuò nǎr wǒ jiù zuò nǎr.",
+              "vi": "Em ngồi đâu thì anh ngồi đó."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "坐这儿吧，这儿安静。你想喝什么饮料？",
+              "py": "Zuò zhèr ba, zhèr ānjìng. Nǐ xiǎng hē shénme yǐnliào?",
+              "vi": "Ngồi đây đi, chỗ này yên tĩnh. Anh muốn uống đồ uống gì nào?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "你喝什么我就喝什么。",
+              "py": "Nǐ hē shénme wǒ jiù hē shénme.",
+              "vi": "Em uống gì thì anh uống nấy."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "喝可乐吧。你等我一会儿，我马上回来。",
+              "py": "Hē kělè ba. Nǐ děng wǒ yíhuìr, wǒ mǎshàng huílái.",
+              "vi": "Uống coca nhé. Anh đợi em một lát, em quay lại ngay."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "小丽，你去哪儿？你去哪儿我就去哪儿。",
+              "py": "Xiǎolì, nǐ qù nǎr? Nǐ qù nǎr wǒ jiù qù nǎr.",
+              "vi": "Tiểu Lệ, em đi đâu đấy? Em đi đâu thì anh theo đó."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我去洗手间。",
+              "py": "Wǒ qù xǐshǒujiān.",
+              "vi": "Em đi vệ sinh mà!"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "在周明家",
+          "sceneVi": "Tại nhà Châu Minh",
+          "pdfPages": [
+            82
+          ],
+          "lines": [
+            {
+              "speaker": "老同学",
+              "zh": "快五年了，你几乎没变化。",
+              "py": "Kuài wǔ nián le, nǐ jīhū méi biànhuà.",
+              "vi": "Gần năm năm rồi mà cậu hầu như chẳng thay đổi gì cả."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "谁说的？我胖了，以前的衣服都不能穿了。",
+              "py": "Shéi shuō de? Wǒ pàng le, yǐqián de yīfu dōu bù néng chuān le.",
+              "vi": "Ai bảo thế chứ? Tớ béo ra rồi, quần áo trước đây đều không mặc vừa nữa này."
+            },
+            {
+              "speaker": "老同学",
+              "zh": "健康最重要，胖瘦没关系。",
+              "py": "Jiànkāng zuì zhòngyào, pàng shòu méi guānxi.",
+              "vi": "Sức khỏe là quan trọng nhất, béo hay gầy đâu có quan trọng."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "是呀，想吃什么就吃什么。",
+              "py": "Shì a, xiǎng chī shénme jiù chī shénme.",
+              "vi": "Đúng thế thật, muốn ăn gì thì cứ ăn nấy thôi."
+            },
+            {
+              "speaker": "老同学",
+              "zh": "你做饭还是周明做饭？",
+              "py": "Nǐ zuò fàn háishi Zhōu Míng zuò fàn?",
+              "vi": "Cậu nấu cơm hay là Châu Minh nấu?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "我做，我想吃什么就做什么，想吃多少就做多少。",
+              "py": "Wǒ zuò, wǒ xiǎng chī shénme jiù zuò shénme, xiǎng chī duōshao jiù zuò duōshao.",
+              "vi": "Tớ nấu chứ, tớ thèm món gì thì nấu món đấy, thích ăn bao nhiêu thì nấu bấy nhiêu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "titleZh": "她的汉语说得跟中国人一样好",
+      "titlePinyin": "Tā de Hànyǔ shuō de gēn Zhōngguórén yíyàng hǎo",
+      "titleVi": "Cô ấy nói tiếng Trung Quốc hay như người Trung Quốc vậy",
+      "pdfStartPage": 88,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在教室",
+          "sceneVi": "Trong lớp học",
+          "pdfPages": [
+            89
+          ],
+          "lines": [
+            {
+              "speaker": "大山",
+              "zh": "马可，你的中文越说越好了！",
+              "py": "Mǎkě, nǐ de Zhōngwén yuè shuō yuè hǎo le!",
+              "vi": "Mark, tiếng Trung của cậu càng nói càng tốt đấy!"
+            },
+            {
+              "speaker": "马可",
+              "zh": "哪里哪里，我们班李静说得更好。",
+              "py": "Nǎli nǎli, wǒmen bān Lǐ Jìng shuō de gèng hǎo.",
+              "vi": "Đâu có đâu có, Lý Tịnh lớp mình còn nói tốt hơn cơ."
+            },
+            {
+              "speaker": "大山",
+              "zh": "怎么好？",
+              "py": "Zěnme hǎo?",
+              "vi": "Tốt thế nào?"
+            },
+            {
+              "speaker": "马可",
+              "zh": "她的汉语说得跟中国人一样好。",
+              "py": "Tā de Hànyǔ shuō de gēn Zhōngguórén yíyàng hǎo.",
+              "vi": "Cô ấy nói tiếng Hán tốt y như người Trung Quốc vậy."
+            },
+            {
+              "speaker": "大山",
+              "zh": "李静？我怎么没听说过这个名字？",
+              "py": "Lǐ Jìng? Wǒ zěnme méi tīngshuōguo zhège míngzi?",
+              "vi": "Lý Tịnh á? Sao tớ chưa từng nghe nói qua cái tên này nhỉ?"
+            },
+            {
+              "speaker": "马可",
+              "zh": "她是我们的汉语老师。",
+              "py": "Tā shì wǒmen de Hànyǔ lǎoshī.",
+              "vi": "Cô ấy là giáo viên dạy tiếng Hán của chúng mình mà."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在蛋糕店",
+          "sceneVi": "Ở cửa hàng bánh kem",
+          "pdfPages": [
+            89
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "别吃了，你已经吃了三块蛋糕了。",
+              "py": "Bié chī le, nǐ yǐjīng chīle sān kuài dàngāo le.",
+              "vi": "Đừng ăn nữa, anh đã ăn ba miếng bánh kem rồi đấy."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "这是最后一块。",
+              "py": "Zhè shì zuìhòu yíkuài.",
+              "vi": "Đây là miếng cuối cùng rồi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "你总是吃甜的东西，会越吃越胖。",
+              "py": "Nǐ zǒngshì chī tián de dōngxi, huì yuè chī yuè pàng.",
+              "vi": "Anh cứ ăn đồ ngọt suốt thế này sẽ càng ăn càng béo đấy."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "你放心，我一定不会变胖。",
+              "py": "Nǐ fàng xīn, wǒ yídìng bú huì biàn pàng.",
+              "vi": "Em yên tâm đi, anh nhất định không bị béo đâu."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "为什么？",
+              "py": "Wèi shénme?",
+              "vi": "Tại sao chứ?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我们家的人都很瘦，吃不胖。",
+              "py": "Wǒmen jiā de rén dōu hěn shòu, chī bú pàng.",
+              "vi": "Người nhà anh ai cũng gầy cả, ăn không béo được đâu."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在山上",
+          "sceneVi": "Ở trên núi",
+          "pdfPages": [
+            89
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "我有点儿害怕。",
+              "py": "Wǒ yǒudiǎnr hàipà.",
+              "vi": "Em thấy hơi sợ."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "怎么了？",
+              "py": "Zěnme le?",
+              "vi": "Sao thế em?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "山越高，路越难走。我也越爬越冷。",
+              "py": "Shān yuè gāo, lù yuè nán zǒu. Wǒ yě yuè pá yuè lěng.",
+              "vi": "Núi càng cao thì đường càng khó đi. Em cũng càng leo càng thấy lạnh."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "不用担心，有我呢，我对这儿比较了解。",
+              "py": "Bú yòng dān xīn, yǒu wǒ ne, wǒ duì zhèr bǐjiào liǎojiě.",
+              "vi": "Đừng lo lắng, có anh đây rồi, anh khá hiểu rõ nơi này."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "那我们先休息一下，一会儿再爬。",
+              "py": "Nà wǒmen xiān xiūxi yíxià, yíhuìr zài pá.",
+              "vi": "Vậy chúng ta nghỉ ngơi một lát đã, lát nữa hãy leo tiếp."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "好，一会儿我们可以从中间这条路上去。",
+              "py": "Hǎo, yíhuìr wǒmen kěyǐ cóng zhōngjiān zhè tiáo lù shàngqu.",
+              "vi": "Được rồi, lát nữa chúng ta có thể đi lên theo con đường ở giữa này."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "在小明家",
+          "sceneVi": "Tại nhà bạn Minh",
+          "pdfPages": [
+            90
+          ],
+          "lines": [
+            {
+              "speaker": "同学",
+              "zh": "小明，你的眼睛怎么跟大熊猫一样了？",
+              "py": "Xiǎomíng, nǐ de yǎnjing zěnme gēn dà xióngmāo yíyàng le?",
+              "vi": "Tiểu Minh, mắt của cậu sao giống như gấu trúc thế kia?"
+            },
+            {
+              "speaker": "小明",
+              "zh": "我这几天脚疼，没休息好。",
+              "py": "Wǒ zhè jǐ tiān jiǎo téng, méi xiūxi hǎo.",
+              "vi": "Mấy hôm nay chân tớ bị đau, nghỉ ngơi không được tốt."
+            },
+            {
+              "speaker": "同学",
+              "zh": "去医院了吗？医生说什么？",
+              "py": "Qù yīyuàn le ma? Yīshēng shuō shénme?",
+              "vi": "Đã đi bệnh viện chưa? Bác sĩ nói sao?"
+            },
+            {
+              "speaker": "小明",
+              "zh": "他让我多休息。休息得越多，好得越快。",
+              "py": "Tā ràng wǒ duō xiūxi. Xiūxi de yuè duō, hǎo de yuè kuài.",
+              "vi": "Bác sĩ bảo tớ nghỉ ngơi nhiều. Nghỉ ngơi càng nhiều thì khỏi càng nhanh."
+            },
+            {
+              "speaker": "同学",
+              "zh": "下个月的篮球比赛，你能参加吗？",
+              "py": "Xià ge yuè de lánqiú bǐsài, nǐ néng cānjiā ma?",
+              "vi": "Trận thi đấu bóng rổ tháng sau, cậu có thể tham gia không?"
+            },
+            {
+              "speaker": "小明",
+              "zh": "一定能参加，一点儿影响也没有。",
+              "py": "Yídìng néng cānjiā, yìdiǎnr yǐngxiǎng yě méiyǒu.",
+              "vi": "Nhất định có thể tham gia, không bị ảnh hưởng chút nào cả."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "titleZh": "数学比历史难多了",
+      "titlePinyin": "Shùxué bǐ lìshǐ nán duō le",
+      "titleVi": "Môn Toán khó hơn môn Lịch Sử nhiều",
+      "pdfStartPage": 97,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在教室",
+          "sceneVi": "Trong lớp học",
+          "pdfPages": [
+            98
+          ],
+          "lines": [
+            {
+              "speaker": "朋友",
+              "zh": "大山，你和马可谁个子高？",
+              "py": "Dàshān, nǐ hé Mǎkě shéi gèzi gāo?",
+              "vi": "Đại Sơn, cậu và Mark ai có vóc dáng cao hơn?"
+            },
+            {
+              "speaker": "大山",
+              "zh": "马可比我高，我比马可矮一点儿。",
+              "py": "Mǎkě bǐ wǒ gāo, wǒ bǐ Mǎkě ǎi yìdiǎnr.",
+              "vi": "Mark cao hơn tớ, tớ thấp hơn Mark một chút."
+            },
+            {
+              "speaker": "朋友",
+              "zh": "那你们谁大？",
+              "py": "Nà nǐmen shéi dà?",
+              "vi": "Thế hai cậu ai lớn tuổi hơn?"
+            },
+            {
+              "speaker": "大山",
+              "zh": "我比马可大两岁。",
+              "py": "Wǒ bǐ Mǎkě dà liǎng suì.",
+              "vi": "Tớ lớn hơn Mark hai tuổi."
+            },
+            {
+              "speaker": "朋友",
+              "zh": "你们谁的汉语说得更好？",
+              "py": "Nǐmen shéi de Hànyǔ shuō de gèng hǎo?",
+              "vi": "Ai trong hai cậu nói tiếng Hán tốt hơn?"
+            },
+            {
+              "speaker": "大山",
+              "zh": "马可比我说得好一些，我的汉语没有他好。",
+              "py": "Mǎkě bǐ wǒ shuō de hǎo yìxiē, wǒ de Hànyǔ méiyǒu tā hǎo.",
+              "vi": "Mark nói tốt hơn tớ một chút, tiếng Hán của tớ không tốt bằng cậu ấy."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在教室",
+          "sceneVi": "Trong lớp học",
+          "pdfPages": [
+            98
+          ],
+          "lines": [
+            {
+              "speaker": "小明",
+              "zh": "我喜欢历史课、体育课，不喜欢数学课。",
+              "py": "Wǒ xǐhuan lìshǐ kè, tǐyù kè, bù xǐhuan shùxué kè.",
+              "vi": "Tớ thích tiết Lịch sử, tiết Thể dục, không thích tiết Toán."
+            },
+            {
+              "speaker": "同学",
+              "zh": "为什么？数学也很有意思啊。",
+              "py": "Wèi shénme? Shùxué yě hěn yǒu yìsi a.",
+              "vi": "Tại sao thế? Môn Toán cũng rất thú vị mà."
+            },
+            {
+              "speaker": "小明",
+              "zh": "我觉得数学比历史难多了，我听不懂。",
+              "py": "Wǒ juéde shùxué bǐ lìshǐ nánduō le, wǒ tīng bu dǒng.",
+              "vi": "Tớ thấy môn Toán khó hơn môn Lịch sử nhiều, tớ nghe không hiểu."
+            },
+            {
+              "speaker": "同学",
+              "zh": "别担心，我可以帮你。",
+              "py": "Bié dān xīn, wǒ kěyǐ bāng nǐ.",
+              "vi": "Đừng lo, tớ có thể giúp cậu."
+            },
+            {
+              "speaker": "小明",
+              "zh": "好啊，我们每天学多长时间？",
+              "py": "Hǎo a, wǒmen měi tiān xué duō cháng shíjiān?",
+              "vi": "Hay quá, mỗi ngày chúng mình học bao lâu?"
+            },
+            {
+              "speaker": "同学",
+              "zh": "一两个小时吧。",
+              "py": "Yì-liǎng ge xiǎoshí ba.",
+              "vi": "Khoảng một, hai tiếng nhé."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在休息室",
+          "sceneVi": "Trong phòng giải lao",
+          "pdfPages": [
+            98
+          ],
+          "lines": [
+            {
+              "speaker": "同事",
+              "zh": "你最近比以前来得早多了，搬家了？",
+              "py": "Nǐ zuìjìn bǐ yǐqián lái de zǎoduō le, bān jiā le?",
+              "vi": "Dạo này cậu đến sớm hơn trước nhiều thế, chuyển nhà rồi à?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "是啊，你不知道？我上个月就搬家了，走路二十分钟就到。",
+              "py": "Shì a, nǐ bù zhīdào? Wǒ shàng ge yuè jiù bān jiā le, zǒu lù èrshí fēnzhōng jiù dào.",
+              "vi": "Đúng vậy, cậu không biết sao? Tháng trước tôi đã chuyển nhà rồi, đi bộ hai mươi phút là tới."
+            },
+            {
+              "speaker": "同事",
+              "zh": "那很方便啊。",
+              "py": "Nà hěn fāngbiàn a.",
+              "vi": "Thế thì tiện quá rồi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我还打算买辆自行车，骑车七八分钟就能到。",
+              "py": "Wǒ hái dǎsuan mǎi liàng zìxíngchē, qí chē qī-bā fēnzhōng jiù néng dào.",
+              "vi": "Tôi còn định mua một chiếc xe đạp, đạp xe khoảng bảy, tám phút là có thể tới nơi."
+            },
+            {
+              "speaker": "同事",
+              "zh": "你不是有一辆吗？",
+              "py": "Nǐ bú shì yǒu yí liàng ma?",
+              "vi": "Cậu chẳng phải có một chiếc rồi sao?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "那辆太旧了，要换一辆，很便宜，两三百块钱。",
+              "py": "Nà liàng tài jiù le, yào huàn yí liàng, hěn piányi, liǎng-sān bǎi kuài qián.",
+              "vi": "Chiếc đó cũ quá rồi, phải đổi chiếc khác thôi, rẻ lắm, khoảng hai, ba trăm tệ."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "在看房子",
+          "sceneVi": "Đang xem nhà",
+          "pdfPages": [
+            99
+          ],
+          "lines": [
+            {
+              "speaker": "大山",
+              "zh": "这两个地方的房子一样吗？",
+              "py": "Zhè liǎng ge dìfang de fángzi yíyàng ma?",
+              "vi": "Nhà ở hai nơi này có giống nhau không?"
+            },
+            {
+              "speaker": "中介",
+              "zh": "不一样。您看，学校外边的房子比学校里边的大一些。",
+              "py": "Bù yíyàng. Nín kàn, xuéxiào wàibian de fángzi bǐ xuéxiào lǐbian de dà yìxiē.",
+              "vi": "Không giống nhau đâu ạ. Bác xem này, nhà ở ngoài trường rộng hơn nhà ở trong trường một chút."
+            },
+            {
+              "speaker": "大山",
+              "zh": "大小没关系，主要是环境，哪个更安静？",
+              "py": "Dàxiǎo méi guānxi, zhǔyào shì huánjìng, nǎge gèng ānjìng?",
+              "vi": "Rộng hẹp không sao, chủ yếu là môi trường xung quanh, nơi nào yên tĩnh hơn?"
+            },
+            {
+              "speaker": "中介",
+              "zh": "学校里边的没有学校外边的那么安静。",
+              "py": "Xuéxiào lǐbian de méiyǒu xuéxiào wàibian de nàme ānjìng.",
+              "vi": "Bên trong trường không yên tĩnh bằng bên ngoài trường đâu ạ."
+            },
+            {
+              "speaker": "大山",
+              "zh": "哪个方便一些呢？",
+              "py": "Nǎge fāngbiàn yìxiē ne?",
+              "vi": "Nơi nào thuận tiện hơn một chút?"
+            },
+            {
+              "speaker": "中介",
+              "zh": "学校里边比学校外边方便，附近有三四个车站。",
+              "py": "Xuéxiào lǐbian bǐ xuéxiào wàibian fāngbiàn, fùjìn yǒu sānsì ge chēzhàn.",
+              "vi": "Bên trong trường thuận tiện hơn bên ngoài, gần đó có ba, bốn trạm xe buýt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "titleZh": "别忘了把空调关了",
+      "titlePinyin": "Bié wàng le bǎ kōngtiáo guān le",
+      "titleVi": "Đừng quên tắt máy điều hòa không khí nhé",
+      "pdfStartPage": 106,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在教室",
+          "sceneVi": "Trong lớp học",
+          "pdfPages": [
+            107
+          ],
+          "lines": [
+            {
+              "speaker": "小明",
+              "zh": "我先走了。",
+              "py": "Wǒ xiān zǒu le.",
+              "vi": "Tớ đi trước đây."
+            },
+            {
+              "speaker": "同学",
+              "zh": "你去哪儿？",
+              "py": "Nǐ qù nǎr?",
+              "vi": "Cậu đi đâu thế?"
+            },
+            {
+              "speaker": "小明",
+              "zh": "我去图书馆借本书。",
+              "py": "Wǒ qù túshūguǎn jiè běn shū.",
+              "vi": "Tớ đến thư viện mượn quyển sách."
+            },
+            {
+              "speaker": "同学",
+              "zh": "帮我把这本词典还了吧。",
+              "py": "Bāng wǒ bǎ zhè běn cídiǎn huánle ba.",
+              "vi": "Tiện thể giúp tớ trả cuốn từ điển này nhé."
+            },
+            {
+              "speaker": "小明",
+              "zh": "好，等一会儿你离开教室的时候，记得把灯关了。",
+              "py": "Hǎo, děng yíhuìr nǐ lí kāi jiàoshì de shíhou, jìde bǎ dēng guān le.",
+              "vi": "Được thôi, lát nữa khi cậu rời khỏi lớp học nhớ tắt đèn nhé."
+            },
+            {
+              "speaker": "同学",
+              "zh": "好的，放心吧。",
+              "py": "Hǎo de, fàng xīn ba.",
+              "vi": "Được rồi, cậu cứ yên tâm đi."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在会议室",
+          "sceneVi": "Trong phòng họp",
+          "pdfPages": [
+            107
+          ],
+          "lines": [
+            {
+              "speaker": "周明",
+              "zh": "会议结束后，别忘记把空调关了。",
+              "py": "Huìyì jiéshù hòu, bié wàngjì bǎ kōngtiáo guān le.",
+              "vi": "Sau khi cuộc họp kết thúc, đừng quên tắt máy điều hòa nhé."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "好的。王经理两点左右来了个电话。",
+              "py": "Hǎo de. Wáng jīnglǐ liǎng diǎn zuǒyòu láile ge diànhuà.",
+              "vi": "Vâng ạ. Giám đốc Vương khoảng hai giờ có gọi điện thoại đến."
+            },
+            {
+              "speaker": "周明",
+              "zh": "他已经到北京了？",
+              "py": "Tā yǐjīng dào Běijīng le?",
+              "vi": "Ông ấy đã đến Bắc Kinh rồi à?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "是的，他正坐地铁来我们公司呢。",
+              "py": "Shì de, tā zhèng zuò dìtiě lái wǒmen gōngsī ne.",
+              "vi": "Vâng, ông ấy đang đi tàu điện ngầm đến công ty chúng ta."
+            },
+            {
+              "speaker": "周明",
+              "zh": "等他到了就告诉我。",
+              "py": "Děng tā dàole jiù gàosu wǒ.",
+              "vi": "Đợi ông ấy đến nơi thì báo cho tôi biết nhé."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在客厅",
+          "sceneVi": "Trong phòng khách",
+          "pdfPages": [
+            107
+          ],
+          "lines": [
+            {
+              "speaker": "妈妈",
+              "zh": "还差一双筷子，你去拿一下。",
+              "py": "Hái chà yì shuāng kuàizi, nǐ qù ná yíxià.",
+              "vi": "Còn thiếu một đôi đũa nữa, con đi lấy đi."
+            },
+            {
+              "speaker": "儿子",
+              "zh": "今天怎么做了这么多菜？",
+              "py": "Jīntiān zěnme zuòle zhème duō cài?",
+              "vi": "Hôm nay sao mẹ nấu nhiều món thế ạ?"
+            },
+            {
+              "speaker": "妈妈",
+              "zh": "今天是你爸爸的生日。",
+              "py": "Jīntiān shì nǐ bàba de shēngrì.",
+              "vi": "Hôm nay là sinh nhật của bố con mà."
+            },
+            {
+              "speaker": "儿子",
+              "zh": "真的啊？我把爸爸的生日忘了。那我们今天喝点儿啤酒吧。",
+              "py": "Zhēn de a? Wǒ bǎ bàba de shēngrì wàng le. Nà wǒmen jīntiān hē diǎnr píjiǔ ba.",
+              "vi": "Thật thế ạ? Con quên mất sinh nhật của bố rồi. Thế hôm nay chúng ta uống chút bia nhé."
+            },
+            {
+              "speaker": "妈妈",
+              "zh": "医生说你爸爸一口酒都不能喝，别让他看见酒瓶子。",
+              "py": "Yīshēng shuō nǐ bàba yì kǒu jiǔ dōu bù néng hē, bié ràng tā kànjiàn jiǔ píngzi.",
+              "vi": "Bác sĩ dặn bố con một ngụm rượu bia cũng không được uống, đừng để ông ấy nhìn thấy chai rượu."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "谈电脑",
+          "sceneVi": "Nói về máy tính",
+          "pdfPages": [
+            108
+          ],
+          "lines": [
+            {
+              "speaker": "我",
+              "zh": "这个笔记本电脑我去年买的时候要五千块左右，现在便宜多了。",
+              "py": "Zhè ge bǐjìběn diànnǎo wǒ qùnián mǎi de shíhou yào wǔ qiān kuài zuǒyòu, xiànzài piányi duō le.",
+              "vi": "Chiếc máy tính xách tay này khi tôi mua năm ngoái giá khoảng năm ngàn tệ, bây giờ rẻ hơn nhiều rồi."
+            },
+            {
+              "speaker": "我",
+              "zh": "我想把这个电脑卖了，再买一个更好的。",
+              "py": "Wǒ xiǎng bǎ zhè ge diànnǎo mài le, zài mǎi yí ge gèng hǎo de.",
+              "vi": "Tôi muốn bán chiếc máy tính này đi, rồi mua một chiếc tốt hơn."
+            },
+            {
+              "speaker": "我",
+              "zh": "现在我每天起床后的第一件事就是打开电脑，看电子邮件。",
+              "py": "Xiànzài wǒ měi tiān qǐ chuáng hòu de dì yī jiàn shì jiù shì dǎ kāi diànnǎo, kàn diànzǐ yóujiàn.",
+              "vi": "Bây giờ việc đầu tiên sau khi thức dậy mỗi ngày của tôi là bật máy tính lên xem email."
+            },
+            {
+              "speaker": "我",
+              "zh": "我已经很少写信，也很少用笔写字，已经习惯用电脑来学习和工作了。",
+              "py": "Wǒ yǐjīng hěn shǎo xiě xìn, yě hěn shǎo yòng bǐ xiě zì, yǐjīng xíguàn yòng diànnǎo lái xuéxí hé gōngzuò le.",
+              "vi": "Tôi đã rất ít khi viết thư, cũng rất ít khi dùng bút viết chữ, đã quen với việc dùng máy tính để học tập và làm việc rồi."
+            },
+            {
+              "speaker": "我",
+              "zh": "哪一天突然没有了电脑，我们怎么办呢？",
+              "py": "Nǎ yì tiān tūrán méiyǒule diànnǎo, wǒmen zěnme bàn ne?",
+              "vi": "Nếu một ngày nào đó đột nhiên không còn máy tính nữa thì chúng ta phải làm thế nào đây?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "titleZh": "把重要的东西放在我这儿吧",
+      "titlePinyin": "Bǎ zhòngyào de dōngxi fàng zài wǒ zhèr ba",
+      "titleVi": "Hãy để những đồ quan trọng ở chỗ tôi đi",
+      "pdfStartPage": 114,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            115
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "今天太阳从西边出来了吗？",
+              "py": "Jīntiān tàiyáng cóng xībian chūlai le ma?",
+              "vi": "Hôm nay mặt trời mọc từ đằng tây rồi sao?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "怎么了？",
+              "py": "Zěnme le?",
+              "vi": "Sao thế em?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "你怎么这么早就要睡觉了？以前都要12点以后才睡觉。",
+              "py": "Nǐ zěnme zhème zǎo jiù yào shuì jiào le? Yǐqián dōu yào shí'èr diǎn yǐhòu cái shuì jiào.",
+              "vi": "Sao anh lại đi ngủ sớm thế này? Trước đây toàn sau 12 giờ anh mới ngủ mà."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我明天8点就要到公司。",
+              "py": "Wǒ míngtiān bā diǎn jiù yào dào gōngsī.",
+              "vi": "Ngày mai 8 giờ anh phải có mặt ở công ty rồi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "有事吗？",
+              "py": "Yǒu shì ma?",
+              "vi": "Có chuyện gì thế anh?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "经理生气了，他告诉我，明天8点不到，以后就别来了。",
+              "py": "Jīnglǐ shēng qì le, tā gàosu wǒ, míngtiān bā diǎn bú dào, yǐhòu jiù bié lái le.",
+              "vi": "Giám đốc giận rồi, ông ấy bảo anh mai mà 8 giờ không đến thì sau này khỏi đến luôn."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            115
+          ],
+          "lines": [
+            {
+              "speaker": "小刚",
+              "zh": "我要跟周经理去外地办事，明天的飞机。",
+              "py": "Wǒ yào gēn Zhōu jīnglǐ qù wàidì bàn shì, míngtiān de fēijī.",
+              "vi": "Anh phải cùng giám đốc Chu đi công tác ngoại tỉnh, chuyến bay ngày mai."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "那我帮你把衣服放到行李箱里吧。什么时候回来？",
+              "py": "Nà wǒ bāng nǐ bǎ yīfu fàngdào xínglixiāng li ba. Shénme shíhou huílai?",
+              "vi": "Thế để em giúp anh xếp quần áo vào vali nhé. Khi nào anh về?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "一个星期就回来。",
+              "py": "Yí ge xīngqī jiù huílai.",
+              "vi": "Một tuần là anh về rồi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "啊？一个星期以后才回来？",
+              "py": "Á? Yí ge xīngqī yǐhòu cái huílai?",
+              "vi": "A? Tận một tuần sau mới về cơ á?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "你要自己照顾好自己，我已经给你准备好吃的和喝的了。",
+              "py": "Nǐ yào zìjǐ zhàogù hǎo zìjǐ, wǒ yǐjīng gěi nǐ zhǔnbèi hǎo chī de hé hē de le.",
+              "vi": "Em phải tự chăm sóc tốt cho bản thân nhé, anh đã chuẩn bị sẵn đồ ăn thức uống cho em rồi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "好吧。我已经把我的照片放在你的包里了。",
+              "py": "Hǎo ba. Wǒ yǐjīng bǎ wǒ de zhàopiàn fàng zài nǐ de bāo li le.",
+              "vi": "Được rồi ạ. Em cũng đã để ảnh của em vào trong túi của anh rồi đấy."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在机场",
+          "sceneVi": "Ở sân bay",
+          "pdfPages": [
+            115
+          ],
+          "lines": [
+            {
+              "speaker": "周明",
+              "zh": "你怎么才来？",
+              "py": "Nǐ zěnme cái lái?",
+              "vi": "Sao giờ cậu mới đến?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "对不起，周经理，来机场的路上我才发现忘带护照了。",
+              "py": "Duìbuqǐ, Zhōu jīnglǐ, lái jīchǎng de lùshang wǒ cái fāxiàn wàng dài hùzhào le.",
+              "vi": "Xin lỗi giám đốc Chu, trên đường tới sân bay em mới phát hiện là quên mang hộ chiếu."
+            },
+            {
+              "speaker": "周明",
+              "zh": "快点儿吧，飞机就要起飞了。",
+              "py": "Kuài diǎnr ba, fēijī jiù yào qǐfēi le.",
+              "vi": "Nhanh lên nào, máy bay sắp cất cánh rồi."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "您有钱吗？司机把我送到机场的时候，我才发现忘记带钱包了。",
+              "py": "Nín yǒu qián ma? Sījī bǎ wǒ sòng dào jīchǎng de shíhou, wǒ cái fāxiàn wàngjì dài qiánbāo le.",
+              "vi": "Anh có tiền không ạ? Lúc tài xế chở em đến sân bay em mới phát hiện quên mang ví tiền."
+            },
+            {
+              "speaker": "周明",
+              "zh": "我看你还是把重要的东西放在我这儿吧。",
+              "py": "Wǒ kàn nǐ háishi bǎ zhòngyào de dōngxi fàng zài wǒ zhèr ba.",
+              "vi": "Tôi thấy cậu tốt nhất là cứ để những thứ quan trọng ở chỗ tôi đi."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "谈学习习惯",
+          "sceneVi": "Nói về thói quen học tập",
+          "pdfPages": [
+            116
+          ],
+          "lines": [
+            {
+              "speaker": "我",
+              "zh": "我是一个中学老师，教学生画画儿。",
+              "py": "Wǒ shì yí ge zhōngxué lǎoshī, jiāo xuésheng huà huàr.",
+              "vi": "Tôi là một giáo viên trung học, dạy học sinh vẽ tranh."
+            },
+            {
+              "speaker": "我",
+              "zh": "每次下课前，我都会把下次学生需要带的东西写在黑板上，但是每次上课时，总会有学生忘了拿铅笔，所以我有点儿生气，不是因为他们没带铅笔，是因为他们没有好的学习习惯。",
+              "py": "Měi cì xià kè qián, wǒ dōu huì bǎ xià cì xuésheng xūyào dài de dōngxi xiě zài hēibǎn shang, dànshì měi cì shàng kè shí, zǒng huì yǒu xuésheng wàngle ná qiānbǐ, suǒyǐ wǒ yǒudiǎnr shēng qì, bú shì yīnwèi tāmen méi dài qiānbǐ, shì yīnwèi tāmen méiyǒu hǎo de xuéxí xíguàn.",
+              "vi": "Trước mỗi lần tan học, tôi đều viết những thứ học sinh cần mang cho buổi học tới lên bảng đen, nhưng mỗi lần vào lớp lại luôn có học sinh quên mang bút chì, thế nên tôi hơi tức giận, không phải vì các em không mang bút chì, mà là vì các em không có thói quen học tập tốt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "titleZh": "我是走回来的",
+      "titlePinyin": "Wǒ shì zǒuhuílai de",
+      "titleVi": "Anh đi bộ về",
+      "pdfStartPage": 123,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            124
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "你终于回来了！从哪儿买回来这么多东西啊？",
+              "py": "Nǐ zhōngyú huílai le! Cóng nǎr mǎi huilai zhème duō dōngxi a?",
+              "vi": "Cuối cùng anh cũng về rồi! Anh mua ở đâu về mà nhiều đồ thế này?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "都是从那边的商店买回来的。",
+              "py": "Dōu shì cóng nà bian de shāngdiàn mǎi huilai de.",
+              "vi": "Đều mua ở cửa hàng bên kia về đấy."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "怎么还买红酒回来了？谁喝啊？",
+              "py": "Zěnme hái mǎi hóngjiǔ huilai le? Shéi hē a?",
+              "vi": "Sao lại còn mua cả rượu vang đỏ về nữa? Ai uống vậy?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "这是给爷爷的礼物，明天我们一起送过去，看看爷爷奶奶。",
+              "py": "Zhè shì gěi yéye de lǐwù, míngtiān wǒmen yìqǐ sòng guoqu, kànkan yéye nǎinai.",
+              "vi": "Đây là quà biếu ông nội, ngày mai chúng mình cùng mang sang, thăm ông bà nội."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "那我的礼物呢？快拿出来让我看看。",
+              "py": "Nà wǒ de lǐwù ne? Kuài ná chulai ràng wǒ kànkan.",
+              "vi": "Thế quà của em đâu? Mau lấy ra cho em xem nào."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "我不是已经回来了吗？",
+              "py": "Wǒ bú shì yǐjīng huílai le ma?",
+              "vi": "Chẳng phải anh đã về rồi sao?"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            124
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "我今天看见你和一个女的进了咖啡店，她是谁啊？",
+              "py": "Wǒ jīntiān kànjiàn nǐ hé yí ge nǚ de jìnle kāfēidiàn, tā shì shéi a?",
+              "vi": "Hôm nay em thấy anh và một cô gái vào quán cà phê, cô ấy là ai thế?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "她是我今天在路上遇到的一个老同学。",
+              "py": "Tā shì wǒ jīntiān zài lùshang yùdào de yí ge lǎo tóngxué.",
+              "vi": "Cô ấy là một người bạn học cũ hôm nay anh tình cờ gặp trên đường."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "你们就一起去喝咖啡了？",
+              "py": "Nǐmen jiù yìqǐ qù hē kāfēi le?",
+              "vi": "Thế là hai người rủ nhau đi uống cà phê luôn à?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "是啊，一边喝咖啡一边说了些过去的事。",
+              "py": "Shì a, yìbiān hē kāfēi yìbiān shuōle xiē guòqù de shì.",
+              "vi": "Đúng vậy, vừa uống cà phê vừa nói vài chuyện ngày xưa."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "你回来得这么晚，是说了很多过去的事吗？",
+              "py": "Nǐ huílai de zhème wǎn, shì shuōle hěn duō guòqù de shì ma?",
+              "vi": "Anh về muộn thế này, là vì nói rất nhiều chuyện quá khứ sao?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "不是。没有公共汽车了，我是走回来的。",
+              "py": "Bú shì. Méiyǒu gōnggòng qìchē le, wǒ shì zǒu huilai de.",
+              "vi": "Không phải. Hết xe buýt rồi, anh phải đi bộ về đấy."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在打电话",
+          "sceneVi": "Nói chuyện qua điện thoại",
+          "pdfPages": [
+            124
+          ],
+          "lines": [
+            {
+              "speaker": "同事",
+              "zh": "小丽，周末你一般跟小刚出去看电影吗？",
+              "py": "Xiǎolì, zhōumò nǐ yìbān gēn Xiǎogāng chūqu kàn diànyǐng ma?",
+              "vi": "Tiểu Lệ này, cuối tuần cậu thường cùng Tiểu Cương đi xem phim không?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我很少去电影院看电影，我更愿意在家看电视。",
+              "py": "Wǒ hěn shǎo qù diànyǐngyuàn kàn diànyǐng, wǒ gèng yuànyì zài jiā kàn diànshì.",
+              "vi": "Mình rất ít khi đến rạp xem phim, mình thích ở nhà xem tivi hơn."
+            },
+            {
+              "speaker": "同事",
+              "zh": "看电视有什么意思啊？",
+              "py": "Kàn diànshì yǒu shénme yìsi a?",
+              "vi": "Xem tivi có gì hay đâu chứ?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "可以一边吃一边看，坐久了还可以站起来休息一会儿。",
+              "py": "Kěyǐ yìbiān chī yìbiān kàn, zuò jiǔ le hái kěyǐ zhàn qǐlai xiūxi yíhuìr.",
+              "vi": "Có thể vừa ăn vừa xem, ngồi lâu thì còn có thể đứng dậy nghỉ ngơi một lát."
+            },
+            {
+              "speaker": "同事",
+              "zh": "你应该多出去走走，这样你们的生活会更有意思。",
+              "py": "Nǐ yīnggāi duō chūqu zǒuzou, zhèyàng nǐmen de shēnghuó huì gèng yǒu yìsi.",
+              "vi": "Cậu nên ra ngoài đi dạo nhiều hơn, như thế cuộc sống của hai người sẽ thú vị hơn."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "有他在，我的生活已经很有意思了。",
+              "py": "Yǒu tā zài, wǒ de shēnghuó yǐjīng hěn yǒu yìsi le.",
+              "vi": "Có anh ấy ở bên, cuộc sống của mình đã rất thú vị rồi."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "谈丈夫",
+          "sceneVi": "Nói về người chồng",
+          "pdfPages": [
+            125
+          ],
+          "lines": [
+            {
+              "speaker": "我",
+              "zh": "刚结婚的时候，我丈夫是中学老师，他喜欢每天早上起床后，一边吃早饭一边看报纸。",
+              "py": "Gāng jié hūn de shíhou, wǒ zhàngfu shì zhōngxué lǎoshī, tā xǐhuan měi tiān zǎoshang qǐ chuáng hòu, yìbiān chī zǎofàn yìbiān kàn bàozhǐ.",
+              "vi": "Hồi mới cưới, chồng tôi là giáo viên trung học, anh ấy thích mỗi sáng sau khi thức dậy vừa ăn sáng vừa đọc báo."
+            },
+            {
+              "speaker": "我",
+              "zh": "十年过去了，现在他已经是校长了，因为太忙，每天早上我起床后都看不到他，晚上很晚他才回到家。",
+              "py": "Shí nián guòqu le, xiànzài tā yǐjīng shì xiàozhǎng le, yīnwèi tài máng, měi tiān zǎoshang wǒ qǐ chuáng hòu dōu kàn bu dào tā, wǎnshang hěn wǎn tā cái huí dào jiā.",
+              "vi": "Mười năm trôi qua rồi, bây giờ anh ấy đã là hiệu trưởng, vì quá bận nên mỗi sáng tôi thức dậy đều không nhìn thấy anh, buổi tối rất muộn anh mới về đến nhà."
+            },
+            {
+              "speaker": "我",
+              "zh": "我真怕他累坏了。",
+              "py": "Wǒ zhēn pà tā lèi huài le.",
+              "vi": "Tôi thực sự sợ anh ấy mệt lả đi mất."
+            },
+            {
+              "speaker": "我",
+              "zh": "希望他能少一些会议，多一些休息，可以经常和我还有孩子在一起。",
+              "py": "Xīwàng tā néng shǎo yìxiē huìyì, duō yìxiē xiūxi, kěyǐ jīngcháng hé wǒ hái yǒu háizi zài yìqǐ.",
+              "vi": "Hy vọng anh ấy có thể bớt chút họp hành, nghỉ ngơi nhiều hơn, và có thể thường xuyên ở bên tôi và con."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "titleZh": "你把水果拿过来",
+      "titlePinyin": "Nǐ bǎ shuǐguǒ ná guòlái",
+      "titleVi": "Cậu hãy mang trái cây đến đây",
+      "pdfStartPage": 132,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            133
+          ],
+          "lines": [
+            {
+              "speaker": "周太太",
+              "zh": "客人就要来了，你怎么还不打扫房间啊？",
+              "py": "Kèrén jiù yào lái le, nǐ zěnme hái bù dǎsǎo fángjiān a?",
+              "vi": "Khách sắp đến rồi đấy, sao anh vẫn chưa dọn dẹp phòng ốc thế?"
+            },
+            {
+              "speaker": "周明",
+              "zh": "别着急，我让孩子们打扫呢，客人来的时候，他们会把房间打扫干净。",
+              "py": "Bié zháojí, wǒ ràng háizimen dǎsǎo ne, kèrén lái de shíhou, tāmen huì bǎ fángjiān dǎsǎo gānjìng.",
+              "vi": "Đừng vội, anh bảo mấy đứa nhỏ dọn dẹp rồi, lúc khách đến chúng sẽ dọn phòng sạch sẽ mà."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "那你也不能看电视啊。",
+              "py": "Nà nǐ yě bù néng kàn diànshì a.",
+              "vi": "Thế anh cũng không thể ngồi xem tivi như vậy được."
+            },
+            {
+              "speaker": "周明",
+              "zh": "你让我做什么？",
+              "py": "Nǐ ràng wǒ zuò shénme?",
+              "vi": "Em muốn anh làm gì nào?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "先把茶和杯子放好，然后把冰箱里的西瓜拿出来。",
+              "py": "Xiān bǎ chá hé bēizi fànghǎo, ránhòu bǎ bīngxiāng li de xīguā ná chulai.",
+              "vi": "Trước tiên đặt sẵn trà và tách ra, sau đó lấy dưa hấu trong tủ lạnh ra."
+            },
+            {
+              "speaker": "周明",
+              "zh": "太热了，我还是先把空调打开吧。",
+              "py": "Tài rè le, wǒ háishi xiān bǎ kōngtiáo dǎ kāi ba.",
+              "vi": "Nóng quá, anh cứ mở điều hòa lên trước đã nhé."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在打电话",
+          "sceneVi": "Nói chuyện qua điện thoại",
+          "pdfPages": [
+            133
+          ],
+          "lines": [
+            {
+              "speaker": "同事",
+              "zh": "你在忙什么呢？刚才打你的手机你也不接。",
+              "py": "Nǐ zài máng shénme ne? Gāngcái dǎ nǐ de shǒujī nǐ yě bù jiē.",
+              "vi": "Cậu đang bận gì thế? Vừa nãy gọi di động cho cậu mà cậu cũng không nghe máy."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "对不起，我刚洗了个澡，没听见。有什么事吗？",
+              "py": "Duìbuqǐ, wǒ gāng xǐle ge zǎo, méi tīngjiàn. Yǒu shénme shì ma?",
+              "vi": "Xin lỗi nhé, tôi vừa tắm xong nên không nghe thấy. Có chuyện gì không?"
+            },
+            {
+              "speaker": "同事",
+              "zh": "我想问问你公司里的一些事情。",
+              "py": "Wǒ xiǎng wènwen nǐ gōngsī li de yìxiē shìqing.",
+              "vi": "Tôi muốn hỏi thăm cậu vài chuyện ở công ty."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "你先等一下，我去把电视关了。",
+              "py": "Nǐ xiān děng yíxià, wǒ qù bǎ diànshì guān le.",
+              "vi": "Cậu đợi một chút nhé, tôi đi tắt tivi đã."
+            },
+            {
+              "speaker": "同事",
+              "zh": "没关系，你先把电视节目看完吧，然后再给我回电话。",
+              "py": "Méi guānxi, nǐ xiān bǎ diànshì jiémù kànwán ba, ránhòu zài gěi wǒ huí diànhuà.",
+              "vi": "Không sao đâu, cậu cứ xem hết chương trình tivi đi đã, rồi gọi lại cho tôi sau."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在小明家",
+          "sceneVi": "Tại nhà bạn Minh",
+          "pdfPages": [
+            133
+          ],
+          "lines": [
+            {
+              "speaker": "同学",
+              "zh": "今晚的月亮真漂亮，像白色的盘子一样。",
+              "py": "Jīn wǎn de yuèliang zhēn piàoliang, xiàng báisè de pánzi yíyàng.",
+              "vi": "Trăng tối nay đẹp thật đấy, trông như chiếc đĩa màu trắng vậy."
+            },
+            {
+              "speaker": "小明",
+              "zh": "是啊，外边也不刮风，我们坐在外边一边看月亮一边吃东西，怎么样？",
+              "py": "Shì a, wàibian yě bù guā fēng, wǒmen zuò zài wàibian yìbiān kàn yuèliang yìbiān chī dōngxi, zěnmeyàng?",
+              "vi": "Đúng thế, bên ngoài cũng không có gió, chúng mình ngồi ngoài này vừa ngắm trăng vừa ăn đồ nhé, thấy thế nào?"
+            },
+            {
+              "speaker": "同学",
+              "zh": "好啊，我先把桌椅搬出去，然后你把水果拿过来，我们听叔叔阿姨讲讲他们年轻时候的故事。",
+              "py": "Hǎo a, wǒ xiān bǎ zhuōyǐ bān chuqu, ránhòu nǐ bǎ shuǐguǒ ná guolai, wǒmen tīng shūshu āyí jiǎngjiang tāmen niánqīng shíhou de gùshì.",
+              "vi": "Tuyệt quá, để mình dọn bàn ghế ra ngoài trước, rồi cậu mang trái cây lại đây, chúng mình nghe chú dì kể chuyện thời trẻ của hai người."
+            },
+            {
+              "speaker": "小明",
+              "zh": "太好了！记得给大山打个电话，让他马上过来。",
+              "py": "Tài hǎo le! Jìde gěi Dàshān dǎ ge diànhuà, ràng tā mǎshàng guolai.",
+              "vi": "Hay quá! Nhớ gọi điện cho Đại Sơn bảo cậu ấy qua ngay nhé."
+            },
+            {
+              "speaker": "同学",
+              "zh": "不用打了，你听外边的声音，一定是大山。",
+              "py": "Búyòng dǎ le, nǐ tīng wàibian de shēngyīn, yídìng shì Dàshān.",
+              "vi": "Không cần gọi đâu, cậu nghe tiếng động ngoài kia kìa, chắc chắn là Đại Sơn đấy."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "做水果饭",
+          "sceneVi": "Làm món cơm trái cây",
+          "pdfPages": [
+            134
+          ],
+          "lines": [
+            {
+              "speaker": "我",
+              "zh": "你吃过水果饭吗？",
+              "py": "Nǐ chī guo shuǐguǒ fàn ma?",
+              "vi": "Bạn đã từng ăn cơm trái cây chưa?"
+            },
+            {
+              "speaker": "我",
+              "zh": "你在饭馆儿的菜单上见过水果饭吗？",
+              "py": "Nǐ zài fànguǎnr de càidān shang jiàn guo shuǐguǒ fàn ma?",
+              "vi": "Bạn đã thấy cơm trái cây trên thực đơn của quán ăn bao giờ chưa?"
+            },
+            {
+              "speaker": "我",
+              "zh": "你想学着做水果饭吗？",
+              "py": "Nǐ xiǎng xuézhe zuò shuǐguǒ fàn ma?",
+              "vi": "Bạn có muốn học làm món cơm trái cây không?"
+            },
+            {
+              "speaker": "我",
+              "zh": "其实做水果饭很简单，先把米饭做好，然后再把一块块新鲜的水果放进去，水果饭就做好了。",
+              "py": "Qíshí zuò shuǐguǒ fàn hěn jiǎndān, xiān bǎ mǐfàn zuòhǎo, ránhòu zài bǎ yí kuàikuài xīnxian de shuǐguǒ fàng jinqu, shuǐguǒ fàn jiù zuòhǎo le.",
+              "vi": "Thực ra làm cơm trái cây rất đơn giản, trước tiên nấu cơm chín, sau đó cho từng miếng trái cây tươi vào là món cơm trái cây đã làm xong rồi."
+            },
+            {
+              "speaker": "我",
+              "zh": "你可以做苹果饭、香蕉饭，要是你愿意，还可以做西瓜饭。",
+              "py": "Nǐ kěyǐ zuò píngguǒ fàn, xiāngjiāo fàn, yàoshi nǐ yuànyì, hái kěyǐ zuò xīguā fàn.",
+              "vi": "Bạn có thể làm cơm táo, cơm chuối, nếu muốn bạn cũng có thể làm cơm dưa hấu nữa."
+            },
+            {
+              "speaker": "我",
+              "zh": "多吃新鲜水果对身体好。",
+              "py": "Duō chī xīnxian shuǐguǒ duì shēntǐ hǎo.",
+              "vi": "Ăn nhiều hoa quả tươi rất tốt cho sức khỏe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "titleZh": "其他都没什么问题",
+      "titlePinyin": "Qítā dōu méi shénme wèntí",
+      "titleVi": "Những câu khác đều không có vấn đề gì",
+      "pdfStartPage": 141,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在办公室",
+          "sceneVi": "Trong văn phòng",
+          "pdfPages": [
+            142
+          ],
+          "lines": [
+            {
+              "speaker": "大山",
+              "zh": "老师，我来中国留学两年了，但是我的汉语水平提高得一点儿也不快啊。",
+              "py": "Lǎoshī, wǒ lái Zhōngguó liú xué liǎng nián le, dànshì wǒ de Hànyǔ shuǐpíng tígāo de yìdiǎnr yě bú kuài a.",
+              "vi": "Thưa thầy, em đến Trung Quốc du học được hai năm rồi, nhưng trình độ tiếng Hán của em tiến bộ chẳng nhanh chút nào cả."
+            },
+            {
+              "speaker": "老师",
+              "zh": "你每天认真学习，做练习、完成作业，一直不错啊。",
+              "py": "Nǐ měi tiān rènzhēn xuéxí, zuò liànxí, wán chéng zuòyè, yìzhí búcuò a.",
+              "vi": "Em mỗi ngày đều chăm chỉ học tập, làm bài luyện tập, hoàn thành bài tập về nhà, luôn rất tốt mà."
+            },
+            {
+              "speaker": "大山",
+              "zh": "这是我昨天的作业，您帮我看看对不对。",
+              "py": "Zhè shì wǒ zuótiān de zuòyè, nín bāng wǒ kànkan duì bu duì.",
+              "vi": "Đây là bài tập hôm qua của em, thầy xem giúp em xem có đúng không ạ."
+            },
+            {
+              "speaker": "老师",
+              "zh": "写得不错，除了这个句子意思有些不清楚外，其他都没什么问题。",
+              "py": "Xiě de búcuò, chúle zhè ge jùzi yìsi yǒuxiē bù qīngchu wài, qítā dōu méi shénme wèntí.",
+              "vi": "Viết tốt lắm, ngoài câu này ý nghĩa hơi không rõ ràng ra thì các câu khác đều không có vấn đề gì."
+            },
+            {
+              "speaker": "大山",
+              "zh": "谢谢老师！",
+              "py": "Xièxie lǎoshī!",
+              "vi": "Cảm ơn thầy ạ!"
+            },
+            {
+              "speaker": "老师",
+              "zh": "以后有什么不明白的地方，可以给我打电话或者发电子邮件。",
+              "py": "Yǐhòu yǒu shénme bù míngbai de dìfang, kěyǐ gěi wǒ dǎ diànhuà huòzhě fā diànzǐ yóujiàn.",
+              "vi": "Sau này có chỗ nào không hiểu, em có thể gọi điện thoại hoặc gửi email cho thầy nhé."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在教室",
+          "sceneVi": "Trong lớp học",
+          "pdfPages": [
+            142
+          ],
+          "lines": [
+            {
+              "speaker": "学生",
+              "zh": "老师，除了小云，其他人都来了。",
+              "py": "Lǎoshī, chúle Xiǎoyún, qítā rén dōu lái le.",
+              "vi": "Thưa cô, ngoài bạn Tiểu Vân ra thì mọi người đều đã đến đủ rồi ạ."
+            },
+            {
+              "speaker": "老师",
+              "zh": "比赛马上就要开始了，小云怎么还没来？",
+              "py": "Bǐsài mǎshàng jiù yào kāishǐ le, Xiǎoyún zěnme hái méi lái?",
+              "vi": "Cuộc thi sắp sửa bắt đầu rồi, sao Tiểu Vân vẫn chưa đến nhỉ?"
+            },
+            {
+              "speaker": "学生",
+              "zh": "刚才给她打电话了，她在路上呢。",
+              "py": "Gāngcái gěi tā dǎ diànhuà le, tā zài lùshang ne.",
+              "vi": "Vừa nãy em đã gọi điện cho bạn ấy rồi, bạn ấy đang trên đường đến ạ."
+            },
+            {
+              "speaker": "老师",
+              "zh": "不等她了，我先给大家讲讲这次比赛的要求和一些需要注意的地方。",
+              "py": "Bù děng tā le, wǒ xiān gěi dàjiā jiǎngjiang zhè cì bǐsài de yāoqiú hé yìxiē xūyào zhùyì de dìfang.",
+              "vi": "Không đợi bạn ấy nữa, cô phổ biến trước cho cả lớp về yêu cầu của cuộc thi lần này và một số điểm cần lưu ý nhé."
+            },
+            {
+              "speaker": "学生",
+              "zh": "老师，您放心，今天的比赛我们一定能拿第一。",
+              "py": "Lǎoshī, nín fàngxīn, jīntiān de bǐsài wǒmen yídìng néng ná dì-yī.",
+              "vi": "Cô cứ yên tâm, cuộc thi hôm nay chúng em nhất định sẽ giành giải nhất ạ."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在休息室",
+          "sceneVi": "Trong phòng giải lao",
+          "pdfPages": [
+            142
+          ],
+          "lines": [
+            {
+              "speaker": "同事",
+              "zh": "现在用电脑上网真方便啊！",
+              "py": "Xiànzài yòng diànnǎo shàng wǎng zhēn fāngbiàn a!",
+              "vi": "Bây giờ dùng máy tính lên mạng thật là tiện lợi quá!"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "是啊，除了看新闻，人们还可以在网上听歌、看电影、买东西。",
+              "py": "Shì a, chúle kàn xīnwén, rénmen hái kěyǐ zài wǎngshang tīng gē, kàn diànyǐng, mǎi dōngxi.",
+              "vi": "Đúng thế, ngoài xem tin tức, mọi người còn có thể lên mạng nghe nhạc, xem phim, mua sắm đồ đạc."
+            },
+            {
+              "speaker": "同事",
+              "zh": "对了，你从网上买的那件衣服呢？怎么没见你穿？",
+              "py": "Duìle, nǐ cóng wǎngshang mǎi de nà jiàn yīfu ne? Zěnme méi jiàn nǐ chuān?",
+              "vi": "À đúng rồi, cái áo cậu mua trên mạng đâu rồi? Sao không thấy cậu mặc thế?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "那件衣服我穿着有点儿小，给我弟弟了。",
+              "py": "Nà jiàn yīfu wǒ chuānzhe yǒudiǎnr xiǎo, gěi wǒ dìdi le.",
+              "vi": "Cái áo đó tôi mặc hơi chật một chút nên tôi cho em trai tôi rồi."
+            },
+            {
+              "speaker": "同事",
+              "zh": "他满意吗？",
+              "py": "Tā mǎnyì ma?",
+              "vi": "Cậu ấy có vừa ý không?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "不用花钱，还有新衣服穿，他满意极了。",
+              "py": "Búyòng huā qián, hái yǒu xīn yīfu chuān, tā mǎnyì jí le.",
+              "vi": "Vừa không mất tiền lại có áo mới mặc, nó thích mê đi ấy chứ."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "介绍啤酒节",
+          "sceneVi": "Giới thiệu về lễ hội bia",
+          "pdfPages": [
+            143
+          ],
+          "lines": [
+            {
+              "speaker": "我",
+              "zh": "除了春节、中秋节以外，啤酒节也是这里很重要的一个节日。",
+              "py": "Chúle Chūnjié, Zhōngqiū jié yǐwài, píjiǔ jié yě shì zhèlǐ hěn zhòngyào de yí ge jiérì.",
+              "vi": "Ngoài Tết Nguyên Đán và Tết Trung Thu ra thì lễ hội bia cũng là một ngày hội rất quan trọng ở nơi này."
+            },
+            {
+              "speaker": "我",
+              "zh": "这个地方每年夏天都要举行一次啤酒节。",
+              "py": "Zhè ge dìfang měi nián xiàtiān dōu yào jǔxíng yí cì píjiǔ jié.",
+              "vi": "Nơi đây vào mùa hè hàng năm đều tổ chức lễ hội bia một lần."
+            },
+            {
+              "speaker": "我",
+              "zh": "在啤酒节上，你可以喝到世界上不同地方的啤酒。",
+              "py": "Zài píjiǔ jié shang, nǐ kěyǐ hēdào shìjiè shang bùtóng dìfang de píjiǔ.",
+              "vi": "Tại lễ hội bia, bạn có thể thưởng thức các loại bia từ nhiều nơi khác nhau trên khắp thế giới."
+            },
+            {
+              "speaker": "我",
+              "zh": "除了喝啤酒，你还可以在街道两边看到世界上不同地方的歌舞。",
+              "py": "Chúle hē píjiǔ, nǐ hái kěyǐ zài jiēdào liǎng biān kàndào shìjiè shang bùtóng dìfang de gēwǔ.",
+              "vi": "Ngoài việc uống bia, bạn còn có thể thưởng thức ca múa nhạc từ khắp các nơi trên thế giới biểu diễn dọc hai bên đường."
+            },
+            {
+              "speaker": "我",
+              "zh": "你想不想了解世界各个地方的啤酒文化？",
+              "py": "Nǐ xiǎng bu xiǎng liǎojiě shìjiè gègè dìfang de píjiǔ wénhuà?",
+              "vi": "Bạn có muốn tìm hiểu về văn hóa bia của các nơi trên thế giới không?"
+            },
+            {
+              "speaker": "我",
+              "zh": "来这里的啤酒节看看吧。",
+              "py": "Lái zhèlǐ de píjiǔ jié kànkan ba.",
+              "vi": "Hãy đến khám phá lễ hội bia ở nơi đây nhé."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "titleZh": "我现在累得下了班就想睡觉",
+      "titlePinyin": "Wǒ xiànzài lèi de xià le bān jiù xiǎng shuìjiào",
+      "titleVi": "Bây giờ tôi mệt đến nỗi chỉ muốn đi ngủ sau khi hết giờ làm việc",
+      "pdfStartPage": 151,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在公司",
+          "sceneVi": "Trong công ty",
+          "pdfPages": [
+            152
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "我不喜欢一直住在同一个城市，想去其他城市看一看。",
+              "py": "Wǒ bù xǐhuan yìzhí zhù zài tóng yí ge chéngshì, xiǎng qù qítā chéngshì kàn yi kàn.",
+              "vi": "Em không thích cứ ở mãi một thành phố, em muốn đi xem những thành phố khác nữa."
+            },
+            {
+              "speaker": "周明",
+              "zh": "我年轻的时候也这么想，但是那时候没有钱，如果有钱，就去了。",
+              "py": "Wǒ niánqīng de shíhou yě zhème xiǎng, dànshì nà shíhou méiyǒu qián, rúguǒ yǒu qián, jiù qù le.",
+              "vi": "Thời trẻ anh cũng từng nghĩ như thế, nhưng hồi đó không có tiền, nếu có tiền thì đã đi rồi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "那您现在为什么不去？",
+              "py": "Nà nín xiànzài wèi shénme bú qù?",
+              "vi": "Thế bây giờ sao anh không đi?"
+            },
+            {
+              "speaker": "周明",
+              "zh": "现在钱不是问题了，主要是没有时间。",
+              "py": "Xiànzài qián bú shì wèntí le, zhǔyào shì méiyǒu shíjiān.",
+              "vi": "Bây giờ tiền không phải là vấn đề nữa rồi, chủ yếu là không có thời gian."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我认为现在您有时间也不会出去玩儿。",
+              "py": "Wǒ rènwéi xiànzài nín yǒu shíjiān yě bú huì chūqu wánr.",
+              "vi": "Em thấy bây giờ cho dù anh có thời gian anh cũng chẳng đi chơi đâu."
+            },
+            {
+              "speaker": "周明",
+              "zh": "你说得对，我现在累得下了班就想睡觉。",
+              "py": "Nǐ shuō de duì, wǒ xiànzài lèi de xiàle bān jiù xiǎng shuì jiào.",
+              "vi": "Em nói đúng đấy, bây giờ anh mệt tới mức vừa tan sở là chỉ muốn lăn ra ngủ thôi."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在同事家",
+          "sceneVi": "Tại nhà đồng nghiệp",
+          "pdfPages": [
+            152
+          ],
+          "lines": [
+            {
+              "speaker": "同事",
+              "zh": "谢谢你们来看我女儿。你送的小皮鞋和小帽子真漂亮！",
+              "py": "Xièxie nǐmen lái kàn wǒ nǚ'ér. Nǐ sòng de xiǎo píxié hé xiǎo màozi zhēn piàoliang!",
+              "vi": "Cảm ơn mọi người đã đến thăm con gái tôi nhé. Đôi giày da nhỏ và chiếc mũ nhỏ cậu tặng xinh xắn quá!"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "别客气，你女儿长得白白的、胖胖的，真可爱！现在多高了？",
+              "py": "Bié kèqi, nǐ nǚ'ér zhǎng de báibái de, pàngpàng de, zhēn kě'ài! Xiànzài duō gāo le?",
+              "vi": "Đừng khách sáo, con gái chị trông trắng trẻo, bụ bẫm, đáng yêu thật đấy! Cháu bây giờ cao bao nhiêu rồi?"
+            },
+            {
+              "speaker": "同事",
+              "zh": "快1米了，25公斤。",
+              "py": "Kuài yì mǐ le, èrshíwǔ gōngjīn.",
+              "vi": "Gần 1 mét rồi, nặng 25 kg."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "你看她鼻子小小的，头发黑黑的，长得像谁？",
+              "py": "Nǐ kàn tā bízi xiǎoxiǎo de, tóufa hēihēi de, zhǎng de xiàng shéi?",
+              "vi": "Chị xem mũi bé be bé, tóc thì đen nhánh, trông giống ai thế?"
+            },
+            {
+              "speaker": "同事",
+              "zh": "像她爸爸，刚出生时她爸爸高兴得一个晚上都没睡着。",
+              "py": "Xiàng tā bàba, gāng chūshēng shí tā bàba gāoxìng de yí ge wǎnshang dōu méi shuì zháo.",
+              "vi": "Giống bố nó đấy, lúc cháu mới chào đời, bố cháu mừng rỡ đến nỗi thức trắng cả đêm không ngủ được."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在公司",
+          "sceneVi": "Trong công ty",
+          "pdfPages": [
+            152
+          ],
+          "lines": [
+            {
+              "speaker": "小刚",
+              "zh": "我的牙还是很疼。",
+              "py": "Wǒ de yá háishi hěn téng.",
+              "vi": "Răng của tôi vẫn còn đau lắm."
+            },
+            {
+              "speaker": "同事",
+              "zh": "如果不舒服，就去医院检查一下吧。",
+              "py": "Rúguǒ bù shūfu, jiù qù yīyuàn jiǎnchá yíxià ba.",
+              "vi": "Nếu không thấy đỡ thì cậu đến bệnh viện kiểm tra một chút đi."
+            },
+            {
+              "speaker": "小刚",
+              "zh": "检查好几次了，但是没什么用。",
+              "py": "Jiǎnchá hǎo jǐ cì le, dànshì méi shénme yòng.",
+              "vi": "Khám mấy lần rồi, nhưng chẳng ăn thua gì."
+            },
+            {
+              "speaker": "同事",
+              "zh": "大夫怎么说的？",
+              "py": "Dàifu zěnme shuō de?",
+              "vi": "Bác sĩ bảo sao vậy?"
+            },
+            {
+              "speaker": "小刚",
+              "zh": "每次医生都告诉我，回家好好儿刷牙。",
+              "py": "Měi cì yīshēng dōu gàosu wǒ, huí jiā hǎohāor shuā yá.",
+              "vi": "Lần nào bác sĩ cũng dặn tôi là về nhà nhớ đánh răng thật kỹ."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "谈人际关系",
+          "sceneVi": "Nói về mối quan hệ giữa người với người",
+          "pdfPages": [
+            153
+          ],
+          "lines": [
+            {
+              "speaker": "我",
+              "zh": "很多人都觉得现在人和人的关系冷冷的，这可能是因为工作太忙，忙得没时间跟别人见面，累得不愿意和别人多说话。",
+              "py": "Hěn duō rén dōu juéde xiànzài rén hé rén de guānxì lěnglěng de, zhè kěnéng shì yīnwèi gōngzuò tài máng, máng de méi shíjiān gēn biérén jiàn miàn, lèi de bú yuànyì hé biérén duō shuō huà.",
+              "vi": "Rất nhiều người đều cảm thấy quan hệ giữa người với người ngày nay có phần lạnh nhạt, điều này có thể là do công việc quá bận rộn, bận đến mức không có thời gian gặp gỡ người khác, mệt mỏi đến nỗi chẳng muốn nói chuyện nhiều với ai."
+            },
+            {
+              "speaker": "我",
+              "zh": "其实，我们应该多对别人笑笑，说话时如果能多用一些“您好”“谢谢”这样的词语，和别人的关系就会变得更好。",
+              "py": "Qíshí, wǒmen yīnggāi duō duì biérén xiàoxiao, shuō huà shí rúguǒ néng duō yòng yìxiē \"nín hǎo\" \"xièxie\" zhèyàng de cíyǔ, hé biérén de guānxì jiù huì biàn de gèng hǎo.",
+              "vi": "Thực ra, chúng ta nên mỉm cười nhiều hơn với người khác, khi trò chuyện nếu có thể dùng nhiều hơn những từ ngữ như \"chào bác/chú/cô/anh/chị\", \"cảm ơn\" thì mối quan hệ với mọi người sẽ trở nên tốt đẹp hơn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "titleZh": "谁都有办法看好你的“病”",
+      "titlePinyin": "Shéi dōu yǒu bànfǎ kànhǎo nǐ de \"bìng\"",
+      "titleVi": "Ai cũng có cách chữa khỏi \"bệnh\" của em",
+      "pdfStartPage": 159,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在公司",
+          "sceneVi": "Trong công ty",
+          "pdfPages": [
+            160
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "周经理，下个星期我可以请几天假吗？",
+              "py": "Zhōu jīnglǐ, xià ge xīngqī wǒ kěyǐ qǐng jǐ tiān jià ma?",
+              "vi": "Giám đốc Chu, tuần sau tôi có thể xin nghỉ phép mấy ngày không ạ?"
+            },
+            {
+              "speaker": "周明",
+              "zh": "你有什么事？",
+              "py": "Nǐ yǒu shénme shì?",
+              "vi": "Cô có việc gì thế?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我的一个老朋友结婚，我跟他两年没见了。",
+              "py": "Wǒ de yí ge lǎo péngyou jié hūn, wǒ gēn tā liǎng nián méi jiàn le.",
+              "vi": "Một người bạn cũ của tôi kết hôn, tôi với anh ấy hai năm rồi chưa gặp nhau."
+            },
+            {
+              "speaker": "周明",
+              "zh": "你一共想请几天假？",
+              "py": "Nǐ yígòng xiǎng qǐng jǐ tiān jià?",
+              "vi": "Cô muốn xin nghỉ tổng cộng mấy ngày?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "三天。",
+              "py": "Sān tiān.",
+              "vi": "Ba ngày ạ."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在公司",
+          "sceneVi": "Trong công ty",
+          "pdfPages": [
+            160
+          ],
+          "lines": [
+            {
+              "speaker": "同事",
+              "zh": "小丽，那个高高的男人是你们公司的吗？你对他了解吗？",
+              "py": "Xiǎolì, nàge gāogāo de nánrén shì nǐmen gōngsī de ma? Nǐ duì tā liǎojiě ma?",
+              "vi": "Tiểu Lệ, người đàn ông dong dỏng cao kia là người của công ty bạn à? Bạn có hiểu rõ về anh ấy không?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我们过去是邻居，后来是大学同学，关系一直很不错。",
+              "py": "Wǒmen guòqù shì línjū, hòulái shì dàxué tóngxué, guānxì yìzhí hěn búcuò.",
+              "vi": "Trước đây chúng tôi là hàng xóm, sau này là bạn học đại học, mối quan hệ luôn rất tốt."
+            },
+            {
+              "speaker": "同事",
+              "zh": "他一般喜欢做什么？",
+              "py": "Tā yìbān xǐhuan zuò shénme?",
+              "vi": "Anh ấy thường thích làm gì?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "他有很多爱好，唱歌、画画儿、踢足球，什么都会。",
+              "py": "Tā yǒu hěn duō àihào, chàng gē, huà huàr, tī zúqiú, shénme dōu huì.",
+              "vi": "Anh ấy có nhiều sở thích lắm, ca hát, vẽ tranh, đá bóng, cái gì cũng biết cả."
+            },
+            {
+              "speaker": "同事",
+              "zh": "真的？那你介绍我们认识认识吧。",
+              "py": "Zhēn de? Nà nǐ jièshào wǒmen rènshi rènshi ba.",
+              "vi": "Thật sao? Vậy bạn giới thiệu cho chúng tôi làm quen đi."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "不行，现在他是我丈夫。",
+              "py": "Bù xíng, xiànzài tā shì wǒ zhàngfu.",
+              "vi": "Không được đâu, bây giờ anh ấy là chồng tôi rồi."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            160
+          ],
+          "lines": [
+            {
+              "speaker": "周太太",
+              "zh": "最近我觉得哪儿都不舒服，你带我去医院检查检查吧。",
+              "py": "Zuìjìn wǒ juéde nǎr dōu bù shūfu, nǐ dài wǒ qù yīyuàn jiǎnchá jiǎncha ba.",
+              "vi": "Dạo này em cảm thấy chỗ nào cũng khó chịu, anh đưa em đến bệnh viện kiểm tra một chút đi."
+            },
+            {
+              "speaker": "周明",
+              "zh": "不用去医院，谁都有办法看好你的“病”。我问你，你多久没运动了？",
+              "py": "Búyòng qù yīyuàn, shéi dōu yǒu bànfǎ kànhǎo nǐ de “bìng”. Wǒ wèn nǐ, nǐ duō jiǔ méi yùndòng le?",
+              "vi": "Không cần đến bệnh viện đâu, ai cũng có cách chữa khỏi \"bệnh\" của em mà. Anh hỏi em này, bao lâu rồi em chưa vận động?"
+            },
+            {
+              "speaker": "周太太",
+              "zh": "我三年没运动了。",
+              "py": "Wǒ sān nián méi yùndòng le.",
+              "vi": "Em ba năm rồi chưa tập thể dục."
+            },
+            {
+              "speaker": "周明",
+              "zh": "谁都知道运动对身体好。但是你吃饱了就睡。",
+              "py": "Shéi dōu zhīdào yùndòng duì shēntǐ hǎo. Dànshì nǐ chībǎole jiù shuì.",
+              "vi": "Ai cũng biết vận động tốt cho sức khỏe. Nhưng em cứ ăn no xong là đi ngủ."
+            },
+            {
+              "speaker": "周太太",
+              "zh": "为了健康，我真应该多锻炼锻炼了。从明天起，我决定每天去长跑。",
+              "py": "Wèile jiànkāng, wǒ zhēn yīnggāi duō duànliàn duànlian le. Cóng míngtiān qǐ, wǒ juédìng měitiān qù chángpǎo.",
+              "vi": "Vì sức khỏe, em thật sự nên rèn luyện nhiều hơn rồi. Từ ngày mai, em quyết định ngày nào cũng đi chạy bộ đường dài."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "谈运动",
+          "sceneVi": "Nói về việc vận động",
+          "pdfPages": [
+            161
+          ],
+          "lines": [
+            {
+              "speaker": "我",
+              "zh": "“运动很重要”这句话谁都懂。但是你知道怎么运动吗？",
+              "py": "“Yùndòng hěn zhòngyào” zhè jù huà shéi dōu dǒng. Dànshì nǐ zhīdào zěnme yùndòng ma?",
+              "vi": "Câu nói \"Vận động rất quan trọng\" ai cũng hiểu. Nhưng bạn có biết vận động như thế nào không?"
+            },
+            {
+              "speaker": "我",
+              "zh": "第一，要选择“对”的时间。一般来说，早上9点是最好的时间，冬天要再晚一些。",
+              "py": "Dì yī, yào xuǎnzé “duì” de shíjiān. Yìbān lái shuō, zǎoshang jiǔ diǎn shì zuì hǎo de shíjiān, dōngtiān yào zài wǎn yìxiē.",
+              "vi": "Thứ nhất, phải chọn thời gian \"đúng\". Thông thường mà nói, 9 giờ sáng là thời gian tốt nhất, mùa đông thì nên muộn hơn một chút."
+            },
+            {
+              "speaker": "我",
+              "zh": "第二，要选择“对”的地点，公园、山上、游泳馆，这些地方都可以运动。",
+              "py": "Dì èr, yào xuǎnzé “duì” de dìdiǎn, gōngyuán, shānshang, yóuyǒngguǎn, zhèxiē dìfang dōu kěyǐ yùndòng.",
+              "vi": "Thứ hai, phải chọn địa điểm \"đúng\", công viên, trên núi, bể bơi, những nơi này đều có thể vận động."
+            },
+            {
+              "speaker": "我",
+              "zh": "第三，必须要根据自己的健康情况运动。",
+              "py": "Dì sān, bìxū yào gēnjù zìjǐ de jiànkāng qíngkuàng yùndòng.",
+              "vi": "Thứ ba, nhất định phải vận động căn cứ vào tình trạng sức khỏe của bản thân."
+            },
+            {
+              "speaker": "我",
+              "zh": "如果你很久没爬山或者游泳了，运动一会儿就一定要休息休息。还要记得刚运动完口渴的时候，不要马上喝水。",
+              "py": "Rúguǒ nǐ hěn jiǔ méi pá shān huòzhě yóu yǒng le, yùndòng yíhuìr jiù yídìng yào xiūxi xiūxi. Hái yào jìde gāng yùndòng wán kǒu kě de shíhou, búyào mǎshàng hē shuǐ.",
+              "vi": "Nếu bạn đã lâu không leo núi hoặc bơi lội, vận động một lát nhất định phải nghỉ ngơi. Còn phải nhớ rằng khi vừa vận động xong khát nước, đừng lập tức uống nước ngay."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "titleZh": "我相信他们会同意的",
+      "titlePinyin": "Wǒ xiāngxìn tāmen huì tóngyì de",
+      "titleVi": "Tôi tin họ sẽ đồng ý",
+      "pdfStartPage": 167,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在打电话",
+          "sceneVi": "Nói chuyện qua điện thoại",
+          "pdfPages": [
+            168
+          ],
+          "lines": [
+            {
+              "speaker": "朋友",
+              "zh": "老周，我打算买房子了，想向你借点儿钱。",
+              "py": "Lǎo Zhōu, wǒ dǎsuàn mǎi fángzi le, xiǎng xiàng nǐ jiè diǎnr qián.",
+              "vi": "Lão Chu, tôi dự định mua nhà rồi, muốn hỏi vay anh một ít tiền."
+            },
+            {
+              "speaker": "周明",
+              "zh": "没问题，只要我有，就一定会借给你的。还差多少？",
+              "py": "Méi wèntí, zhǐyào wǒ yǒu, jiù yídìng huì jiè gěi nǐ de. Hái chà duōshao?",
+              "vi": "Không vấn đề gì, chỉ cần tôi có thì nhất định sẽ cho anh vay. Còn thiếu bao nhiêu?"
+            },
+            {
+              "speaker": "朋友",
+              "zh": "还差5万块钱。",
+              "py": "Hái chà wǔ wàn kuài qián.",
+              "vi": "Còn thiếu 5 vạn tệ (50.000 tệ)."
+            },
+            {
+              "speaker": "周明",
+              "zh": "好，钱下午打给你。你打算在哪儿买房？",
+              "py": "Hǎo, qián xiàwǔ dǎ gěi nǐ. Nǐ dǎsuàn zài nǎr mǎi fáng?",
+              "vi": "Được, chiều nay tôi chuyển tiền cho anh. Anh tính mua nhà ở đâu?"
+            },
+            {
+              "speaker": "朋友",
+              "zh": "就在我们医院前面。",
+              "py": "Jiù zài wǒmen yīyuàn qiánmian.",
+              "vi": "Ngay phía trước bệnh viện của chúng tôi."
+            },
+            {
+              "speaker": "周明",
+              "zh": "那你以后去医院就方便了。",
+              "py": "Nà nǐ yǐhòu qù yīyuàn jiù fāngbiàn le.",
+              "vi": "Thế thì sau này anh đi đến bệnh viện thuận tiện quá rồi."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在商店",
+          "sceneVi": "Ở cửa hàng",
+          "pdfPages": [
+            168
+          ],
+          "lines": [
+            {
+              "speaker": "小明",
+              "zh": "妈妈，你看那只狗多可爱，眼睛大大的，嘴小小的，我们买回去吧。",
+              "py": "Māma, nǐ kàn nà zhī gǒu duō kě'ài, yǎnjing dàdà de, zuǐ xiǎoxiǎo de, wǒmen mǎi huíqu ba.",
+              "vi": "Mẹ ơi, mẹ nhìn chú chó kia đáng yêu chưa kìa, mắt to tròn, miệng chúm chím nhỏ xíu, chúng mình mua về đi mẹ."
+            },
+            {
+              "speaker": "妈妈",
+              "zh": "动物和小孩儿一样，都需要人照顾。买回家去，谁照顾它啊？",
+              "py": "Dòngwù hé xiǎoháir yíyàng, dōu xūyào rén zhàogù. Mǎi huí jiā qu, shéi zhàogù tā a?",
+              "vi": "Động vật cũng như trẻ con vậy, đều cần có người chăm sóc. Mua về nhà rồi ai chăm sóc nó đây?"
+            },
+            {
+              "speaker": "小明",
+              "zh": "我照顾啊。",
+              "py": "Wǒ zhàogù a.",
+              "vi": "Con chăm sóc ạ."
+            },
+            {
+              "speaker": "妈妈",
+              "zh": "这段时间你自己的衣服都没洗，你能照顾好它吗？",
+              "py": "Zhè duàn shíjiān nǐ zìjǐ de yīfu dōu méi xǐ, nǐ néng zhàogù hǎo tā ma?",
+              "vi": "Dạo này quần áo của chính con mà con còn chưa giặt nữa là, con liệu có chăm sóc tốt cho nó được không?"
+            },
+            {
+              "speaker": "小明",
+              "zh": "只要你给我买，我就能照顾好它。",
+              "py": "Zhǐyào nǐ gěi wǒ mǎi, wǒ jiù néng zhàogù hǎo tā.",
+              "vi": "Chỉ cần mẹ mua cho con, con nhất định sẽ chăm sóc tốt cho nó."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在公司",
+          "sceneVi": "Trong công ty",
+          "pdfPages": [
+            168
+          ],
+          "lines": [
+            {
+              "speaker": "经理",
+              "zh": "说说你为什么选择来我们公司工作。",
+              "py": "Shuōshuo nǐ wèishénme xuǎnzé lái wǒmen gōngsī gōngzuò.",
+              "vi": "Hãy nói xem vì sao bạn lại chọn đến làm việc ở công ty chúng tôi."
+            },
+            {
+              "speaker": "学生",
+              "zh": "贵公司不但很有名，而且工作环境好。",
+              "py": "Guì gōngsī búdàn hěn yǒumíng, érqiě gōngzuò huánjìng hǎo.",
+              "vi": "Quý công ty không những rất nổi tiếng mà môi trường làm việc cũng rất tốt."
+            },
+            {
+              "speaker": "经理",
+              "zh": "做这个工作有点儿累，需要经常去外地。你家人同意吗？",
+              "py": "Zuò zhège gōngzuò yǒudiǎnr lèi, xūyào jīngcháng qù wàidì. Nǐ jiārén tóngyì ma?",
+              "vi": "Làm công việc này có chút vất vả đấy, cần phải thường xuyên đi công tác xa. Người nhà bạn có đồng ý không?"
+            },
+            {
+              "speaker": "学生",
+              "zh": "只要我愿意，我相信他们就会同意的。",
+              "py": "Zhǐyào wǒ yuànyì, wǒ xiāngxìn tāmen jiù huì tóngyì de.",
+              "vi": "Chỉ cần em bằng lòng, em tin là họ sẽ đồng ý thôi ạ."
+            },
+            {
+              "speaker": "经理",
+              "zh": "好，那你明天来上班吧。关于这个工作，还有什么问题吗？",
+              "py": "Hǎo, nà nǐ míngtiān lái shàng bān ba. Guānyú zhège gōngzuò, hái yǒu shénme wèntí ma?",
+              "vi": "Được rồi, vậy ngày mai bạn đến làm việc nhé. Về công việc này, bạn còn câu hỏi nào nữa không?"
+            },
+            {
+              "speaker": "学生",
+              "zh": "没有了，谢谢您给我这个机会，我会努力的。",
+              "py": "Méiyǒu le, xièxie nín gěi wǒ zhège jīhuì, wǒ huì nǔlì de.",
+              "vi": "Không còn nữa ạ, cảm ơn ngài đã cho em cơ hội này, em sẽ cố gắng hết mình."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "谈文化",
+          "sceneVi": "Nói về văn hóa",
+          "pdfPages": [
+            169
+          ],
+          "lines": [
+            {
+              "speaker": "我",
+              "zh": "不同的国家有不同的文化，每种文化都有自己的特点。",
+              "py": "Bùtóng de guójiā yǒu bùtóng de wénhuà, měi zhǒng wénhuà dōu yǒu zìjǐ de tèdiǎn.",
+              "vi": "Các quốc gia khác nhau có những nền văn hóa khác nhau, mỗi một nền văn hóa đều có đặc điểm riêng của mình."
+            },
+            {
+              "speaker": "我",
+              "zh": "到了一个新环境，你会觉得什么都很新鲜，而且还会觉得有点奇怪：",
+              "py": "Dàole yí ge xīn huánjìng, nǐ huì juéde shénme dōu hěn xīnxian, érqiě hái huì juéde yǒudiǎnr qíguài:",
+              "vi": "Đến một môi trường mới, bạn sẽ thấy cái gì cũng rất mới mẻ, và còn cảm thấy hơi kỳ lạ:"
+            },
+            {
+              "speaker": "我",
+              "zh": "有些国家的人名写在姓前面，有些国家的人名写在姓后面，但是只要经过一段时间，就会慢慢地习惯。",
+              "py": "yǒuxiē guójiā de rénmíng xiě zài xìng qiánmiàn, yǒuxiē guójiā de rénmíng xiě zài xìng hòumiàn, dànshì zhǐyào jīngguò yí duàn shíjiān, jiù huì mànman de xíguàn.",
+              "vi": "có một số quốc gia tên người viết trước họ, có một số quốc gia tên người lại viết sau họ, nhưng chỉ cần qua một thời gian là sẽ dần quen thôi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "titleZh": "你没看出来吗？",
+      "titlePinyin": "Nǐ méi kàn chūlai ma?",
+      "titleVi": "Anh không nhìn ra được à?",
+      "pdfStartPage": 175,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在家",
+          "sceneVi": "Ở nhà",
+          "pdfPages": [
+            176
+          ],
+          "lines": [
+            {
+              "speaker": "爸爸",
+              "zh": "女儿最近喜欢把头发放在耳朵后面，你知道为什么吗？",
+              "py": "Nǚ'ér zuìjìn xǐhuan bǎ tóufa fàng zài ěrduo hòumiàn, nǐ zhīdào wéi shénme ma?",
+              "vi": "Con gái dạo này thích vén tóc ra sau tai, em có biết vì sao không?"
+            },
+            {
+              "speaker": "妈妈",
+              "zh": "这样可以使她的脸看上去漂亮一些。",
+              "py": "Zhèyàng kěyǐ shǐ tā de liǎn kàn shangqu piàoliang yìxiē.",
+              "vi": "Như vậy có thể khiến khuôn mặt con bé trông xinh đẹp hơn một chút đấy."
+            },
+            {
+              "speaker": "爸爸",
+              "zh": "我最近觉得她和以前不太一样了。",
+              "py": "Wǒ zuìjìn juéde tā hé yǐqián bú tài yíyàng le.",
+              "vi": "Dạo này anh thấy con bé không giống ngày trước lắm."
+            },
+            {
+              "speaker": "妈妈",
+              "zh": "女儿变化不小，她小时候喜欢短头发，像男孩子一样。",
+              "py": "Nǚ'ér biànhuà bù xiǎo, tā xiǎoshíhou xǐhuan duǎn tóufa, xiàng nán háizi yíyàng.",
+              "vi": "Con gái thay đổi nhiều mà, lúc nhỏ con bé thích tóc ngắn, trông như con trai vậy."
+            },
+            {
+              "speaker": "爸爸",
+              "zh": "我也想起来了。她现在慢慢地开始像个女孩子了。",
+              "py": "Wǒ yě xiǎng qilai le. Tā xiànzài mànmàn de kāishǐ xiàng ge nǚ háizi le.",
+              "vi": "Anh cũng nhớ ra rồi. Bây giờ con bé dần dần bắt đầu ra dáng con gái rồi."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在看照片",
+          "sceneVi": "Đang xem ảnh",
+          "pdfPages": [
+            176
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "上次我们参加骑马比赛的照片，我选了几张洗出来了。",
+              "py": "Shàng cì wǒmen cānjiā qí mǎ bǐsài de zhàopiàn, wǒ xuǎnle jǐ zhāng xǐ chulai le.",
+              "vi": "Ảnh lần trước chúng ta tham gia cuộc thi cưỡi ngựa, tôi đã chọn rửa ra mấy tấm rồi."
+            },
+            {
+              "speaker": "同事",
+              "zh": "快给我看看。骑得最快的这位是谁？",
+              "py": "Kuài gěi wǒ kànkan. Qí de zuì kuài de zhè wèi shì shéi?",
+              "vi": "Đưa tôi xem nhanh nào. Vị cưỡi nhanh nhất này là ai vậy?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "你没看出来吗？他是小刚啊。",
+              "py": "Nǐ méi kàn chūlai ma? Tā shì Xiǎogāng a.",
+              "vi": "Bạn không nhận ra à? Anh ấy là Tiểu Cương đó."
+            },
+            {
+              "speaker": "同事",
+              "zh": "怎么看上去跟现在不太一样？",
+              "py": "Zěnme kàn shangqu gēn xiànzài bú tài yíyàng?",
+              "vi": "Sao trông không giống bây giờ lắm nhỉ?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "他上班穿西服、衬衫，比赛的时候穿得是运动服。",
+              "py": "Tā shàng bān chuān xīfú, chènshān, bǐsài de shíhou chuān de shì yùndòngfú.",
+              "vi": "Anh ấy đi làm thì mặc âu phục, áo sơ mi, còn lúc thi đấu thì mặc đồ thể thao."
+            },
+            {
+              "speaker": "同事",
+              "zh": "他今天穿蓝西服，看上去像40多岁，还是穿运动服让他更年轻。",
+              "py": "Tā jīntiān chuān lán xīfú, kàn shangqu xiàng sìshí duō suì, háishi chuān yùndòngfú ràng tā gèng niánqīng.",
+              "vi": "Hôm nay anh ấy mặc âu phục màu xanh lam, trông như hơn 40 tuổi, vẫn là mặc đồ thể thao giúp anh ấy trẻ trung hơn."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在小丽家",
+          "sceneVi": "Tại nhà chị Lệ",
+          "pdfPages": [
+            176
+          ],
+          "lines": [
+            {
+              "speaker": "朋友",
+              "zh": "我们一年没见面了吧？",
+              "py": "Wǒmen yì nián méi jiàn miàn le ba?",
+              "vi": "Chúng ta một năm rồi chưa gặp nhau nhỉ?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "听说你都有女儿了？她多大了？",
+              "py": "Tīngshuō nǐ dōu yǒu nǚ'ér le? Tā duō dà le?",
+              "vi": "Nghe nói bạn đã có con gái rồi à? Bé bao nhiêu tuổi rồi?"
+            },
+            {
+              "speaker": "朋友",
+              "zh": "她去年秋天出生的，刚过完一岁生日。",
+              "py": "Tā qùnián qiūtiān chūshēng de, gāng guòwán yí suì shēngrì.",
+              "vi": "Con bé sinh vào mùa thu năm ngoái, vừa đón sinh nhật một tuổi xong."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "她喜欢什么？我送给她。",
+              "py": "Tā xǐhuan shénme? Wǒ sòng gěi tā.",
+              "vi": "Bé thích gì? Tôi tặng cho bé."
+            },
+            {
+              "speaker": "朋友",
+              "zh": "她就喜欢听她爸爸学鸟叫。哭的时候，只要她爸爸学小鸟叫，她马上就安静下来了。",
+              "py": "Tā jiù xǐhuan tīng tā bàba xué niǎo jiào. Kū de shíhou, zhǐyào tā bàba xué xiǎo niǎo jiào, tā mǎshàng jiù ānjìng xialai le.",
+              "vi": "Con bé chỉ thích nghe bố nó bắt chước tiếng chim hót thôi. Lúc khóc, chỉ cần bố nó giả tiếng chim non hót là con bé nín và ngoan ngay."
+            },
+            {
+              "speaker": "小丽",
+              "zh": "啊？这个礼物我没办法送。",
+              "py": "Á? Zhè ge lǐwù wǒ méi bànfǎ sòng.",
+              "vi": "Hả? Món quà này thì tôi chịu, không tặng nổi rồi."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "谈旅游",
+          "sceneVi": "Nói về chuyến du lịch",
+          "pdfPages": [
+            177
+          ],
+          "lines": [
+            {
+              "speaker": "我",
+              "zh": "这次旅游，我去了不少地方，每个地方都让我非常难忘。",
+              "py": "Zhè cì lǚyóu, wǒ qùle bù shǎo dìfang, měi ge dìfang dōu ràng wǒ fēicháng nánwàng.",
+              "vi": "Chuyến du lịch lần này, tôi đã đi khá nhiều nơi, mỗi nơi đều khiến tôi vô cùng khó quên."
+            },
+            {
+              "speaker": "我",
+              "zh": "我先去看了黄河，黄河是中国有名的大河，我坐在船上，一边看一边照相。",
+              "py": "Wǒ xiān qù kànle Huáng Hé, Huáng Hé shì Zhōngguó yǒumíng de dà hé, wǒ zuò zài chuán shang, yìbiān kàn yìbiān zhào xiàng.",
+              "vi": "Trước tiên tôi đi ngắm sông Hoàng Hà, sông Hoàng Hà là con sông lớn nổi tiếng của Trung Quốc, tôi ngồi trên thuyền, vừa ngắm cảnh vừa chụp ảnh."
+            },
+            {
+              "speaker": "我",
+              "zh": "一路上经过了很多地方，每个地方都不一样。",
+              "py": "Yí lù shang jīngguòle hěn duō dìfang, měi ge dìfang dōu bù yíyàng.",
+              "vi": "Suốt dọc đường đã đi qua rất nhiều nơi, mỗi một nơi đều mang vẻ khác biệt."
+            },
+            {
+              "speaker": "我",
+              "zh": "我想快点儿把照片发给大家，叫朋友们也高兴高兴。",
+              "py": "Wǒ xiǎng kuài diǎnr bǎ zhàopiàn fā gěi dàjiā, jiào péngyoumen yě gāoxìng gāoxing.",
+              "vi": "Tôi muốn mau chóng gửi ảnh cho mọi người xem, để bạn bè cũng vui lây cùng tôi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "titleZh": "我被他影响了",
+      "titlePinyin": "Wǒ bèi tā yǐngxiǎng le",
+      "titleVi": "Mình chịu ảnh hưởng từ anh ấy",
+      "pdfStartPage": 184,
+      "texts": [
+        {
+          "number": 1,
+          "sceneZh": "在休息室",
+          "sceneVi": "Trong phòng giải lao",
+          "pdfPages": [
+            185
+          ],
+          "lines": [
+            {
+              "speaker": "小丽",
+              "zh": "我的照相机被谁拿走了？怎么找不到了？",
+              "py": "Wǒ de zhàoxiàngjī bèi shéi názǒu le? Zěnme zhǎo bu dào le?",
+              "vi": "Máy ảnh của tôi bị ai lấy mất rồi? Sao không tìm thấy nữa thế này?"
+            },
+            {
+              "speaker": "同事",
+              "zh": "你再找找。是不是没带来？",
+              "py": "Nǐ zài zhǎozhao. Shì bu shì méi dàilai?",
+              "vi": "Bạn tìm lại xem. Có phải là không mang theo không?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "我找了，没找到啊。",
+              "py": "Wǒ zhǎo le, méi zhǎodào a.",
+              "vi": "Tôi tìm rồi, có thấy đâu cơ chứ."
+            },
+            {
+              "speaker": "同事",
+              "zh": "别难过，再买一个吧，公司东门外不就有一个大商场吗？",
+              "py": "Bié nánguò, zài mǎi yí ge ba, gōngsī dōngmén wài bù jiù yǒu yí ge dà shāngchǎng ma?",
+              "vi": "Đừng buồn, mua cái khác đi, ngoài cửa đông công ty chẳng phải có một trung tâm thương mại lớn đó sao?"
+            },
+            {
+              "speaker": "小丽",
+              "zh": "但是我这个月信用卡里的钱已经花得差不多了。",
+              "py": "Dànshì wǒ zhège yuè xìnyòngkǎ li de qián yǐjīng huā de chà bu duō le.",
+              "vi": "Nhưng mà tiền trong thẻ tín dụng tháng này của tôi tiêu gần hết rồi."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sceneZh": "在教室",
+          "sceneVi": "Trong lớp học",
+          "pdfPages": [
+            185
+          ],
+          "lines": [
+            {
+              "speaker": "小明",
+              "zh": "你怎么突然关心起体育来了？",
+              "py": "Nǐ zěnme tūrán guānxīn qi tǐyù lai le?",
+              "vi": "Sao tự dưng bạn lại quan tâm đến thể thao thế?"
+            },
+            {
+              "speaker": "朋友",
+              "zh": "我的男朋友喜欢看足球比赛，我被他影响的。",
+              "py": "Wǒ de nánpéngyou xǐhuan kàn zúqiú bǐsài, wǒ bèi tā yǐngxiǎng de.",
+              "vi": "Bạn trai tôi thích xem bóng đá, tôi bị anh ấy làm ảnh hưởng đấy."
+            },
+            {
+              "speaker": "小明",
+              "zh": "看来只有爱，才能让人有变化。",
+              "py": "Kànlái zhíyǒu ài, cái néng ràng rén yǒu biànhuà.",
+              "vi": "Xem ra chỉ có tình yêu mới có thể khiến con người ta thay đổi thôi."
+            },
+            {
+              "speaker": "朋友",
+              "zh": "是啊，为了和他的爱好一样，我天天看球赛。",
+              "py": "Shì a, wèile hé tā de àihào yíyàng, wǒ tiāntiān kàn qiúsài.",
+              "vi": "Đúng thế, để có cùng sở thích với anh ấy, ngày nào tôi cũng xem các trận đấu bóng."
+            },
+            {
+              "speaker": "小明",
+              "zh": "除了足球，他还影响你什么了？",
+              "py": "Chúle zúqiú, tā hái yǐngxiǎng nǐ shénme le?",
+              "vi": "Ngoài bóng đá ra, anh ấy còn ảnh hưởng đến bạn điểm nào nữa?"
+            },
+            {
+              "speaker": "朋友",
+              "zh": "我最近天天上网玩儿游戏，我的成绩差极了。",
+              "py": "Wǒ zuìjìn tiāntiān shàng wǎng wánr yóuxì, wǒ de chéngjì chà jí le.",
+              "vi": "Dạo này ngày nào tôi cũng lên mạng chơi game, thành tích học tập của tôi kém tệ hại luôn."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "sceneZh": "在饭馆儿",
+          "sceneVi": "Ở quán ăn",
+          "pdfPages": [
+            185
+          ],
+          "lines": [
+            {
+              "speaker": "朋友",
+              "zh": "那个拿着碗吃饭的人是你哥哥吗？他和你长得真像。",
+              "py": "Nàge názhe wǎn chī fàn de rén shì nǐ gēge ma? Tā hé nǐ zhǎng de zhēn xiàng.",
+              "vi": "Người đang bưng bát ăn cơm kia là anh trai của cậu à? Anh ấy với cậu trông giống nhau thật đấy."
+            },
+            {
+              "speaker": "大卫",
+              "zh": "我们经常被别人认错。",
+              "py": "Wǒmen jīngcháng bèi biérén rèncuò.",
+              "vi": "Tụi mình thường xuyên bị người khác nhận nhầm lắm."
+            },
+            {
+              "speaker": "朋友",
+              "zh": "只有你们的爸爸妈妈才能分出来哪个是哥哥，哪个是弟弟吧。",
+              "py": "Zhǐyǒu nǐmen de bàba māma cái néng fēn chulai nǎge shì gēge, nǎge shì dìdi ba.",
+              "vi": "Chắc chỉ có bố mẹ hai cậu mới phân biệt được ai là anh, ai là em thôi nhỉ."
+            },
+            {
+              "speaker": "大卫",
+              "zh": "除了父母以外，还有我们自己也能啊。",
+              "py": "Chúle fùmǔ yǐwài, hái yǒu wǒmen zìjǐ yě néng a.",
+              "vi": "Ngoài bố mẹ ra thì còn có chính hai đứa mình cũng nhận ra được chứ."
+            },
+            {
+              "speaker": "朋友",
+              "zh": "你们两个除了长得像，还有什么相同的地方？",
+              "py": "Nǐmen liǎng ge chúle zhǎng de xiàng, hái yǒu shénme xiāngtóng de dìfang?",
+              "vi": "Hai người ngoài việc trông giống nhau ra, còn có điểm gì giống nhau nữa không?"
+            },
+            {
+              "speaker": "大卫",
+              "zh": "我们住在同一个楼、同一个房间……",
+              "py": "Wǒmen zhù zài tóng yí ge lóu, tóng yí ge fángjiān......",
+              "vi": "Tụi mình ở cùng một tòa nhà, cùng một phòng……"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sceneZh": "谈解决问题",
+          "sceneVi": "Nói về việc giải quyết vấn đề",
+          "pdfPages": [
+            186
+          ],
+          "lines": [
+            {
+              "speaker": "我",
+              "zh": "年轻人遇到难题，常常很着急，不知道怎么办。",
+              "py": "Niánqīng rén yùdào nántí, chángcháng hěn zháo jí, bù zhīdào zěnme bàn.",
+              "vi": "Người trẻ tuổi khi gặp phải vấn đề khó khăn thường rất sốt ruột, không biết phải làm sao."
+            },
+            {
+              "speaker": "我",
+              "zh": "其实，不同的问题有不同的解决办法。",
+              "py": "Qíshí, bù tóng de wèntí yǒu bù tóng de jiějué bànfǎ.",
+              "vi": "Kỳ thực, những vấn đề khác nhau sẽ có cách giải quyết khác nhau."
+            },
+            {
+              "speaker": "我",
+              "zh": "有些问题看上去很难，但是做起来非常简单，所以得试着做做。",
+              "py": "Yǒuxiē wèntí kàn shangqu hěn nán, dànshì zuò qilai fēicháng jiǎndān, suǒyǐ děi shìzhe zuòzuo.",
+              "vi": "Có những vấn đề nhìn qua tưởng chừng rất khó, nhưng bắt tay vào làm lại vô cùng đơn giản, cho nên phải thử làm xem sao."
+            },
+            {
+              "speaker": "我",
+              "zh": "有些问题看上去虽然简单，但是解决起来难极了。",
+              "py": "Yǒuxiē wèntí kàn shangqu suīrán jiǎndān, dànshì jiějué qilai nán jí le.",
+              "vi": "Có những vấn đề nhìn thì tuy đơn giản, nhưng bắt tay vào giải quyết lại khó vô cùng."
+            },
+            {
+              "speaker": "我",
+              "zh": "所以只有真正做事情的时候，才能了解有多难。",
+              "py": "Suǒyǐ zhǐyǒu zhēnzhèng zuò shìqing de shíhou, cái néng liǎojiě yǒu duō nán.",
+              "vi": "Vì vậy chỉ khi thật sự bắt tay vào làm việc, người ta mới hiểu được nó khó khăn đến mức nào."
+            },
+            {
+              "speaker": "我",
+              "zh": "不过，我们一定要相信：多么难的问题，都会被解决的。",
+              "py": "Búguò, wǒmen yídìng yào xiāngxìn: duōme nán de wèntí, dōu huì bèi jiějué de.",
+              "vi": "Tuy nhiên, chúng ta nhất định phải tin tưởng rằng: dù vấn đề có khó khăn đến đâu, rồi cũng sẽ được giải quyết."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
