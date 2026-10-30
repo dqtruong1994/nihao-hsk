@@ -1,211 +1,278 @@
 /* ================================================================
    THEME & SEASONAL EVENT TEMPLATES
    Hỗ trợ 5 chủ đề: Mặc định, Halloween, Tết Nguyên Đán, Trung Thu, Tình Yêu
+   Nguyên tắc: Giữ nguyên màu nền sáng và độ tương phản đọc chuẩn mặc định,
+   chỉ thay đổi điểm nhấn thương hiệu (accent) và không khí lễ hội tinh tế.
    ================================================================ */
 
-/* --- 1. Theme Variables & Styles --- */
+/* --- 1. Theme Variables & Festive Accents --- */
 
 /* 🎃 THEME: HALLOWEEN */
 [data-theme="halloween"] {
   --purple: #ea580c !important;
-  --purple-light: #ffedd5 !important;
-  --paper: #1c1917 !important;
-  --ink: #fafaf9 !important;
-  --muted: #a8a29e !important;
-  --line: #292524 !important;
-  --green: #84cc16 !important;
+  --purple-light: #fff7ed !important;
   --p: #ea580c !important;
-  --p2: #451a03 !important;
-  --bg: #1c1917 !important;
-  --mut: #a8a29e !important;
+  --p2: #fff7ed !important;
+  --green: #84cc16 !important;
 }
 [data-theme="halloween"] .top {
-  background: rgba(28, 25, 23, 0.92) !important;
-  border-bottom-color: #292524 !important;
+  border-bottom: 2px solid #fed7aa !important;
 }
-[data-theme="halloween"] .site-nav a {
-  color: #a8a29e !important;
+[data-theme="halloween"] .logo>b {
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.28) !important;
 }
 [data-theme="halloween"] .site-nav a:hover {
-  background: #292524 !important;
-  color: #fb923c !important;
+  background: #fff7ed !important;
+  color: #ea580c !important;
 }
 [data-theme="halloween"] .site-nav a.active {
-  background: #451a03 !important;
-  color: #fb923c !important;
+  background: #ffedd5 !important;
+  color: #c2410c !important;
 }
-[data-theme="halloween"] .character-card,
-[data-theme="halloween"] .journey,
-[data-theme="halloween"] .course-card,
-[data-theme="halloween"] .art-caption {
-  background: #292524 !important;
-  border-color: #44403c !important;
-  color: #fafaf9 !important;
+[data-theme="halloween"] .primary-action {
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  box-shadow: 0 5px 15px rgba(234, 88, 12, 0.28) !important;
+}
+[data-theme="halloween"] .primary-action:hover {
+  background: linear-gradient(135deg, #ea580c, #c2410c) !important;
 }
 [data-theme="halloween"] .card-ni {
-  background: #451a03 !important;
-  color: #fb923c !important;
-  border-color: #7c2d12 !important;
+  background: #fff7ed !important;
+  color: #c2410c !important;
+  border-color: #fed7aa !important;
 }
 [data-theme="halloween"] .card-hao {
-  background: #3b0764 !important;
-  color: #d8b4fe !important;
-  border-color: #581c87 !important;
+  background: #ffffff !important;
+  color: #7e22ce !important;
+  border-color: #e9d5ff !important;
 }
 [data-theme="halloween"] .home-rank-card {
-  background: linear-gradient(135deg, #451a03 0%, #292524 100%) !important;
-  border-color: #ea580c !important;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%) !important;
+  border-color: #fed7aa !important;
 }
 [data-theme="halloween"] .home-rank-card strong {
-  color: #fed7aa !important;
+  color: #ea580c !important;
 }
-[data-theme="halloween"] .home-review-cta {
-  background: #292524 !important;
-  border-color: #44403c !important;
+[data-theme="halloween"] .course-exam-cta {
+  background: #fff7ed !important;
+  border-color: #fed7aa !important;
+  color: #ea580c !important;
 }
-[data-theme="halloween"] .home-review-cta strong {
-  color: #f5f5f4 !important;
+[data-theme="halloween"] .course-exam-cta:hover {
+  background: #ea580c !important;
+  color: #ffffff !important;
+  border-color: #ea580c !important;
 }
-[data-theme="halloween"] .drill-cat-card {
-  background: #292524 !important;
-  border-color: #44403c !important;
-  color: #fafaf9 !important;
+[data-theme="halloween"] .art-seal {
+  border-color: #ea580c !important;
+  color: #ea580c !important;
+}
+[data-theme="halloween"] .theme-header-btn {
+  background: #fff7ed !important;
+  color: #c2410c !important;
+  border-color: #fed7aa !important;
 }
 
 /* 🧧 THEME: TẾT NGUYÊN ĐÁN (XUÂN TIẾT - 春节) */
 [data-theme="tet"] {
   --purple: #dc2626 !important;
   --purple-light: #fee2e2 !important;
-  --paper: #fffbf5 !important;
-  --ink: #450a0a !important;
-  --muted: #991b1b !important;
-  --line: #fecaca !important;
-  --green: #15803d !important;
   --p: #dc2626 !important;
   --p2: #fee2e2 !important;
-  --bg: #fffbf5 !important;
-  --mut: #991b1b !important;
+  --green: #15803d !important;
 }
 [data-theme="tet"] .top {
-  background: rgba(255, 251, 245, 0.95) !important;
-  border-bottom: 2px solid #f87171 !important;
+  border-bottom: 2px solid #fca5a5 !important;
 }
 [data-theme="tet"] .logo>b {
-  background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3) !important;
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.28) !important;
 }
 [data-theme="tet"] .site-nav a:hover {
   background: #fee2e2 !important;
-  color: #b91c1c !important;
+  color: #dc2626 !important;
 }
 [data-theme="tet"] .site-nav a.active {
   background: #fecaca !important;
-  color: #991b1b !important;
+  color: #b91c1c !important;
 }
-[data-theme="tet"] .character-card {
-  border-color: #fca5a5 !important;
+[data-theme="tet"] .primary-action {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  box-shadow: 0 5px 15px rgba(220, 38, 38, 0.28) !important;
+}
+[data-theme="tet"] .primary-action:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
 }
 [data-theme="tet"] .card-ni {
   background: #fef2f2 !important;
   color: #dc2626 !important;
+  border-color: #fca5a5 !important;
 }
 [data-theme="tet"] .card-hao {
-  background: #fffbeb !important;
+  background: #ffffff !important;
   color: #b45309 !important;
   border-color: #fde68a !important;
 }
 [data-theme="tet"] .home-rank-card {
-  background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%) !important;
-  border-color: #f87171 !important;
+  background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%) !important;
+  border-color: #fca5a5 !important;
 }
-[data-theme="tet"] .primary-action {
-  background: linear-gradient(135deg, #dc2626, #ea580c) !important;
-  box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3) !important;
+[data-theme="tet"] .home-rank-card strong {
+  color: #dc2626 !important;
+}
+[data-theme="tet"] .course-exam-cta {
+  background: #fef2f2 !important;
+  border-color: #fca5a5 !important;
+  color: #dc2626 !important;
+}
+[data-theme="tet"] .course-exam-cta:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #dc2626 !important;
+}
+[data-theme="tet"] .art-seal {
+  border-color: #dc2626 !important;
+  color: #dc2626 !important;
+}
+[data-theme="tet"] .theme-header-btn {
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+  border-color: #fca5a5 !important;
 }
 
 /* 🥮 THEME: TRUNG THU (TRUNG THU TIẾT - 中秋节) */
 [data-theme="midautumn"] {
   --purple: #0284c7 !important;
   --purple-light: #e0f2fe !important;
-  --paper: #f8fafc !important;
-  --ink: #0f172a !important;
-  --muted: #475569 !important;
-  --line: #cbd5e1 !important;
-  --green: #0d9488 !important;
   --p: #0284c7 !important;
   --p2: #e0f2fe !important;
-  --bg: #f8fafc !important;
-  --mut: #475569 !important;
+  --green: #0d9488 !important;
 }
 [data-theme="midautumn"] .top {
-  background: rgba(248, 250, 252, 0.95) !important;
   border-bottom: 2px solid #bae6fd !important;
 }
 [data-theme="midautumn"] .logo>b {
-  background: linear-gradient(135deg, #0284c7, #0369a1) !important;
+  background: linear-gradient(135deg, #38bdf8, #0284c7) !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.28) !important;
+}
+[data-theme="midautumn"] .site-nav a:hover {
+  background: #e0f2fe !important;
+  color: #0284c7 !important;
 }
 [data-theme="midautumn"] .site-nav a.active {
-  background: #e0f2fe !important;
+  background: #bae6fd !important;
   color: #0369a1 !important;
 }
+[data-theme="midautumn"] .primary-action {
+  background: linear-gradient(135deg, #0284c7, #0369a1) !important;
+  box-shadow: 0 5px 15px rgba(2, 132, 199, 0.28) !important;
+}
+[data-theme="midautumn"] .primary-action:hover {
+  background: linear-gradient(135deg, #0369a1, #075985) !important;
+}
 [data-theme="midautumn"] .card-ni {
-  background: #fef9c3 !important;
+  background: #f0f9ff !important;
+  color: #0369a1 !important;
+  border-color: #bae6fd !important;
+}
+[data-theme="midautumn"] .card-hao {
+  background: #ffffff !important;
   color: #a16207 !important;
   border-color: #fde047 !important;
 }
-[data-theme="midautumn"] .card-hao {
-  background: #e0f2fe !important;
-  color: #0284c7 !important;
-  border-color: #7dd3fc !important;
-}
 [data-theme="midautumn"] .home-rank-card {
-  background: linear-gradient(135deg, #e0f2fe 0%, #fef9c3 100%) !important;
-  border-color: #38bdf8 !important;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%) !important;
+  border-color: #bae6fd !important;
+}
+[data-theme="midautumn"] .home-rank-card strong {
+  color: #0284c7 !important;
+}
+[data-theme="midautumn"] .course-exam-cta {
+  background: #f0f9ff !important;
+  border-color: #bae6fd !important;
+  color: #0284c7 !important;
+}
+[data-theme="midautumn"] .course-exam-cta:hover {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  border-color: #0284c7 !important;
+}
+[data-theme="midautumn"] .art-seal {
+  border-color: #0284c7 !important;
+  color: #0284c7 !important;
+}
+[data-theme="midautumn"] .theme-header-btn {
+  background: #f0f9ff !important;
+  color: #0369a1 !important;
+  border-color: #bae6fd !important;
 }
 
 /* 💖 THEME: TÌNH YÊU / VALENTINE / THẤT TỊCH (QIXI - 七夕) */
 [data-theme="love"] {
   --purple: #e11d48 !important;
   --purple-light: #ffe4e6 !important;
-  --paper: #fff5f6 !important;
-  --ink: #4c0519 !important;
-  --muted: #9f1239 !important;
-  --line: #fecdd3 !important;
-  --green: #059669 !important;
   --p: #e11d48 !important;
   --p2: #ffe4e6 !important;
-  --bg: #fff5f6 !important;
-  --mut: #9f1239 !important;
+  --green: #059669 !important;
 }
 [data-theme="love"] .top {
-  background: rgba(255, 245, 246, 0.95) !important;
-  border-bottom: 2px solid #fda4af !important;
+  border-bottom: 2px solid #fecdd3 !important;
 }
 [data-theme="love"] .logo>b {
-  background: linear-gradient(135deg, #e11d48, #db2777) !important;
-  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25) !important;
+  background: linear-gradient(135deg, #fb7185, #e11d48) !important;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.28) !important;
 }
-[data-theme="love"] .site-nav a.active {
-  background: #ffe4e6 !important;
-  color: #be123c !important;
-}
-[data-theme="love"] .card-ni {
+[data-theme="love"] .site-nav a:hover {
   background: #ffe4e6 !important;
   color: #e11d48 !important;
-  border-color: #fbcfe8 !important;
 }
-[data-theme="love"] .card-hao {
-  background: #fdf2f8 !important;
-  color: #db2777 !important;
-  border-color: #f472b6 !important;
-}
-[data-theme="love"] .home-rank-card {
-  background: linear-gradient(135deg, #ffe4e6 0%, #fdf2f8 100%) !important;
-  border-color: #fb7185 !important;
+[data-theme="love"] .site-nav a.active {
+  background: #fecdd3 !important;
+  color: #be123c !important;
 }
 [data-theme="love"] .primary-action {
-  background: linear-gradient(135deg, #e11d48, #f43f5e) !important;
-  box-shadow: 0 5px 15px rgba(225, 29, 72, 0.3) !important;
+  background: linear-gradient(135deg, #f43f5e, #e11d48) !important;
+  box-shadow: 0 5px 15px rgba(225, 29, 72, 0.28) !important;
+}
+[data-theme="love"] .primary-action:hover {
+  background: linear-gradient(135deg, #e11d48, #be123c) !important;
+}
+[data-theme="love"] .card-ni {
+  background: #fff1f2 !important;
+  color: #e11d48 !important;
+  border-color: #fecdd3 !important;
+}
+[data-theme="love"] .card-hao {
+  background: #ffffff !important;
+  color: #db2777 !important;
+  border-color: #fbcfe8 !important;
+}
+[data-theme="love"] .home-rank-card {
+  background: linear-gradient(135deg, #fff1f2 0%, #ffffff 100%) !important;
+  border-color: #fecdd3 !important;
+}
+[data-theme="love"] .home-rank-card strong {
+  color: #e11d48 !important;
+}
+[data-theme="love"] .course-exam-cta {
+  background: #fff1f2 !important;
+  border-color: #fecdd3 !important;
+  color: #e11d48 !important;
+}
+[data-theme="love"] .course-exam-cta:hover {
+  background: #e11d48 !important;
+  color: #ffffff !important;
+  border-color: #e11d48 !important;
+}
+[data-theme="love"] .art-seal {
+  border-color: #e11d48 !important;
+  color: #e11d48 !important;
+}
+[data-theme="love"] .theme-header-btn {
+  background: #fff1f2 !important;
+  color: #e11d48 !important;
+  border-color: #fecdd3 !important;
 }
 
 /* --- 2. Header Theme Button --- */
@@ -229,50 +296,31 @@
   border-color: #94a3b8;
   transform: translateY(-1px);
 }
-[data-theme="halloween"] .theme-header-btn {
-  background: #292524 !important;
-  color: #fed7aa !important;
-  border-color: #7c2d12 !important;
-}
-[data-theme="tet"] .theme-header-btn {
-  background: #fee2e2 !important;
-  color: #b91c1c !important;
-  border-color: #fca5a5 !important;
-}
-[data-theme="midautumn"] .theme-header-btn {
-  background: #e0f2fe !important;
-  color: #0369a1 !important;
-  border-color: #7dd3fc !important;
-}
-[data-theme="love"] .theme-header-btn {
-  background: #ffe4e6 !important;
-  color: #be123c !important;
-  border-color: #fda4af !important;
-}
 
 /* --- 3. Festive Floating Particles Container --- */
 .theme-particles-container {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 5;
   overflow: hidden;
+  opacity: 0.55;
 }
 .theme-particle {
   position: absolute;
   top: -40px;
   user-select: none;
   animation: themeFall linear infinite;
-  opacity: 0.85;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));
 }
 @keyframes themeFall {
   0% {
     transform: translateY(0) rotate(0deg) translateX(0);
-    opacity: 0.9;
+    opacity: 0.8;
   }
   50% {
     transform: translateY(50vh) rotate(180deg) translateX(25px);
-    opacity: 0.8;
+    opacity: 0.7;
   }
   100% {
     transform: translateY(105vh) rotate(360deg) translateX(-20px);
@@ -280,13 +328,20 @@
   }
 }
 
+/* Tuyệt đối ẩn hạt rơi trong trang Admin */
+body.admin-body #themeParticles,
+#adminApp #themeParticles,
+#adminApp ~ #themeParticles {
+  display: none !important;
+}
+
 /* --- 4. Theme Picker Modal --- */
 .theme-modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 100000;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,16 +356,12 @@
   width: min(580px, 100%);
   background: #ffffff;
   border-radius: 24px;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
   padding: 24px 28px;
   position: relative;
   max-height: 90vh;
   overflow-y: auto;
-}
-[data-theme="halloween"] .theme-modal-card {
-  background: #1c1917 !important;
-  color: #fafaf9 !important;
-  border: 1px solid #44403c !important;
+  border: 1px solid #e2e8f0;
 }
 
 .theme-modal-header {
@@ -327,9 +378,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-}
-[data-theme="halloween"] .theme-modal-title {
-  color: #fed7aa !important;
 }
 
 .theme-grid {
@@ -352,11 +400,11 @@
 }
 .theme-card-option:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 .theme-card-option.active {
   border-width: 2.5px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 .theme-card-option[data-id="default"].active { border-color: #6657d9; }
 .theme-card-option[data-id="halloween"].active { border-color: #ea580c; }
@@ -421,10 +469,6 @@
   border-radius: 12px;
   margin-top: 18px;
   border: 1px solid #e2e8f0;
-}
-[data-theme="halloween"] .theme-switch-row {
-  background: #292524 !important;
-  border-color: #44403c !important;
 }
 
 @keyframes themeFadeIn {

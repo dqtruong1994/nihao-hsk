@@ -22,8 +22,8 @@
       icon: '🎃',
       tagline: '🎃 ĐÊM HALLOWEEN KỲ BÍ · HỌC CHỮ HÁN KHÔNG SỢ',
       seal: '鬼节',
-      desc: 'Bí ngô ma thuật, bóng ma vui nhộn và dơi đêm kỳ thú',
-      colors: ['#ea580c', '#451a03', '#1c1917'],
+      desc: 'Sắc cam bí ngô rực rỡ, chữ Hán nổi bật sắc nét trên nền sáng',
+      colors: ['#ea580c', '#fff7ed', '#ffffff'],
       particles: ['🎃', '🦇', '👻', '🍬', '🕸️']
     },
     {
@@ -121,9 +121,18 @@
     let container = document.getElementById('themeParticles');
     if (container) container.remove();
 
-    // Không kích hoạt hiệu ứng hạt rơi trong iframe để giữ giao diện học tập tập trung
+    // 1. Tuyệt đối không kích hoạt hạt rơi trong iframe bài học
     if (window.self !== window.top) return;
 
+    // 2. Tuyệt đối không kích hoạt hạt rơi trong trang Quản trị Admin
+    const path = window.location.pathname.toLowerCase();
+    if (path.includes('admin')) return;
+
+    // 3. Không kích hoạt hạt rơi khi đang ở màn hình học bài (#hsk1, #hsk2, #hsk3)
+    const hash = (window.location.hash || '').toLowerCase();
+    if (hash.startsWith('#hsk')) return;
+
+    // 4. Nếu người dùng tắt hiệu ứng hoặc theme không có hạt rơi
     if (!isParticlesEnabled() || !theme.particles || !theme.particles.length) {
       return;
     }
@@ -134,15 +143,15 @@
     document.body.appendChild(container);
 
     const icons = theme.particles;
-    const count = 16;
+    const count = 14;
 
     for (let i = 0; i < count; i++) {
       const p = document.createElement('div');
       p.className = 'theme-particle';
       p.textContent = icons[Math.floor(Math.random() * icons.length)];
-      p.style.left = (Math.random() * 96 + 2) + 'vw';
-      p.style.fontSize = (Math.random() * 12 + 16) + 'px';
-      p.style.animationDuration = (Math.random() * 6 + 7) + 's';
+      p.style.left = (Math.random() * 94 + 3) + 'vw';
+      p.style.fontSize = (Math.random() * 10 + 16) + 'px';
+      p.style.animationDuration = (Math.random() * 6 + 8) + 's';
       p.style.animationDelay = (Math.random() * 7) + 's';
       container.appendChild(p);
     }
@@ -260,6 +269,12 @@
     if (e.data && e.data.type === 'hsk-theme-change' && e.data.theme) {
       applyTheme(e.data.theme, false);
     }
+  });
+
+  // Lắng nghe sự kiện chuyển trang/bài học để dọn hoặc kích hoạt hạt rơi
+  window.addEventListener('hashchange', () => {
+    const currentTheme = THEMES.find(t => t.id === getCurrentThemeId()) || THEMES[0];
+    setupParticles(currentTheme);
   });
 
   // Khởi tạo theme ban đầu
