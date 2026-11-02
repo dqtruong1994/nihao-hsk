@@ -1,28 +1,29 @@
 /**
- * NiHao HSK - Panda Mascot & Chinese Culture Notification System
- * Phong cách thiết kế độc quyền mang đậm dấu ấn Hán ngữ:
- * - Linh vật: Chú Gấu Trúc NiHao "Bao Bao" (大熊猫 🐼) biểu tượng quốc bảo Trung Hoa
- * - Họa tiết: Đèn lồng đỏ (红灯笼 🏮), Trúc xanh (竹子 🎋), Mây cát tường (祥云), Ấn triện son (印章)
- * - Màu sắc: Đỏ chu sa (#e11d48), Vàng kim (#f59e0b), Tím thạch anh (#6657d9), Xanh ngọc (#059669)
+ * NiHao HSK - Little Cat Mascot (小猫) & Chinese Culture Notification System
+ * Phong cách thiết kế Á Đông ấm áp kết hợp biểu tượng chú mèo Tiểu Miêu (小猫):
+ * - Linh vật: Chú mèo đen Tiểu Miêu (小猫 🐱) mắt hổ phách thông minh, nũng nịu nhắc học
+ * - Biểu tượng: Chú mèo ngắm trăng tròn (cat-moon) & Chú mèo con đáng yêu (cat-cute)
+ * - Tông màu: Vàng hổ phách (#f59e0b), Cam vầng trăng (#ea580c), Đỏ son (#e11d48), Đen tuyền (#0f172a)
  * - Nút bấm 3D nổi khối sang trọng, bóng đổ đậm chất Á Đông cao cấp
  */
 
 /* ================================================================
    1. PROMPT BANNER / GỢI Ý BẬT THÔNG BÁO TỰ ĐỘNG KHI VÀO WEB
    ================================================================ */
-.panda-prompt-banner {
+.panda-prompt-banner,
+.cat-prompt-banner {
   position: fixed;
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(140px);
   z-index: 10001;
   background: #ffffff;
-  border: 2.5px solid #fecdd3; /* Viền hồng chu sa nhẹ */
-  border-radius: 22px;
+  border: 2.5px solid #fed7aa; /* Viền cam hổ phách ấm áp */
+  border-radius: 24px;
   padding: 16px 20px;
   max-width: 520px;
   width: calc(100% - 32px);
-  box-shadow: 0 16px 36px rgba(225, 29, 72, 0.16), 0 4px 0 #fda4af;
+  box-shadow: 0 16px 36px rgba(234, 88, 12, 0.16), 0 4px 0 #fdba74;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -32,24 +33,40 @@
   transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
 }
 
-.panda-prompt-banner.show {
+.panda-prompt-banner.show,
+.cat-prompt-banner.show {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
   pointer-events: auto;
 }
 
-.panda-prompt-avatar {
-  width: 64px;
-  height: 64px;
+.panda-prompt-avatar,
+.cat-prompt-avatar {
+  width: 68px;
+  height: 68px;
   flex-shrink: 0;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
-  animation: pandaWiggle 3s infinite ease-in-out;
+  background: radial-gradient(circle, #fff7ed 60%, #ffedd5 100%);
+  border: 2px solid #fed7aa;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
 }
 
-@keyframes pandaWiggle {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-6deg); }
-  75% { transform: rotate(6deg); }
+.cat-prompt-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: catWiggle 3.2s infinite ease-in-out;
+}
+
+@keyframes catWiggle {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-3px) rotate(-4deg); }
+  75% { transform: translateY(-1px) rotate(4deg); }
 }
 
 .panda-prompt-content {
@@ -58,7 +75,7 @@
 }
 
 .panda-prompt-title {
-  margin: 0 0 3px;
+  margin: 0 0 4px;
   font-size: 15.5px;
   font-weight: 800;
   color: #1e293b;
@@ -80,8 +97,9 @@
   margin-top: 10px;
 }
 
-.panda-btn-allow {
-  background: linear-gradient(135deg, #e11d48, #be123c);
+.panda-btn-allow,
+.cat-btn-allow {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
   color: #ffffff;
   border: none;
   padding: 8px 16px;
@@ -89,20 +107,22 @@
   font-size: 13px;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 3px 0 #9f1239;
+  box-shadow: 0 3px 0 #9a3412;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   transition: all 0.15s ease;
 }
 
-.panda-btn-allow:hover {
+.panda-btn-allow:hover,
+.cat-btn-allow:hover {
   filter: brightness(1.08);
 }
 
-.panda-btn-allow:active {
+.panda-btn-allow:active,
+.cat-btn-allow:active {
   transform: translateY(3px);
-  box-shadow: 0 0 0 #9f1239;
+  box-shadow: 0 0 0 #9a3412;
 }
 
 .panda-btn-dismiss {
@@ -129,14 +149,15 @@
 }
 
 /* ================================================================
-   2. POPUP MODAL DIALOG - GẤU TRÚC NIHAO
+   2. POPUP MODAL DIALOG - TIỂU MIÊU (小猫)
    ================================================================ */
-.panda-popup-overlay {
+.panda-popup-overlay,
+.cat-popup-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 10002;
   display: flex;
   align-items: center;
@@ -147,29 +168,32 @@
   transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.panda-popup-overlay.active {
+.panda-popup-overlay.active,
+.cat-popup-overlay.active {
   opacity: 1;
   pointer-events: auto;
 }
 
-.panda-card {
+.panda-card,
+.cat-card {
   position: relative;
   background: #ffffff;
-  background-image: radial-gradient(#fff1f2 1px, transparent 1px);
+  background-image: radial-gradient(#fff7ed 1.2px, transparent 1.2px);
   background-size: 18px 18px;
   width: 100%;
   max-width: 450px;
-  border: 2.5px solid #fecdd3;
-  border-radius: 26px;
+  border: 2.5px solid #fed7aa;
+  border-radius: 28px;
   padding: 28px 24px 22px;
-  box-shadow: 0 20px 50px rgba(225, 29, 72, 0.18), 0 5px 0 #f43f5e;
+  box-shadow: 0 20px 50px rgba(234, 88, 12, 0.2), 0 5px 0 #f97316;
   text-align: center;
   transform: translateY(30px) scale(0.92);
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-sizing: border-box;
 }
 
-.panda-popup-overlay.active .panda-card {
+.panda-popup-overlay.active .panda-card,
+.cat-popup-overlay.active .cat-card {
   transform: translateY(0) scale(1);
 }
 
@@ -194,43 +218,56 @@
 }
 
 .panda-close-btn:hover {
-  background: #e11d48;
-  border-color: #be123c;
+  background: #ea580c;
+  border-color: #c2410c;
   color: #ffffff;
   transform: scale(1.08);
 }
 
-/* Khung linh vật Gấu Trúc */
-.panda-mascot-wrapper {
+/* Khung linh vật Tiểu Miêu */
+.panda-mascot-wrapper,
+.cat-mascot-wrapper {
   position: relative;
-  width: 130px;
-  height: 130px;
-  margin: -12px auto 14px;
+  width: 145px;
+  height: 145px;
+  margin: -14px auto 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.panda-svg {
+.cat-mascot-img {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12));
-  animation: pandaFloat 3s infinite ease-in-out;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.16));
+  animation: catFloat 3.2s infinite ease-in-out;
+  cursor: pointer;
+  transition: transform 0.25s ease;
 }
 
-@keyframes pandaFloat {
+.cat-mascot-img:hover {
+  transform: scale(1.06);
+}
+
+.cat-mascot-img.moon-mode {
+  filter: drop-shadow(0 12px 24px rgba(234, 88, 12, 0.3));
+}
+
+@keyframes catFloat {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
+  50% { transform: translateY(-8px); }
 }
 
 /* Ấn triện đỏ vuông góc dưới linh vật */
-.panda-seal-badge {
+.panda-seal-badge,
+.cat-seal-badge {
   position: absolute;
   bottom: 0;
-  right: 8px;
+  right: 6px;
   background: #be123c;
   color: #fef08a;
-  border: 2px solid #fecdd3;
+  border: 2px solid #fed7aa;
   box-shadow: 0 3px 0 #881337;
   border-radius: 8px;
   padding: 3px 8px;
@@ -238,16 +275,17 @@
   font-weight: 900;
   font-family: STKaiti, KaiTi, 'KaiTi SC', serif;
   letter-spacing: 1px;
-  animation: pandaBadgePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: catBadgePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-@keyframes pandaBadgePop {
+@keyframes catBadgePop {
   0% { transform: scale(0); }
   100% { transform: scale(1); }
 }
 
 /* Bong bóng thoại phong cách Thư pháp Á Đông */
-.panda-bubble {
+.panda-bubble,
+.cat-bubble {
   position: relative;
   background: #fffaf5;
   border: 2px solid #fed7aa;
@@ -259,7 +297,9 @@
 }
 
 .panda-bubble::after,
-.panda-bubble::before {
+.panda-bubble::before,
+.cat-bubble::after,
+.cat-bubble::before {
   content: '';
   position: absolute;
   top: -12px;
@@ -272,7 +312,8 @@
   width: 0;
 }
 
-.panda-bubble::before {
+.panda-bubble::before,
+.cat-bubble::before {
   top: -15px;
   border-color: transparent transparent #fed7aa transparent;
 }
@@ -326,10 +367,10 @@
 }
 
 .panda-stat-pill.xp {
-  border-color: #ddd6fe;
-  color: #6d28d9;
-  background: #f5f3ff;
-  box-shadow: 0 3px 0 #ddd6fe;
+  border-color: #fde68a;
+  color: #b45309;
+  background: #fefce8;
+  box-shadow: 0 3px 0 #fde68a;
 }
 
 /* Nút bấm 3D nổi khối phong cách NiHao HSK */
@@ -358,27 +399,30 @@
   user-select: none;
 }
 
-/* Nút chính sắc Đỏ Chu Sa Hoàng Triều */
-.panda-btn-primary {
-  background: linear-gradient(135deg, #e11d48, #be123c);
+/* Nút chính sắc Cam Vầng Trăng & Đỏ Hán Tự */
+.panda-btn-primary,
+.cat-btn-primary {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
   color: #ffffff;
-  box-shadow: 0 4px 0 #9f1239;
+  box-shadow: 0 4px 0 #9a3412;
 }
 
-.panda-btn-primary:hover {
-  filter: brightness(1.06);
+.panda-btn-primary:hover,
+.cat-btn-primary:hover {
+  filter: brightness(1.08);
 }
 
-.panda-btn-primary:active {
+.panda-btn-primary:active,
+.cat-btn-primary:active {
   transform: translateY(4px);
-  box-shadow: 0 0 0 #9f1239;
+  box-shadow: 0 0 0 #9a3412;
 }
 
 /* Nút màu Cam Lửa Chuỗi ngày */
 .panda-btn-orange {
-  background: linear-gradient(135deg, #ea580c, #c2410c);
+  background: linear-gradient(135deg, #f97316, #ea580c);
   color: #ffffff;
-  box-shadow: 0 4px 0 #9a3412;
+  box-shadow: 0 4px 0 #c2410c;
 }
 
 .panda-btn-orange:hover {
@@ -387,7 +431,7 @@
 
 .panda-btn-orange:active {
   transform: translateY(4px);
-  box-shadow: 0 0 0 #9a3412;
+  box-shadow: 0 0 0 #c2410c;
 }
 
 /* Nút phụ Viền Thư Pháp */
@@ -409,35 +453,48 @@
 }
 
 /* ================================================================
-   3. TOAST THÔNG BÁO GÓC MÀN HÌNH (GẤU TRÚC NIHAO)
+   3. TOAST THÔNG BÁO GÓC MÀN HÌNH (TIỂU MIÊU)
    ================================================================ */
-.panda-toast {
+.panda-toast,
+.cat-toast {
   position: fixed;
   bottom: 24px;
   right: 24px;
   z-index: 9999;
   background: #ffffff;
-  border: 2.5px solid #f43f5e;
-  border-radius: 20px;
+  border: 2.5px solid #f97316;
+  border-radius: 22px;
   padding: 14px 18px;
-  box-shadow: 0 14px 35px rgba(225, 29, 72, 0.16), 0 4px 0 #be123c;
+  box-shadow: 0 14px 35px rgba(234, 88, 12, 0.2), 0 4px 0 #ea580c;
   display: flex;
   align-items: center;
   gap: 14px;
-  max-width: 390px;
+  max-width: 400px;
   transform: translateX(120%);
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-sizing: border-box;
 }
 
-.panda-toast.show {
+.panda-toast.show,
+.cat-toast.show {
   transform: translateX(0);
 }
 
-.panda-toast-mascot {
-  width: 52px;
-  height: 52px;
+.panda-toast-mascot,
+.cat-toast-mascot {
+  width: 54px;
+  height: 54px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-toast-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
 }
 
 .panda-toast-content {
@@ -446,7 +503,7 @@
 }
 
 .panda-toast-title {
-  margin: 0 0 2px;
+  margin: 0 0 3px;
   font-size: 14.5px;
   font-weight: 800;
   color: #1e293b;
@@ -471,14 +528,15 @@
 }
 
 .panda-toast-close:hover {
-  color: #e11d48;
-  background: #ffe4e6;
+  color: #ea580c;
+  background: #ffedd5;
 }
 
 /* ================================================================
-   4. NÚT TRÒN LINH VẬT GẤU TRÚC GÓC PHẢI DƯỚI (FLOATING WIDGET)
+   4. NÚT TRÒN LINH VẬT TIỂU MIÊU GÓC PHẢI DƯỚI (FLOATING WIDGET)
    ================================================================ */
-.panda-floating-widget {
+.panda-floating-widget,
+.cat-floating-widget {
   position: fixed;
   bottom: 86px;
   right: 20px;
@@ -490,63 +548,74 @@
   pointer-events: none;
 }
 
-.panda-floating-btn {
+.panda-floating-btn,
+.cat-floating-btn {
   pointer-events: auto;
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: #ffffff;
-  border: 2.5px solid #f43f5e;
-  box-shadow: 0 8px 25px rgba(225, 29, 72, 0.28), 0 4px 0 #be123c;
+  border: 2.5px solid #f97316;
+  box-shadow: 0 8px 25px rgba(234, 88, 12, 0.32), 0 4px 0 #c2410c;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding: 3px;
   box-sizing: border-box;
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
 }
 
-.panda-floating-btn:hover {
-  transform: scale(1.12) rotate(-5deg);
+.panda-floating-btn:hover,
+.cat-floating-btn:hover {
+  transform: scale(1.14) rotate(-5deg);
 }
 
-.panda-floating-btn:active {
+.panda-floating-btn:active,
+.cat-floating-btn:active {
   transform: translateY(3px) scale(1.05);
-  box-shadow: 0 1px 0 #be123c;
+  box-shadow: 0 1px 0 #c2410c;
+}
+
+.cat-floating-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .panda-floating-badge {
   position: absolute;
   top: -4px;
   right: -4px;
-  background: #e11d48;
+  background: #ea580c;
   color: #ffffff;
   font-size: 10.5px;
   font-weight: 900;
   border-radius: 999px;
   padding: 2px 6px;
   border: 2px solid #ffffff;
-  box-shadow: 0 2px 6px rgba(225, 29, 72, 0.4);
-  animation: pandaPulse 1.8s infinite;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.4);
+  animation: catPulse 1.8s infinite;
 }
 
-@keyframes pandaPulse {
+@keyframes catPulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.15); }
 }
 
-.panda-floating-hint {
+.panda-floating-hint,
+.cat-floating-hint {
   pointer-events: auto;
   background: #ffffff;
-  border: 2px solid #fecdd3;
-  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.12), 0 3px 0 #fda4af;
+  border: 2px solid #fed7aa;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.14), 0 3px 0 #fdba74;
   border-radius: 14px;
   padding: 7px 12px;
   font-size: 12px;
   font-weight: 800;
-  color: #be123c;
+  color: #c2410c;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -555,7 +624,8 @@
 }
 
 @media (max-width: 600px) {
-  .panda-prompt-banner {
+  .panda-prompt-banner,
+  .cat-prompt-banner {
     bottom: 16px;
     padding: 14px 16px;
     flex-direction: column;
@@ -566,13 +636,14 @@
     width: 100%;
     justify-content: center;
   }
-  .panda-card {
-    border-radius: 20px;
+  .panda-card,
+  .cat-card {
+    border-radius: 22px;
     padding: 22px 18px 18px;
   }
-  .panda-floating-widget {
+  .panda-floating-widget,
+  .cat-floating-widget {
     bottom: 76px;
     right: 14px;
   }
 }
-
