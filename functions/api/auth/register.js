@@ -1,6 +1,6 @@
 /**
  * Cloudflare Pages Function: POST /api/auth/register
- * Đăng ký tài khoản học viên mới (Bắt buộc xác thực email nhân viên)
+ * Đăng ký tài khoản học viên mới (Ghi nhận thông tin Họ tên, Email nhân viên)
  */
 
 async function sha256(text) {
@@ -33,13 +33,6 @@ export async function onRequestPost({ request, env }) {
       });
     }
 
-    if (!cleanOtp) {
-      return new Response(JSON.stringify({ error: 'Vui lòng nhập mã xác nhận 6 số đã gửi tới email.' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' }
-      });
-    }
-
     if (!password || password.length < 6) {
       return new Response(JSON.stringify({ error: 'Mật khẩu tối thiểu 6 ký tự.' }), {
         status: 400,
@@ -64,27 +57,29 @@ export async function onRequestPost({ request, env }) {
         });
       }
 
-      // Kiểm tra mã xác thực OTP trong DB nếu có bảng email_verifications
-      try {
-        const otpRecord = await env.DB.prepare('SELECT code, expires_at FROM email_verifications WHERE email = ?').bind(cleanEmail).first();
-        if (otpRecord) {
-          if (Date.now() > otpRecord.expires_at) {
-            return new Response(JSON.stringify({ error: 'Mã xác nhận đã hết hạn (quá 10 phút). Vui lòng gửi lại mã mới.' }), {
-              status: 400,
-              headers: { 'Content-Type': 'application/json' }
-            });
+      // Nếu có truyền mã OTP thì kiểm tra đối chiếu trong DB (khi có cấu hình email)
+      if (cleanOtp) {
+        try {
+          const otpRecord = await env.DB.prepare('SELECT code, expires_at FROM email_verifications WHERE email = ?').bind(cleanEmail).first();
+          if (otpRecord) {
+            if (Date.now() > otpRecord.expires_at) {
+              return new Response(JSON.stringify({ error: 'Mã xác nhận đã hết hạn (quá 10 phút). Vui lòng gửi lại mã mới.' }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' }
+              });
+            }
+            if (otpRecord.code !== cleanOtp) {
+              return new Response(JSON.stringify({ error: 'Mã xác nhận 6 số từ email không chính xác.' }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' }
+              });
+            }
+            // Xóa mã đã dùng
+            await env.DB.prepare('DELETE FROM email_verifications WHERE email = ?').bind(cleanEmail).run();
           }
-          if (otpRecord.code !== cleanOtp) {
-            return new Response(JSON.stringify({ error: 'Mã xác nhận 6 số từ email không chính xác.' }), {
-              status: 400,
-              headers: { 'Content-Type': 'application/json' }
-            });
-          }
-          // Xóa mã đã dùng
-          await env.DB.prepare('DELETE FROM email_verifications WHERE email = ?').bind(cleanEmail).run();
+        } catch (otpErr) {
+          console.warn('Verify OTP record warning:', otpErr.message);
         }
-      } catch (otpErr) {
-        console.warn('Verify OTP record warning:', otpErr.message);
       }
 
       const id = 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);

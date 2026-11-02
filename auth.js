@@ -522,12 +522,10 @@
       throw new Error('Vui lòng nhập địa chỉ email hợp lệ để xác nhận danh tính nhân viên.');
     }
 
-    if (!otpCode) {
-      throw new Error('Vui lòng nhập mã xác nhận 6 số từ email.');
+    // Nếu có mã xác thực OTP thì kiểm tra
+    if (otpCode) {
+      verifyEmailOtp(email, otpCode);
     }
-
-    // Kiểm tra tính hợp lệ của mã xác thực OTP
-    verifyEmailOtp(email, otpCode);
 
     if (!username || username.length < 3) {
       throw new Error('Tên đăng nhập cần có ít nhất 3 ký tự.');
@@ -1040,9 +1038,18 @@
         tabLogin.style.color = '#626880';
         nameGroup.hidden = false;
         emailGroup.hidden = false;
-        otpGroup.hidden = false;
         usernameLabel.textContent = 'Tên đăng nhập mới';
-        submitBtn.textContent = 'Xác nhận Email & Đăng ký';
+
+        const hasMailer = !!(localStorage.getItem('hsk_mail_webhook_url'));
+        if (hasMailer) {
+          if (btnSendOtp) btnSendOtp.style.display = 'inline-block';
+          if (otpGroup) otpGroup.hidden = false;
+          submitBtn.textContent = 'Xác nhận Email & Đăng ký';
+        } else {
+          if (btnSendOtp) btnSendOtp.style.display = 'none';
+          if (otpGroup) otpGroup.hidden = true;
+          submitBtn.textContent = 'Đăng ký tài khoản nhân viên';
+        }
       }
     }
 

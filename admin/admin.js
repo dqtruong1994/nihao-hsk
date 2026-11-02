@@ -1265,13 +1265,7 @@
     };
   }
 
-  // Khởi động
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
+
 
 
   // --- DASHBOARD WIDGET: HỌC VIÊN HOẠT ĐỘNG GẦN ĐÂY ---
@@ -1778,3 +1772,11 @@
     link.click();
     document.body.removeChild(link);
   }
+
+  // Khởi động hệ thống quản trị
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
