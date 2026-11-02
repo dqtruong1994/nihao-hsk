@@ -753,13 +753,16 @@
           <h3>Danh sách Tài khoản & Phân quyền</h3>
           <button type="button" class="btn-primary" id="btnAddNewUser">+ Thêm tài khoản mới</button>
         </div>
-        <p style="color:#64748b; font-size:13px; margin:0 0 16px;">Quản lý phân quyền giữa <b>Quản trị viên (Admin)</b> và <b>Học viên (Student)</b>.</p>
+        <p style="color:#64748b; font-size:13px; margin:0 0 16px;">
+          Quản lý phân quyền giữa <b>Quản trị viên (Admin)</b> và <b>Học viên (Student)</b>. Mọi nhân viên đăng ký đều qua bước xác thực email để định danh chính xác.
+        </p>
         <div class="table-responsive">
           <table class="admin-table">
             <thead>
               <tr>
                 <th>Tài khoản</th>
-                <th>Họ tên</th>
+                <th>Họ tên & Email nhân viên</th>
+                <th>Xác thực Email</th>
                 <th>Vai trò (Role)</th>
                 <th>Trạng thái</th>
                 <th>Ngày tạo</th>
@@ -770,7 +773,19 @@
               ${users.map(u => `
                 <tr>
                   <td><b>${u.username}</b> ${u.id === currentUser.id ? '<small style="color:#6657d9;">(Bạn)</small>' : ''}</td>
-                  <td>${u.fullName}</td>
+                  <td>
+                    <div style="font-weight:600; color:#1e1b4b;">${u.fullName}</div>
+                    <div style="font-size:12px; color:#475569; margin-top:2px;">
+                      ✉️ <b>${u.email || 'Chưa cập nhật email'}</b>
+                    </div>
+                  </td>
+                  <td>
+                    ${u.emailVerified ? `
+                      <span class="badge badge-verified" title="Đã xác thực OTP qua email">✓ Đã xác nhận</span>
+                    ` : `
+                      <span class="badge badge-unverified">⚠️ Chưa xác thực</span>
+                    `}
+                  </td>
                   <td>
                     <span class="badge ${u.role === 'admin' ? 'badge-admin' : 'badge-student'}">
                       ${u.role === 'admin' ? '👑 Admin' : '🎓 Học viên'}
@@ -858,8 +873,15 @@
           <form id="addUserForm">
             <div class="admin-modal-body">
               <div class="form-group">
-                <label>Họ và tên</label>
-                <input type="text" id="newFullName" class="form-control" required placeholder="Ví dụ: Trần Thị Bình">
+                <label>Họ và tên nhân viên</label>
+                <input type="text" id="newFullName" class="form-control" required placeholder="Ví dụ: Trần Thị Bình - Kinh Doanh">
+              </div>
+              <div class="form-group">
+                <label>Email nhân viên (xác thực danh tính)</label>
+                <input type="email" id="newEmail" class="form-control" required placeholder="binh.tranthi@company.com">
+                <small style="color:#64748b; font-size:12px; margin-top:3px; display:block;">
+                  Email chính thức của nhân sự để phục vụ giám sát và báo cáo học tập.
+                </small>
               </div>
               <div class="form-group">
                 <label>Tên đăng nhập (username)</label>
@@ -897,7 +919,8 @@
           document.getElementById('newUsername').value,
           document.getElementById('newPassword').value,
           document.getElementById('newFullName').value,
-          document.getElementById('newRole').value
+          document.getElementById('newRole').value,
+          document.getElementById('newEmail').value
         );
         close();
         renderTabContent();
@@ -1042,7 +1065,9 @@
                 <span class="badge ${u.role === 'admin' ? 'badge-admin' : 'badge-student'}" style="font-size:10px; padding:2px 6px;">
                   ${u.role === 'admin' ? 'Admin' : 'Học viên'}
                 </span>
+                ${u.emailVerified ? '<span title="Đã xác thực email" style="color:#16a34a; font-weight:700; font-size:11px; margin-left:2px;">✓</span>' : ''}
               </div>
+              <div style="font-size:11px; color:#475569; margin:1px 0;">✉️ ${u.email || 'Chưa có email'}</div>
               <div class="user-meta-sub">@${u.username}</div>
             </div>
           </div>
@@ -1194,12 +1219,13 @@
 
     function getFilteredUsers() {
       return allUsers.filter(u => {
-        // Search filter
+        // Search filter (hỗ trợ tìm theo tên, username hoặc email nhân viên)
         if (searchTerm) {
           const term = searchTerm.toLowerCase();
           const matchName = (u.fullName || '').toLowerCase().includes(term);
           const matchUser = (u.username || '').toLowerCase().includes(term);
-          if (!matchName && !matchUser) return false;
+          const matchEmail = (u.email || '').toLowerCase().includes(term);
+          if (!matchName && !matchUser && !matchEmail) return false;
         }
         // Category filter
         if (currentFilter === 'online') return u.isOnline;
@@ -1240,8 +1266,13 @@
                   <span class="badge ${u.role === 'admin' ? 'badge-admin' : 'badge-student'}" style="font-size:11px;">
                     ${u.role === 'admin' ? '👑 Admin' : '🎓 Học viên'}
                   </span>
+                  ${u.emailVerified ? '<span title="Đã xác thực email" style="color:#16a34a; font-weight:700; font-size:12px; margin-left:3px;">✓</span>' : ''}
                 </div>
-                <div class="user-meta-sub">@${u.username} · Tạo ${new Date(u.createdAt).toLocaleDateString('vi-VN')}</div>
+                <div class="user-meta-email" style="font-size:12px; color:#475569; margin:2px 0;">
+                  ✉️ <b>${u.email || 'Chưa cập nhật email'}</b>
+                  ${u.emailVerified ? '<span style="color:#16a34a; font-size:10px; background:#dcfce7; padding:1px 5px; border-radius:4px; font-weight:600; margin-left:4px;">Đã xác nhận</span>' : ''}
+                </div>
+                <div class="user-meta-sub" style="font-size:11px; color:#94a3b8; margin-top:2px;">@${u.username} · Tạo ${new Date(u.createdAt).toLocaleDateString('vi-VN')}</div>
               </div>
             </div>
           </td>
@@ -1373,9 +1404,10 @@
                     <span class="badge ${user.role === 'admin' ? 'badge-admin' : 'badge-student'}">
                       ${user.role === 'admin' ? 'Admin' : 'Học viên'}
                     </span>
+                    ${user.emailVerified ? '<span title="Đã xác thực email" style="color:#16a34a; font-weight:700; font-size:13px;">✓</span>' : ''}
                   </h3>
                   <div style="font-size:12px; color:#64748b; margin-top:2px;">
-                    @${user.username} · Trạng thái: <b>${user.activeText}</b> · Tổng hoàn thành: <b>${user.totalLessonsCompleted}/47 bài</b>
+                    ✉️ <b>${user.email || 'Chưa có email'}</b> ${user.emailVerified ? '<span style="color:#16a34a; font-size:10.5px; background:#dcfce7; padding:1px 5px; border-radius:4px; font-weight:600;">(Đã xác nhận)</span>' : ''} · @${user.username} · Trạng thái: <b>${user.activeText}</b> · Tổng hoàn thành: <b>${user.totalLessonsCompleted}/47 bài</b>
                   </div>
                 </div>
               </div>
@@ -1470,7 +1502,7 @@
   // Xuất file CSV tiến độ học viên
   function exportProgressCSV(users) {
     const headers = [
-      'ID', 'Tài khoản', 'Họ và tên', 'Vai trò', 'Trạng thái hoạt động', 'Lần cuối hoạt động',
+      'ID', 'Tài khoản', 'Họ và tên', 'Email nhân viên', 'Xác thực Email', 'Vai trò', 'Trạng thái hoạt động', 'Lần cuối hoạt động',
       'HSK1 Hoàn thành', 'HSK1 %', 'HSK1 Điểm',
       'HSK2 Hoàn thành', 'HSK2 %', 'HSK2 Điểm',
       'HSK3 Hoàn thành', 'HSK3 %', 'HSK3 Điểm',
@@ -1481,6 +1513,8 @@
       `"${u.id}"`,
       `"${u.username}"`,
       `"${u.fullName}"`,
+      `"${u.email || ''}"`,
+      `"${u.emailVerified ? 'Đã xác nhận' : 'Chưa xác thực'}"`,
       `"${u.role === 'admin' ? 'Quản trị viên' : 'Học viên'}"`,
       `"${u.activeText}"`,
       `"${new Date(u.lastActive).toLocaleString('vi-VN')}"`,

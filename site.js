@@ -137,7 +137,8 @@
             <div class="user-dropdown-header">
               <div class="user-dropdown-avatar">${(user.name || user.username || 'U')[0].toUpperCase()}</div>
               <div class="user-dropdown-info">
-                <div class="user-dropdown-name">${user.name || user.username}</div>
+                <div class="user-dropdown-name">${user.name || user.fullName || user.username}</div>
+                ${user.email ? `<div class="user-dropdown-email" style="font-size:11px; color:#64748b; margin:1px 0;">✉️ ${user.email}</div>` : ''}
                 <div class="user-dropdown-role ${isAdmin ? 'admin' : ''}">${isAdmin ? 'Quản trị viên' : 'Học viên'}</div>
               </div>
             </div>

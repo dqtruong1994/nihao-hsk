@@ -5,6 +5,8 @@
 CREATE TABLE IF NOT EXISTS users (
   id TEXT PRIMARY KEY,
   username TEXT UNIQUE NOT NULL,
+  email TEXT UNIQUE,
+  email_verified INTEGER NOT NULL DEFAULT 1,
   password_hash TEXT NOT NULL,
   name TEXT NOT NULL,
   role TEXT NOT NULL DEFAULT 'student', -- 'admin' hoặc 'student'
@@ -15,10 +17,12 @@ CREATE TABLE IF NOT EXISTS users (
 
 -- Tạo tài khoản Admin mặc định (admin / admin@nihao123)
 -- SHA-256 hash của "admin@nihao123"
-INSERT OR IGNORE INTO users (id, username, password_hash, name, role, status, created_at)
+INSERT OR IGNORE INTO users (id, username, email, email_verified, password_hash, name, role, status, created_at)
 VALUES (
   'admin_01',
   'admin',
+  'admin@nihaohsk.edu.vn',
+  1,
   'd0d39e25d2c8fbcf34b4661ea00d8cb36b28537553f1d5336fbf188c64bb93b2',
   'Quản trị viên',
   'admin',

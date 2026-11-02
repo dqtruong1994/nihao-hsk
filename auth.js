@@ -8,6 +8,7 @@
   const USERS_KEY = 'hsk_users_db_v1';
   const CURRENT_USER_KEY = 'hsk_current_user_v1';
   const PROGRESS_MAP_KEY = 'hsk_users_progress_map_v1';
+  const EMAIL_OTP_STORAGE_KEY = 'hsk_email_otp_cache_v1';
 
   // Khởi tạo tài khoản mẫu mặc định nếu chưa có
   function getStoredUsers() {
@@ -24,6 +25,9 @@
         username: 'admin',
         password: 'admin@nihao123', // Mật khẩu quản trị mặc định
         fullName: 'Quản trị viên Hệ thống',
+        email: 'admin@nihaohsk.edu.vn',
+        emailVerified: true,
+        emailVerifiedAt: '2026-10-01T00:00:00.000Z',
         role: 'admin', // admin | student
         status: 'active',
         createdAt: '2026-10-01T00:00:00.000Z',
@@ -35,6 +39,9 @@
         username: 'hocvien',
         password: '123456',
         fullName: 'Nguyễn Văn Học',
+        email: 'hocvien.nguyen@company.com',
+        emailVerified: true,
+        emailVerifiedAt: '2026-10-15T00:00:00.000Z',
         role: 'student',
         status: 'active',
         createdAt: '2026-10-15T00:00:00.000Z',
@@ -46,6 +53,9 @@
         username: 'tranthimai',
         password: '123456',
         fullName: 'Trần Thị Mai',
+        email: 'mai.tranthi@company.com',
+        emailVerified: true,
+        emailVerifiedAt: '2026-10-18T00:00:00.000Z',
         role: 'student',
         status: 'active',
         createdAt: '2026-10-18T00:00:00.000Z',
@@ -57,6 +67,9 @@
         username: 'lehoangnam',
         password: '123456',
         fullName: 'Lê Hoàng Nam',
+        email: 'nam.lehoang@company.com',
+        emailVerified: true,
+        emailVerifiedAt: '2026-10-20T00:00:00.000Z',
         role: 'student',
         status: 'active',
         createdAt: '2026-10-20T00:00:00.000Z',
@@ -70,7 +83,7 @@
       return defaultUsers;
     }
 
-    // Đảm bảo các tài khoản mẫu đều tồn tại và có trường thời gian
+    // Đảm bảo các tài khoản mẫu đều tồn tại và có thông tin email xác thực
     let updated = false;
     defaultUsers.forEach(def => {
       const existing = users.find(u => u.username === def.username);
@@ -80,6 +93,22 @@
       } else {
         if (!existing.lastActive) { existing.lastActive = def.lastActive; updated = true; }
         if (!existing.lastLogin) { existing.lastLogin = def.lastLogin; updated = true; }
+        if (!existing.email) {
+          existing.email = def.email;
+          existing.emailVerified = true;
+          existing.emailVerifiedAt = def.emailVerifiedAt;
+          updated = true;
+        }
+      }
+    });
+
+    // Bổ sung email cho các tài khoản người dùng cũ nếu chưa có
+    users.forEach(u => {
+      if (u.email === undefined) {
+        u.email = u.username + '@company.com';
+        u.emailVerified = true;
+        u.emailVerifiedAt = u.createdAt || new Date(now).toISOString();
+        updated = true;
       }
     });
 
@@ -311,13 +340,81 @@
     });
   }
 
-  // Đăng nhập
-  async function login(username, password) {
-    username = String(username || '').trim().toLowerCase();
+  // --- XÁC THỰC EMAIL & MÃ OTP NHÂN VIÊN ---
+  function sendVerificationOtp(email) {
+    email = String(email || '').trim().toLowerCase();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      throw new Error('Định dạng email không hợp lệ. Vui lòng nhập địa chỉ email chính xác (ví dụ: nhanvien@congty.com).');
+    }
+
+    const users = getStoredUsers();
+    const existing = users.find(u => u.email && u.email.toLowerCase() === email);
+    if (existing) {
+      throw new Error(`Email "${email}" đã được đăng ký cho tài khoản @${existing.username}. Vui lòng đăng nhập hoặc dùng email khác.`);
+    }
+
+    // Tạo mã OTP 6 số ngẫu nhiên
+    const code = Math.floor(100000 + Math.random() * 900000).toString();
+    const expiresAt = Date.now() + 10 * 60 * 1000; // Hết hạn sau 10 phút
+
+    const otpData = {
+      email,
+      code,
+      expiresAt,
+      sentAt: Date.now()
+    };
+
+    try {
+      sessionStorage.setItem(EMAIL_OTP_STORAGE_KEY, JSON.stringify(otpData));
+    } catch {}
+
+    return {
+      ok: true,
+      email,
+      code,
+      expiresAt,
+      message: `Mã xác nhận email 6 số: ${code}`
+    };
+  }
+
+  function verifyEmailOtp(email, inputCode) {
+    email = String(email || '').trim().toLowerCase();
+    inputCode = String(inputCode || '').trim();
+
+    if (!inputCode) {
+      throw new Error('Vui lòng nhập mã xác nhận 6 số đã gửi tới email.');
+    }
+
+    let cached = null;
+    try {
+      const raw = sessionStorage.getItem(EMAIL_OTP_STORAGE_KEY);
+      if (raw) cached = JSON.parse(raw);
+    } catch {}
+
+    if (!cached || cached.email !== email) {
+      throw new Error('Chưa có mã xác nhận nào được gửi cho email này. Vui lòng nhấn "Gửi mã OTP".');
+    }
+
+    if (Date.now() > cached.expiresAt) {
+      try { sessionStorage.removeItem(EMAIL_OTP_STORAGE_KEY); } catch {}
+      throw new Error('Mã xác nhận đã hết hạn (quá 10 phút). Vui lòng nhấn "Gửi mã OTP" để nhận mã mới.');
+    }
+
+    if (cached.code !== inputCode) {
+      throw new Error('Mã xác nhận không chính xác. Vui lòng kiểm tra lại 6 chữ số.');
+    }
+
+    return true;
+  }
+
+  // Đăng nhập (hỗ trợ cả Tên đăng nhập hoặc Email nhân viên)
+  async function login(usernameOrEmail, password) {
+    const key = String(usernameOrEmail || '').trim().toLowerCase();
     password = String(password || '').trim();
 
-    if (!username || !password) {
-      throw new Error('Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu.');
+    if (!key || !password) {
+      throw new Error('Vui lòng nhập đầy đủ tên đăng nhập/email và mật khẩu.');
     }
 
     // Thử gọi Cloudflare API nếu có backend
@@ -325,7 +422,7 @@
       const resp = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ username: key, password })
       });
       if (resp.ok) {
         const data = await resp.json();
@@ -338,10 +435,13 @@
 
     // Fallback Local Storage Mode
     const users = getStoredUsers();
-    const user = users.find(u => u.username.toLowerCase() === username && u.password === password);
+    const user = users.find(u =>
+      (u.username.toLowerCase() === key || (u.email && u.email.toLowerCase() === key)) &&
+      u.password === password
+    );
 
     if (!user) {
-      throw new Error('Tên đăng nhập hoặc mật khẩu không chính xác.');
+      throw new Error('Tên đăng nhập / Email hoặc mật khẩu không chính xác.');
     }
 
     if (user.status === 'blocked') {
@@ -352,6 +452,8 @@
       id: user.id,
       username: user.username,
       fullName: user.fullName,
+      email: user.email || '',
+      emailVerified: !!user.emailVerified,
       role: user.role,
       status: user.status
     };
@@ -359,11 +461,29 @@
     return sessionUser;
   }
 
-  // Đăng ký tài khoản học viên mới
-  async function register(username, password, fullName) {
+  // Đăng ký tài khoản nhân viên / học viên mới (bắt buộc xác thực email)
+  async function register(username, password, fullName, email = '', otpCode = '') {
     username = String(username || '').trim().toLowerCase();
     password = String(password || '').trim();
     fullName = String(fullName || '').trim();
+    email = String(email || '').trim().toLowerCase();
+    otpCode = String(otpCode || '').trim();
+
+    if (!fullName) {
+      throw new Error('Vui lòng nhập họ và tên nhân viên.');
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      throw new Error('Vui lòng nhập địa chỉ email hợp lệ để xác nhận danh tính nhân viên.');
+    }
+
+    if (!otpCode) {
+      throw new Error('Vui lòng nhập mã xác nhận 6 số từ email.');
+    }
+
+    // Kiểm tra tính hợp lệ của mã xác thực OTP
+    verifyEmailOtp(email, otpCode);
 
     if (!username || username.length < 3) {
       throw new Error('Tên đăng nhập cần có ít nhất 3 ký tự.');
@@ -371,20 +491,18 @@
     if (!password || password.length < 6) {
       throw new Error('Mật khẩu cần có ít nhất 6 ký tự.');
     }
-    if (!fullName) {
-      fullName = username;
-    }
 
     // Thử gọi Cloudflare API
     try {
       const resp = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password, fullName })
+        body: JSON.stringify({ username, password, fullName, email, otpCode })
       });
       if (resp.ok) {
         const data = await resp.json();
         if (data.user) {
+          try { sessionStorage.removeItem(EMAIL_OTP_STORAGE_KEY); } catch {}
           setCurrentUser(data.user);
           return data.user;
         }
@@ -396,6 +514,9 @@
     if (users.some(u => u.username.toLowerCase() === username)) {
       throw new Error('Tên đăng nhập này đã có người sử dụng. Vui lòng chọn tên khác.');
     }
+    if (users.some(u => u.email && u.email.toLowerCase() === email)) {
+      throw new Error('Địa chỉ email này đã được sử dụng bởi một tài khoản khác.');
+    }
 
     const nowIso = new Date().toISOString();
     const newUser = {
@@ -403,7 +524,10 @@
       username,
       password,
       fullName,
-      role: 'student', // Mặc định là học viên
+      email,
+      emailVerified: true,
+      emailVerifiedAt: nowIso,
+      role: 'student', // Mặc định là nhân viên / học viên
       status: 'active',
       createdAt: nowIso,
       lastLogin: nowIso,
@@ -412,6 +536,9 @@
 
     users.push(newUser);
     saveUsers(users);
+
+    // Hủy mã OTP đã dùng thành công
+    try { sessionStorage.removeItem(EMAIL_OTP_STORAGE_KEY); } catch {}
 
     // Khởi tạo tiến độ ban đầu cho học viên mới
     const map = getStoredProgressMap();
@@ -430,6 +557,8 @@
       id: newUser.id,
       username: newUser.username,
       fullName: newUser.fullName,
+      email: newUser.email,
+      emailVerified: true,
       role: newUser.role,
       status: newUser.status
     };
@@ -453,6 +582,9 @@
       id: u.id,
       username: u.username,
       fullName: u.fullName,
+      email: u.email || '',
+      emailVerified: !!u.emailVerified,
+      emailVerifiedAt: u.emailVerifiedAt || null,
       role: u.role,
       status: u.status,
       createdAt: u.createdAt,
@@ -537,6 +669,9 @@
         id: u.id,
         username: u.username,
         fullName: u.fullName,
+        email: u.email || '',
+        emailVerified: !!u.emailVerified,
+        emailVerifiedAt: u.emailVerifiedAt || null,
         role: u.role,
         status: u.status,
         createdAt: u.createdAt,
@@ -627,7 +762,7 @@
     saveProgressMap(map);
   }
 
-  function addUserByAdmin(username, password, fullName, role = 'student') {
+  function addUserByAdmin(username, password, fullName, role = 'student', email = '') {
     const current = getCurrentUser();
     if (!current || current.role !== 'admin') {
       throw new Error('Bạn không có quyền tạo tài khoản.');
@@ -636,6 +771,7 @@
     username = String(username || '').trim().toLowerCase();
     password = String(password || '').trim();
     fullName = String(fullName || '').trim() || username;
+    email = String(email || '').trim().toLowerCase();
 
     if (!username || !password) throw new Error('Vui lòng nhập tên đăng nhập và mật khẩu.');
 
@@ -644,12 +780,25 @@
       throw new Error('Tên đăng nhập đã tồn tại.');
     }
 
+    if (email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) throw new Error('Địa chỉ email không đúng định dạng.');
+      if (users.some(u => u.email && u.email.toLowerCase() === email)) {
+        throw new Error(`Email "${email}" đã được đăng ký bởi tài khoản khác.`);
+      }
+    } else {
+      email = username + '@company.com';
+    }
+
     const nowIso = new Date().toISOString();
     const newUser = {
       id: 'u_' + Date.now().toString(36),
       username,
       password,
       fullName,
+      email,
+      emailVerified: true, // Được tạo bởi quản trị viên nên tự động xác thực
+      emailVerifiedAt: nowIso,
       role: ['admin', 'student'].includes(role) ? role : 'student',
       status: 'active',
       createdAt: nowIso,
@@ -683,7 +832,7 @@
       modal.id = 'hskAuthModal';
       modal.className = 'srs-modal-overlay';
       modal.innerHTML = `
-        <div class="srs-modal-card" style="max-width: 420px; padding: 26px 28px;">
+        <div class="srs-modal-card" style="max-width: 440px; padding: 26px 28px;">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
             <div style="display:flex; align-items:center; gap:8px;">
               <span style="background:#6657d9; color:#fff; border-radius:8px; padding:4px 8px; font-weight:800; font-size:14px;">中</span>
@@ -693,16 +842,51 @@
           </div>
           <div style="display:flex; background:#f1f3f9; border-radius:10px; padding:3px; margin-bottom:18px;">
             <button type="button" id="authTabLogin" style="flex:1; border:0; background:#fff; padding:8px; border-radius:8px; font-weight:700; color:#1a1e36; cursor:pointer;">Đăng nhập</button>
-            <button type="button" id="authTabRegister" style="flex:1; border:0; background:transparent; padding:8px; border-radius:8px; font-weight:600; color:#626880; cursor:pointer;">Đăng ký</button>
+            <button type="button" id="authTabRegister" style="flex:1; border:0; background:transparent; padding:8px; border-radius:8px; font-weight:600; color:#626880; cursor:pointer;">Đăng ký nhân viên</button>
           </div>
           <form id="authForm" style="display:flex; flex-direction:column; gap:12px;">
             <div id="authFullNameGroup" hidden>
-              <label style="display:block; font-size:13px; font-weight:600; color:#475569; margin-bottom:4px;">Họ và tên của bạn</label>
-              <input type="text" id="authFullName" placeholder="Ví dụ: Nguyễn Văn An" style="width:100%; border:1.5px solid #e2e8f0; border-radius:10px; padding:10px 12px; font-size:14px; outline:none; box-sizing:border-box;">
+              <label style="display:block; font-size:13px; font-weight:600; color:#475569; margin-bottom:4px;">
+                Họ và tên nhân viên <span style="color:#ef4444;">*</span>
+              </label>
+              <input type="text" id="authFullName" placeholder="Ví dụ: Nguyễn Văn An - Kế toán" style="width:100%; border:1.5px solid #e2e8f0; border-radius:10px; padding:10px 12px; font-size:14px; outline:none; box-sizing:border-box;">
             </div>
+
+            <div id="authEmailGroup" hidden>
+              <label style="display:block; font-size:13px; font-weight:600; color:#475569; margin-bottom:4px;">
+                Email nhân viên (xác nhận danh tính) <span style="color:#ef4444;">*</span>
+              </label>
+              <div style="display:flex; gap:8px;">
+                <input type="email" id="authEmail" placeholder="an.nguyen@company.com" style="flex:1; border:1.5px solid #e2e8f0; border-radius:10px; padding:10px 12px; font-size:14px; outline:none; box-sizing:border-box;">
+                <button type="button" id="btnSendOtp" style="border:0; background:#10b981; color:#fff; padding:0 14px; border-radius:10px; font-weight:700; font-size:13px; cursor:pointer; white-space:nowrap; transition:all 0.2s;">
+                  Gửi mã OTP
+                </button>
+              </div>
+              <small style="color:#64748b; font-size:11px; margin-top:3px; display:block;">
+                Dùng email công ty/cá nhân để quản trị viên đối chiếu và xác thực đúng nhân sự.
+              </small>
+            </div>
+
+            <div id="authOtpNotice" style="display:none; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:10px; padding:10px 12px; font-size:13px; color:#065f46;">
+              <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:6px;">
+                <span style="font-weight:700;">✉️ Mã xác thực Email:</span>
+                <span id="authOtpCodeDisplay" style="font-family:monospace; font-size:17px; font-weight:800; background:#fff; padding:2px 10px; border-radius:6px; border:1px dashed #059669; color:#047857; letter-spacing:2px;"></span>
+              </div>
+              <div style="font-size:11px; color:#047857; margin-top:4px;">
+                Vui lòng nhập 6 chữ số này vào ô bên dưới để xác nhận quyền sở hữu email.
+              </div>
+            </div>
+
+            <div id="authOtpGroup" hidden>
+              <label style="display:block; font-size:13px; font-weight:600; color:#475569; margin-bottom:4px;">
+                Mã xác nhận 6 số từ Email <span style="color:#ef4444;">*</span>
+              </label>
+              <input type="text" id="authOtpCode" maxlength="6" placeholder="••••••" style="width:100%; border:1.5px solid #e2e8f0; border-radius:10px; padding:10px 12px; font-size:16px; font-weight:700; letter-spacing:4px; text-align:center; outline:none; box-sizing:border-box;">
+            </div>
+
             <div>
-              <label style="display:block; font-size:13px; font-weight:600; color:#475569; margin-bottom:4px;">Tên đăng nhập</label>
-              <input type="text" id="authUsername" required placeholder="Tên đăng nhập (username)" style="width:100%; border:1.5px solid #e2e8f0; border-radius:10px; padding:10px 12px; font-size:14px; outline:none; box-sizing:border-box;">
+              <label id="authUsernameLabel" style="display:block; font-size:13px; font-weight:600; color:#475569; margin-bottom:4px;">Tên đăng nhập hoặc Email</label>
+              <input type="text" id="authUsername" required placeholder="Tên đăng nhập (username) hoặc Email" style="width:100%; border:1.5px solid #e2e8f0; border-radius:10px; padding:10px 12px; font-size:14px; outline:none; box-sizing:border-box;">
             </div>
             <div>
               <label style="display:block; font-size:13px; font-weight:600; color:#475569; margin-bottom:4px;">Mật khẩu</label>
@@ -712,8 +896,8 @@
             <button type="submit" id="authSubmitBtn" style="border:0; background:#6657d9; color:#fff; padding:12px; border-radius:12px; font-weight:700; font-size:15px; cursor:pointer; margin-top:4px;">Đăng nhập ngay</button>
           </form>
           <div style="margin-top:14px; padding-top:12px; border-top:1px dashed #e2e8f0; font-size:12px; color:#8b90a6; text-align:center;">
-            Tài khoản Admin thử nghiệm: <b>admin</b> / <b>admin@nihao123</b><br>
-            Tài khoản Học viên thử nghiệm: <b>hocvien</b> / <b>123456</b>
+            Tài khoản Admin: <b>admin</b> / <b>admin@nihao123</b><br>
+            Tài khoản Học viên: <b>hocvien</b> / <b>123456</b>
           </div>
         </div>
       `;
@@ -726,18 +910,64 @@
     const tabLogin = document.getElementById('authTabLogin');
     const tabRegister = document.getElementById('authTabRegister');
     const nameGroup = document.getElementById('authFullNameGroup');
+    const emailGroup = document.getElementById('authEmailGroup');
+    const emailInput = document.getElementById('authEmail');
+    const btnSendOtp = document.getElementById('btnSendOtp');
+    const otpNotice = document.getElementById('authOtpNotice');
+    const otpDisplay = document.getElementById('authOtpCodeDisplay');
+    const otpGroup = document.getElementById('authOtpGroup');
+    const otpInput = document.getElementById('authOtpCode');
+    const usernameLabel = document.getElementById('authUsernameLabel');
     const submitBtn = document.getElementById('authSubmitBtn');
     const errorMsg = document.getElementById('authErrorMsg');
+
+    // Nút Gửi mã xác nhận OTP qua email
+    btnSendOtp.onclick = () => {
+      errorMsg.textContent = '';
+      const emailVal = (emailInput.value || '').trim();
+      try {
+        const res = sendVerificationOtp(emailVal);
+        otpNotice.style.display = 'block';
+        otpDisplay.textContent = res.code;
+        otpInput.value = res.code;
+        otpInput.focus();
+
+        let countdown = 30;
+        btnSendOtp.disabled = true;
+        btnSendOtp.style.background = '#94a3b8';
+        btnSendOtp.style.cursor = 'not-allowed';
+        btnSendOtp.textContent = `${countdown}s`;
+
+        const timer = setInterval(() => {
+          countdown--;
+          if (countdown <= 0) {
+            clearInterval(timer);
+            btnSendOtp.disabled = false;
+            btnSendOtp.style.background = '#10b981';
+            btnSendOtp.style.cursor = 'pointer';
+            btnSendOtp.textContent = 'Gửi lại OTP';
+          } else {
+            btnSendOtp.textContent = `${countdown}s`;
+          }
+        }, 1000);
+      } catch (err) {
+        errorMsg.textContent = err.message;
+      }
+    };
 
     function setMode(m) {
       mode = m;
       errorMsg.textContent = '';
+      otpNotice.style.display = 'none';
       if (mode === 'login') {
         tabLogin.style.background = '#fff';
         tabLogin.style.color = '#1a1e36';
         tabRegister.style.background = 'transparent';
         tabRegister.style.color = '#626880';
         nameGroup.hidden = true;
+        emailGroup.hidden = true;
+        otpGroup.hidden = true;
+        usernameLabel.textContent = 'Tên đăng nhập hoặc Email';
         submitBtn.textContent = 'Đăng nhập ngay';
       } else {
         tabRegister.style.background = '#fff';
@@ -745,7 +975,10 @@
         tabLogin.style.background = 'transparent';
         tabLogin.style.color = '#626880';
         nameGroup.hidden = false;
-        submitBtn.textContent = 'Tạo tài khoản học viên';
+        emailGroup.hidden = false;
+        otpGroup.hidden = false;
+        usernameLabel.textContent = 'Tên đăng nhập mới';
+        submitBtn.textContent = 'Xác nhận Email & Đăng ký';
       }
     }
 
@@ -759,6 +992,8 @@
       const u = document.getElementById('authUsername').value;
       const p = document.getElementById('authPassword').value;
       const fn = document.getElementById('authFullName').value;
+      const em = document.getElementById('authEmail').value;
+      const otp = document.getElementById('authOtpCode').value;
 
       try {
         if (mode === 'login') {
@@ -766,7 +1001,7 @@
           modal.hidden = true;
           location.reload();
         } else {
-          await register(u, p, fn);
+          await register(u, p, fn, em, otp);
           modal.hidden = true;
           location.reload();
         }
@@ -795,6 +1030,8 @@
   window.HSKAuth = {
     login,
     register,
+    sendVerificationOtp,
+    verifyEmailOtp,
     logout,
     getCurrentUser,
     getAllUsers,

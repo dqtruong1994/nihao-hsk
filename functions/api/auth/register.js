@@ -12,13 +12,21 @@ async function sha256(text) {
 
 export async function onRequestPost({ request, env }) {
   try {
-    const { username, password, name } = await request.json();
+    const { username, password, name, email, fullName } = await request.json();
 
     const cleanUser = String(username || '').trim().toLowerCase();
-    const cleanName = String(name || '').trim();
+    const cleanName = String(name || fullName || '').trim();
+    const cleanEmail = String(email || '').trim().toLowerCase();
 
     if (!cleanUser || cleanUser.length < 3) {
       return new Response(JSON.stringify({ error: 'Tên đăng nhập tối thiểu 3 ký tự.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    if (!cleanEmail || !cleanEmail.includes('@')) {
+      return new Response(JSON.stringify({ error: 'Địa chỉ email nhân viên không hợp lệ.' }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' }
       });
@@ -40,24 +48,32 @@ export async function onRequestPost({ request, env }) {
         });
       }
 
+      const existingEmail = await env.DB.prepare('SELECT id FROM users WHERE email = ?').bind(cleanEmail).first();
+      if (existingEmail) {
+        return new Response(JSON.stringify({ error: 'Email này đã được sử dụng bởi một tài khoản khác.' }), {
+          status: 409,
+          headers: { 'Content-Type': 'application/json' }
+        });
+      }
+
       const id = 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
       const hash = await sha256(password);
       const displayName = cleanName || cleanUser;
 
       await env.DB.prepare(
-        'INSERT INTO users (id, username, password_hash, name, role, status, created_at, last_login) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
-      ).bind(id, cleanUser, hash, displayName, 'student', 'active', Date.now(), Date.now()).run();
+        'INSERT INTO users (id, username, email, email_verified, password_hash, name, role, status, created_at, last_login) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+      ).bind(id, cleanUser, cleanEmail, 1, hash, displayName, 'student', 'active', Date.now(), Date.now()).run();
 
       return new Response(JSON.stringify({
         success: true,
-        user: { id, username: cleanUser, name: displayName, role: 'student' }
+        user: { id, username: cleanUser, email: cleanEmail, emailVerified: true, name: displayName, fullName: displayName, role: 'student' }
       }), { headers: { 'Content-Type': 'application/json' } });
     }
 
     // Fallback nếu chạy không D1
     return new Response(JSON.stringify({
       success: true,
-      user: { id: 'u_' + Date.now(), username: cleanUser, name: cleanName || cleanUser, role: 'student' }
+      user: { id: 'u_' + Date.now(), username: cleanUser, email: cleanEmail, emailVerified: true, name: cleanName || cleanUser, fullName: cleanName || cleanUser, role: 'student' }
     }), { headers: { 'Content-Type': 'application/json' } });
 
   } catch (err) {

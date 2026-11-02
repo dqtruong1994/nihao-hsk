@@ -326,6 +326,8 @@ table.admin-table tr:hover td {
 .badge-student { background: #dbeafe; color: #1d4ed8; }
 .badge-active { background: #dcfce7; color: #15803d; }
 .badge-blocked { background: #fee2e2; color: #b91c1c; }
+.badge-verified { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+.badge-unverified { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
 
 /* Filter Tabs */
 .filter-tabs {

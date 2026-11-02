@@ -7,13 +7,13 @@ export async function onRequestGet({ env }) {
   try {
     if (env.DB) {
       const { results } = await env.DB.prepare(
-        'SELECT id, username, name, role, status, created_at, last_login FROM users ORDER BY created_at DESC'
+        'SELECT id, username, email, email_verified, name, role, status, created_at, last_login FROM users ORDER BY created_at DESC'
       ).all();
       return new Response(JSON.stringify(results || []), { headers: { 'Content-Type': 'application/json' } });
     }
 
     return new Response(JSON.stringify([
-      { id: 'admin_01', username: 'admin', name: 'Quản trị viên', role: 'admin', status: 'active', created_at: Date.now() }
+      { id: 'admin_01', username: 'admin', email: 'admin@nihaohsk.edu.vn', email_verified: 1, name: 'Quản trị viên', role: 'admin', status: 'active', created_at: Date.now() }
     ]), { headers: { 'Content-Type': 'application/json' } });
   } catch (err) {
     return new Response(JSON.stringify({ error: err.message }), { status: 500, headers: { 'Content-Type': 'application/json' } });
@@ -23,7 +23,7 @@ export async function onRequestGet({ env }) {
 export async function onRequestPut({ request, env }) {
   try {
     const body = await request.json();
-    const { id, role, status, name } = body;
+    const { id, role, status, name, email } = body;
 
     if (!id) {
       return new Response(JSON.stringify({ error: 'Thiếu User ID.' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
@@ -33,6 +33,7 @@ export async function onRequestPut({ request, env }) {
       if (role) await env.DB.prepare('UPDATE users SET role = ? WHERE id = ?').bind(role, id).run();
       if (status) await env.DB.prepare('UPDATE users SET status = ? WHERE id = ?').bind(status, id).run();
       if (name) await env.DB.prepare('UPDATE users SET name = ? WHERE id = ?').bind(name, id).run();
+      if (email) await env.DB.prepare('UPDATE users SET email = ? WHERE id = ?').bind(email, id).run();
     }
 
     return new Response(JSON.stringify({ success: true }), { headers: { 'Content-Type': 'application/json' } });
