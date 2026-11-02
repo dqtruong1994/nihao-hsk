@@ -4,6 +4,16 @@
  * Hỗ trợ: Gmail (qua Google Apps Script Webhook 100% Free), Resend API, Brevo API
  */
 
+const DEFAULT_MAIL_WEBHOOK = 'https://script.google.com/macros/s/AKfycbyTLv22IiCpxeRoaxgyI2uK6Hb27f5hHQKOjokCJa_IGIxYrIuHbWQIHRxQYW-7sE9g/exec';
+const OTP_SALT = 'nihao_hsk_salt_2026';
+
+async function sha256(text) {
+  const msgBuffer = new TextEncoder().encode(text);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
 export async function onRequestPost({ request, env }) {
   try {
     const { email, webhookUrl: customWebhook, isTest } = await request.json();
@@ -35,6 +45,7 @@ export async function onRequestPost({ request, env }) {
     // Tạo mã OTP ngẫu nhiên 6 chữ số
     const code = Math.floor(100000 + Math.random() * 900000).toString();
     const expiresAt = Date.now() + 10 * 60 * 1000; // Hết hạn sau 10 phút
+    const otpHash = await sha256(code + ':' + cleanEmail + ':' + OTP_SALT);
 
     // Lưu mã vào bảng email_verifications nếu có D1
     if (env.DB && !isTest) {
@@ -62,7 +73,7 @@ export async function onRequestPost({ request, env }) {
     let sendError = '';
 
     // 1. GỬI QUA GMAIL (Google Apps Script Webhook) - 100% MIỄN PHÍ, KHÔNG TỐN TIỀN
-    const activeWebhook = String(customWebhook || env.MAIL_WEBHOOK_URL || '').trim();
+    const activeWebhook = String(customWebhook || env.MAIL_WEBHOOK_URL || DEFAULT_MAIL_WEBHOOK).trim();
     if (activeWebhook) {
       try {
         const resp = await fetch(activeWebhook, {
@@ -98,7 +109,7 @@ export async function onRequestPost({ request, env }) {
                   </div>
                   <h2 style="color: #1e293b; font-size: 20px; margin: 0 0 12px; text-align: center;">Mã xác nhận đăng ký tài khoản</h2>
                   <p style="color: #475569; font-size: 14px; line-height: 1.6; margin: 0 0 16px;">
-                    Xin chào, bạn (hoặc một nhân viên) vừa yêu cầu tạo tài khoản trên hệ thống học tiếng Trung <b>NiHao HSK</b>. Vui lòng sử dụng mã xác nhận bên dưới để hoàn tất đăng ký:
+                    Xin chào, bạn vừa yêu cầu tạo tài khoản trên hệ thống học tiếng Trung <b>NiHao HSK</b>. Vui lòng sử dụng mã xác nhận bên dưới để hoàn tất đăng ký:
                   </p>
                   <div style="text-align: center; margin: 24px 0;">
                     <div style="display: inline-block; font-size: 32px; font-weight: 800; letter-spacing: 6px; color: #4338ca; background: #eef2ff; border: 2px dashed #6366f1; padding: 12px 28px; border-radius: 12px;">
@@ -116,7 +127,6 @@ export async function onRequestPost({ request, env }) {
           })
         });
 
-        // Google Script trả về 200 hoặc 302 sau khi gửi
         if (resp.status >= 200 && resp.status < 400) {
           emailSent = true;
           providerUsed = 'gmail';
@@ -179,11 +189,13 @@ export async function onRequestPost({ request, env }) {
       }
     }
 
-    // Trả về kết quả: TUYỆT ĐỐI KHÔNG TRẢ 'code' VỀ CLIENT ĐỂ BẢO MẬT
+    // Trả về kết quả: Trả otpHash để client đối chiếu an toàn mà không lộ plaintext code
     return new Response(JSON.stringify({
       success: true,
       emailSent,
       provider: providerUsed,
+      otpHash: emailSent ? otpHash : null,
+      expiresAt,
       message: emailSent
         ? (isTest ? `Đã gửi email kiểm tra thành công tới ${cleanEmail} qua Gmail!` : `Đã gửi mã xác nhận 6 số đến hộp thư ${cleanEmail}.`)
         : `Chưa thể gửi email thật: ${sendError || 'Chưa cấu hình URL Google Apps Script của Gmail'}. Vui lòng liên hệ quản trị viên để thiết lập.`,

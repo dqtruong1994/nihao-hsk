@@ -9,6 +9,17 @@
   const CURRENT_USER_KEY = 'hsk_current_user_v1';
   const PROGRESS_MAP_KEY = 'hsk_users_progress_map_v1';
   const EMAIL_OTP_STORAGE_KEY = 'hsk_email_otp_cache_v1';
+  const DEFAULT_MAIL_WEBHOOK = 'https://script.google.com/macros/s/AKfycbyTLv22IiCpxeRoaxgyI2uK6Hb27f5hHQKOjokCJa_IGIxYrIuHbWQIHRxQYW-7sE9g/exec';
+  const OTP_SALT = 'nihao_hsk_salt_2026';
+
+  async function computeOtpHash(code, email) {
+    const cleanEmail = String(email || '').trim().toLowerCase();
+    const cleanCode = String(code || '').trim();
+    const text = cleanCode + ':' + cleanEmail + ':' + OTP_SALT;
+    const msgBuffer = new TextEncoder().encode(text);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+  }
 
   // Khởi tạo tài khoản mẫu mặc định nếu chưa có
   function getStoredUsers() {
@@ -354,7 +365,7 @@
       throw new Error(`Email "${email}" đã được đăng ký cho tài khoản @${existing.username}. Vui lòng đăng nhập hoặc dùng email khác.`);
     }
 
-    const savedWebhook = localStorage.getItem('hsk_mail_webhook_url') || '';
+    const savedWebhook = localStorage.getItem('hsk_mail_webhook_url') || DEFAULT_MAIL_WEBHOOK;
 
     // 1. Thử gọi API Cloudflare Worker gửi email thật (ưu tiên Gmail Webhook)
     try {
@@ -369,7 +380,8 @@
           email,
           sentAt: Date.now(),
           expiresAt: Date.now() + 10 * 60 * 1000,
-          serverBacked: true
+          serverBacked: true,
+          otpHash: data.otpHash || null
         }));
         return { ok: true, email, message: data.message };
       } else {
@@ -421,7 +433,7 @@
     };
   }
 
-  function verifyEmailOtp(email, inputCode) {
+  async function verifyEmailOtp(email, inputCode) {
     email = String(email || '').trim().toLowerCase();
     inputCode = String(inputCode || '').trim();
 
@@ -444,8 +456,14 @@
       throw new Error('Mã xác nhận đã hết hạn (quá 10 phút). Vui lòng nhấn "Gửi mã OTP" để nhận mã mới.');
     }
 
-    // Nếu có mã lưu local (offline mode), kiểm tra mã
-    if (cached.code && cached.code !== inputCode) {
+    // 1. Kiểm tra với mã hash SHA-256 an toàn từ email thật gửi qua Gmail
+    if (cached.otpHash) {
+      const checkHash = await computeOtpHash(inputCode, email);
+      if (checkHash !== cached.otpHash) {
+        throw new Error('Mã xác nhận không chính xác. Vui lòng kiểm tra lại 6 chữ số trong hộp thư Gmail.');
+      }
+    } else if (cached.code && cached.code !== inputCode) {
+      // 2. Chế độ offline/fallback nếu không có mạng
       throw new Error('Mã xác nhận không chính xác. Vui lòng kiểm tra lại 6 chữ số từ email.');
     }
 
@@ -522,9 +540,15 @@
       throw new Error('Vui lòng nhập địa chỉ email hợp lệ để xác nhận danh tính nhân viên.');
     }
 
-    // Nếu có mã xác thực OTP thì kiểm tra
-    if (otpCode) {
-      verifyEmailOtp(email, otpCode);
+    // Bắt buộc xác thực OTP để đảm bảo đúng email nhân viên
+    const hasMailer = true;
+    if (hasMailer) {
+      if (!otpCode) {
+        throw new Error('Vui lòng nhập mã xác nhận 6 số đã gửi tới email để hoàn tất đăng ký.');
+      }
+      await verifyEmailOtp(email, otpCode);
+    } else if (otpCode) {
+      await verifyEmailOtp(email, otpCode);
     }
 
     if (!username || username.length < 3) {
@@ -1040,16 +1064,10 @@
         emailGroup.hidden = false;
         usernameLabel.textContent = 'Tên đăng nhập mới';
 
-        const hasMailer = !!(localStorage.getItem('hsk_mail_webhook_url'));
-        if (hasMailer) {
-          if (btnSendOtp) btnSendOtp.style.display = 'inline-block';
-          if (otpGroup) otpGroup.hidden = false;
-          submitBtn.textContent = 'Xác nhận Email & Đăng ký';
-        } else {
-          if (btnSendOtp) btnSendOtp.style.display = 'none';
-          if (otpGroup) otpGroup.hidden = true;
-          submitBtn.textContent = 'Đăng ký tài khoản nhân viên';
-        }
+        const hasMailer = true; // Luôn kích hoạt gửi mã OTP qua Gmail
+        if (btnSendOtp) btnSendOtp.style.display = 'inline-block';
+        if (otpGroup) otpGroup.hidden = false;
+        submitBtn.textContent = 'Xác nhận Email & Đăng ký';
       }
     }
 

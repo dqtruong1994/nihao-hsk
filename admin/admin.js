@@ -5,6 +5,8 @@
 (() => {
   'use strict';
 
+  const DEFAULT_MAIL_WEBHOOK = 'https://script.google.com/macros/s/AKfycbyTLv22IiCpxeRoaxgyI2uK6Hb27f5hHQKOjokCJa_IGIxYrIuHbWQIHRxQYW-7sE9g/exec';
+
   let currentTab = 'dashboard';
   let activeLevel = 'hsk1';
   const HSK_LESSON_CATALOG = {
@@ -935,7 +937,7 @@
     const siteTitle = localStorage.getItem('hsk_site_title') || '你好 HSK · Học tiếng Trung mỗi ngày';
     const announcement = localStorage.getItem('hsk_site_announcement') || 'Chào mừng các bạn đến với góc tự học tiếng Trung HSK 1, 2, 3!';
     const sysTheme = localStorage.getItem('hsk_system_default_theme') || 'default';
-    const mailWebhookUrl = localStorage.getItem('hsk_mail_webhook_url') || '';
+    const mailWebhookUrl = localStorage.getItem('hsk_mail_webhook_url') || DEFAULT_MAIL_WEBHOOK;
 
     container.innerHTML = `
       <div class="admin-card">
@@ -1126,13 +1128,12 @@
       const urlVal = (urlInput.value || '').trim();
       const testEmail = (emailInput.value || '').trim();
 
-      // 1. Kiểm tra URL Webhook
+      // 1. Kiểm tra URL Webhook (Tự động điền link mặc định nếu ô trống)
+      let activeWebhook = urlVal || DEFAULT_MAIL_WEBHOOK;
       if (!urlVal) {
-        alert('⚠️ BẠN CHƯA DÁN ĐƯỜNG LINK GOOGLE APPS SCRIPT!\n\nVui lòng làm theo hướng dẫn 4 bước bên dưới để tạo link trên script.google.com rồi dán vào ô số 1 trước khi gửi thử.');
-        urlInput.focus();
-        urlInput.style.borderColor = '#ef4444';
-        resEl.innerHTML = '<span style="color:#ef4444;">⚠️ Bạn chưa dán link Webhook vào ô số 1. Vui lòng làm theo hướng dẫn bên dưới để tạo link.</span>';
-        return;
+        urlInput.value = DEFAULT_MAIL_WEBHOOK;
+        urlVal = DEFAULT_MAIL_WEBHOOK;
+        localStorage.setItem('hsk_mail_webhook_url', DEFAULT_MAIL_WEBHOOK);
       }
 
       if (urlVal.includes('/edit')) {
