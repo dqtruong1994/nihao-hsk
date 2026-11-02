@@ -971,41 +971,59 @@
       </div>
 
       <div class="admin-card">
-        <div class="card-header">
-          <h3>📧 Cấu hình Gửi Email OTP qua Gmail (Miễn phí 100%)</h3>
+        <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+          <h3 style="margin:0;">📧 Cấu hình Gửi Email OTP qua Gmail (Miễn phí 100%)</h3>
+          <span id="webhookStatusBadge" style="font-size:12px; font-weight:700; padding:4px 10px; border-radius:999px; ${mailWebhookUrl ? 'background:#dcfce7; color:#15803d;' : 'background:#fee2e2; color:#b91c1c;'}">
+            ${mailWebhookUrl ? '🟢 Đã kết nối Webhook' : '🔴 Chưa kết nối Webhook'}
+          </span>
         </div>
-        <p style="font-size:13.5px; color:#475569; margin: 0 0 14px; line-height: 1.6;">
-          Hệ thống sẽ gửi mã xác nhận 6 số đến email nhân viên/học viên <b>trực tiếp từ chính hộp thư Gmail của bạn</b> qua Google Apps Script Webhook. Hoàn toàn <b>miễn phí vĩnh viễn</b>, không tốn tiền mua dịch vụ ngoài (Brevo/Sendgrid) và không cần thẻ thanh toán.
+        <p style="font-size:13.5px; color:#475569; margin: 10px 0 14px; line-height: 1.6;">
+          Hệ thống sẽ gửi mã OTP xác nhận đăng ký <b>trực tiếp từ chính tài khoản Gmail của bạn</b> qua Google Apps Script Webhook. Hoàn toàn <b>miễn phí vĩnh viễn</b>, không tốn tiền mua dịch vụ ngoài (Brevo/Sendgrid) và không cần thẻ thanh toán.
         </p>
 
-        <form id="mailWebhookForm" style="display:flex; flex-direction:column; gap:14px; max-width:650px;">
+        <form id="mailWebhookForm" style="display:flex; flex-direction:column; gap:14px; max-width:680px;">
           <div class="form-group">
-            <label style="font-weight:700;">Đường link Web App Google Apps Script (Webhook URL)</label>
-            <input type="url" id="cfgMailWebhookUrl" class="form-control" placeholder="https://script.google.com/macros/s/AKfycb.../exec" value="${mailWebhookUrl}" style="font-family:monospace; font-size:13px;">
+            <label style="font-weight:700; color:#1e293b;">1. Đường link Web App Google Apps Script (Webhook URL)</label>
+            <input type="url" id="cfgMailWebhookUrl" class="form-control" placeholder="https://script.google.com/macros/s/AKfycb.../exec" value="${mailWebhookUrl}" style="font-family:monospace; font-size:13px; border:2px solid #cbd5e1;">
             <small style="color:#64748b; font-size:12px; margin-top:4px; display:block;">
-              Dán URL nhận được sau khi bấm <b>Deploy (Triển khai) &rarr; Web App</b> trong Google Apps Script.
+              ⚠️ <b>Lưu ý quan trọng:</b> Link phải kết thúc bằng chữ <code>/exec</code> sau khi bấm <b>Deploy &rarr; Web app</b> trên Google (không dùng link <code>/edit</code> trên thanh địa chỉ).
             </small>
           </div>
 
           <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-            <button type="submit" class="btn-primary" style="background:#10b981;">💾 Lưu cấu hình Gmail</button>
-            <button type="button" id="btnTestMailWebhook" class="btn-secondary" style="border:1px solid #6657d9; color:#6657d9; background:#f5f3ff; font-weight:700;">✉️ Gửi thử email test</button>
-            <button type="button" id="btnCopyGoogleScript" class="btn-secondary" style="border:1px solid #cbd5e1; background:#f8fafc;">📋 Sao chép mã Google Script</button>
+            <button type="submit" class="btn-primary" style="background:#10b981; padding:9px 16px;">💾 Lưu cấu hình Gmail</button>
+            <button type="button" id="btnCopyGoogleScript" class="btn-secondary" style="border:1px solid #cbd5e1; background:#f8fafc; padding:9px 14px;">📋 Sao chép mã Google Script</button>
           </div>
-          <div id="mailTestResult" style="font-size:13px; font-weight:600; min-height:18px;"></div>
+
+          <!-- KHUNG KIỂM TRA GỬI THỬ EMAIL RÕ RÀNG TRỰC QUAN -->
+          <div style="background:#f8fafc; border:2px dashed #93c5fd; border-radius:12px; padding:16px; margin-top:6px;">
+            <div style="font-weight:800; font-size:14px; color:#1e40af; margin-bottom:6px;">
+              2. Kiểm tra gửi thử Email Test vào hòm thư Gmail của bạn:
+            </div>
+            <p style="font-size:12.5px; color:#475569; margin:0 0 10px;">
+              Nhập địa chỉ email bất kỳ của bạn rồi bấm nút màu xanh tím để nhận email thử ngay:
+            </p>
+            <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+              <input type="email" id="cfgTestEmailInput" class="form-control" placeholder="Ví dụ: myemail@gmail.com" style="flex:1; min-width:260px; font-size:14px; border:2px solid #93c5fd;" value="">
+              <button type="button" id="btnTestMailWebhook" class="btn-primary" style="background:#4f46e5; padding:10px 18px; font-weight:800; white-space:nowrap; box-shadow:0 4px 12px rgba(79,70,229,0.25);">
+                🚀 Gửi thử email ngay
+              </button>
+            </div>
+            <div id="mailTestResult" style="font-size:13px; font-weight:600; min-height:20px; margin-top:12px;"></div>
+          </div>
         </form>
 
-        <div style="margin-top:20px; padding:16px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px;">
-          <h4 style="margin:0 0 10px; font-size:14px; color:#1e293b;">⚡ Hướng dẫn cài đặt Gmail Webhook trong 2 phút (Hoàn toàn miễn phí):</h4>
-          <ol style="margin:0; padding-left:20px; font-size:13px; color:#475569; line-height:1.75;">
-            <li>Truy cập <a href="https://script.google.com/" target="_blank" style="color:#6657d9; font-weight:700; text-decoration:underline;">script.google.com</a> (đăng nhập bằng tài khoản Gmail bạn muốn dùng để gửi mail).</li>
+        <div style="margin-top:20px; padding:16px; background:#fdf2f8; border:1px solid #fbcfe8; border-radius:12px;">
+          <h4 style="margin:0 0 10px; font-size:14px; color:#9d174d;">⚡ Hướng dẫn cài đặt Gmail Webhook trong 2 phút (Hoàn toàn miễn phí):</h4>
+          <ol style="margin:0; padding-left:20px; font-size:13px; color:#831843; line-height:1.75;">
+            <li>Truy cập <a href="https://script.google.com/" target="_blank" style="color:#be185d; font-weight:800; text-decoration:underline;">script.google.com</a> (đăng nhập bằng tài khoản Gmail bạn muốn dùng gửi mail).</li>
             <li>Bấm <b>Dự án mới (New project)</b>, xóa toàn bộ code có sẵn và dán đoạn mã Google Script (bấm nút <i>"📋 Sao chép mã Google Script"</i> ở trên).</li>
-            <li>Bấm nút <b>Triển khai (Deploy) &rarr; Quản lý tùy chọn triển khai / Tùy chọn triển khai mới (New deployment)</b>:
-              <br>&bull; Chọn loại: <b>Ứng dụng web (Web app)</b>
+            <li>Bấm nút <b>Triển khai (Deploy) &rarr; Tùy chọn triển khai mới (New deployment)</b>:
+              <br>&bull; Chọn loại (Type): <b>Ứng dụng web (Web app)</b>
               <br>&bull; Thực thi dưới dạng (Execute as): <b>Tôi (email của bạn)</b>
-              <br>&bull; Ai có quyền truy cập (Who has access): <b>Bất kỳ ai (Anyone)</b>
+              <br>&bull; Ai có quyền truy cập (Who has access): <b>Bất kỳ ai (Anyone)</b> <i>(Bắt buộc để web có quyền gửi yêu cầu)</i>
             </li>
-            <li>Bấm <b>Triển khai</b>, cấp quyền cho Gmail, rồi sao chép đường dẫn <b>URL ứng dụng web (Web app URL)</b> dán vào ô bên trên và bấm <b>Lưu cấu hình Gmail</b>.</li>
+            <li>Bấm <b>Triển khai</b>, cấp quyền cho Gmail, rồi sao chép đường dẫn <b>URL ứng dụng web</b> (dạng <code>https://script.google.com/macros/s/.../exec</code>) dán vào ô <b>1. Đường link Web App</b> ở trên và bấm <b>Lưu cấu hình Gmail</b>.</li>
           </ol>
         </div>
       </div>
@@ -1072,53 +1090,103 @@
 
     document.getElementById('mailWebhookForm').onsubmit = (e) => {
       e.preventDefault();
-      const urlVal = (document.getElementById('cfgMailWebhookUrl').value || '').trim();
+      const urlInput = document.getElementById('cfgMailWebhookUrl');
+      const urlVal = (urlInput.value || '').trim();
+      if (urlVal && urlVal.includes('/edit')) {
+        alert('⚠️ CẢNH BÁO: Đường link bạn dán là link trang chỉnh sửa code (/edit)!\n\nLink Web App gửi mail phải kết thúc bằng "/exec".\nBạn hãy bấm nút Deploy (Triển khai) -> Tùy chọn triển khai mới -> Web App trên Google Apps Script để lấy link "/exec".');
+        urlInput.focus();
+        return;
+      }
       localStorage.setItem('hsk_mail_webhook_url', urlVal);
       const resEl = document.getElementById('mailTestResult');
-      resEl.textContent = '✅ Đã lưu cấu hình Webhook Gmail thành công! Bây giờ mã OTP đăng ký sẽ gửi qua Gmail của bạn.';
-      resEl.style.color = '#10b981';
-      setTimeout(() => { if (resEl.textContent.startsWith('✅')) resEl.textContent = ''; }, 5000);
+      resEl.innerHTML = '<span style="color:#10b981;">✅ Đã lưu cấu hình Webhook Gmail thành công! Bây giờ bạn có thể nhập email bên dưới để gửi thử.</span>';
+      const badge = document.getElementById('webhookStatusBadge');
+      if (badge) {
+        badge.textContent = urlVal ? '🟢 Đã kết nối Webhook' : '🔴 Chưa kết nối Webhook';
+        badge.style.background = urlVal ? '#dcfce7' : '#fee2e2';
+        badge.style.color = urlVal ? '#15803d' : '#b91c1c';
+      }
+      alert('Đã lưu cấu hình Webhook Gmail thành công!');
     };
 
     document.getElementById('btnCopyGoogleScript').onclick = () => {
       navigator.clipboard.writeText(GOOGLE_APPS_SCRIPT_TEMPLATE).then(() => {
-        alert('Đã sao chép mã Google Apps Script vào bộ nhớ tạm! Bạn chỉ cần vào script.google.com rồi dán (Ctrl+V) vào dự án mới.');
+        alert('Đã sao chép mã Google Apps Script vào bộ nhớ tạm!\n\nBây giờ bạn chỉ cần vào script.google.com, tạo dự án mới rồi dán (Ctrl+V) vào.');
       }).catch(() => {
         prompt('Sao chép mã Google Apps Script bên dưới:', GOOGLE_APPS_SCRIPT_TEMPLATE);
       });
     };
 
-    document.getElementById('btnTestMailWebhook').onclick = async () => {
-      const urlVal = (document.getElementById('cfgMailWebhookUrl').value || '').trim();
+    const btnTest = document.getElementById('btnTestMailWebhook');
+    btnTest.onclick = async () => {
+      const urlInput = document.getElementById('cfgMailWebhookUrl');
+      const emailInput = document.getElementById('cfgTestEmailInput');
       const resEl = document.getElementById('mailTestResult');
+
+      const urlVal = (urlInput.value || '').trim();
+      const testEmail = (emailInput.value || '').trim();
+
+      // 1. Kiểm tra URL Webhook
       if (!urlVal) {
-        resEl.textContent = '⚠️ Vui lòng nhập link Webhook Google Apps Script trước khi gửi thử.';
-        resEl.style.color = '#ef4444';
+        alert('⚠️ BẠN CHƯA DÁN ĐƯỜNG LINK GOOGLE APPS SCRIPT!\n\nVui lòng làm theo hướng dẫn 4 bước bên dưới để tạo link trên script.google.com rồi dán vào ô số 1 trước khi gửi thử.');
+        urlInput.focus();
+        urlInput.style.borderColor = '#ef4444';
+        resEl.innerHTML = '<span style="color:#ef4444;">⚠️ Bạn chưa dán link Webhook vào ô số 1. Vui lòng làm theo hướng dẫn bên dưới để tạo link.</span>';
         return;
       }
 
-      const defaultEmail = (window.HSKAuth && window.HSKAuth.getCurrentUser && window.HSKAuth.getCurrentUser() && window.HSKAuth.getCurrentUser().email) || '';
-      const testEmail = prompt('Nhập địa chỉ email của bạn để nhận email kiểm tra:', defaultEmail);
+      if (urlVal.includes('/edit')) {
+        alert('⚠️ ĐÂY LÀ LINK CHỈNH SỬA CODE (/edit), KHÔNG PHẢI LINK WEB APP!\n\nBạn hãy mở tab Google Apps Script, bấm nút "Triển khai (Deploy)" màu xanh -> chọn "Tùy chọn triển khai mới (New deployment)" -> Web App -> Ai có quyền truy cập: "Bất kỳ ai (Anyone)" -> Bấm Triển khai để lấy link kết thúc bằng "/exec".');
+        urlInput.focus();
+        urlInput.style.borderColor = '#ef4444';
+        resEl.innerHTML = '<span style="color:#ef4444;">⚠️ Link của bạn đang kết thúc bằng /edit. Link đúng phải kết thúc bằng /exec sau khi Deploy.</span>';
+        return;
+      }
+
+      urlInput.style.borderColor = '#cbd5e1';
+
+      // 2. Kiểm tra Email người nhận test
       if (!testEmail || !testEmail.includes('@')) {
-        if (testEmail) alert('Địa chỉ email không hợp lệ.');
+        alert('⚠️ VUI LÒNG NHẬP ĐỊA CHỈ EMAIL CỦA BẠN!\n\nHãy gõ địa chỉ email bạn muốn nhận thư kiểm tra vào ô "Ví dụ: myemail@gmail.com".');
+        emailInput.focus();
+        emailInput.style.borderColor = '#ef4444';
+        resEl.innerHTML = '<span style="color:#ef4444;">⚠️ Vui lòng nhập địa chỉ email vào ô phía trên rồi bấm "Gửi thử email ngay".</span>';
         return;
       }
 
-      resEl.textContent = '⏳ Đang gửi thử email qua Gmail Webhook...';
-      resEl.style.color = '#6657d9';
+      emailInput.style.borderColor = '#93c5fd';
+
+      // Tự động lưu URL vào máy
+      localStorage.setItem('hsk_mail_webhook_url', urlVal);
+
+      // Hiển thị trạng thái đang gửi
+      btnTest.disabled = true;
+      const originalText = btnTest.innerHTML;
+      btnTest.innerHTML = '⏳ Đang gửi mail...';
+      btnTest.style.opacity = '0.7';
+      resEl.innerHTML = `<span style="color:#4f46e5;">⏳ Đang kết nối tới Google Apps Script và gửi email test tới <b>${testEmail}</b>... Vui lòng đợi 3-5 giây.</span>`;
 
       try {
+        // Gửi qua backend Cloudflare Worker
         const resp = await fetch('/api/auth/send-otp', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email: testEmail, webhookUrl: urlVal, isTest: true })
         });
         const data = await resp.json().catch(() => ({}));
+
         if (resp.ok && data.success && data.emailSent) {
-          resEl.textContent = `🎉 Tuyệt vời! Đã gửi email test thành công tới ${testEmail}. Vui lòng mở hộp thư Gmail để kiểm tra.`;
-          resEl.style.color = '#10b981';
+          resEl.innerHTML = `
+            <div style="background:#ecfdf5; border:1.5px solid #10b981; border-radius:10px; padding:12px; color:#065f46;">
+              <div style="font-weight:800; font-size:14px;">🎉 THÀNH CÔNG RỰC RỠ!</div>
+              <div style="font-size:13px; margin-top:4px;">
+                Email kiểm tra đã được gửi tới <b>${testEmail}</b> qua Gmail. Bạn hãy mở hộp thư Gmail (kiểm tra cả mục Hộp thư đến / Thư rác Spam) để xem email nhé!
+              </div>
+            </div>
+          `;
+          alert(`🎉 THÀNH CÔNG RỰC RỠ!\n\nEmail kiểm tra đã được gửi thành công đến: ${testEmail}\n\nVui lòng mở hộp thư Gmail của bạn để kiểm tra nhé!`);
         } else {
-          // Thử gửi trực tiếp từ trình duyệt nếu server API chưa nhận
+          // Thử gửi trực tiếp từ trình duyệt đến Webhook
           try {
             await fetch(urlVal, {
               method: 'POST',
@@ -1126,20 +1194,44 @@
               headers: { 'Content-Type': 'text/plain;charset=utf-8' },
               body: JSON.stringify({
                 email: testEmail,
-                code: '888888',
-                subject: 'NiHao HSK · Kiểm tra gửi mail trực tiếp từ Webhook Gmail thành công!'
+                code: '668899',
+                isTest: true,
+                subject: 'NiHao HSK · Kiểm tra gửi mail trực tiếp từ Gmail thành công!'
               })
             });
-            resEl.textContent = `🎉 Đã kích hoạt gửi email qua Webhook Gmail tới ${testEmail}! Hãy kiểm tra hộp thư (inbox hoặc Spam).`;
-            resEl.style.color = '#10b981';
+
+            resEl.innerHTML = `
+              <div style="background:#ecfdf5; border:1.5px solid #10b981; border-radius:10px; padding:12px; color:#065f46;">
+                <div style="font-weight:800; font-size:14px;">🎉 ĐÃ GỬI YÊU CẦU ĐẾN GMAIL THÀNH CÔNG!</div>
+                <div style="font-size:13px; margin-top:4px;">
+                  Hệ thống đã kết nối trực tiếp đến Google Apps Script. Vui lòng mở hộp thư <b>${testEmail}</b> (kiểm tra cả mục Hộp thư đến / Thư rác Spam) để kiểm tra email nhé!
+                </div>
+              </div>
+            `;
+            alert(`🎉 ĐÃ KÍCH HOẠT GỬI EMAIL THÀNH CÔNG!\n\nYêu cầu gửi mail đã được chuyển tới Gmail của bạn. Vui lòng mở hòm thư ${testEmail} để kiểm tra.`);
           } catch (directErr) {
-            resEl.textContent = '❌ Lỗi gửi email test: ' + (data.message || directErr.message);
-            resEl.style.color = '#ef4444';
+            resEl.innerHTML = `
+              <div style="background:#fef2f2; border:1.5px solid #ef4444; border-radius:10px; padding:12px; color:#991b1b;">
+                <div style="font-weight:800;">❌ Không thể gửi email: ${data.message || directErr.message}</div>
+                <div style="font-size:12px; margin-top:4px;">
+                  👉 Hãy kiểm tra xem khi Triển khai trên script.google.com bạn đã chọn mục <b>"Ai có quyền truy cập (Who has access)"</b> là <b>"Bất kỳ ai (Anyone)"</b> chưa nhé!
+                </div>
+              </div>
+            `;
+            alert('❌ Lỗi kết nối Google Apps Script:\n\n' + (data.message || directErr.message) + '\n\nBạn hãy kiểm tra xem lúc Triển khai trên Google đã chọn "Ai có quyền truy cập" là "Bất kỳ ai (Anyone)" chưa nhé.');
           }
         }
       } catch (err) {
-        resEl.textContent = '❌ Không thể kết nối Webhook: ' + err.message;
-        resEl.style.color = '#ef4444';
+        resEl.innerHTML = `
+          <div style="background:#fef2f2; border:1.5px solid #ef4444; border-radius:10px; padding:12px; color:#991b1b;">
+            <div style="font-weight:800;">❌ Lỗi kết nối: ${err.message}</div>
+          </div>
+        `;
+        alert('❌ Lỗi kết nối: ' + err.message);
+      } finally {
+        btnTest.disabled = false;
+        btnTest.innerHTML = originalText;
+        btnTest.style.opacity = '1';
       }
     };
 
