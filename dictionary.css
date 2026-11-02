@@ -40,6 +40,65 @@
 }
 
 /* ================================================================
+   1.1 LEVEL FILTER PILLS (BỘ LỌC CẤP ĐỘ HSK 1, 2, 3)
+   ================================================================ */
+.dict-level-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 16px 0 14px;
+}
+
+.dict-level-pill {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dict-level-pill:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+.dict-level-pill.active {
+  background: #6657d9;
+  border-color: #6657d9;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(102, 87, 217, 0.28);
+}
+
+.dict-load-more-btn {
+  display: block;
+  margin: 24px auto 12px;
+  padding: 10px 24px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.dict-load-more-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #1e293b;
+  transform: translateY(-1px);
+}
+
+/* ================================================================
    2. VOICE SEARCH BAR (TRA CỨU BẰNG GIỌNG NÓI)
    ================================================================ */
 .dict-search-wrapper {
@@ -496,3 +555,4 @@
   line-height: 1.5;
   margin: 4px 0 0;
 }
+

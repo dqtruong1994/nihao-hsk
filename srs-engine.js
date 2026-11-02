@@ -98,16 +98,24 @@
   function openReviewModal() {
     let dueCards = getAllDueCards();
     
-    // Nếu chưa có từ nào trong SRS DB, lấy từ các từ đã học từ localStorage
+    // Nếu chưa có từ nào trong SRS DB, lấy từ kho từ điển chuẩn HSK 1, 2, 3
     if (!dueCards.length) {
-      const sampleCards = [
-        { hanzi: '你好', pinyin: 'nǐ hǎo', hv: 'nhĩ hảo', meaning: 'xin chào', course: 'HSK 1' },
-        { hanzi: '谢谢', pinyin: 'xièxie', hv: 'tạ tạ', meaning: 'cảm ơn', course: 'HSK 1' },
-        { hanzi: '每天', pinyin: 'měitiān', hv: 'mỗi ngày', meaning: 'mỗi ngày', course: 'HSK 2' },
-        { hanzi: '起床', pinyin: 'qǐchuáng', hv: 'khởi sàng', meaning: 'thức dậy', course: 'HSK 2' },
-        { hanzi: '打算', pinyin: 'dǎsuàn', hv: 'đả toán', meaning: 'dự định', course: 'HSK 3' }
-      ];
-      sampleCards.forEach(c => registerCard(c.hanzi, c.pinyin, c.hv, c.meaning, c.course));
+      let pool = [];
+      if (window.HSKDictionary && typeof window.HSKDictionary.getAllWords === 'function') {
+        pool = window.HSKDictionary.getAllWords();
+      }
+      if (!pool.length) {
+        pool = [
+          { hanzi: '你好', pinyin: 'nǐ hǎo', hv: 'nhĩ hảo', meaning: 'xin chào', course: 'HSK 1' },
+          { hanzi: '谢谢', pinyin: 'xièxie', hv: 'tạ tạ', meaning: 'cảm ơn', course: 'HSK 1' },
+          { hanzi: '每天', pinyin: 'měitiān', hv: 'mỗi ngày', meaning: 'mỗi ngày', course: 'HSK 2' },
+          { hanzi: '起床', pinyin: 'qǐchuáng', hv: 'khởi sàng', meaning: 'thức dậy', course: 'HSK 2' },
+          { hanzi: '打算', pinyin: 'dǎsuàn', hv: 'đả toán', meaning: 'dự định', course: 'HSK 3' }
+        ];
+      }
+      // Nạp ngẫu nhiên 15 từ cho buổi ôn tập hôm nay
+      const shuffled = pool.slice().sort(() => Math.random() - 0.5).slice(0, 15);
+      shuffled.forEach(c => registerCard(c.hanzi, c.pinyin, c.hv, c.meaning, c.level || c.course || 'HSK 1'));
       dueCards = getAllDueCards();
     }
 
