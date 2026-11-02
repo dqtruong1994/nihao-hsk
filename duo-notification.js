@@ -360,12 +360,17 @@
     try {
       const notifOptions = {
         body: body || 'Học 5 phút mỗi ngày cùng NiHao HSK nhé!',
-        icon: '/images/icon-192.png',
-        badge: '/images/icon-192.png',
+        icon: 'favicon.svg',
+        badge: 'favicon.svg',
+        vibrate: [200, 100, 200], // Rung điện thoại hai nhịp
         tag: 'hsk-daily-duo-reminder',
         renotify: true,
         silent: false,
-        data: { url: window.location.origin }
+        data: { url: window.location.origin },
+        actions: [
+          { action: 'study', title: '🚀 Vào học ngay' },
+          { action: 'later', title: '⏰ Để sau' }
+        ]
       };
 
       if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
@@ -534,3 +539,4 @@
     moods: { ...DUO_SVGS }
   };
 })();
+

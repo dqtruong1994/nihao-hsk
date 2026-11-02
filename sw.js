@@ -22,6 +22,9 @@ self.addEventListener('fetch', event => {
 // Xử lý khi người dùng nhấn vào thông báo màn hình Duolingo
 self.addEventListener('notificationclick', event => {
   event.notification.close();
+  if (event.action === 'later') {
+    return;
+  }
   event.waitUntil(
     self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(clientList => {
       if (clientList.length > 0) {
@@ -34,4 +37,38 @@ self.addEventListener('notificationclick', event => {
       return self.clients.openWindow('/');
     })
   );
+});
+
+// Xử lý sự kiện Push nhận từ server (khi điện thoại khóa màn hình hoặc tắt hẳn app)
+self.addEventListener('push', event => {
+  let data = {
+    title: '🦉 Duo nhắc bạn học tiếng Trung!',
+    body: 'Đừng để tắt ngọn lửa chuỗi ngày học hôm nay nhé! Vào học 5 phút cùng Duo nào! 🔥',
+    icon: 'favicon.svg',
+    badge: 'favicon.svg'
+  };
+
+  if (event.data) {
+    try {
+      data = { ...data, ...event.data.json() };
+    } catch {
+      data.body = event.data.text();
+    }
+  }
+
+  const options = {
+    body: data.body,
+    icon: data.icon || 'favicon.svg',
+    badge: data.badge || 'favicon.svg',
+    vibrate: [200, 100, 200],
+    tag: 'hsk-duo-notification',
+    renotify: true,
+    data: { url: data.url || '/' },
+    actions: [
+      { action: 'study', title: '🚀 Vào học ngay' },
+      { action: 'later', title: '⏰ Để sau' }
+    ]
+  };
+
+  event.waitUntil(self.registration.showNotification(data.title, options));
 });
