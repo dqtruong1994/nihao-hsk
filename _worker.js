@@ -5,6 +5,7 @@
 
 import * as authLogin from './functions/api/auth/login.js';
 import * as authRegister from './functions/api/auth/register.js';
+import * as authSendOtp from './functions/api/auth/send-otp.js';
 import * as lessonsApi from './functions/api/lessons.js';
 import * as menusApi from './functions/api/menus.js';
 import * as usersApi from './functions/api/users.js';
@@ -21,6 +22,11 @@ export default {
     // 2. API Đăng ký
     if (url.pathname === '/api/auth/register') {
       if (request.method === 'POST') return authRegister.onRequestPost({ request, env, ctx });
+    }
+
+    // 2.1 API Gửi mã OTP xác thực email
+    if (url.pathname === '/api/auth/send-otp') {
+      if (request.method === 'POST') return authSendOtp.onRequestPost({ request, env, ctx });
     }
 
     // 3. API Quản lý Bài học

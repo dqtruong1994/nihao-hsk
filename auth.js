@@ -341,7 +341,7 @@
   }
 
   // --- XÁC THỰC EMAIL & MÃ OTP NHÂN VIÊN ---
-  function sendVerificationOtp(email) {
+  async function sendVerificationOtp(email) {
     email = String(email || '').trim().toLowerCase();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailRegex.test(email)) {
@@ -354,27 +354,50 @@
       throw new Error(`Email "${email}" đã được đăng ký cho tài khoản @${existing.username}. Vui lòng đăng nhập hoặc dùng email khác.`);
     }
 
-    // Tạo mã OTP 6 số ngẫu nhiên
-    const code = Math.floor(100000 + Math.random() * 900000).toString();
-    const expiresAt = Date.now() + 10 * 60 * 1000; // Hết hạn sau 10 phút
+    // 1. Thử gọi API Cloudflare Worker gửi email thật
+    try {
+      const resp = await fetch('/api/auth/send-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      if (resp.ok) {
+        const data = await resp.json();
+        sessionStorage.setItem(EMAIL_OTP_STORAGE_KEY, JSON.stringify({
+          email,
+          sentAt: Date.now(),
+          expiresAt: Date.now() + 10 * 60 * 1000,
+          serverBacked: true
+        }));
+        return { ok: true, email, message: data.message };
+      } else {
+        const errData = await resp.json().catch(() => ({}));
+        if (errData.error) throw new Error(errData.error);
+      }
+    } catch (apiErr) {
+      if (apiErr.message && !apiErr.message.includes('fetch')) {
+        throw apiErr;
+      }
+    }
 
-    const otpData = {
+    // 2. Fallback nếu chạy chế độ offline / local không có mạng API
+    const code = Math.floor(100000 + Math.random() * 900000).toString();
+    const expiresAt = Date.now() + 10 * 60 * 1000;
+    sessionStorage.setItem(EMAIL_OTP_STORAGE_KEY, JSON.stringify({
       email,
       code,
       expiresAt,
-      sentAt: Date.now()
-    };
-
-    try {
-      sessionStorage.setItem(EMAIL_OTP_STORAGE_KEY, JSON.stringify(otpData));
-    } catch {}
+      sentAt: Date.now(),
+      serverBacked: false
+    }));
+    // Không hiện mã trên giao diện người dùng; chỉ ghi log ở console để lập trình viên kiểm thử khi chưa kết nối API mail
+    console.info(`%c[NiHao HSK] Đã tạo mã OTP cho ${email}: ${code} (Dành cho nhà phát triển kiểm thử khi chưa cấu hình API gửi mail)`, 'color:#10b981; font-weight:bold;');
 
     return {
       ok: true,
       email,
-      code,
       expiresAt,
-      message: `Mã xác nhận email 6 số: ${code}`
+      message: 'Đã gửi mã xác nhận đến email.'
     };
   }
 
@@ -401,8 +424,9 @@
       throw new Error('Mã xác nhận đã hết hạn (quá 10 phút). Vui lòng nhấn "Gửi mã OTP" để nhận mã mới.');
     }
 
-    if (cached.code !== inputCode) {
-      throw new Error('Mã xác nhận không chính xác. Vui lòng kiểm tra lại 6 chữ số.');
+    // Nếu có mã lưu local (offline mode), kiểm tra mã
+    if (cached.code && cached.code !== inputCode) {
+      throw new Error('Mã xác nhận không chính xác. Vui lòng kiểm tra lại 6 chữ số từ email.');
     }
 
     return true;
@@ -499,15 +523,20 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, fullName, email, otpCode })
       });
-      if (resp.ok) {
-        const data = await resp.json();
-        if (data.user) {
-          try { sessionStorage.removeItem(EMAIL_OTP_STORAGE_KEY); } catch {}
-          setCurrentUser(data.user);
-          return data.user;
-        }
+      const data = await resp.json().catch(() => ({}));
+      if (!resp.ok) {
+        throw new Error(data.error || 'Đăng ký tài khoản không thành công.');
       }
-    } catch {}
+      if (data.user) {
+        try { sessionStorage.removeItem(EMAIL_OTP_STORAGE_KEY); } catch {}
+        setCurrentUser(data.user);
+        return data.user;
+      }
+    } catch (apiErr) {
+      if (apiErr.message && !apiErr.message.includes('fetch')) {
+        throw apiErr;
+      }
+    }
 
     // Fallback Local Storage Mode
     const users = getStoredUsers();
@@ -868,12 +897,14 @@
             </div>
 
             <div id="authOtpNotice" style="display:none; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:10px; padding:10px 12px; font-size:13px; color:#065f46;">
-              <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:6px;">
-                <span style="font-weight:700;">✉️ Mã xác thực Email:</span>
-                <span id="authOtpCodeDisplay" style="font-family:monospace; font-size:17px; font-weight:800; background:#fff; padding:2px 10px; border-radius:6px; border:1px dashed #059669; color:#047857; letter-spacing:2px;"></span>
-              </div>
-              <div style="font-size:11px; color:#047857; margin-top:4px;">
-                Vui lòng nhập 6 chữ số này vào ô bên dưới để xác nhận quyền sở hữu email.
+              <div style="display:flex; align-items:flex-start; gap:8px;">
+                <span style="font-size:16px; line-height:1.2;">✉️</span>
+                <div>
+                  <div style="font-weight:700;">Đã gửi mã xác nhận đến email!</div>
+                  <div style="font-size:12px; color:#047857; margin-top:2px;">
+                    Vui lòng mở hộp thư <b id="authOtpSentEmail" style="text-decoration:underline;"></b> (kiểm tra cả thư mục Spam / Thư rác) và nhập mã 6 số vào ô bên dưới.
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -914,7 +945,6 @@
     const emailInput = document.getElementById('authEmail');
     const btnSendOtp = document.getElementById('btnSendOtp');
     const otpNotice = document.getElementById('authOtpNotice');
-    const otpDisplay = document.getElementById('authOtpCodeDisplay');
     const otpGroup = document.getElementById('authOtpGroup');
     const otpInput = document.getElementById('authOtpCode');
     const usernameLabel = document.getElementById('authUsernameLabel');
@@ -922,19 +952,29 @@
     const errorMsg = document.getElementById('authErrorMsg');
 
     // Nút Gửi mã xác nhận OTP qua email
-    btnSendOtp.onclick = () => {
+    btnSendOtp.onclick = async () => {
       errorMsg.textContent = '';
       const emailVal = (emailInput.value || '').trim();
+      if (!emailVal || !emailVal.includes('@')) {
+        errorMsg.textContent = 'Vui lòng nhập địa chỉ email hợp lệ trước khi gửi mã.';
+        return;
+      }
+
+      btnSendOtp.disabled = true;
+      btnSendOtp.style.background = '#94a3b8';
+      btnSendOtp.textContent = 'Đang gửi...';
+
       try {
-        const res = sendVerificationOtp(emailVal);
+        await sendVerificationOtp(emailVal);
         otpNotice.style.display = 'block';
-        otpDisplay.textContent = res.code;
-        otpInput.value = res.code;
+        const sentTarget = document.getElementById('authOtpSentEmail');
+        if (sentTarget) sentTarget.textContent = emailVal;
+
+        // Xóa ô nhập OTP để người dùng tự nhập mã nhận được từ hộp thư
+        otpInput.value = '';
         otpInput.focus();
 
-        let countdown = 30;
-        btnSendOtp.disabled = true;
-        btnSendOtp.style.background = '#94a3b8';
+        let countdown = 60;
         btnSendOtp.style.cursor = 'not-allowed';
         btnSendOtp.textContent = `${countdown}s`;
 
@@ -951,6 +991,10 @@
           }
         }, 1000);
       } catch (err) {
+        btnSendOtp.disabled = false;
+        btnSendOtp.style.background = '#10b981';
+        btnSendOtp.style.cursor = 'pointer';
+        btnSendOtp.textContent = 'Gửi mã OTP';
         errorMsg.textContent = err.message;
       }
     };
