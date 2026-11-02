@@ -42,8 +42,8 @@ self.addEventListener('notificationclick', event => {
 // Xử lý sự kiện Push nhận từ server (khi điện thoại khóa màn hình hoặc tắt hẳn app)
 self.addEventListener('push', event => {
   let data = {
-    title: '🦉 Duo nhắc bạn học tiếng Trung!',
-    body: 'Đừng để tắt ngọn lửa chuỗi ngày học hôm nay nhé! Vào học 5 phút cùng Duo nào! 🔥',
+    title: '🐼 Gấu Trúc NiHao nhắc học bài!',
+    body: 'Đừng để tắt ngọn lửa chuỗi ngày học hôm nay nhé! 5 phút luyện từ vựng cùng Gấu Trúc nào! 🏮🔥',
     icon: 'favicon.svg',
     badge: 'favicon.svg'
   };
@@ -61,11 +61,11 @@ self.addEventListener('push', event => {
     icon: data.icon || 'favicon.svg',
     badge: data.badge || 'favicon.svg',
     vibrate: [200, 100, 200],
-    tag: 'hsk-duo-notification',
+    tag: 'hsk-panda-notification',
     renotify: true,
     data: { url: data.url || '/' },
     actions: [
-      { action: 'study', title: '🚀 Vào học ngay' },
+      { action: 'study', title: '🏮 Vào học ngay' },
       { action: 'later', title: '⏰ Để sau' }
     ]
   };

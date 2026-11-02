@@ -1,0 +1,577 @@
+/**
+ * NiHao HSK - Panda Mascot & Chinese Culture Notification System
+ * Phong cách thiết kế độc quyền mang đậm dấu ấn Hán ngữ:
+ * - Linh vật: Chú Gấu Trúc NiHao "Bao Bao" (大熊猫 🐼) biểu tượng quốc bảo Trung Hoa
+ * - Họa tiết: Đèn lồng đỏ (红灯笼 🏮), Trúc xanh (竹子 🎋), Mây cát tường (祥云), Ấn triện son (印章)
+ * - Màu sắc: Đỏ chu sa (#e11d48), Vàng kim (#f59e0b), Tím thạch anh (#6657d9), Xanh ngọc (#059669)
+ * - Nút bấm 3D nổi khối sang trọng, bóng đổ đậm chất Á Đông cao cấp
+ */
+
+/* ================================================================
+   1. PROMPT BANNER / GỢI Ý BẬT THÔNG BÁO TỰ ĐỘNG KHI VÀO WEB
+   ================================================================ */
+.panda-prompt-banner {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(140px);
+  z-index: 10001;
+  background: #ffffff;
+  border: 2.5px solid #fecdd3; /* Viền hồng chu sa nhẹ */
+  border-radius: 22px;
+  padding: 16px 20px;
+  max-width: 520px;
+  width: calc(100% - 32px);
+  box-shadow: 0 16px 36px rgba(225, 29, 72, 0.16), 0 4px 0 #fda4af;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+
+.panda-prompt-banner.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.panda-prompt-avatar {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+  animation: pandaWiggle 3s infinite ease-in-out;
+}
+
+@keyframes pandaWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-6deg); }
+  75% { transform: rotate(6deg); }
+}
+
+.panda-prompt-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.panda-prompt-title {
+  margin: 0 0 3px;
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.panda-prompt-desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #64748b;
+}
+
+.panda-prompt-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.panda-btn-allow {
+  background: linear-gradient(135deg, #e11d48, #be123c);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #9f1239;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.panda-btn-allow:hover {
+  filter: brightness(1.08);
+}
+
+.panda-btn-allow:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 #9f1239;
+}
+
+.panda-btn-dismiss {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  color: #64748b;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 0 #cbd5e1;
+  transition: all 0.15s ease;
+}
+
+.panda-btn-dismiss:hover {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.panda-btn-dismiss:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 #cbd5e1;
+}
+
+/* ================================================================
+   2. POPUP MODAL DIALOG - GẤU TRÚC NIHAO
+   ================================================================ */
+.panda-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 10002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.panda-popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.panda-card {
+  position: relative;
+  background: #ffffff;
+  background-image: radial-gradient(#fff1f2 1px, transparent 1px);
+  background-size: 18px 18px;
+  width: 100%;
+  max-width: 450px;
+  border: 2.5px solid #fecdd3;
+  border-radius: 26px;
+  padding: 28px 24px 22px;
+  box-shadow: 0 20px 50px rgba(225, 29, 72, 0.18), 0 5px 0 #f43f5e;
+  text-align: center;
+  transform: translateY(30px) scale(0.92);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-sizing: border-box;
+}
+
+.panda-popup-overlay.active .panda-card {
+  transform: translateY(0) scale(1);
+}
+
+/* Nút đóng góc phải */
+.panda-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #fed7aa;
+  background: #fff7ed;
+  color: #ea580c;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.panda-close-btn:hover {
+  background: #e11d48;
+  border-color: #be123c;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* Khung linh vật Gấu Trúc */
+.panda-mascot-wrapper {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: -12px auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panda-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12));
+  animation: pandaFloat 3s infinite ease-in-out;
+}
+
+@keyframes pandaFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+/* Ấn triện đỏ vuông góc dưới linh vật */
+.panda-seal-badge {
+  position: absolute;
+  bottom: 0;
+  right: 8px;
+  background: #be123c;
+  color: #fef08a;
+  border: 2px solid #fecdd3;
+  box-shadow: 0 3px 0 #881337;
+  border-radius: 8px;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 900;
+  font-family: STKaiti, KaiTi, 'KaiTi SC', serif;
+  letter-spacing: 1px;
+  animation: pandaBadgePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes pandaBadgePop {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+/* Bong bóng thoại phong cách Thư pháp Á Đông */
+.panda-bubble {
+  position: relative;
+  background: #fffaf5;
+  border: 2px solid #fed7aa;
+  border-radius: 20px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.05);
+}
+
+.panda-bubble::after,
+.panda-bubble::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 12px 10px;
+  border-style: solid;
+  border-color: transparent transparent #fffaf5 transparent;
+  display: block;
+  width: 0;
+}
+
+.panda-bubble::before {
+  top: -15px;
+  border-color: transparent transparent #fed7aa transparent;
+}
+
+.panda-title {
+  margin: 0 0 6px;
+  font-size: 18.5px;
+  font-weight: 900;
+  color: #1e293b;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panda-message {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* Thanh hiển thị Chuỗi ngày & Điểm XP */
+.panda-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.panda-stat-pill {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #334155;
+  box-shadow: 0 3px 0 #e2e8f0;
+}
+
+.panda-stat-pill.streak {
+  border-color: #fed7aa;
+  color: #c2410c;
+  background: #fff7ed;
+  box-shadow: 0 3px 0 #fed7aa;
+}
+
+.panda-stat-pill.xp {
+  border-color: #ddd6fe;
+  color: #6d28d9;
+  background: #f5f3ff;
+  box-shadow: 0 3px 0 #ddd6fe;
+}
+
+/* Nút bấm 3D nổi khối phong cách NiHao HSK */
+.panda-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.panda-btn {
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.1s ease;
+  user-select: none;
+}
+
+/* Nút chính sắc Đỏ Chu Sa Hoàng Triều */
+.panda-btn-primary {
+  background: linear-gradient(135deg, #e11d48, #be123c);
+  color: #ffffff;
+  box-shadow: 0 4px 0 #9f1239;
+}
+
+.panda-btn-primary:hover {
+  filter: brightness(1.06);
+}
+
+.panda-btn-primary:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #9f1239;
+}
+
+/* Nút màu Cam Lửa Chuỗi ngày */
+.panda-btn-orange {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+  color: #ffffff;
+  box-shadow: 0 4px 0 #9a3412;
+}
+
+.panda-btn-orange:hover {
+  filter: brightness(1.06);
+}
+
+.panda-btn-orange:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #9a3412;
+}
+
+/* Nút phụ Viền Thư Pháp */
+.panda-btn-secondary {
+  background: #ffffff;
+  color: #64748b;
+  border: 2px solid #cbd5e1;
+  box-shadow: 0 4px 0 #cbd5e1;
+}
+
+.panda-btn-secondary:hover {
+  background: #f8fafc;
+  color: #334155;
+}
+
+.panda-btn-secondary:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #cbd5e1;
+}
+
+/* ================================================================
+   3. TOAST THÔNG BÁO GÓC MÀN HÌNH (GẤU TRÚC NIHAO)
+   ================================================================ */
+.panda-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background: #ffffff;
+  border: 2.5px solid #f43f5e;
+  border-radius: 20px;
+  padding: 14px 18px;
+  box-shadow: 0 14px 35px rgba(225, 29, 72, 0.16), 0 4px 0 #be123c;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 390px;
+  transform: translateX(120%);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-sizing: border-box;
+}
+
+.panda-toast.show {
+  transform: translateX(0);
+}
+
+.panda-toast-mascot {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.panda-toast-content {
+  flex: 1;
+  text-align: left;
+}
+
+.panda-toast-title {
+  margin: 0 0 2px;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.panda-toast-body {
+  margin: 0;
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.panda-toast-close {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.panda-toast-close:hover {
+  color: #e11d48;
+  background: #ffe4e6;
+}
+
+/* ================================================================
+   4. NÚT TRÒN LINH VẬT GẤU TRÚC GÓC PHẢI DƯỚI (FLOATING WIDGET)
+   ================================================================ */
+.panda-floating-widget {
+  position: fixed;
+  bottom: 86px;
+  right: 20px;
+  z-index: 9980;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.panda-floating-btn {
+  pointer-events: auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid #f43f5e;
+  box-shadow: 0 8px 25px rgba(225, 29, 72, 0.28), 0 4px 0 #be123c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  box-sizing: border-box;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.panda-floating-btn:hover {
+  transform: scale(1.12) rotate(-5deg);
+}
+
+.panda-floating-btn:active {
+  transform: translateY(3px) scale(1.05);
+  box-shadow: 0 1px 0 #be123c;
+}
+
+.panda-floating-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #e11d48;
+  color: #ffffff;
+  font-size: 10.5px;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 2px 6px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(225, 29, 72, 0.4);
+  animation: pandaPulse 1.8s infinite;
+}
+
+@keyframes pandaPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.panda-floating-hint {
+  pointer-events: auto;
+  background: #ffffff;
+  border: 2px solid #fecdd3;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.12), 0 3px 0 #fda4af;
+  border-radius: 14px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #be123c;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .panda-prompt-banner {
+    bottom: 16px;
+    padding: 14px 16px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .panda-prompt-actions {
+    width: 100%;
+    justify-content: center;
+  }
+  .panda-card {
+    border-radius: 20px;
+    padding: 22px 18px 18px;
+  }
+  .panda-floating-widget {
+    bottom: 76px;
+    right: 14px;
+  }
+}

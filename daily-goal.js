@@ -42,17 +42,17 @@
     const isNowCompleted = updated >= target;
 
     if (!wasCompleted && isNowCompleted) {
-      // Ăn mừng hoàn thành mục tiêu ngày phong cách Duolingo!
+      // Ăn mừng hoàn thành mục tiêu ngày phong cách NiHao HSK!
       setTimeout(() => {
         if (window.HSKAudioFX) {
           window.HSKAudioFX.playVictory();
           window.HSKAudioFX.confetti(120);
         }
-        if (window.DuoNotification) {
-          window.DuoNotification.showPopup({
+        if (window.HSKNotification) {
+          window.HSKNotification.showPopup({
             mood: 'streak',
             title: '🎉 XUẤT SẮC! CÁN MỐC HÔM NAY!',
-            message: `Bạn vừa hoàn thành mục tiêu ${target} XP và kéo dài ngọn lửa chuỗi ngày học tập! Duo rất tự hào về bạn! 🔥`,
+            message: `Bạn vừa hoàn thành mục tiêu ${target} XP và kéo dài ngọn lửa chuỗi ngày học tập! Gấu Trúc NiHao rất tự hào về bạn! 🏮🔥`,
             primaryText: 'TIẾP TỤC HỌC TẬP'
           });
         }
