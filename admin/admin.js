@@ -1030,6 +1030,38 @@
         </div>
       </div>
 
+            <div class="admin-card">
+        <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+          <h3 style="margin:0;">🦉 Thông Báo Màn Hình & Popup Nhắc Học Kiểu Duolingo</h3>
+          <span style="font-size:12px; font-weight:700; padding:4px 10px; border-radius:999px; background:#dcfce7; color:#15803d;">
+            🟢 Đã kích hoạt
+          </span>
+        </div>
+        <p style="font-size:13.5px; color:#475569; margin: 10px 0 14px; line-height: 1.6;">
+          Hệ thống mô phỏng 100% phong cách <b>Cú Duo nhắc học</b> của Duolingo: Popup 3D nổi bật trong web, thông báo đẩy Web Push Notification ra màn hình desktop/điện thoại của học viên, kèm âm thanh Chime tươi vui và ngọn lửa chuỗi ngày (Streak).
+        </p>
+
+        <div style="background:#f0fdf4; border:1.5px solid #86efac; border-radius:14px; padding:16px; margin-bottom:16px;">
+          <div style="font-weight:800; color:#166534; font-size:14px; margin-bottom:8px;">
+            🧪 Khu vực Kiểm thử Trực quan (Click để xem hiệu ứng ngay):
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="button" id="btnAdminTestDuoPopup" class="btn-primary" style="background:#58cc02; box-shadow:0 3px 0 #46a302; padding:9px 15px; font-weight:800;">
+              🦉 Popup Duo Nhắc Học
+            </button>
+            <button type="button" id="btnAdminTestDuoStreak" class="btn-primary" style="background:#ff9600; box-shadow:0 3px 0 #d97706; padding:9px 15px; font-weight:800;">
+              🔥 Popup Giữ Chuỗi (Streak)
+            </button>
+            <button type="button" id="btnAdminTestDuoSad" class="btn-primary" style="background:#ef4444; box-shadow:0 3px 0 #dc2626; padding:9px 15px; font-weight:800;">
+              🥺 Duo Khóc Năn Nỉ
+            </button>
+            <button type="button" id="btnAdminTestDuoDesktop" class="btn-secondary" style="border:2px solid #58cc02; color:#15803d; font-weight:800; padding:9px 15px; background:#fff;">
+              🔔 Web Push ra Màn hình ngoài
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div class="admin-card">
         <div class="card-header">
           <h3>Sao lưu & Phục hồi Dữ liệu (Backup & Restore)</h3>
@@ -1046,6 +1078,35 @@
         </div>
       </div>
     `;
+
+        // Sự kiện kiểm thử thông báo Duolingo
+    document.getElementById('btnAdminTestDuoPopup')?.addEventListener('click', () => {
+      window.DuoNotification?.showPopup({
+        mood: 'happy',
+        title: '🦉 Duo nhắc bạn học bài!',
+        message: 'Chỉ còn 5 phút nữa là hoàn thành 50 XP mục tiêu hôm nay. Vào học cùng Duo nhé!'
+      });
+    });
+
+    document.getElementById('btnAdminTestDuoStreak')?.addEventListener('click', () => {
+      window.DuoNotification?.showPopup({
+        mood: 'streak',
+        title: '🔥 Cảnh báo bảo vệ chuỗi ngày!',
+        message: 'Bạn đang có chuỗi học tập rực rỡ! Hoàn thành ngay 1 bài học để ngọn lửa không bị dập tắt nhé!'
+      });
+    });
+
+    document.getElementById('btnAdminTestDuoSad')?.addEventListener('click', () => {
+      window.DuoNotification?.showPopup({
+        mood: 'sad',
+        title: '🦉 Duo đang buồn thiu...',
+        message: 'Hôm nay bạn chưa ghé thăm lớp học. Duo đang ngồi mếu máo chờ bạn bên góc màn hình nè! 🥺'
+      });
+    });
+
+    document.getElementById('btnAdminTestDuoDesktop')?.addEventListener('click', () => {
+      window.DuoNotification?.test();
+    });
 
     document.getElementById('settingsForm').onsubmit = (e) => {
       e.preventDefault();

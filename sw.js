@@ -18,3 +18,20 @@ self.addEventListener('fetch', event => {
     return;
   }
 });
+
+// Xử lý khi người dùng nhấn vào thông báo màn hình Duolingo
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+  event.waitUntil(
+    self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(clientList => {
+      if (clientList.length > 0) {
+        let client = clientList[0];
+        for (let i = 0; i < clientList.length; i++) {
+          if (clientList[i].focused) { client = clientList[i]; break; }
+        }
+        return client.focus();
+      }
+      return self.clients.openWindow('/');
+    })
+  );
+});
