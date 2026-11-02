@@ -1,0 +1,498 @@
+/**
+ * NiHao HSK - Dictionary, Voice Search & AI Sentence Analyzer Styles
+ */
+
+/* ================================================================
+   1. DICTIONARY TOP NAVIGATION TABS
+   ================================================================ */
+.dict-tab-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.dict-tab-btn {
+  background: #f1f3f9;
+  border: 2px solid transparent;
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 10px 22px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dict-tab-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.dict-tab-btn.active {
+  background: #ffffff;
+  color: #6657d9;
+  border-color: #6657d9;
+  box-shadow: 0 4px 14px rgba(102, 87, 217, 0.16);
+}
+
+/* ================================================================
+   2. VOICE SEARCH BAR (TRA CỨU BẰNG GIỌNG NÓI)
+   ================================================================ */
+.dict-search-wrapper {
+  position: relative;
+  max-width: 660px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dict-search-input-box {
+  position: relative;
+  flex: 1;
+}
+
+.dict-search-input {
+  width: 100%;
+  padding: 14px 44px 14px 20px;
+  font-size: 16px;
+  border: 2.5px solid #6657d9;
+  border-radius: 16px;
+  outline: none;
+  box-sizing: border-box;
+  box-shadow: 0 6px 20px rgba(102, 87, 217, 0.12);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dict-search-input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.2);
+}
+
+.dict-clear-btn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: none;
+}
+
+.dict-clear-btn:hover {
+  color: #e11d48;
+}
+
+/* Nút micro tìm kiếm giọng nói */
+.dict-mic-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  border: 2px solid #6657d9;
+  background: #ffffff;
+  color: #6657d9;
+  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(102, 87, 217, 0.14);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.dict-mic-btn:hover {
+  background: #f5f3ff;
+  transform: scale(1.05);
+}
+
+.dict-mic-btn.listening {
+  background: #e11d48;
+  border-color: #be123c;
+  color: #ffffff;
+  animation: micPulse 1.4s infinite ease-in-out;
+  box-shadow: 0 0 0 6px rgba(225, 29, 72, 0.25);
+}
+
+@keyframes micPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+/* Thanh trạng thái nhận diện giọng nói */
+.dict-voice-status {
+  max-width: 660px;
+  margin: -8px auto 16px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #fff1f2;
+  border: 1.5px solid #fecdd3;
+  color: #9f1239;
+  font-size: 13.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.dict-lang-toggle {
+  display: inline-flex;
+  gap: 4px;
+  background: #ffffff;
+  padding: 3px 6px;
+  border-radius: 8px;
+  border: 1px solid #fed7aa;
+}
+
+.dict-lang-opt {
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  padding: 3px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dict-lang-opt.active {
+  background: #e11d48;
+  color: #ffffff;
+}
+
+/* ================================================================
+   3. AI SENTENCE ANALYZER & GRAMMAR BREAKDOWN STYLES
+   ================================================================ */
+.analyzer-card {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  margin-bottom: 24px;
+}
+
+.analyzer-input-area {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.analyzer-textarea {
+  width: 100%;
+  min-height: 95px;
+  padding: 16px 56px 16px 18px;
+  font-size: 17px;
+  line-height: 1.55;
+  font-family: STKaiti, KaiTi, 'KaiTi SC', sans-serif;
+  border: 2px solid #cbd5e1;
+  border-radius: 16px;
+  outline: none;
+  box-sizing: border-box;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.analyzer-textarea:focus {
+  border-color: #6657d9;
+  box-shadow: 0 0 0 4px rgba(102, 87, 217, 0.12);
+}
+
+.analyzer-mic-btn {
+  position: absolute;
+  right: 14px;
+  bottom: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f1f3f9;
+  border: 1.5px solid #cbd5e1;
+  color: #64748b;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.analyzer-mic-btn:hover {
+  background: #6657d9;
+  border-color: #4f46e5;
+  color: #ffffff;
+}
+
+.analyzer-mic-btn.listening {
+  background: #e11d48;
+  border-color: #be123c;
+  color: #ffffff;
+  animation: micPulse 1.4s infinite ease-in-out;
+}
+
+/* Gợi ý câu mẫu nhanh */
+.analyzer-samples-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.analyzer-sample-pill {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  color: #475569;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.analyzer-sample-pill:hover {
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+  color: #6657d9;
+  transform: translateY(-1px);
+}
+
+/* Nút bấm Phân tích chính */
+.analyzer-submit-btn {
+  background: linear-gradient(135deg, #6657d9, #4f46e5);
+  color: #ffffff;
+  border: none;
+  padding: 13px 26px;
+  border-radius: 14px;
+  font-size: 15.5px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(102, 87, 217, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.1s ease, filter 0.15s ease;
+}
+
+.analyzer-submit-btn:hover {
+  filter: brightness(1.08);
+}
+
+.analyzer-submit-btn:active {
+  transform: translateY(2px);
+}
+
+/* ================================================================
+   4. KẾT QUẢ PHÂN TÍCH CẤU TRÚC & DỊCH NGHĨA
+   ================================================================ */
+.analysis-results-card {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Phần bản dịch nghĩa */
+.analysis-trans-box {
+  background: #faf5ff;
+  border: 2px solid #e9d5ff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 22px;
+}
+
+.analysis-hanzi-text {
+  font-size: 28px;
+  line-height: 1.4;
+  font-family: STKaiti, KaiTi, 'KaiTi SC', serif;
+  color: #1e1b4b;
+  margin-bottom: 4px;
+}
+
+.analysis-pinyin-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #6657d9;
+  margin-bottom: 10px;
+}
+
+.analysis-vi-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.5;
+  padding-top: 10px;
+  border-top: 1px dashed #d8b4fe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Sơ đồ cấu trúc ngữ pháp trực quan (Component Chips) */
+.grammar-diagram-section {
+  margin-bottom: 24px;
+}
+
+.grammar-diagram-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grammar-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.grammar-chip {
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 72px;
+  border: 2px solid transparent;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.06);
+}
+
+.grammar-chip .gc-text {
+  font-size: 20px;
+  font-family: STKaiti, KaiTi, 'KaiTi SC', serif;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.grammar-chip .gc-role {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Màu sắc các thành phần câu */
+.gc-subject { background: #e0e7ff; border-color: #c7d2fe; color: #3730a3; } /* Chủ ngữ: Tím Chàm */
+.gc-adverbial { background: #fef3c7; border-color: #fde68a; color: #92400e; } /* Trạng ngữ: Vàng Cam */
+.gc-verb { background: #fee2e2; border-color: #fecaca; color: #991b1b; } /* Vị ngữ/Động từ: Đỏ */
+.gc-attributive { background: #dcfce7; border-color: #bbf7d0; color: #166534; } /* Định ngữ: Xanh lá */
+.gc-object { background: #e0f2fe; border-color: #bae6fd; color: #075985; } /* Tân ngữ: Xanh dương */
+.gc-complement { background: #ccfbf1; border-color: #99f6e4; color: #115e59; } /* Bổ ngữ: Ngọc bích */
+.gc-particle { background: #f1f5f9; border-color: #cbd5e1; color: #475569; } /* Trợ từ/Hư từ: Xám */
+
+/* Bảng phân tách từ vựng */
+.word-breakdown-section {
+  margin-bottom: 24px;
+}
+
+.word-breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.word-token-card {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+
+.word-token-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.wtc-hanzi {
+  font-size: 24px;
+  font-family: STKaiti, KaiTi, serif;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.1;
+}
+
+.wtc-pinyin {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #6657d9;
+}
+
+.wtc-meaning {
+  font-size: 13px;
+  color: #475569;
+  margin-top: 2px;
+}
+
+.wtc-level {
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #f1f3f9;
+  color: #475569;
+}
+
+/* Thẻ giải thích điểm ngữ pháp HSK */
+.grammar-insight-card {
+  background: #fff7ed;
+  border: 2px solid #fed7aa;
+  border-radius: 16px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+
+.gic-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 15px;
+  color: #9a3412;
+  margin-bottom: 6px;
+}
+
+.gic-formula {
+  background: #ffffff;
+  border: 1px dashed #fdba74;
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #c2410c;
+  margin: 6px 0;
+  display: inline-block;
+}
+
+.gic-explain {
+  font-size: 13.5px;
+  color: #7c2d12;
+  line-height: 1.5;
+  margin: 4px 0 0;
+}

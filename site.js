@@ -229,6 +229,7 @@
         </button>
         <div class="nav-dropdown-menu">
           <a href="javascript:void(0)" onclick="window.HSKSpeechTrainer?.open()">🎙️ Luyện phát âm AI</a>
+          <a href="javascript:void(0)" onclick="window.location.hash='dict'; setTimeout(() => window.HSKDictionary?.switchTab('analyzer'), 100);">🤖 Phân tích câu & Ngữ pháp</a>
           <a href="javascript:void(0)" onclick="window.HSKTypingGame?.open()">⌨️ Game gõ Pinyin</a>
           <a href="javascript:void(0)" onclick="window.HSKSkillDrills?.open()">⚡ Đấu trường 4 kỹ năng</a>
           <a href="javascript:void(0)" onclick="window.SRSEngine?.open()">🗂️ Flashcards SRS</a>
@@ -321,7 +322,8 @@
   }
 
   function showRoute() {
-    const requested = location.hash.slice(1);
+    const rawHash = location.hash.slice(1);
+    const requested = rawHash.split('?')[0].split('/')[0];
     const validRoutes = window.HSKData ? window.HSKData.getMenus().map(m => m.route) : baseRoutes;
     const allRoutes = Array.from(new Set([...baseRoutes, ...validRoutes]));
     const route = allRoutes.includes(requested) ? requested : 'home';
@@ -348,6 +350,9 @@
       if (dictView) {
         dictView.hidden = false;
         window.HSKDictionary?.renderDictionaryView('dictView');
+        if (rawHash.includes('analyzer')) {
+          setTimeout(() => window.HSKDictionary?.switchTab('analyzer'), 50);
+        }
       }
       document.title = '📖 Tra cứu từ điển Hán ngữ · 你好 HSK';
     } else if (route === 'notebook') {
