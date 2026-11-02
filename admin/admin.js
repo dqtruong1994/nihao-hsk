@@ -935,6 +935,7 @@
     const siteTitle = localStorage.getItem('hsk_site_title') || '你好 HSK · Học tiếng Trung mỗi ngày';
     const announcement = localStorage.getItem('hsk_site_announcement') || 'Chào mừng các bạn đến với góc tự học tiếng Trung HSK 1, 2, 3!';
     const sysTheme = localStorage.getItem('hsk_system_default_theme') || 'default';
+    const mailWebhookUrl = localStorage.getItem('hsk_mail_webhook_url') || '';
 
     container.innerHTML = `
       <div class="admin-card">
@@ -971,6 +972,46 @@
 
       <div class="admin-card">
         <div class="card-header">
+          <h3>📧 Cấu hình Gửi Email OTP qua Gmail (Miễn phí 100%)</h3>
+        </div>
+        <p style="font-size:13.5px; color:#475569; margin: 0 0 14px; line-height: 1.6;">
+          Hệ thống sẽ gửi mã xác nhận 6 số đến email nhân viên/học viên <b>trực tiếp từ chính hộp thư Gmail của bạn</b> qua Google Apps Script Webhook. Hoàn toàn <b>miễn phí vĩnh viễn</b>, không tốn tiền mua dịch vụ ngoài (Brevo/Sendgrid) và không cần thẻ thanh toán.
+        </p>
+
+        <form id="mailWebhookForm" style="display:flex; flex-direction:column; gap:14px; max-width:650px;">
+          <div class="form-group">
+            <label style="font-weight:700;">Đường link Web App Google Apps Script (Webhook URL)</label>
+            <input type="url" id="cfgMailWebhookUrl" class="form-control" placeholder="https://script.google.com/macros/s/AKfycb.../exec" value="${mailWebhookUrl}" style="font-family:monospace; font-size:13px;">
+            <small style="color:#64748b; font-size:12px; margin-top:4px; display:block;">
+              Dán URL nhận được sau khi bấm <b>Deploy (Triển khai) &rarr; Web App</b> trong Google Apps Script.
+            </small>
+          </div>
+
+          <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+            <button type="submit" class="btn-primary" style="background:#10b981;">💾 Lưu cấu hình Gmail</button>
+            <button type="button" id="btnTestMailWebhook" class="btn-secondary" style="border:1px solid #6657d9; color:#6657d9; background:#f5f3ff; font-weight:700;">✉️ Gửi thử email test</button>
+            <button type="button" id="btnCopyGoogleScript" class="btn-secondary" style="border:1px solid #cbd5e1; background:#f8fafc;">📋 Sao chép mã Google Script</button>
+          </div>
+          <div id="mailTestResult" style="font-size:13px; font-weight:600; min-height:18px;"></div>
+        </form>
+
+        <div style="margin-top:20px; padding:16px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px;">
+          <h4 style="margin:0 0 10px; font-size:14px; color:#1e293b;">⚡ Hướng dẫn cài đặt Gmail Webhook trong 2 phút (Hoàn toàn miễn phí):</h4>
+          <ol style="margin:0; padding-left:20px; font-size:13px; color:#475569; line-height:1.75;">
+            <li>Truy cập <a href="https://script.google.com/" target="_blank" style="color:#6657d9; font-weight:700; text-decoration:underline;">script.google.com</a> (đăng nhập bằng tài khoản Gmail bạn muốn dùng để gửi mail).</li>
+            <li>Bấm <b>Dự án mới (New project)</b>, xóa toàn bộ code có sẵn và dán đoạn mã Google Script (bấm nút <i>"📋 Sao chép mã Google Script"</i> ở trên).</li>
+            <li>Bấm nút <b>Triển khai (Deploy) &rarr; Quản lý tùy chọn triển khai / Tùy chọn triển khai mới (New deployment)</b>:
+              <br>&bull; Chọn loại: <b>Ứng dụng web (Web app)</b>
+              <br>&bull; Thực thi dưới dạng (Execute as): <b>Tôi (email của bạn)</b>
+              <br>&bull; Ai có quyền truy cập (Who has access): <b>Bất kỳ ai (Anyone)</b>
+            </li>
+            <li>Bấm <b>Triển khai</b>, cấp quyền cho Gmail, rồi sao chép đường dẫn <b>URL ứng dụng web (Web app URL)</b> dán vào ô bên trên và bấm <b>Lưu cấu hình Gmail</b>.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <div class="card-header">
           <h3>Sao lưu & Phục hồi Dữ liệu (Backup & Restore)</h3>
         </div>
         <p style="color:#64748b; font-size:14px; margin-bottom:18px;">
@@ -997,6 +1038,109 @@
         window.HSKTheme.setTheme(chosenTheme, true);
       }
       alert('Đã lưu cấu hình website và cập nhật chủ đề lễ hội thành công!');
+    };
+
+    const GOOGLE_APPS_SCRIPT_TEMPLATE = `function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+    var to = data.email;
+    var code = data.code || '';
+    var subject = data.subject || ('NiHao HSK · Mã xác nhận đăng ký tài khoản: ' + code);
+    var body = data.body || ('Mã xác nhận của bạn là: ' + code);
+    var htmlBody = data.html || (
+      '<div style="font-family:sans-serif;max-width:500px;margin:auto;padding:24px;border:1px solid #e2e8f0;border-radius:14px;">' +
+      '<h2 style="color:#6657d9;text-align:center;">NiHao HSK · Xác nhận Email</h2>' +
+      '<p>Xin chào, bạn vừa yêu cầu đăng ký tài khoản trên hệ thống <b>NiHao HSK</b>.</p>' +
+      '<p>Mã xác thực của bạn là:</p>' +
+      '<div style="text-align:center;margin:24px 0;"><span style="font-size:32px;font-weight:800;letter-spacing:6px;color:#4338ca;background:#eef2ff;padding:12px 28px;border-radius:10px;border:2px dashed #6366f1;">' + code + '</span></div>' +
+      '<p style="color:#64748b;font-size:13px;">Mã có hiệu lực trong vòng 10 phút. Tuyệt đối không chia sẻ mã cho người khác.</p>' +
+      '</div>'
+    );
+
+    GmailApp.sendEmail(to, subject, body, {
+      name: 'NiHao HSK',
+      htmlBody: htmlBody
+    });
+
+    return ContentService.createTextOutput(JSON.stringify({ success: true }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ error: err.message }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}`;
+
+    document.getElementById('mailWebhookForm').onsubmit = (e) => {
+      e.preventDefault();
+      const urlVal = (document.getElementById('cfgMailWebhookUrl').value || '').trim();
+      localStorage.setItem('hsk_mail_webhook_url', urlVal);
+      const resEl = document.getElementById('mailTestResult');
+      resEl.textContent = '✅ Đã lưu cấu hình Webhook Gmail thành công! Bây giờ mã OTP đăng ký sẽ gửi qua Gmail của bạn.';
+      resEl.style.color = '#10b981';
+      setTimeout(() => { if (resEl.textContent.startsWith('✅')) resEl.textContent = ''; }, 5000);
+    };
+
+    document.getElementById('btnCopyGoogleScript').onclick = () => {
+      navigator.clipboard.writeText(GOOGLE_APPS_SCRIPT_TEMPLATE).then(() => {
+        alert('Đã sao chép mã Google Apps Script vào bộ nhớ tạm! Bạn chỉ cần vào script.google.com rồi dán (Ctrl+V) vào dự án mới.');
+      }).catch(() => {
+        prompt('Sao chép mã Google Apps Script bên dưới:', GOOGLE_APPS_SCRIPT_TEMPLATE);
+      });
+    };
+
+    document.getElementById('btnTestMailWebhook').onclick = async () => {
+      const urlVal = (document.getElementById('cfgMailWebhookUrl').value || '').trim();
+      const resEl = document.getElementById('mailTestResult');
+      if (!urlVal) {
+        resEl.textContent = '⚠️ Vui lòng nhập link Webhook Google Apps Script trước khi gửi thử.';
+        resEl.style.color = '#ef4444';
+        return;
+      }
+
+      const defaultEmail = (window.HSKAuth && window.HSKAuth.getCurrentUser && window.HSKAuth.getCurrentUser() && window.HSKAuth.getCurrentUser().email) || '';
+      const testEmail = prompt('Nhập địa chỉ email của bạn để nhận email kiểm tra:', defaultEmail);
+      if (!testEmail || !testEmail.includes('@')) {
+        if (testEmail) alert('Địa chỉ email không hợp lệ.');
+        return;
+      }
+
+      resEl.textContent = '⏳ Đang gửi thử email qua Gmail Webhook...';
+      resEl.style.color = '#6657d9';
+
+      try {
+        const resp = await fetch('/api/auth/send-otp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: testEmail, webhookUrl: urlVal, isTest: true })
+        });
+        const data = await resp.json().catch(() => ({}));
+        if (resp.ok && data.success && data.emailSent) {
+          resEl.textContent = `🎉 Tuyệt vời! Đã gửi email test thành công tới ${testEmail}. Vui lòng mở hộp thư Gmail để kiểm tra.`;
+          resEl.style.color = '#10b981';
+        } else {
+          // Thử gửi trực tiếp từ trình duyệt nếu server API chưa nhận
+          try {
+            await fetch(urlVal, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+              body: JSON.stringify({
+                email: testEmail,
+                code: '888888',
+                subject: 'NiHao HSK · Kiểm tra gửi mail trực tiếp từ Webhook Gmail thành công!'
+              })
+            });
+            resEl.textContent = `🎉 Đã kích hoạt gửi email qua Webhook Gmail tới ${testEmail}! Hãy kiểm tra hộp thư (inbox hoặc Spam).`;
+            resEl.style.color = '#10b981';
+          } catch (directErr) {
+            resEl.textContent = '❌ Lỗi gửi email test: ' + (data.message || directErr.message);
+            resEl.style.color = '#ef4444';
+          }
+        }
+      } catch (err) {
+        resEl.textContent = '❌ Không thể kết nối Webhook: ' + err.message;
+        resEl.style.color = '#ef4444';
+      }
     };
 
     document.getElementById('btnExportJSON').onclick = () => {

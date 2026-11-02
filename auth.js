@@ -354,12 +354,14 @@
       throw new Error(`Email "${email}" đã được đăng ký cho tài khoản @${existing.username}. Vui lòng đăng nhập hoặc dùng email khác.`);
     }
 
-    // 1. Thử gọi API Cloudflare Worker gửi email thật
+    const savedWebhook = localStorage.getItem('hsk_mail_webhook_url') || '';
+
+    // 1. Thử gọi API Cloudflare Worker gửi email thật (ưu tiên Gmail Webhook)
     try {
       const resp = await fetch('/api/auth/send-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ email, webhookUrl: savedWebhook })
       });
       if (resp.ok) {
         const data = await resp.json();
@@ -390,6 +392,24 @@
       sentAt: Date.now(),
       serverBacked: false
     }));
+
+    // Nếu đã cấu hình Webhook Gmail trong máy, gửi trực tiếp qua Google Apps Script
+    if (savedWebhook) {
+      try {
+        fetch(savedWebhook, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            email,
+            code,
+            subject: 'NiHao HSK · Mã xác nhận đăng ký tài khoản: ' + code
+          })
+        });
+      } catch (scriptErr) {
+        console.warn('Direct webhook call warning:', scriptErr);
+      }
+    }
     // Không hiện mã trên giao diện người dùng; chỉ ghi log ở console để lập trình viên kiểm thử khi chưa kết nối API mail
     console.info(`%c[NiHao HSK] Đã tạo mã OTP cho ${email}: ${code} (Dành cho nhà phát triển kiểm thử khi chưa cấu hình API gửi mail)`, 'color:#10b981; font-weight:bold;');
 
