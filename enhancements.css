@@ -257,6 +257,19 @@
   height: 100%;
   cursor: crosshair;
   touch-action: none;
+  z-index: 6;
+}
+.hanzi-writer-layer {
+  position: absolute;
+  inset: 0;
+  width: 260px;
+  height: 260px;
+  pointer-events: none;
+  z-index: 2;
+}
+.hanzi-writer-layer svg {
+  width: 100% !important;
+  height: 100% !important;
 }
 .hanzi-guide {
   position: absolute;
@@ -265,13 +278,61 @@
   align-items: center;
   justify-content: center;
   font-size: 175px;
-  font-family: STKaiti, KaiTi, 'KaiTi SC', serif;
-  color: rgba(102, 87, 217, 0.15);
+  font-family: STKaiti, KaiTi, 'KaiTi SC', SimKai, serif;
+  font-weight: 700;
+  color: #4f46e5;
+  opacity: 0.50; /* Đậm nét rõ ràng - chuẩn hướng dẫn tập viết */
   pointer-events: none;
   line-height: 1;
   user-select: none;
   overflow: hidden;
   text-align: center;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+}
+.hanzi-stroke-badges {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+.stroke-guide-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5px;
+  background: #ef4444;
+  color: #ffffff;
+  padding: 1.5px 5.5px;
+  border-radius: 999px;
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  font-size: 10.5px;
+  font-weight: 800;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  animation: strokeBadgePop 0.22s ease-out;
+}
+.stroke-num-badge {
+  font-size: 11px;
+  font-weight: 900;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+}
+.stroke-arrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 11px;
+  height: 11px;
+}
+@keyframes strokeBadgePop {
+  0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }
 .hanzi-char-chip {
   background: #f1f5f9;
