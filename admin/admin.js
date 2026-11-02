@@ -7,6 +7,62 @@
 
   let currentTab = 'dashboard';
   let activeLevel = 'hsk1';
+  const HSK_LESSON_CATALOG = {
+    hsk1: [
+      { num: 1, zh: "你好", py: "Nǐ hǎo", vi: "Xin chào" },
+      { num: 2, zh: "谢谢你", py: "Xièxiè nǐ", vi: "Cảm ơn bạn" },
+      { num: 3, zh: "你叫什么名字？", py: "Nǐ jiào shénme míngzi?", vi: "Bạn tên là gì?" },
+      { num: 4, zh: "她是我的汉语老师", py: "Tā shì wǒ de hànyǔ lǎoshī", vi: "Cô ấy là giáo viên tiếng Trung của tôi" },
+      { num: 5, zh: "她女儿今年二十岁", py: "Tā nǚ'ér jīnnián èrshí suì", vi: "Con gái cô ấy năm nay 20 tuổi" },
+      { num: 6, zh: "我会说汉语", py: "Wǒ huì shuō hànyǔ", vi: "Tôi biết nói tiếng Trung" },
+      { num: 7, zh: "今天几号？", py: "Jīntiān jǐ hào?", vi: "Hôm nay ngày mấy?" },
+      { num: 8, zh: "我想喝茶", py: "Wǒ xiǎng hē chá", vi: "Tôi muốn uống trà" },
+      { num: 9, zh: "你儿子在哪儿工作？", py: "Nǐ érzi zài nǎr gōngzuò?", vi: "Con trai bạn làm việc ở đâu?" },
+      { num: 10, zh: "我能坐这儿吗？", py: "Wǒ néng zuò zhèr ma?", vi: "Tôi có thể ngồi đây không?" },
+      { num: 11, zh: "现在几点？", py: "Xiànzài jǐ diǎn?", vi: "Bây giờ là mấy giờ?" },
+      { num: 12, zh: "明天天气怎么样？", py: "Míngtiān tiānqì zěnmeyàng?", vi: "Thời tiết ngày mai thế nào?" }
+    ],
+    hsk2: [
+      { num: 1, zh: "九月去北京旅游最好", py: "Jiǔyuè qù Běijīng lǚyóu zuì hǎo", vi: "Tháng 9 đi Bắc Kinh du lịch là thích hợp nhất" },
+      { num: 2, zh: "我每天六点起床", py: "Wǒ měitiān liù diǎn qǐchuáng", vi: "Mỗi ngày tôi đều thức dậy lúc 6 giờ" },
+      { num: 3, zh: "左边那个红色的是我的", py: "Zuǒbian nàge hóngsè de shì wǒ de", vi: "Cái màu đỏ bên trái là của tôi" },
+      { num: 4, zh: "这个工作是他帮我介绍 de", py: "Zhège gōngzuò shì tā bāng wǒ jièshào de", vi: "Công việc này là anh ấy giới thiệu cho tôi" },
+      { num: 5, zh: "就买这件吧", py: "Jiù mǎi zhè jiàn ba", vi: "Mua chiếc này đi" },
+      { num: 6, zh: "你怎么不吃了？", py: "Nǐ zěnme bù chī le?", vi: "Sao bạn không ăn nữa?" },
+      { num: 7, zh: "差不多四十分钟", py: "Chàbùduō sìshí fēnzhōng", vi: "Khoảng tầm bốn mươi phút" },
+      { num: 8, zh: "让我想想再说", py: "Ràng wǒ xiǎngxiang zài shuō", vi: "Để tôi nghĩ chút rồi nói tiếp" },
+      { num: 9, zh: "题太多，我没做完", py: "Tí tài duō, wǒ méi zuò wán", vi: "Câu hỏi nhiều quá, tôi làm chưa xong" },
+      { num: 10, zh: "别找了，手机在桌子上呢", py: "Bié zhǎo le, shǒujī zài zhuōzi shang ne", vi: "Đừng tìm nữa, điện thoại ở trên bàn kìa" },
+      { num: 11, zh: "他比我大三岁", py: "Tā bǐ wǒ dà sān suì", vi: "Anh ấy lớn hơn tôi 3 tuổi" },
+      { num: 12, zh: "你穿得太少了", py: "Nǐ chuān de tài shǎo le", vi: "Bạn mặc phong phanh quá" },
+      { num: 13, zh: "门开着呢", py: "Mén kāizhe ne", vi: "Cửa đang mở kìa" },
+      { num: 14, zh: "你看过那个电影吗？", py: "Nǐ kànguo nàge diànyǐng ma?", vi: "Bạn đã từng xem bộ phim đó chưa?" },
+      { num: 15, zh: "新年就要到了", py: "Xīnnián jiù yào dào le", vi: "Năm mới sắp đến rồi" }
+    ],
+    hsk3: [
+      { num: 1, zh: "周末你有什么打算？", py: "Zhōumò nǐ yǒu shénme dǎsuàn?", vi: "Anh dự định làm gì vào cuối tuần vậy?" },
+      { num: 2, zh: "他什么时候回来？", py: "Tā shénme shíhou huílái?", vi: "Khi nào anh ấy quay về?" },
+      { num: 3, zh: "桌子上放着很多饮料", py: "Zhuōzi shang fàng zhe hěn duō yǐnliào", vi: "Trên bàn có rất nhiều thức uống" },
+      { num: 4, zh: "她总是笑着跟客人说话", py: "Tā zǒngshì xiàozhe gēn kèrén shuōhuà", vi: "Cô ấy luôn cười khi nói chuyện với khách hàng" },
+      { num: 5, zh: "我最近越来越胖了", py: "Wǒ zuìjìn yuèláiyuè pàng le", vi: "Dạo này em ngày càng béo ra" },
+      { num: 6, zh: "怎么突然找不到了？", py: "Zěnme tūrán zhǎobudào le?", vi: "Sao bỗng dưng lại không tìm thấy?" },
+      { num: 7, zh: "我跟她都认识五年了", py: "Wǒ gēn tā dōu rènshi wǔ nián le", vi: "Tôi và cô ấy quen nhau được năm năm rồi" },
+      { num: 8, zh: "你去哪儿我就去哪儿", py: "Nǐ qù nǎr wǒ jiù qù nǎr", vi: "Em đi đâu thì anh đi đến đó" },
+      { num: 9, zh: "她的汉语说得跟中国人一样好", py: "Tā de Hànyǔ shuō de gēn Zhōngguórén yíyàng hǎo", vi: "Cô ấy nói tiếng Trung Quốc hay như người Trung Quốc vậy" },
+      { num: 10, zh: "数学比历史难多了", py: "Shùxué bǐ lìshǐ nán duō le", vi: "Môn Toán khó hơn môn Lịch Sử nhiều" },
+      { num: 11, zh: "别忘了把空调关了", py: "Bié wàng le bǎ kōngtiáo guān le", vi: "Đừng quên tắt máy điều hòa không khí nhé" },
+      { num: 12, zh: "把重要的东西放在我这儿吧", py: "Bǎ zhòngyào de dōngxi fàng zài wǒ zhèr ba", vi: "Hãy để những đồ quan trọng ở chỗ tôi đi" },
+      { num: 13, zh: "我是走回来的", py: "Wǒ shì zǒuhuílai de", vi: "Anh đi bộ về" },
+      { num: 14, zh: "你把水果拿过来", py: "Nǐ bǎ shuǐguǒ ná guòlái", vi: "Cậu hãy mang trái cây đến đây" },
+      { num: 15, zh: "其他都没什么问题", py: "Qítā dōu méi shénme wèntí", vi: "Những câu khác đều không có vấn đề gì" },
+      { num: 16, zh: "我现在累得下了班就想睡觉", py: "Wǒ xiànzài lèi de xià le bān jiù xiǎng shuìjiào", vi: "Bây giờ tôi mệt đến nỗi chỉ muốn đi ngủ sau khi hết giờ làm việc" },
+      { num: 17, zh: "谁都有办法看好你的“病”", py: "Shéi dōu yǒu bànfǎ kànhǎo nǐ de 'bìng'", vi: "Ai cũng có cách chữa khỏi 'bệnh' của em" },
+      { num: 18, zh: "我相信他们会同意的", py: "Wǒ xiāngxìn tāmen huì tóngyì de", vi: "Tôi tin họ sẽ đồng ý" },
+      { num: 19, zh: "你没看出来吗？", py: "Nǐ méi kàn chūlai ma?", vi: "Anh không nhìn ra được à?" },
+      { num: 20, zh: "我被他影响了", py: "Wǒ bèi tā yǐngxiǎng le", vi: "Mình chịu ảnh hưởng từ anh ấy" }
+    ]
+  };
+
 
   function init() {
     const user = window.HSKAuth?.getCurrentUser();
@@ -89,6 +145,9 @@
           <nav class="sidebar-nav">
             <button type="button" class="nav-item ${currentTab === 'dashboard' ? 'active' : ''}" data-tab="dashboard">
               📊 Tổng quan
+            </button>
+            <button type="button" class="nav-item ${currentTab === 'activity' ? 'active' : ''}" data-tab="activity">
+              ⚡ Hoạt động & Tiến độ
             </button>
             <button type="button" class="nav-item ${currentTab === 'lessons' ? 'active' : ''}" data-tab="lessons">
               📚 Quản lý Bài học
@@ -205,8 +264,8 @@
         </div>
         <div class="metric-card">
           <div class="metric-header"><span>TỔNG BÀI HỌC</span><span class="metric-icon">📚</span></div>
-          <div class="metric-value">36</div>
-          <div class="metric-sub">12 HSK 1 · 12 HSK 2 · 12 HSK 3</div>
+          <div class="metric-value">47</div>
+          <div class="metric-sub">12 HSK 1 · 15 HSK 2 · 20 HSK 3</div>
         </div>
         <div class="metric-card">
           <div class="metric-header"><span>TỔNG TỪ VỰNG</span><span class="metric-icon">🗂</span></div>
@@ -240,28 +299,61 @@
                 <td><b>HSK 1</b></td>
                 <td>12 bài</td>
                 <td>Pinyin, 4 thanh điệu, câu giao tiếp nền tảng</td>
-                <td><span class="badge badge-active">✓ Đã bật (12 bài)</span></td>
+                <td><span class="badge badge-active">✓ 12 bài chuẩn BLCU</span></td>
                 <td><button type="button" class="btn-primary btn-sm" onclick="window.open('/#hsk1')">Mở học ↗</button></td>
               </tr>
               <tr>
                 <td><b>HSK 2</b></td>
-                <td>12 bài</td>
-                <td>Mở rộng ngữ pháp, câu ghép, đời sống</td>
-                <td><span class="badge badge-active">✓ Đã bật (12 bài mới)</span></td>
+                <td>15 bài</td>
+                <td>Mở rộng ngữ pháp, câu ghép, đời sống chuẩn BLCU</td>
+                <td><span class="badge badge-active">✓ 15 bài chuẩn BLCU</span></td>
                 <td><button type="button" class="btn-primary btn-sm" onclick="window.open('/#hsk2')">Mở học ↗</button></td>
               </tr>
               <tr>
                 <td><b>HSK 3</b></td>
-                <td>12 bài</td>
-                <td>Giao tiếp chủ đề, công việc, du lịch</td>
-                <td><span class="badge badge-active">✓ Đã bật</span></td>
+                <td>20 bài</td>
+                <td>Giao tiếp chuyên sâu, du lịch, công sở chuẩn BLCU</td>
+                <td><span class="badge badge-active">✓ 20 bài chuẩn BLCU</span></td>
                 <td><button type="button" class="btn-primary btn-sm" onclick="window.open('/#hsk3')">Mở học ↗</button></td>
               </tr>
             </tbody>
           </table>
         </div>
+
+      <!-- Widget Học viên đang hoạt động gần đây -->
+      <div class="admin-card" style="margin-top: 24px;">
+        <div class="card-header">
+          <div>
+            <h3 style="display:flex; align-items:center; gap:8px;">
+              <span>⚡ Học viên Đang hoạt động & Tiến độ gần đây</span>
+            </h3>
+            <p style="color:#64748b; font-size:13px; margin:4px 0 0;">Cập nhật trạng thái trực tuyến và số bài học viên đã hoàn thành theo thời gian thực.</p>
+          </div>
+          <button type="button" class="btn-primary" id="btnDashboardToActivity">Xem tất cả tiến độ học viên →</button>
+        </div>
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Học viên</th>
+                <th>Trạng thái</th>
+                <th>Tiến độ HSK 1</th>
+                <th>Tiến độ HSK 2</th>
+                <th>Tiến độ HSK 3</th>
+                <th>Tổng XP</th>
+                <th style="text-align:right;">Thao tác</th>
+              </tr>
+            </thead>
+            <tbody id="dashActiveUsersBody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
       </div>
     `;
+
+    renderDashboardRecentUsers();
   }
 
   // --- TAB 2: QUẢN LÝ BÀI HỌC (LESSONS CRUD) ---
@@ -921,3 +1013,498 @@
     init();
   }
 })();
+
+
+  // --- DASHBOARD WIDGET: HỌC VIÊN HOẠT ĐỘNG GẦN ĐÂY ---
+  function renderDashboardRecentUsers() {
+    const tbody = document.getElementById('dashActiveUsersBody');
+    const btnNav = document.getElementById('btnDashboardToActivity');
+    if (btnNav) {
+      btnNav.onclick = () => {
+        const navBtn = document.querySelector('.nav-item[data-tab="activity"]');
+        if (navBtn) navBtn.click();
+      };
+    }
+    if (!tbody) return;
+
+    const users = window.HSKAuth.getAllUsersWithProgress ? window.HSKAuth.getAllUsersWithProgress() : [];
+    // Sắp xếp: online trước, sau đó theo lần cuối hoạt động
+    users.sort((a, b) => (b.isOnline ? 1 : 0) - (a.isOnline ? 1 : 0) || new Date(b.lastActive) - new Date(a.lastActive));
+
+    tbody.innerHTML = users.slice(0, 5).map(u => `
+      <tr>
+        <td>
+          <div class="user-profile-cell">
+            <div class="user-avatar">${(u.fullName || u.username).charAt(0).toUpperCase()}</div>
+            <div>
+              <div class="user-meta-name">
+                ${u.fullName}
+                <span class="badge ${u.role === 'admin' ? 'badge-admin' : 'badge-student'}" style="font-size:10px; padding:2px 6px;">
+                  ${u.role === 'admin' ? 'Admin' : 'Học viên'}
+                </span>
+              </div>
+              <div class="user-meta-sub">@${u.username}</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <span class="badge ${u.activeState === 'online' ? 'badge-online' : (u.activeState === 'today' ? 'badge-today' : 'badge-offline')}">
+            <span class="${u.activeState === 'online' ? 'pulse-dot' : (u.activeState === 'today' ? 'dot-today' : 'dot-offline')}"></span>
+            ${u.activeText}
+          </span>
+        </td>
+        <td>
+          <div class="progress-cell">
+            <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:700;">
+              <span>${u.hsk1.doneCount} / 12</span>
+              <span style="color:#6657d9;">${u.hsk1.percent}%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-hsk1" style="width: ${u.hsk1.percent}%;"></div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="progress-cell">
+            <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:700;">
+              <span>${u.hsk2.doneCount} / 15</span>
+              <span style="color:#10b981;">${u.hsk2.percent}%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-hsk2" style="width: ${u.hsk2.percent}%;"></div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="progress-cell">
+            <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:700;">
+              <span>${u.hsk3.doneCount} / 20</span>
+              <span style="color:#0284c7;">${u.hsk3.percent}%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-hsk3" style="width: ${u.hsk3.percent}%;"></div>
+            </div>
+          </div>
+        </td>
+        <td><b>⭐ ${u.totalXP}</b></td>
+        <td style="text-align:right;">
+          <button type="button" class="btn-secondary btn-sm btn-view-progress" data-id="${u.id}">Chi tiết bài học →</button>
+        </td>
+      </tr>
+    `).join('');
+
+    tbody.querySelectorAll('.btn-view-progress').forEach(b => {
+      b.onclick = () => {
+        const u = users.find(x => x.id === b.dataset.id);
+        if (u) openProgressDetailModal(u);
+      };
+    });
+  }
+
+  // --- TAB: HỌC VIÊN ĐANG HOẠT ĐỘNG & TIẾN ĐỘ HOÀN THÀNH ---
+  function renderActivityTab(container) {
+    const allUsers = window.HSKAuth.getAllUsersWithProgress ? window.HSKAuth.getAllUsersWithProgress() : [];
+    let currentFilter = 'all'; // all | online | hsk1 | hsk2 | hsk3
+    let searchTerm = '';
+
+    const onlineCount = allUsers.filter(u => u.isOnline).length;
+    const todayCount = allUsers.filter(u => u.activeState === 'online' || u.activeState === 'today').length;
+    const totalLessonsAll = allUsers.reduce((sum, u) => sum + u.totalLessonsCompleted, 0);
+    const totalXPAll = allUsers.reduce((sum, u) => sum + u.totalXP, 0);
+
+    container.innerHTML = `
+      <!-- Top Metrics Cards -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-header"><span>ĐANG TRỰC TUYẾN</span><span class="metric-icon">🟢</span></div>
+          <div class="metric-value" style="color:#16a34a;">${onlineCount}</div>
+          <div class="metric-sub">${todayCount} người dùng hoạt động trong ngày hôm nay</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-header"><span>TỔNG HỌC VIÊN</span><span class="metric-icon">🎓</span></div>
+          <div class="metric-value">${allUsers.length}</div>
+          <div class="metric-sub">${allUsers.filter(u => u.role === 'student').length} học viên · ${allUsers.filter(u => u.role === 'admin').length} quản trị viên</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-header"><span>BÀI ĐÃ HOÀN THÀNH</span><span class="metric-icon">🏆</span></div>
+          <div class="metric-value" style="color:#6657d9;">${totalLessonsAll}</div>
+          <div class="metric-sub">Tổng bài học HSK 1, 2, 3 đã được các học viên vượt qua</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-header"><span>TỔNG ĐIỂM XP</span><span class="metric-icon">⭐</span></div>
+          <div class="metric-value" style="color:#ca8a04;">${totalXPAll}</div>
+          <div class="metric-sub">Điểm thưởng học tập tích lũy toàn hệ thống</div>
+        </div>
+      </div>
+
+      <!-- Main Activity Table Card -->
+      <div class="admin-card">
+        <div class="card-header" style="flex-wrap:wrap; gap:12px;">
+          <div>
+            <h3>Danh sách Học viên Hoạt động & Tiến độ Chi tiết</h3>
+            <p style="color:#64748b; font-size:13px; margin:4px 0 0;">
+              Theo dõi ai đang online, số bài đã hoàn thành từng cấp độ, điểm thi gần nhất và danh sách bài học cụ thể.
+            </p>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button type="button" class="btn-secondary" id="btnExportProgressCsv" style="display:inline-flex; align-items:center; gap:6px;">
+              📥 Xuất báo cáo CSV
+            </button>
+            <button type="button" class="btn-primary" id="btnRefreshActivity" style="display:inline-flex; align-items:center; gap:6px;">
+              🔄 Làm mới
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; margin-bottom:18px;">
+          <div class="filter-tabs" style="margin-bottom:0;">
+            <button type="button" class="filter-tab active" data-actfilter="all">Tất cả (${allUsers.length})</button>
+            <button type="button" class="filter-tab" data-actfilter="online">🟢 Đang online (${onlineCount})</button>
+            <button type="button" class="filter-tab" data-actfilter="hsk1">Đang học HSK 1</button>
+            <button type="button" class="filter-tab" data-actfilter="hsk2">Đang học HSK 2</button>
+            <button type="button" class="filter-tab" data-actfilter="hsk3">Đang học HSK 3</button>
+          </div>
+          <div style="min-width: 260px; flex: 1; max-width: 360px;">
+            <input type="text" id="activitySearchInput" class="form-control" placeholder="🔍 Tìm học viên theo tên, username...">
+          </div>
+        </div>
+
+        <!-- Table View -->
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Học viên</th>
+                <th>Trạng thái hoạt động</th>
+                <th style="min-width: 140px;">Tiến độ HSK 1 (12 bài)</th>
+                <th style="min-width: 140px;">Tiến độ HSK 2 (15 bài)</th>
+                <th style="min-width: 140px;">Tiến độ HSK 3 (20 bài)</th>
+                <th>Tổng XP & Chuỗi</th>
+                <th style="width: 160px; text-align: right;">Chi tiết đã học</th>
+              </tr>
+            </thead>
+            <tbody id="activityTableBody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+
+    function getFilteredUsers() {
+      return allUsers.filter(u => {
+        // Search filter
+        if (searchTerm) {
+          const term = searchTerm.toLowerCase();
+          const matchName = (u.fullName || '').toLowerCase().includes(term);
+          const matchUser = (u.username || '').toLowerCase().includes(term);
+          if (!matchName && !matchUser) return false;
+        }
+        // Category filter
+        if (currentFilter === 'online') return u.isOnline;
+        if (currentFilter === 'hsk1') return u.hsk1.doneCount > 0;
+        if (currentFilter === 'hsk2') return u.hsk2.doneCount > 0;
+        if (currentFilter === 'hsk3') return u.hsk3.doneCount > 0;
+        return true;
+      });
+    }
+
+    function renderTableRows() {
+      const tbody = document.getElementById('activityTableBody');
+      if (!tbody) return;
+
+      const filtered = getFilteredUsers();
+      // Sắp xếp: online trước, sau đó theo lần cuối hoạt động
+      filtered.sort((a, b) => (b.isOnline ? 1 : 0) - (a.isOnline ? 1 : 0) || new Date(b.lastActive) - new Date(a.lastActive));
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7" style="text-align:center; padding:36px; color:#94a3b8;">
+              Không tìm thấy học viên nào phù hợp với bộ lọc hiện tại.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(u => `
+        <tr>
+          <td>
+            <div class="user-profile-cell">
+              <div class="user-avatar">${(u.fullName || u.username).charAt(0).toUpperCase()}</div>
+              <div>
+                <div class="user-meta-name">
+                  <span>${u.fullName}</span>
+                  <span class="badge ${u.role === 'admin' ? 'badge-admin' : 'badge-student'}" style="font-size:11px;">
+                    ${u.role === 'admin' ? '👑 Admin' : '🎓 Học viên'}
+                  </span>
+                </div>
+                <div class="user-meta-sub">@${u.username} · Tạo ${new Date(u.createdAt).toLocaleDateString('vi-VN')}</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <span class="badge ${u.activeState === 'online' ? 'badge-online' : (u.activeState === 'today' ? 'badge-today' : 'badge-offline')}">
+              <span class="${u.activeState === 'online' ? 'pulse-dot' : (u.activeState === 'today' ? 'dot-today' : 'dot-offline')}"></span>
+              ${u.activeText}
+            </span>
+          </td>
+          <td>
+            <div class="progress-cell">
+              <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:700;">
+                <span>${u.hsk1.doneCount}/12 bài</span>
+                <span style="color:#6657d9;">${u.hsk1.percent}%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill fill-hsk1" style="width: ${u.hsk1.percent}%;"></div>
+              </div>
+              <div style="font-size:11px; color:#64748b; margin-top:3px;">
+                Điểm: <b>${u.hsk1.score}</b> · XP: ${u.hsk1.xp}
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="progress-cell">
+              <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:700;">
+                <span>${u.hsk2.doneCount}/15 bài</span>
+                <span style="color:#10b981;">${u.hsk2.percent}%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill fill-hsk2" style="width: ${u.hsk2.percent}%;"></div>
+              </div>
+              <div style="font-size:11px; color:#64748b; margin-top:3px;">
+                Điểm: <b>${u.hsk2.score}</b> · XP: ${u.hsk2.xp}
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="progress-cell">
+              <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:700;">
+                <span>${u.hsk3.doneCount}/20 bài</span>
+                <span style="color:#0284c7;">${u.hsk3.percent}%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill fill-hsk3" style="width: ${u.hsk3.percent}%;"></div>
+              </div>
+              <div style="font-size:11px; color:#64748b; margin-top:3px;">
+                Điểm: <b>${u.hsk3.score}</b> · XP: ${u.hsk3.xp}
+              </div>
+            </div>
+          </td>
+          <td>
+            <div style="font-size:13px; font-weight:700; color:#ca8a04;">⭐ ${u.totalXP} XP</div>
+            <div style="font-size:12px; color:#64748b; margin-top:2px;">🔥 Chuỗi ${u.streak} ngày</div>
+          </td>
+          <td style="text-align: right;">
+            <button type="button" class="btn-primary btn-sm btn-open-detail" data-id="${u.id}" style="padding:7px 12px;">
+              📋 Xem bài đã học
+            </button>
+          </td>
+        </tr>
+      `).join('');
+
+      tbody.querySelectorAll('.btn-open-detail').forEach(b => {
+        b.onclick = () => {
+          const userObj = allUsers.find(x => x.id === b.dataset.id);
+          if (userObj) openProgressDetailModal(userObj);
+        };
+      });
+    }
+
+    renderTableRows();
+
+    // Event listeners
+    container.querySelectorAll('[data-actfilter]').forEach(b => {
+      b.onclick = () => {
+        container.querySelectorAll('[data-actfilter]').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        currentFilter = b.dataset.actfilter;
+        renderTableRows();
+      };
+    });
+
+    const searchInput = document.getElementById('activitySearchInput');
+    if (searchInput) {
+      searchInput.oninput = (e) => {
+        searchTerm = e.target.value.trim();
+        renderTableRows();
+      };
+    }
+
+    const btnRefresh = document.getElementById('btnRefreshActivity');
+    if (btnRefresh) {
+      btnRefresh.onclick = () => {
+        renderActivityTab(container);
+      };
+    }
+
+    // Xuất CSV
+    const btnExport = document.getElementById('btnExportProgressCsv');
+    if (btnExport) {
+      btnExport.onclick = () => {
+        exportProgressCSV(allUsers);
+      };
+    }
+  }
+
+  // --- MODAL CHI TIẾT BÀI ĐÃ HOÀN THÀNH CỦA TỪNG HỌC VIÊN ---
+  function openProgressDetailModal(user) {
+    const host = document.getElementById('adminModalHost');
+    let activeLevelTab = 'hsk1'; // hsk1 | hsk2 | hsk3
+
+    function renderModalContent() {
+      const levelData = user[activeLevelTab] || { done: [], score: '—', xp: 0, total: 12, percent: 0 };
+      const catalog = HSK_LESSON_CATALOG[activeLevelTab] || [];
+      const completedIndices = new Set(levelData.done || []);
+
+      host.innerHTML = `
+        <div class="admin-modal-overlay">
+          <div class="admin-modal-card" style="max-width: 780px; width: 95%;">
+            <div class="admin-modal-header" style="background:#f8fafc; border-bottom:1px solid #e2e8f0; padding:18px 22px;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div class="user-avatar" style="width:44px; height:44px; font-size:17px;">
+                  ${(user.fullName || user.username).charAt(0).toUpperCase()}
+                </div>
+                <div>
+                  <h3 style="font-size:18px; margin:0; display:flex; align-items:center; gap:8px;">
+                    <span>${user.fullName}</span>
+                    <span class="badge ${user.role === 'admin' ? 'badge-admin' : 'badge-student'}">
+                      ${user.role === 'admin' ? 'Admin' : 'Học viên'}
+                    </span>
+                  </h3>
+                  <div style="font-size:12px; color:#64748b; margin-top:2px;">
+                    @${user.username} · Trạng thái: <b>${user.activeText}</b> · Tổng hoàn thành: <b>${user.totalLessonsCompleted}/47 bài</b>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="modal-close" id="btnCloseProgressModal" style="border:0; background:transparent; font-size:22px; cursor:pointer; color:#94a3b8;">✕</button>
+            </div>
+
+            <!-- Level Selector Tabs -->
+            <div style="padding:14px 22px 0; background:#fff; border-bottom:1px solid #e2e8f0; display:flex; gap:10px;">
+              <button type="button" class="filter-tab ${activeLevelTab === 'hsk1' ? 'active' : ''}" data-modallevel="hsk1" style="padding:8px 16px;">
+                HSK 1 (${user.hsk1.doneCount}/12 bài)
+              </button>
+              <button type="button" class="filter-tab ${activeLevelTab === 'hsk2' ? 'active' : ''}" data-modallevel="hsk2" style="padding:8px 16px;">
+                HSK 2 (${user.hsk2.doneCount}/15 bài)
+              </button>
+              <button type="button" class="filter-tab ${activeLevelTab === 'hsk3' ? 'active' : ''}" data-modallevel="hsk3" style="padding:8px 16px;">
+                HSK 3 (${user.hsk3.doneCount}/20 bài)
+              </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="admin-modal-body" style="padding:20px 22px;">
+              <!-- Level Summary Banner -->
+              <div style="background:#f9f8ff; border:1px solid #e5e0ff; border-radius:12px; padding:14px 18px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                <div>
+                  <span style="font-size:12px; font-weight:700; color:#6657d9; text-transform:uppercase;">TIẾN ĐỘ ${activeLevelTab.toUpperCase()}</span>
+                  <div style="font-size:20px; font-weight:800; color:#1e1b4b; margin-top:2px;">
+                    ${levelData.doneCount} / ${catalog.length} bài đã hoàn thành (${levelData.percent}%)
+                  </div>
+                </div>
+                <div style="display:flex; gap:16px;">
+                  <div style="text-align:right;">
+                    <span style="font-size:11px; color:#64748b; font-weight:600;">ĐIỂM GẦN NHẤT</span>
+                    <div style="font-size:18px; font-weight:800; color:#0284c7;">${levelData.score}</div>
+                  </div>
+                  <div style="text-align:right;">
+                    <span style="font-size:11px; color:#64748b; font-weight:600;">XP TÍCH LŨY</span>
+                    <div style="font-size:18px; font-weight:800; color:#ca8a04;">⭐ ${levelData.xp}</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Checklist Grid -->
+              <h4 style="margin:8px 0 2px; font-size:15px; color:#0f172a;">
+                Danh sách chi tiết từng bài học (${catalog.length} bài chuẩn giáo trình):
+              </h4>
+              <div class="checklist-grid">
+                ${catalog.map((lesson, idx) => {
+                  const isDone = completedIndices.has(idx);
+                  return `
+                    <div class="checklist-item ${isDone ? 'completed' : ''}">
+                      <div class="checklist-item-icon" style="color: ${isDone ? '#16a34a' : '#94a3b8'};">
+                        ${isDone ? '✅' : '⏳'}
+                      </div>
+                      <div style="flex:1;">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                          <span class="checklist-item-title">Bài ${lesson.num}</span>
+                          <span class="badge ${isDone ? 'badge-active' : 'badge-offline'}" style="font-size:10px; padding:2px 6px;">
+                            ${isDone ? '✓ Đã xong' : 'Chưa học'}
+                          </span>
+                        </div>
+                        <div class="checklist-item-zh">${lesson.zh}</div>
+                        <div class="checklist-item-sub">${lesson.py} · ${lesson.vi}</div>
+                      </div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+
+            <div class="admin-modal-footer">
+              <button type="button" class="btn-secondary" id="btnDismissProgressModal">Đóng cửa sổ</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Event handlers inside modal
+      document.getElementById('btnCloseProgressModal').onclick = () => { host.innerHTML = ''; };
+      document.getElementById('btnDismissProgressModal').onclick = () => { host.innerHTML = ''; };
+
+      host.querySelectorAll('[data-modallevel]').forEach(tab => {
+        tab.onclick = () => {
+          activeLevelTab = tab.dataset.modallevel;
+          renderModalContent();
+        };
+      });
+    }
+
+    renderModalContent();
+  }
+
+  // Xuất file CSV tiến độ học viên
+  function exportProgressCSV(users) {
+    const headers = [
+      'ID', 'Tài khoản', 'Họ và tên', 'Vai trò', 'Trạng thái hoạt động', 'Lần cuối hoạt động',
+      'HSK1 Hoàn thành', 'HSK1 %', 'HSK1 Điểm',
+      'HSK2 Hoàn thành', 'HSK2 %', 'HSK2 Điểm',
+      'HSK3 Hoàn thành', 'HSK3 %', 'HSK3 Điểm',
+      'Tổng số bài xong (trên 47)', 'Tổng XP', 'Chuỗi ngày'
+    ];
+
+    const rows = users.map(u => [
+      `"${u.id}"`,
+      `"${u.username}"`,
+      `"${u.fullName}"`,
+      `"${u.role === 'admin' ? 'Quản trị viên' : 'Học viên'}"`,
+      `"${u.activeText}"`,
+      `"${new Date(u.lastActive).toLocaleString('vi-VN')}"`,
+      `"${u.hsk1.doneCount}/12"`,
+      `"${u.hsk1.percent}%"`,
+      `"${u.hsk1.score}"`,
+      `"${u.hsk2.doneCount}/15"`,
+      `"${u.hsk2.percent}%"`,
+      `"${u.hsk2.score}"`,
+      `"${u.hsk3.doneCount}/20"`,
+      `"${u.hsk3.percent}%"`,
+      `"${u.hsk3.score}"`,
+      `"${u.totalLessonsCompleted}/47"`,
+      `"${u.totalXP}"`,
+      `"${u.streak}"`
+    ]);
+
+    const csvContent = '﻿' + [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `nihao-hsk-tien-do-hoc-vien-${new Date().toISOString().slice(0, 10)}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }

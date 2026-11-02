@@ -420,6 +420,151 @@ table.admin-table tr:hover td {
   box-shadow: 0 0 0 3px rgba(102, 87, 217, 0.15);
 }
 
+/* User Activity & Progress UI */
+.badge-online {
+  background: #dcfce7;
+  color: #15803d;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+.badge-today {
+  background: #fef9c3;
+  color: #854d0e;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+.badge-offline {
+  background: #f1f5f9;
+  color: #64748b;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+  box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+  animation: pulse-green 1.8s infinite;
+}
+.dot-today {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #eab308;
+}
+.dot-offline {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+@keyframes pulse-green {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(22, 163, 74, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+
+.user-profile-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6657d9, #8c7cf2);
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(102, 87, 217, 0.25);
+}
+.user-meta-name {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.user-meta-sub {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.progress-cell {
+  min-width: 140px;
+}
+.progress-bar-bg {
+  height: 7px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+.fill-hsk1 { background: #6657d9; }
+.fill-hsk2 { background: #10b981; }
+.fill-hsk3 { background: #0284c7; }
+
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 10px;
+  max-height: 460px;
+  overflow-y: auto;
+  padding: 4px;
+}
+.checklist-item {
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  transition: all 0.15s ease;
+}
+.checklist-item.completed {
+  border-color: #86efac;
+  background: #f0fdf4;
+}
+.checklist-item-icon {
+  font-size: 18px;
+  line-height: 1.2;
+}
+.checklist-item-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+}
+.checklist-item-zh {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 2px 0 1px;
+}
+.checklist-item-sub {
+  font-size: 12px;
+  color: #64748b;
+}
+
 @media (max-width: 860px) {
   .admin-layout { flex-direction: column; }
   .admin-sidebar { width: 100%; height: auto; position: static; }
