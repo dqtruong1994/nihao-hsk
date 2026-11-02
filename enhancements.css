@@ -315,6 +315,7 @@
   user-select: none;
   pointer-events: none;
   animation: strokeBadgePop 0.22s ease-out;
+  z-index: 5;
 }
 .stroke-num-badge {
   font-size: 11px;

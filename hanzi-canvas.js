@@ -72,9 +72,11 @@
   }
 
   // Tính toán vị trí và góc hướng của từng nét bút
-  function calculateStrokeMarkers(medians, width = 260, height = 260) {
+  function calculateStrokeMarkers(medians, width = 260, height = 260, padding = 15) {
     if (!Array.isArray(medians) || !medians.length) return [];
     const markers = [];
+    const drawW = width - padding * 2;
+    const drawH = height - padding * 2;
 
     for (let i = 0; i < medians.length; i++) {
       const med = medians[i];
@@ -96,8 +98,8 @@
       const angleRad = Math.atan2(dy, dx);
       const angleDeg = ((angleRad * 180 / Math.PI) + 360) % 360;
 
-      let x = (p0[0] / 1024) * width;
-      let y = ((900 - p0[1]) / 1024) * height;
+      let x = padding + (p0[0] / 1024) * drawW;
+      let y = padding + ((900 - p0[1]) / 1024) * drawH;
 
       // Giới hạn trong khung kẻ ô
       x = Math.max(16, Math.min(width - 16, x));
@@ -106,10 +108,10 @@
       // Tránh đè số khi điểm bắt đầu của 2 nét nằm sát nhau
       for (const prev of markers) {
         const d = Math.hypot(x - prev.x, y - prev.y);
-        if (d < 24) {
+        if (d < 22) {
           const perpAngle = angleRad + Math.PI / 2;
-          x += Math.cos(perpAngle) * 16;
-          y += Math.sin(perpAngle) * 16;
+          x += Math.cos(perpAngle) * 15;
+          y += Math.sin(perpAngle) * 15;
           x = Math.max(16, Math.min(width - 16, x));
           y = Math.max(16, Math.min(height - 16, y));
         }
@@ -389,15 +391,22 @@
   }
 
   function updateGuideOpacity() {
-    let opacityVal = '0.52';
-    if (guideContrast === 'medium') opacityVal = '0.24';
-    if (guideContrast === 'off') opacityVal = '0';
+    let opacityVal = '0.58';
+    let targetOpacity = '0.65';
+    if (guideContrast === 'medium') {
+      opacityVal = '0.28';
+      targetOpacity = '0.30';
+    }
+    if (guideContrast === 'off') {
+      opacityVal = '0';
+      targetOpacity = '0';
+    }
 
     const guide = document.getElementById('hanziGuideChar');
     if (guide) guide.style.opacity = opacityVal;
 
     const target = document.getElementById('hanziWriterTarget');
-    if (target) target.style.opacity = guideContrast === 'off' ? '0' : '1';
+    if (target) target.style.opacity = targetOpacity;
   }
 
   async function renderActiveChar() {
@@ -504,10 +513,10 @@
             strokeAnimationSpeed: 1.1,
             delayBetweenStrokes: 180,
             strokeColor: '#312e81',
-            outlineColor: '#4f46e5',
+            outlineColor: '#818cf8',
             drawingColor: '#0f172a',
             drawingWidth: 15,
-            showCharacter: false,
+            showCharacter: true,
             charDataLoader: (c, onComplete) => {
               onComplete(strokeData);
             }
