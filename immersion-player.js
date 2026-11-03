@@ -859,6 +859,7 @@
     cardEl.removeAttribute('hidden');
     cardEl.classList.remove('hidden');
     cardEl.style.display = 'flex';
+    document.body.classList.add('immersion-card-open');
   }
 
   function hideCard() {
@@ -866,6 +867,7 @@
     cardEl.setAttribute('hidden', '');
     cardEl.classList.add('hidden');
     cardEl.style.display = 'none';
+    document.body.classList.remove('immersion-card-open');
   }
 
   // Tự khởi tạo khi trang load

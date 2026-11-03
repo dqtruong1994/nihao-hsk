@@ -432,17 +432,34 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
+/* Nâng nhẹ nút nổi khi thanh TTS Audio đang phát ở góc dưới */
+body:has(.hsk-audio-status:not([hidden])) .immersion-floating-trigger {
+  bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+}
+
+/* Khi máy nghe thụ động đang mở toàn màn hình/dock, ẩn các nút nổi khác để không che khuất */
+body.immersion-card-open .immersion-floating-trigger {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px) scale(0.9);
+}
+
 @media (max-width: 640px) {
   .immersion-floating-trigger {
-    bottom: 74px; /* Tránh che bottom nav bar */
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
     right: 16px;
-    padding: 8px 14px;
+    padding: 8px 13px;
     font-size: 12px;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(102, 87, 217, 0.35);
+    z-index: 9980;
   }
   .immersion-player-card {
-    bottom: 74px;
-    right: 16px;
-    left: 16px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    right: 12px;
+    left: 12px;
     width: auto;
+    z-index: 99995;
+    border-radius: 18px;
   }
 }

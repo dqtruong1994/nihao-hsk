@@ -535,17 +535,32 @@
 /* ================================================================
    4. NÚT TRÒN LINH VẬT TIỂU MIÊU GÓC PHẢI DƯỚI (FLOATING WIDGET)
    ================================================================ */
+/* Khi dock nghe thụ động mở, ẩn widget mèo nổi để không che giao diện nghe */
+/* Nâng nhẹ widget linh vật nổi khi thanh TTS Audio đang phát ở góc dưới */
+body:has(.hsk-audio-status:not([hidden])) .panda-floating-widget,
+body:has(.hsk-audio-status:not([hidden])) .cat-floating-widget {
+  bottom: calc(128px + env(safe-area-inset-bottom, 0px));
+}
+
+body.immersion-card-open .panda-floating-widget,
+body.immersion-card-open .cat-floating-widget {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(12px) scale(0.85);
+}
+
 .panda-floating-widget,
 .cat-floating-widget {
   position: fixed;
-  bottom: 86px;
-  right: 20px;
+  bottom: 82px;
+  right: 24px;
   z-index: 9980;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
+  gap: 6px;
   pointer-events: none;
+  transition: bottom 0.25s ease, right 0.25s ease, opacity 0.2s ease, transform 0.2s ease;
 }
 
 .panda-floating-btn,
@@ -680,11 +695,13 @@
 @media (max-width: 600px) {
   .panda-prompt-banner,
   .cat-prompt-banner {
-    bottom: 16px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
     padding: 14px 16px;
     flex-direction: column;
     text-align: center;
     gap: 10px;
+    width: calc(100% - 24px);
+    z-index: 10005;
   }
   .panda-prompt-actions {
     width: 100%;
@@ -695,9 +712,45 @@
     border-radius: 22px;
     padding: 22px 18px 18px;
   }
+  /* Bố trí widget linh vật nổi phía trên nút nghe thụ động, không bao giờ bị đè */
   .panda-floating-widget,
   .cat-floating-widget {
-    bottom: 76px;
+    bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+    right: 16px;
+    gap: 0;
+    z-index: 9980;
+  }
+  .panda-floating-btn,
+  .cat-floating-btn {
+    width: 46px;
+    height: 46px;
+    padding: 2px;
+    box-shadow: 0 4px 14px rgba(234, 88, 12, 0.28), 0 2px 0 #c2410c;
+  }
+  /* Trên mobile ẩn nhãn chữ nổi để tránh chiếm ngang màn hình và không đè nút khác */
+  .panda-floating-hint,
+  .cat-floating-hint {
+    display: none !important;
+  }
+  .panda-floating-badge {
+    top: -3px;
+    right: -3px;
+    font-size: 9.5px;
+    padding: 1px 5px;
+  }
+  /* Toast thông báo đẩy lên trên cùng trên mobile giống thông báo hệ thống */
+  .panda-toast,
+  .cat-toast {
+    bottom: auto;
+    top: calc(14px + env(safe-area-inset-top, 0px));
+    left: 14px;
     right: 14px;
+    max-width: none;
+    transform: translateY(-130%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+  }
+  .panda-toast.show,
+  .cat-toast.show {
+    transform: translateY(0);
   }
 }

@@ -22,5 +22,5 @@
 .hsk-audio-stop{flex-shrink:0;font:inherit;font-size:12px;font-weight:700;border:1px solid #d5dce6;border-radius:8px;background:#f5f7fb;color:#37465d;padding:8px 11px;min-height:36px;cursor:pointer}
 .dialogue-line .hsk-audio-controls,.grammar-example .hsk-audio-controls{margin-bottom:3px}
 #topicAudio .hsk-audio-controls{margin:10px 0 0}
-@media(max-width:760px){.hsk-audio-status{right:10px;bottom:10px;max-width:calc(100% - 20px);gap:9px;padding:11px 12px;font-size:12px}.hsk-audio-controls{gap:6px}.tone-card{padding:13px 8px}.hsk-audio-caption{font-size:11px}.sound-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}.hsk-audio-message{max-width:calc(100vw - 128px)}}
+@media(max-width:760px){.hsk-audio-status{right:12px;left:12px;bottom:calc(12px + env(safe-area-inset-bottom, 0px));width:auto;max-width:none;gap:9px;padding:11px 12px;font-size:12px}.hsk-audio-controls{gap:6px}.tone-card{padding:13px 8px}.hsk-audio-caption{font-size:11px}.sound-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}.hsk-audio-message{max-width:calc(100vw - 128px)}}
 @media(prefers-reduced-motion:reduce){.hsk-audio-btn{transition:none}}
