@@ -259,30 +259,66 @@
     btnPrimary.className = `panda-btn ${primaryColor} cat-btn-primary`;
     btnPrimary.textContent = primaryText;
     btnPrimary.onclick = () => {
-      hidePopup();
       if (typeof options.onPrimary === 'function') {
         options.onPrimary();
       } else {
         const lastCourse = localStorage.getItem('hskLastCourse') || 'hsk1';
         window.location.hash = '#' + lastCourse;
       }
+      hidePopup();
     };
 
     const btnSecondary = document.getElementById('catActionSecondary');
+    const secondaryText = options.secondaryText || '⏰ NHẮC TÔI SAU 10 PHÚT';
+    const secondaryColor = options.secondaryColor || 'panda-btn-secondary';
+    btnSecondary.className = `panda-btn ${secondaryColor}`;
+    btnSecondary.textContent = secondaryText;
     btnSecondary.onclick = () => {
+      if (typeof options.onSecondary === 'function') {
+        options.onSecondary();
+      } else {
+        showToast('⏰ Đã hẹn nhắc lại', 'Tiểu Miêu (小猫) sẽ nhắc bạn lại sau ít phút nữa nhé! 🐾', 'reminder');
+      }
       hidePopup();
-      showToast('⏰ Đã hẹn nhắc lại', 'Tiểu Miêu (小猫) sẽ nhắc bạn lại sau ít phút nữa nhé! 🐾', 'reminder');
     };
 
     overlayEl.classList.add('active');
     playChineseSound(mood);
+
+    if (typeof options.onRender === 'function') {
+      try { options.onRender(); } catch (err) { console.error(err); }
+    }
 
     if (mood === 'streak' && window.HSKAudioFX?.confetti) {
       setTimeout(() => window.HSKAudioFX.confetti(60), 150);
     }
   }
 
+  // Quản lý lưu giờ nhắc học chắc chắn vào localStorage
+  function setReminderTime(newTime) {
+    if (!newTime || typeof newTime !== 'string') return;
+    const cleanTime = newTime.trim();
+    if (!/^\d{1,2}:\d{2}$/.test(cleanTime)) return;
+    localStorage.setItem(STORAGE_NOTIF_TIME, cleanTime);
+
+    // Nếu người dùng đổi sang giờ mới còn chưa tới hôm nay, xóa mốc đã nhắc để được kích hoạt vào giờ mới
+    const now = new Date();
+    const [h, m] = cleanTime.split(':').map(n => parseInt(n, 10));
+    if (h > now.getHours() || (h === now.getHours() && m > now.getMinutes())) {
+      localStorage.removeItem(STORAGE_LAST_REMIND_DATE);
+    }
+  }
+
+  function getReminderTime() {
+    return localStorage.getItem(STORAGE_NOTIF_TIME) || '20:00';
+  }
+
   function hidePopup() {
+    // Tự động lưu giờ nếu modal chứa ô chọn giờ nhắc học
+    const timeInput = document.getElementById('catConfigTime');
+    if (timeInput && timeInput.value) {
+      setReminderTime(timeInput.value);
+    }
     if (overlayEl) overlayEl.classList.remove('active');
   }
 
@@ -417,7 +453,7 @@
   // Bảng điều khiển lịch nhắc học & test thông báo Tiểu Miêu (小猫)
   function openControlCard() {
     const isGranted = 'Notification' in window && Notification.permission === 'granted';
-    const notifTime = localStorage.getItem(STORAGE_NOTIF_TIME) || '20:00';
+    const notifTime = getReminderTime();
 
     showPopup({
       title: '🐱 Cài đặt Nhắc học cùng 小猫',
@@ -425,29 +461,114 @@
       sealText: '小猫',
       message: `
         <div style="font-size:13.5px; line-height:1.6; color:#475569;">
-          Nhận thông báo màn hình mỗi ngày từ <b>Tiểu Miêu (小猫)</b> để không bao giờ bỏ lỡ buổi học tiếng Trung:
-          <div style="margin: 12px 0; background: #ffffff; border: 2px solid #fed7aa; border-radius: 12px; padding: 10px 14px; display:flex; justify-content:space-between; align-items:center;">
-            <span>🔔 Thông báo màn hình:</span>
-            <b>${isGranted ? '🟢 Đã cấp quyền' : '🔴 Chưa cấp quyền'}</b>
+          Nhận thông báo màn hình mỗi ngày từ <b>Tiểu Miêu (小猫)</b> để giữ vững chuỗi ngày học tiếng Trung:
+          <div style="margin: 12px 0; background: #ffffff; border: 2px solid #fed7aa; border-radius: 14px; padding: 12px 14px; display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:18px;">🔔</span>
+              <span style="font-weight:700;">Thông báo màn hình:</span>
+            </div>
+            <button type="button" id="btnToggleNotifPerm" style="background:${isGranted ? '#dcfce7' : '#fee2e2'}; color:${isGranted ? '#15803d' : '#b91c1c'}; border:1.5px solid ${isGranted ? '#86efac' : '#fca5a5'}; border-radius:8px; padding:5px 12px; font-weight:800; font-size:12px; cursor:pointer;">
+              ${isGranted ? '🟢 Đã bật' : '🔴 Bấm để bật'}
+            </button>
           </div>
-          <div style="display:flex; gap:8px; align-items:center; margin-top:8px;">
-            <label style="font-weight:700;">⏰ Giờ nhắc hàng ngày:</label>
-            <input type="time" id="catConfigTime" value="${notifTime}" style="padding:6px 10px; border-radius:8px; border:1.5px solid #cbd5e1; font-weight:700;">
+          <div style="background:#fff7ed; border:2px solid #fed7aa; border-radius:14px; padding:14px; margin-top:10px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <label for="catConfigTime" style="font-weight:800; color:#1e293b; display:flex; align-items:center; gap:6px;">
+                ⏰ Giờ nhắc hàng ngày:
+              </label>
+              <input type="time" id="catConfigTime" value="${notifTime}" style="padding:7px 12px; border-radius:10px; border:2px solid #fdba74; font-weight:800; font-size:16px; color:#c2410c; background:#ffffff; outline:none;">
+            </div>
+            <div style="margin-top:6px; min-height:22px; text-align:left;">
+              <span id="catTimeSavedBadge" class="cat-time-saved-badge" style="display:none;">✓ Đã lưu giờ nhắc tự động!</span>
+            </div>
+            <div style="margin-top:8px; text-align:left;">
+              <div style="font-size:11.5px; font-weight:800; color:#9a3412; margin-bottom:6px;">Gợi ý khung giờ học hiệu quả:</div>
+              <div class="cat-time-preset-row" id="catTimePresetRow">
+                <button type="button" class="cat-time-preset-btn ${notifTime === '07:00' ? 'active' : ''}" data-time="07:00">🌅 07:00 Sáng</button>
+                <button type="button" class="cat-time-preset-btn ${notifTime === '12:30' ? 'active' : ''}" data-time="12:30">🍱 12:30 Trưa</button>
+                <button type="button" class="cat-time-preset-btn ${notifTime === '20:00' ? 'active' : ''}" data-time="20:00">🌙 20:00 Tối</button>
+                <button type="button" class="cat-time-preset-btn ${notifTime === '21:30' ? 'active' : ''}" data-time="21:30">🛏️ 21:30 Khuya</button>
+              </div>
+            </div>
           </div>
         </div>
       `,
-      primaryText: isGranted ? '🧪 GỬI THỬ THÔNG BÁO NGAY' : '🏮 BẬT THÔNG BÁO TIỂU MIÊU',
+      primaryText: '💾 LƯU CÀI ĐẶT GIỜ NHẮC',
+      primaryColor: 'cat-btn-primary',
+      secondaryText: '🧪 GỬI THỬ THÔNG BÁO',
+      secondaryColor: 'panda-btn-secondary',
       onPrimary: async () => {
         const timeInput = document.getElementById('catConfigTime');
-        if (timeInput) localStorage.setItem(STORAGE_NOTIF_TIME, timeInput.value || '20:00');
+        const chosenTime = timeInput ? timeInput.value : notifTime;
+        setReminderTime(chosenTime);
 
         if (!isGranted) {
           const ok = await requestNotificationPermission();
           if (ok) {
-            triggerSampleNotification();
+            showToast('💾 Đã lưu giờ nhắc!', `Tiểu Miêu (小猫) sẽ nhắc bạn học tiếng Trung vào lúc ${chosenTime} hàng ngày nhé! 🐾🏮`, 'happy');
           }
         } else {
+          showToast('💾 Đã lưu giờ nhắc!', `Tiểu Miêu (小猫) sẽ nhắc bạn học tiếng Trung vào lúc ${chosenTime} hàng ngày nhé! 🐾🏮`, 'happy');
+          if (window.HSKAudioFX?.confetti) window.HSKAudioFX.confetti(50);
+        }
+      },
+      onSecondary: async () => {
+        const timeInput = document.getElementById('catConfigTime');
+        if (timeInput && timeInput.value) setReminderTime(timeInput.value);
+
+        if (!isGranted) {
+          const ok = await requestNotificationPermission();
+          if (ok) triggerSampleNotification();
+        } else {
           triggerSampleNotification();
+        }
+      },
+      onRender: () => {
+        const timeInput = document.getElementById('catConfigTime');
+        const saveBadge = document.getElementById('catTimeSavedBadge');
+        const presetBtns = document.querySelectorAll('.cat-time-preset-btn');
+        const btnTogglePerm = document.getElementById('btnToggleNotifPerm');
+
+        const saveAndHighlight = (val) => {
+          if (!val) return;
+          setReminderTime(val);
+          if (timeInput) timeInput.value = val;
+
+          presetBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.time === val);
+          });
+
+          if (saveBadge) {
+            saveBadge.textContent = `✓ Đã lưu giờ nhắc: ${val}`;
+            saveBadge.style.display = 'inline-flex';
+            clearTimeout(window._catSaveTimer);
+            window._catSaveTimer = setTimeout(() => {
+              if (saveBadge) saveBadge.style.display = 'none';
+            }, 3000);
+          }
+        };
+
+        if (timeInput) {
+          timeInput.addEventListener('input', (e) => saveAndHighlight(e.target.value));
+          timeInput.addEventListener('change', (e) => saveAndHighlight(e.target.value));
+        }
+
+        presetBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            saveAndHighlight(btn.dataset.time);
+          });
+        });
+
+        if (btnTogglePerm && !isGranted) {
+          btnTogglePerm.addEventListener('click', async () => {
+            const ok = await requestNotificationPermission();
+            if (ok) {
+              btnTogglePerm.style.background = '#dcfce7';
+              btnTogglePerm.style.color = '#15803d';
+              btnTogglePerm.style.borderColor = '#86efac';
+              btnTogglePerm.textContent = '🟢 Đã bật';
+            }
+          });
         }
       }
     });
@@ -531,6 +652,8 @@
     openControlCard,
     test: triggerSampleNotification,
     checkOnVisit: checkNotificationOnVisit,
+    setReminderTime,
+    getReminderTime,
     images: { ...CAT_IMAGES }
   };
 

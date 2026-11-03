@@ -236,7 +236,7 @@
           <a href="#exam" onclick="window.location.hash='exam'">📝 Thi thử HSK</a>
           <a href="javascript:void(0)" onclick="window.HSKCertificate?.open()">🎓 Nhận chứng chỉ</a>
           <a href="javascript:void(0)" onclick="window.HSKImmersionPlayer?.show()">🎧 Nghe thụ động</a>
-          <a href="javascript:void(0)" onclick="window.HSKNotification?.openControlCard()">🐼 Gấu Trúc nhắc học</a>
+          <a href="javascript:void(0)" onclick="window.HSKNotification?.openControlCard()">🐱 小猫 nhắc học</a>
         </div>
       </div>
     `;
